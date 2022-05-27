@@ -39,6 +39,137 @@ Experimental uncertainties, Background modeling uncertainties, Theoretical uncer
   \end{table}
 
 \subsubsection{Quark/Gluon jets uncertainties}
+
+  \begin{table}[!hp]
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Source        & Description                     & Analysis Name                                       \\ \hline
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_BJES\_Response                            \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Detector1                    \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Detector2                    \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Mixed1                       \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Mixed2                       \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Mixed3                       \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling1                   \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling2                   \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling3                   \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling4                   \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical1                 \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical2                 \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical3                 \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical4                 \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical5                 \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical6                 \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Flavor\_Composition                       \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Flavor\_Response                          \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_OffsetMu                          \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_OffsetNPV                         \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_PtTerm                            \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_RhoTopology                       \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_PunchThrough\_MC16                        \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_SingleParticle\_HighPt                    \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_TotalStat            \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_Modelling            \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_NonClosure\_highE    \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_NonClosure\_negEta   \\
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_NonClosure\_posEta   \\
+      \hline
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_DataVsMC                 \\
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_1           \\
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_2           \\
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_3           \\
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_4           \\
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_5           \\
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_6           \\
+      Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_7restTerm   \\
+      \hline
+  \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
+  \label{tab:syst_summary_sources_2}
+  \end{tabular}
+
+  \subsubsection*{Small-$R$ Jet Energy Scale and Resolution Uncertainty}
+  The jet energy scale and resolution of the small-R jets are measured in situ by calculating
+the response between MC and data in various bins of kinematic phase space using \texttt{JetUncertainties}~\cite{JetUncertainties}.
+We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config},
+with roughly 30 JES uncertainty components and 8 JER uncertainty components.
+They also enter the boosted analysis because they are used in the calculation of the missing transverse energy.
+We also consider the uncertainty on JVT efficiency, using \texttt{JetJvtEfficiency}~\cite{JVTCalib}.
+
+\subsubsection*{Small-$R$ Jet Energy Scale and Resolution Uncertainty}
+The jet energy scale and resolution of the small-R jets are measured in situ by calculating
+the response between MC and data in various bins of kinematic phase space using \texttt{JetUncertainties}~\cite{JetUncertainties}.
+We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config},
+with roughly 30 JES uncertainty components and 8 JER uncertainty components.
+They also enter the boosted analysis because they are used in the calculation of the missing transverse energy.
+We also consider the uncertainty on JVT efficiency, using \texttt{JetJvtEfficiency}~\cite{JVTCalib}.
+
+
+\subsubsection*{Large-$R$ Jet Energy Scale and Resolution Uncertainty}
+\label{sec:fatjetUncert}
+
+The large-$R$ jet energy scale uncertainties are included following the prescription of the
+jet substructure group included in the \texttt{JetUncertainties} package~\cite{JSSrecommendation}.
+%The \pt of TCC jet can be approximated to be equivalent with calo-jet \pt, and not depending on track measurements so much.
+The uncertainty on the \pt scale of jets is evaluated by
+comparing the ratio of the jet \pt to track-jet \pt in dijet data and simulation (Rtrk method).
+In addition to this ``Baseline'' uncertainty, the uncertainties on track measurements (``Tracking''), differences between Pythia and Sherpa dijet simulations (``Modelling'') and the statistical uncertainty of dijet data (``TotalStat'') are considered.
+
+  \begin{table}[!hp]
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Source        & Description                     & Analysis Name                                       \\ \hline
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Baseline\_pT              \\
+      %Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Closure\_pT               \\
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Modelling\_pT             \\
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_TotalStat\_pT             \\
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Tracking\_pT              \\
+
+      Large-R Jets  & \pt scale                       & FATJET\_BJT\_JET\_EtaIntercalibration\_Modelling      \\
+      Large-R Jets  & \pt scale                       & FATJET\_BJT\_JET\_Flavor\_Composition                 \\
+      Large-R Jets  & \pt scale                       & FATJET\_BJT\_JET\_Flavor\_Response                    \\
+
+      Large-R Jets  & Mass resolution                 & FATJET\_JMR                            \\\hline
+      Large-R Jets  & JER                             & FATJET\_JER                            \\\hline
+
+%
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_B\_0\_AntiKt4PFlowJets                \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_B\_1\_AntiKt4PFlowJets                \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_B\_2\_AntiKt4PFlowJets                \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_0\_AntiKt4PFlowJets                \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_1\_AntiKt4PFlowJets                \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_2\_AntiKt4PFlowJets                \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_3\_AntiKt4PFlowJets                \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_0\_AntiKt4PFlowJets            \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_1\_AntiKt4PFlowJets            \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_2\_AntiKt4PFlowJets            \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_3\_AntiKt4PFlowJets            \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_extrapolation\_AntiKt4PFlowJets              \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_extrapolation\_from\_charm\_AntiKt4PFlowJets \\
+
+      \hline
+      Pileup reweighting & PRW\_DATASF & PRW\_DATASF \\
+      Luminosity & LumiNP & ATLAS\_LUMI\_2015\_2018  \\
+\hline
+\end{tabular}
+    \end{center}
+  \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
+  \label{tab:syst_summary_sources_3}
+  \end{table}
+
+  \clearpage
+
+\subsubsection{B-tagging uncertainties}
+The systematic uncertainties associated to the b-tagging.
+They are uncertainties on the scaling factor for taking account for the disagreement of the b-tag efficiency between data and MC. Each separated scale factors and corresponding systematic uncertainties are provided for b-,c-, and light-flavor jets from several measurements.
+These b-tagging systematic uncertainties are applied when calculating the SF since they are uncertainties on the SF. b-tagging SF is firstly calculated with all small-R jets (PFlowJets) and applied to the events after having selected non b-tagged tagging jets, same as the uncertainties. 
+
+\subsubsection{Quark/Gluon jets uncertainties}
 \subsubsection{Modeling uncertainties}
 \subsubsection{Reweighting uncertainties}
 \subsection{Theoretical uncertainties}
@@ -54,13 +185,5 @@ The systematic uncertainties related to the determination or the calculation of 
 \subsubsection{Parton shower uncertainties}
 \subsubsection{NLO order EW corrections}
 \end{itemize}
-\subsubsection{Small-R jets uncertainties}
-\subsubsection{Large-R jet uncertainties}
-\subsubsection{B-tagging uncertainties}
-The systematic uncertainties associated to the b-tagging.
-They are uncertainties on the scaling factor for taking account for the disagreement of the b-tag efficiency between data and MC. Each separated scale factors and corresponding systematic uncertainties are provided for b-,c-, and light-flavor jets from several measurements.
-These b-tagging systematic uncertainties are applied when calculating the SF since they are uncertainties on the SF. b-tagging SF is firstly calculated with all small-R jets (PFlowJets) and applied to the events after having selected non b-tagged tagging jets, same as the uncertainties. 
-
-
 
 \subsection{NP differently constrained between Asimov and Data fitting}
