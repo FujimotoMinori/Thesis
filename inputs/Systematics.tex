@@ -1,8 +1,43 @@
 \chapter{Systematics uncertainties}
-
-
+In this section, all systemaatics uncertainties considered in the analysis are described. The uncertainties are deviede into three categories:
+Experimental uncertainties, Background modeling uncertainties, Theoretical uncertainties. Each systematics uncertainty is treated as a nuisance parameter as described in Chapter{}. The systematics variations are estimated on the final discriminant described in Chapter{}.
 
 \subsection{Experimental uncertainties}
+\begin{table}[!hp]
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Source        & Description                     & Analysis Name                                 \\ \hline
+      Electrons     & Energy scale                    &  EG\_SCALE\_ALL                               \\
+      Electrons     & Energy resolution               &  EG\_RESOLUTION\_ALL                          \\
+      Electrons     & Trigger                        &  EL\_EFF\_Trigger\_TOTAL\_1NPCOR\_PLUS\_UNCOR  \\
+      Electrons     & ID efficiency SF                &  EL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR      \\
+      Electrons     & Isolation efficiency SF                &   EL\_EFF\_Iso\_TOTAL\_1NPCOR\_PLUS\_UNCOR   \\
+      Electrons     & Reconstruction efficiency SF                &   EL\_EFF\_Reco\_TOTAL\_1NPCOR\_PLUS\_UNCOR   \\ \hline
+      Muons         & \pt\ scale                       &   MUONS\_SCALE                                \\
+      Muons         & \pt\ scale (charge dependent)          &   MUON\_SAGITTA\_RHO                    \\
+      Muons         & \pt\ scale (charge dependent)          &   MUON\_SAGITTA\_RESBIAS                \\
+      Muons         & \pt\ resolution MS               &   MUONS\_MS                                   \\
+      Muons         & \pt\ resolution ID               &   MUONS\_ID                                   \\
+      Muons         & Isolation efficiency SF         &   MUON\_ISO\_SYS                               \\
+      Muons         & Isolation efficiency SF         &   MUON\_ISO\_STAT                               \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT                  \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT\_LOWPT           \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST                  \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST\_LOWPT           \\
+      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_SYS             \\
+      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_STAT            \\ \hline
+      MET           & Soft term                       &   MET\_SoftTrk\_ResoPerp                        \\
+      MET           & Soft term                       &   MET\_SoftTrk\_ResoPara                        \\
+      MET           & Soft term                       &   MET\_SoftTrk\_Scale                           \\ \hline
+      \end{tabular}
+      \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
+      \label{tab:syst_summary_sources_1}
+    \end{center}
+  \end{table}
+
 \subsubsection{Quark/Gluon jets uncertainties}
 \subsubsection{Modeling uncertainties}
 \subsubsection{Reweighting uncertainties}
@@ -26,8 +61,6 @@ The systematic uncertainties associated to the b-tagging.
 They are uncertainties on the scaling factor for taking account for the disagreement of the b-tag efficiency between data and MC. Each separated scale factors and corresponding systematic uncertainties are provided for b-,c-, and light-flavor jets from several measurements.
 These b-tagging systematic uncertainties are applied when calculating the SF since they are uncertainties on the SF. b-tagging SF is firstly calculated with all small-R jets (PFlowJets) and applied to the events after having selected non b-tagged tagging jets, same as the uncertainties. 
 
-%table here
-%FT_EFF_Eigen_B_0_AntiKt4PFlowJets FT_EFF_Eigen_B_1_AntiKt4PFlowJets FT_EFF_Eigen_B_2_AntiKt4PFlowJets FT_EFF_Eigen_C_0_AntiKt4PFlowJets FT_EFF_Eigen_C_1_AntiKt4PFlowJets FT_EFF_Eigen_C_2_AntiKt4PFlowJets FT_EFF_Eigen_C_3_AntiKt4PFlowJets FT_EFF_Eigen_Light_0_AntiKt4PFlowJets FT_EFF_Eigen_Light_1_AntiKt4PFlowJets FT_EFF_Eigen_Light_2_AntiKt4PFlowJets FT_EFF_Eigen_Light_3_AntiKt4PFlowJets FT_EFF_extrapolation_AntiKt4PFlowJets FT_EFF_extrapolation_from_charm_AntiKt4PFlowJets 
 
 
 \subsection{NP differently constrained between Asimov and Data fitting}
