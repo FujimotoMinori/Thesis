@@ -1,10 +1,48 @@
 \chapter{Multi-Variate Analysis}
 
-In order to improve the separation with respect to the other SM background processes, we use a Machine Learning approach for the analysis. The approach adopted in this analysis is a Recurrent Neural Network (RNN) architecture.
+The target signal in this analysis is the $EW VV+jj$ production and, specifically, the VBS-diagram like events.
+These events are not characterized by any resonant variable,
+despite some sensitive variables like the $\eta$ of the VBS-like jets as well as
+the invariant mass of the VBS jets and of the diboson system.
+Indeed, the VBS signal toplogy is carachterised by two extra hard jets that are produced in the two opposite
+forward regions of the detector, both of them have usually high $\eta$ and high energy
+and the di-jets pair is carachterised by high invariant mass and high angular separation.
+
+In order to improve the separation with respect to the other SM background processes,
+we use a Machine Learning (ML) approach for this analysis.
+The baseline approach is based on a Recurrent Neural Network (RNN) architecture;
+we tested also other approaches like a high-level BDT in the \tlep channel (similar to the previous round)
+and a NN approach in the \zlep channel.
+
+In particular, we decided to use a Deep Learning (DL) approach meaning using Neural Networks in the deep regime;
+in order to exploit the deep regime as much as possible we focus on the lowest level variables available
+at the analysis level, i.e. the 4-momentum of the jets.
+Indeed, using low-level input variable the ML approach trained in a deep regime is able to reconstruct all the
+high-level information we might think to build by hand at the event levent and use as input.
+
+In particular, the jets reonstructed in the event brin information of both the VBS jets both the signal jets
+coming from the hadronic $V \rightarrow qq$ decay; therefore, a deep network using low-level information is able
+to learn not only high-level features realetd to the VBS di-jets pars but also features about the V-hadronic
+as well as correlation among the VBS jets and the V-hadronic.
 
 \section{RNN}
+
+The DL (or sometimes referred as RNN) approach means to use a network in the DL regime and, in particular, use RNN layers in the architecture. For this approach, we focused on the 4-momentum components of the jets and on other sub-structure variable like tracks multiplicity.
+
+The main idea is to use all the jets reconstructed in the event in order to let the network understand all the hidden correlation and exploit the target signal topology.
+Since the jets multiplicity is a variable feature event by event given its own nature, we can not have fixed inputs values unless to use some default (-99 or something) values. Therefore, one architecture that allows to naturally attack this kind of input sequences is the RNN. Given the good and wide usage of this network in ATLAS recentely, we decided to use this architecture for this analysis.
+
 \section{Input variables}
+
+We use the 4-momentum of the jets, \pt, $\eta$, $\phi$, $E$, as well as the tracks multiplicity ($n_{Tracks}$) as the RNN inputs in a recurrent way.
+In particular, we build sequences of float values for each of the input variable, using the jets reconstructed in the event; therefore, 5 sequences (4-momentum + $n_{Tracks}$) and they have a maximum lenght given by the maximum jets multiplicity considered; in particular, this value has been fine tune to be 5 for this analysis, check Section \ref{subsec:RNN_nJetsX} for details. Each sequence will not be fully filled given the variable lenght nature of the jets collection in our physics events, but it will contains the information for all the jets available. For instance, if the event there are just 3 reconstructed jets the 5 sequences will have lenght equal to 3, if there are 4 jets they will have lenght equal to 4 and so on.
+In summary, the actual input of the network are 5 sequences with variable lenght according to the jets multiplicity in the that particular event, but the maximum lenght is set to be equal to 5.
+
+
 \section{Setup and training}
+
+The RNN model is trained to separate the signal from the other SM background processes; the output scores are then not use as a categorization variable (meaning no cut is applied on it) but it is used as final discriminant in the analysis result. In order to build such discriminant the architecture has been designed to exploit the recurrent features across a couple of RNN layers and then the last RNN layer has been design to not return the full sequence but just the last step in order then to build a single last node; the simplified picture in Figure \ref{fig:RNNArchitecturePic} gives a simplified visualisation of the architecture.
+
 \section{Optimization of the binning}
 The optimization of the binning is needed to get the optimal performance of the RNN. The transformation of the RNN output to optimise the effect of the final sensitivity and reduction in the number of bins is implemented.
 
