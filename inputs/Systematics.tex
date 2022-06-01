@@ -1,105 +1,17 @@
-\chapter{Systematics uncertainties}
-In this section, all systemaatics uncertainties considered in the analysis are described. The uncertainties are divided into three categories:
-Experimental uncertainties, Background modeling uncertainties, Theoretical uncertainties. Each systematics uncertainty is treated as a nuisance parameter as described in Chapter{}. The systematics variations are estimated on the final discriminant described in Chapter{}.
+\chapter{Systematic uncertainties}
+In this section, all systematic uncertainties considered in the analysis are described. The uncertainties are divided into three categories:
+Experimental uncertainties, Background modeling uncertainties, Theoretical uncertainties. Each systematic uncertainty is treated as a nuisance parameter as described in Chapter{}. The systematic variations are estimated on the final discriminant described in Chapter{}.
 
-\subsection{Experimental uncertainties}
+\section{Experimental uncertainties}
 
-\subsubsection*{Luminosity}
-The uncertainty on the integrated luminosity for the 2015+2016 dataset is 2.1\%,
-and 2.4\% for the 2017 dataset.
-The uncertainty for the 2018 data alone is 2.0\%, and the uncertainty for the combined run-2 dataset (2015-2018) is 1.7\% \cite{AtlasLumiRun2}.
-The luminosity uncertainty is applied to those backgrounds estimated from simulation and the signal samples.
+%\subsection{Jet-related uncertainty}
 
-\subsubsection*{Pileup reweighting}
-The uncertainty associated with the pileup reweighting is considered\cite{ExtendedPileupReweighting} as PRW\_DATASF.
-A variation in the pileup reweighting of MC is included to cover the uncertainty on the ratio between the predicted
-and measured inelastic cross-section in the fiducial volume defined by $M_X > 13\,\GeV$ where $M_X$ is the mass
-of the non-diffractive hadronic system~\cite{STDM-2015-05}.
-
- \begin{table}[!hp]
-  \centering
-  \footnotesize
-  \begin{center}
-    \begin{tabular}{|l|l|l|l|}
-      \hline
-      Source        & Description                     & Analysis Name  & Note                                     \\ \hline
-      Pileup reweighting & PRW\_DATASF & PRW\_DATASF \\                &
-      Luminosity & LumiNP & ATLAS\_LUMI\_2015\_2018  \\\hline          &    
-\end{tabular}
-    \end{center}
-  \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
-  \label{tab:syst_summary_sources_1}
-  \end{table}
-
-
-
-\subsubsection*{Muons and electrons}
-The following systematic uncertainties are applied to electrons and muons in estimations based on the simulation:
-
-\begin{itemize}
-\item Identification and reconstruction efficiencies: The efficiencies are measured with the tag and probe method using the $Z$ mass peak.
-\item Isolation efficiency: Scale factor and its uncertainty are derived by tag and probe method using the $Z$ mass peak as well.
-\item Energy and Momentum scales: These are also measured with $Z$ mass line shape, and provided by the CP groups.
-\item Track-to-vertex association efficiency: Only for muons.
-\end{itemize}
-
-They are implemented in \texttt{ElectronPhotonFourMomentumCorrection}~\cite{EgammaCalibration},\\
-\texttt{ElectronEfficiencyCorrection}~\cite{AsgElectronEfficiencyCorrectionTool}, \\
-\texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections}~\cite{MCPAnalysisGuidelines}.
-\texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections}~\cite{MCPAnalysisGuidelines}.
-
-
-\subsubsection*{Missing transverse energy}
- The missing transverse energy is calculated using physics objects as described in Section~\ref{sec:ObjectDefinition}.
-%from the negative vectorial sum of physics objects: muons, electrons, taus, photons, jets and unassociated clusters of calorimeter cells.
-As such, all of the systematic errors on the reconstructed components, e.g. the jet energy scale,
-result in an uncertainty on $\met$. These are the dominant sources of uncertainty on $\met$.
-In addition, there is an uncertainty called the ''Soft Term'', from the unassociated tracks.
-The resolution and scale of this soft term are varied within their errors to evaluate their
-contribution to the total uncertainty using \texttt{METUtilities}~\cite{METUtilSystematics}.
-
-\begin{table}[!hp]
-  \centering
-  \footnotesize
-  \begin{center}
-    \begin{tabular}{|l|l|l|}
-      \hline
-      Source        & Description                     & Analysis Name                                 \\ \hline
-      Electrons     & Energy scale                    &  EG\_SCALE\_ALL                               \\
-      Electrons     & Energy resolution               &  EG\_RESOLUTION\_ALL                          \\
-      Electrons     & Trigger                         &  EL\_EFF\_Trigger\_TOTAL\_1NPCOR\_PLUS\_UNCOR  \\
-      Electrons     & ID efficiency SF                &  EL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR      \\
-      Electrons     & Isolation efficiency SF         &   EL\_EFF\_Iso\_TOTAL\_1NPCOR\_PLUS\_UNCOR   \\
-      Electrons     & Reconstruction efficiency SF    &   EL\_EFF\_Reco\_TOTAL\_1NPCOR\_PLUS\_UNCOR   \\ \hline
-      Muons         & \pt\ scale                      &   MUONS\_SCALE                                \\
-      Muons         & \pt\ scale (charge dependent)   &   MUON\_SAGITTA\_RHO                    \\
-      Muons         & \pt\ scale (charge dependent)          &   MUON\_SAGITTA\_RESBIAS                \\
-      Muons         & \pt\ resolution MS               &   MUONS\_MS                                   \\
-      Muons         & \pt\ resolution ID               &   MUONS\_ID                                   \\
-      Muons         & Isolation efficiency SF         &   MUON\_ISO\_SYS                               \\
-      Muons         & Isolation efficiency SF         &   MUON\_ISO\_STAT                               \\
-      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT                  \\
-      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT\_LOWPT           \\
-      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST                  \\
-      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST\_LOWPT           \\
-      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_SYS             \\
-      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_STAT            \\ \hline
-      MET           & Soft term                       &   MET\_SoftTrk\_ResoPerp                        \\
-      MET           & Soft term                       &   MET\_SoftTrk\_ResoPara                        \\
-      MET           & Soft term                       &   MET\_SoftTrk\_Scale                           \\ \hline
-      \end{tabular}
-      \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
-      \label{tab:syst_summary_sources_2}
-    \end{center}
-  \end{table}
-
-\subsubsection*{Small-$R$ Jet Energy Scale and Resolution Uncertainty}
-  The jet energy scale and resolution of the small-R jets are measured in situ by calculating
-the response between MC and data in various bins of kinematic phase space using \texttt{JetUncertainties}~\cite{JetUncertainties}.
-We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config},
-with roughly 30 JES uncertainty components and 8 JER uncertainty components.
-They also enter the boosted analysis because they are used in the calculation of the missing transverse energy.
-We also consider the uncertainty on JVT efficiency, using \texttt{JetJvtEfficiency}~\cite{JVTCalib}.
+\subsection*{Small-$R$ Jet Energy Scale(JES) and Resolution(JER) Uncertainty}
+The jet energy scale (JER) uncertainties and jet energy resolution (JER) are measured by calculating the response between MC and data in various kinematic phase space ~\cite{JetUncertainties}.
+What is used in this analysis is 30 JES uncertainty and 8 JER uncertainty components.
+We also consider the uncertainty on jet vertex tagger (JVT) efficiency~\cite{JVTCalib} and forward jet vertex tagger (fJvt) efficiency.
+  
+%We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config}
 
 \begin{table}[!hp]
   \centering
@@ -151,7 +63,7 @@ We also consider the uncertainty on JVT efficiency, using \texttt{JetJvtEfficien
   \end{center}
 \end{table}
 
-\subsubsection*{Large-$R$ Jet Energy Scale and Resolution Uncertainty}
+\subsection*{Large-$R$ Jet Energy Scale and Resolution Uncertainty}
 \label{sec:fatjetUncert}
 
 The large-$R$ jet energy scale uncertainties are included following the prescription of the
@@ -186,8 +98,95 @@ In addition to this ``Baseline'' uncertainty, the uncertainties on track measure
   \end{table}
 
   \clearpage
+  
+  All other experimental uncertainties are summerized in the Table{}.
 
-\subsubsection{B-tagging uncertainties}
+\subsection*{Luminosity}
+The uncertainty on the integrated luminosity. 
+For the 2015+2016 dataset, this uncertainty is 2.1\%, and 2.4\% for the 2017 dataset. The uncertainty for the 2018 data alone is 2.0\%, and the uncertainty for the combined run-2 dataset (2015-2018) is 1.7\% \cite{AtlasLumiRun2}.
+The luminosity uncertainty is applied to all MC samples.
+\subsection*{Pileup reweighting}
+The uncertainty associated with the pileup reweighting is considered\cite{ExtendedPileupReweighting}. To cover the uncertainty on the ratio between the predicted and measure inelastic cross-section in the fiducial volume is covered. The fiducial volume is defined by $M_X > 13\,\GeV$ where $M_X$ is the mass of the non-diffractive hadronic system~\cite{STDM-2015-05}.
+
+ \begin{table}[!hp]
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Source             & Description   & Analysis Name    \\ \hline
+      Luminosity         & LumiNP        & ATLAS\_LUMI\_2015\_2018 \\ \hline
+      Pileup reweighting & PRW\_DATASF   & PRW\_DATASF       \\\hline       
+    \end{tabular}
+    \end{center}
+  \label{tab:syst_summary_sources_1}
+ \end{table}
+
+
+
+\subsection*{Muons and electrons}
+The following systematic uncertainties are applied to electrons and muons in estimations based on the simulation:
+
+\begin{itemize}
+\item Identification and reconstruction efficiencies: The efficiencies are measured with the tag and probe method using the $Z$ mass peak.
+\item Isolation efficiency: Scale factor and its uncertainty are derived by tag and probe method using the $Z$ mass peak as well.
+\item Energy and Momentum scales: These are also measured with $Z$ mass line shape, and provided by the CP groups.
+\item Track-to-vertex association efficiency: Only for muons.
+\end{itemize}
+
+They are implemented in \texttt{ElectronPhotonFourMomentumCorrection}~\cite{EgammaCalibration},\\
+\texttt{ElectronEfficiencyCorrection}~\cite{AsgElectronEfficiencyCorrectionTool}, \\
+\texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections}~\cite{MCPAnalysisGuidelines}.
+\texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections}~\cite{MCPAnalysisGuidelines}.
+
+
+\subsection*{Missing transverse energy}
+ The missing transverse energy is calculated using physics objects as described in Section~\ref{sec:ObjectDefinition}.
+%from the negative vectorial sum of physics objects: muons, electrons, taus, photons, jets and unassociated clusters of calorimeter cells.
+As such, all of the systematic errors on the reconstructed components, e.g. the jet energy scale,
+result in an uncertainty on $\met$. These are the dominant sources of uncertainty on $\met$.
+In addition, there is an uncertainty called the ''Soft Term'', from the unassociated tracks.
+The resolution and scale of this soft term are varied within their errors to evaluate their
+contribution to the total uncertainty using \texttt{METUtilities}~\cite{METUtilSystematics}.
+
+\begin{table}[!hp]
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|}
+      \hline
+      Source        & Description                     & Analysis Name                                 \\ \hline
+      Electrons     & Energy scale                    &  EG\_SCALE\_ALL                               \\
+      Electrons     & Energy resolution               &  EG\_RESOLUTION\_ALL                          \\
+      Electrons     & Trigger                         &  EL\_EFF\_Trigger\_TOTAL\_1NPCOR\_PLUS\_UNCOR  \\
+      Electrons     & ID efficiency SF                &  EL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR      \\
+      Electrons     & Isolation efficiency SF         &   EL\_EFF\_Iso\_TOTAL\_1NPCOR\_PLUS\_UNCOR   \\
+      Electrons     & Reconstruction efficiency SF    &   EL\_EFF\_Reco\_TOTAL\_1NPCOR\_PLUS\_UNCOR   \\ \hline
+      Muons         & \pt\ scale                      &   MUONS\_SCALE                                \\
+      Muons         & \pt\ scale (charge dependent)   &   MUON\_SAGITTA\_RHO                    \\
+      Muons         & \pt\ scale (charge dependent)          &   MUON\_SAGITTA\_RESBIAS                \\
+      Muons         & \pt\ resolution MS               &   MUONS\_MS                                   \\
+      Muons         & \pt\ resolution ID               &   MUONS\_ID                                   \\
+      Muons         & Isolation efficiency SF         &   MUON\_ISO\_SYS                               \\
+      Muons         & Isolation efficiency SF         &   MUON\_ISO\_STAT                               \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT                  \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT\_LOWPT           \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST                  \\
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST\_LOWPT           \\
+      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_SYS             \\
+      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_STAT            \\ \hline
+      MET           & Soft term                       &   MET\_SoftTrk\_ResoPerp                        \\
+      MET           & Soft term                       &   MET\_SoftTrk\_ResoPara                        \\
+      MET           & Soft term                       &   MET\_SoftTrk\_Scale                           \\ \hline
+      \end{tabular}
+      \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
+      \label{tab:syst_summary_sources_2}
+    \end{center}
+  \end{table}
+
+
+
+\subsection{B-tagging uncertainties}
 The systematic uncertainties associated to the b-tagging.
 They are uncertainties on the scaling factor for taking account for the disagreement of the b-tag efficiency between data and MC. Each separated scale factors and corresponding systematic uncertainties are provided for b-,c-, and light-flavor jets from several measurements.
 These b-tagging systematic uncertainties are applied when calculating the SF since they are uncertainties on the SF. b-tagging SF is firstly calculated with all small-R jets (PFlowJets) and applied to the events after having selected non b-tagged tagging jets, same as the uncertainties. 
@@ -218,19 +217,26 @@ These b-tagging systematic uncertainties are applied when calculating the SF sin
   \label{tab:syst_summary_sources_4}
   \end{table}
 
-%\subsubsection{Quark/Gluon jets uncertainties}
-%\subsubsection{Modeling uncertainties}
-%\subsubsection{Reweighting uncertainties}
-\subsection{Theoretical uncertainties}
+%\subsection{Quark/Gluon jets uncertainties}
+\section{Background Modeling uncertainties}
+The systematics uncertainties related to the modeling of the background samples are explained.
+\subsection{Modeling uncertainties}
+By thinking of this, the the difference of the parton shower modeling is considered as the difference of Phythia and Herwig.
+\subsection{Reweighting uncertainties}
+
+\section{Theoretical uncertainties}
 The systematic uncertainties related to the determination or the calculation of the MC.
-\subsubsection{Perturbative QCD matrix-element uncertainties}
+
+\subsection{Perturbative QCD matrix-element uncertainties}
 \begin{itemize}
-      \item PDF + $\alpha_s$ uncertainties\\
-      Since PDF sets are obtained by fitting experimental dataset, there are uncertainties on selecting different type of PDF sets, which originated from the experimental uncertainties from the dataset and from the choice of the functional form adapted in the PDF fits.
-      The uncertainty from the PDF set choice can be assessed by 2 means. One is by calculating the difference within one PDF set by varying its internal parameters, which is called internal PDF uncertainties. The second is from the difference between the nominal sets of different PDF sets, which is called external PDF uncertainties.
-      $\alpha_s$ uncertainties are from the experimental uncertainties in the determination of it and the truncated fixed order calculations are used for the calculation.
-      %\item QCD scale uncertainties\\
-     
-%\subsubsection{Parton shower uncertainties}
-%\subsubsection{NLO order EW corrections}
+\item PDF + $\alpha_s$ uncertainties\\
+Since PDF sets are obtained by fitting experimental dataset, there are uncertainties on selecting different type of PDF sets, which originated from the experimental uncertainties from the dataset and from the choice of the functional form adapted in the PDF fits.
+The uncertainty from the PDF set choice can be assessed by 2 means. One is by calculating the difference within one PDF set by varying its internal parameters, which is called internal PDF uncertainties. The second is from the difference between the nominal sets of different PDF sets, which is called external PDF uncertainties.
+$\alpha_s$ uncertainties are from the experimental uncertainties in the determination of it and the truncated fixed order calculations are used for the calculation.
+\item QCD scale uncertainties\\
+QCD scale uncertainties are determined by using different renormalization and factorization scale factor sets. 
+The renormalization scale $\mu_R$ is the scale at which the strong coupling $\alpha_s$ is evaluated, while the factorization scale $\mu_F$ is the scale to separate the perturbative part of the hard-interaction from the non-perturbative part of PDF. 
+
+\subsection{NLO order EW corrections}
+\red{this is not considered}
 \end{itemize}
