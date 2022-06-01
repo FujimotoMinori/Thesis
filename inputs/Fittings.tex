@@ -1,6 +1,37 @@
 \chapter{Statistical treatment}
 
-The statistical analysis of the data uses a binned likelihood function constructed as the product of Poisson probability terms,
+\section{Likelihood function definition}
+A binned maximum likelihood fit is performed to get the signal strength $\mu$. The likelihood function is written as:
+\begin{equation} \label{eq:Lh1}
+\mathcal{L}\left( N, \tilde{\theta} | \mu, \theta \right)=  P\left( \mu | \mu s +b \right) \cdot p\left( \tilde{\theta} | \theta \right)
+ \end{equation}
+
+ where $P$ is the product of Poisson probability terms over all the histogram bins:
+
+ \begin{equation} \label{eq:Lh2}
+ P\left( \mu | \mu s +b \right)  =  \prod_{i=1}^{N_{bins}} \frac{{ (\mu s_{i} (\theta)+ b_{i}(\theta))^{N_{i}} e^{ - (\mu s_{i}(\theta) + b_{i}(\theta))} } }{{N_{i}!}}
+ \end{equation}
+
+where $\mu s_{i }$, $b_{i }$ is the expected number of signal and background events in bin i, and $N_{i}$ is the number of observed events in the bin. 
+The $p\left( \tilde{\theta} | \theta \right)$ term of equation~\ref{eq:Lh1}, is referred to as prior, added to represent the additional systematic effects considered in the analysis. 
+
+Assuming not correlated uncertainties this term is given by the product of all single uncertainty priors; $ p\left( \tilde{\theta} | \theta \right) =  \prod_{j}p_{j}\left( \tilde{\theta_{j}} | \theta_{j} \right)$ where j is running over all uncertainties and  $\theta_{j}$ is the nuisance parameter associated to the source of systematic uncertainty j. Each of the terms represents the probability of the uncertainty to have a true value equal to $\theta_{j}$ given the best estimate $ \tilde{\theta_j}$ obtained from an auxiliary measurement. 
+In our analysis, priors are considered to be Gaussian distributed for the majority of uncertainties. $\theta_{j} $ are scaled to $\theta_{j} =0$ for the nominal expectation, and $\theta_{j} = \pm 1$ is scaled to the $\pm 1 \sigma$ variations of the systematic source.
+
+%corresponds to the nominal expectation while $\theta_{j} = \pm 1$ correspond to the $\pm 1 \sigma$ variations of the systematic source. 
+
+%This parametrization is convenient in order to easily spot constrained nuisance parameters that might be problematic. %Log-normal priors are also used in the case of uncertainties with only normalizations effects. % An estimate on $\mu$ is obtained by maximizing the likelihood function with respect to all the parameters.
+
+\section{Smoothing}
+In order to remove statistical fluctuations from systematic uncertainties that might create spurious effects in the fit a smoothing algorithm is applied. During this procedure bins are merged together (starting from left to right) until the statistical uncertainty per bin to be less than 5$\%$. The nominal and smoothed variation histograms are then compared to derive the $\pm\sigma$ uncertainties. The resulting uncertainties are then associated to the initial finer binned distribution. %fix: need some proper documentation here
+
+\section{Pruning}
+In order to keep the fit model as simple as possible uncertainties with a negligible impact on the final result are pruned away. Such uncertainties are:
+  \begin{itemize}
+   \item  Normalization uncertainties with a less than 5$\%$ relative variation effects or same sign effects (relative variation being positive (or negative) for both the up and down uncertainty)
+   \item  Shape uncertainties with less than 0.5$\%$ effect for all bins of the distribution or missing one of the up or down variations.
+    \end{itemize}
+
 \begin{equation}     \mathrm{Pois}\,(n|\mu S+B)\left[ \prod_{b\in \text{bins}}^{n} \frac{\mu \nu^{\mathrm{sig}}_{b}+\nu^{\mathrm{bkg}}_{b}}{\mu S+B} \right],
 \end{equation} where $\mu$,
 a signal strength parameter, multiplies the expected signal yield $\nu^{\mathrm{sig}}_b$ in each histogram bin $b$, and $\nu^{\mathrm{bkg}}_b$ represents the background content for bin $b$.
@@ -16,6 +47,9 @@ This is referred to as the maximized log-likelihood value, MLL.
 The test statistic $q_\mu$ is then constructed according to the profile likelihood: $q_\mu = 2 \ln (\mathcal{L} (\mu, \hat{\hat{\theta_\mu}})/\mathcal{L} (\hat{\mu}, \hat{\theta}))$, where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize the likelihood (with the constraint $0 \leq \hat{\mu} \leq \mu$), and $\hat{\hat{\theta}}_\mu$ are the nuisance parameter values that maximize the likelihood for a given $\mu$.
 This test statistic is used to measure the compatibility of the background-only model with the observed data and for exclusion intervals derived with the $CL_s$ method~\cite{Cowan:2010js}.
 The limit set on $\mu$ is then translated into a limit on the signal cross section times branching ratio, using the theoretical cross section and branching ratio for the given signal model.
+
+\section{Fitting strategy}
+A simultaneous fit to the merged and resolved signal and control regions is performed. In the signal regions the RNN score is fitted, while in the CRs the $M^{tag}_{jj}$ is fitted, in order to give a better constrains to the $M^{tag}_{jj}$ reweighting uncertainty. The 2POI fit to the Merged and Resolved region is also performed as a testing purpose. For the blinding strategy, unconditional fits on the Asimov dataset are performed in the full range of the RNN score. Unconditional fit on data are also performed to the left-side bins of the RNN score up to the 75\% of the total signal integral.
 
 
 

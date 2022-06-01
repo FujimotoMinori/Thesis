@@ -4,13 +4,10 @@ Experimental uncertainties, Background modeling uncertainties, Theoretical uncer
 
 \section{Experimental uncertainties}
 
-%\subsection{Jet-related uncertainty}
-
 \subsection*{Small-$R$ Jet Energy Scale(JES) and Resolution(JER) Uncertainty}
 The jet energy scale (JER) uncertainties and jet energy resolution (JER) are measured by calculating the response between MC and data in various kinematic phase space ~\cite{JetUncertainties}.
 What is used in this analysis is 30 JES uncertainty and 8 JER uncertainty components.
 We also consider the uncertainty on jet vertex tagger (JVT) efficiency~\cite{JVTCalib} and forward jet vertex tagger (fJvt) efficiency.
-  
 %We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config}
 
 \begin{table}[!hp]
@@ -68,7 +65,6 @@ We also consider the uncertainty on jet vertex tagger (JVT) efficiency~\cite{JVT
 
 The large-$R$ jet energy scale uncertainties are included following the prescription of the
 jet substructure group included in the \texttt{JetUncertainties} package~\cite{JSSrecommendation}.
-%The \pt of TCC jet can be approximated to be equivalent with calo-jet \pt, and not depending on track measurements so much.
 The uncertainty on the \pt scale of jets is evaluated by
 comparing the ratio of the jet \pt to track-jet \pt in dijet data and simulation (Rtrk method).
 In addition to this ``Baseline'' uncertainty, the uncertainties on track measurements (``Tracking''), differences between Pythia and Sherpa dijet simulations (``Modelling'') and the statistical uncertainty of dijet data (``TotalStat'') are considered.
@@ -137,7 +133,6 @@ The following systematic uncertainties are applied to electrons and muons in est
 They are implemented in \texttt{ElectronPhotonFourMomentumCorrection}~\cite{EgammaCalibration},\\
 \texttt{ElectronEfficiencyCorrection}~\cite{AsgElectronEfficiencyCorrectionTool}, \\
 \texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections}~\cite{MCPAnalysisGuidelines}.
-\texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections}~\cite{MCPAnalysisGuidelines}.
 
 
 \subsection*{Missing transverse energy}
@@ -184,8 +179,6 @@ contribution to the total uncertainty using \texttt{METUtilities}~\cite{METUtilS
     \end{center}
   \end{table}
 
-
-
 \subsection{B-tagging uncertainties}
 The systematic uncertainties associated to the b-tagging.
 They are uncertainties on the scaling factor for taking account for the disagreement of the b-tag efficiency between data and MC. Each separated scale factors and corresponding systematic uncertainties are provided for b-,c-, and light-flavor jets from several measurements.
@@ -217,10 +210,10 @@ These b-tagging systematic uncertainties are applied when calculating the SF sin
   \label{tab:syst_summary_sources_4}
   \end{table}
 
-%\subsection{Quark/Gluon jets uncertainties}
-\section{Background Modeling uncertainties}
+\subsection{Quark/Gluon jets uncertainties}
+The Flavour response and the Flavour conposition uncertatinties.
+\subsection{Background Modeling uncertainties}
 The systematics uncertainties related to the modeling of the background samples are explained.
-\subsection{Modeling uncertainties}
 By thinking of this, the the difference of the parton shower modeling is considered as the difference of Phythia and Herwig.
 \subsection{Reweighting uncertainties}
 
@@ -237,6 +230,9 @@ $\alpha_s$ uncertainties are from the experimental uncertainties in the determin
 QCD scale uncertainties are determined by using different renormalization and factorization scale factor sets. 
 The renormalization scale $\mu_R$ is the scale at which the strong coupling $\alpha_s$ is evaluated, while the factorization scale $\mu_F$ is the scale to separate the perturbative part of the hard-interaction from the non-perturbative part of PDF. 
 
+
 \subsection{NLO order EW corrections}
-\red{this is not considered}
+\color{blue}
+this is not currently considered
 \end{itemize}
+
