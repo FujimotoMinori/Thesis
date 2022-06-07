@@ -38,6 +38,7 @@ There are two types of particles described in details below:
 \end{itemize}
 
 \subsection{SM Lagrangian}
+\label{ch:Lagrangian}
 The SM Lagrangian and its origin is to be shown here in this subsection. 
 The Standard Model consists of several components as discribed in the follwing subsections. They are mathematically described as the Lagrangian density, $\mathcal{L}$, which is denoted as Lagrangian in the following.\\
 
@@ -86,7 +87,7 @@ which leads the Lagrangian as:
 \end{equation}
 The Lagrangian now restore the invariance with the gauge field A$_\mu$. By using the strength tensor $F_{\mu \nu}=\partial_{\mu} A_{\nu}-\partial_{\nu} A_{\mu}$, the Lagrangian of QED is defined as:
 \begin{equation}
-\ref{eqn:QEDLagrangian}
+\label{eqn:QEDLagrangian}
 \mathcal{L}_{\mathrm{QED}}=i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi-m \bar{\psi} \psi+e \bar{\psi} \gamma^{\mu} \psi A_{\mu}-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
 \end{equation}
 The Lagrangian is invariant under the U(1)$_{EM}$ local gauge transformations of fields. The field A$_\mu$ is identified as photon, and the invariance forbids the introduction of a mass term of the A$_\mu$, of the form of $\frac{1}{2}m^2 A_\mu A^\mu$. The photon is requested to be massless, which agrees with all experiment results.
@@ -188,6 +189,7 @@ The mechanism is known as Brout-Englert-Higgs (BEH) mechanism or “Higgs mechan
 
 A complex scalar field, $\Phi$, which is a weak isospin doublet is introduced as the Higgs field:
 \begin{equation}
+\label{eqn:higgsphi}
 \Phi=\left(\begin{array}{l}
 \phi^{+} \\
 \phi^{0}
@@ -209,23 +211,28 @@ V(\Phi)=\mu^{2} \Phi^{\dagger} \Phi+\lambda\left(\Phi^{\dagger} \Phi\right)^{2}
 where the $\lambda$ > 0. The value of the $\Phi$ at the vacuum is obtained by minimizing $V(\Phi)$. 
 In case $-\mu^{2}>0$, the $V(\Phi)$ has its minimum value at 
 \begin{equation}
+\label{eqn:vacuum}
 \Phi_{0}&=\frac{1}{\sqrt{2}}\left(\begin{array}{l}
 0 \\
 v
 \end{array}\right)
 \end{equation}
 where $v = \sqrt {-\mu^{2}/\lambda}$, while in case $-\mu^{2}<0, \Phi_{0}=0$ gives the minimum of $V(\Phi)$. 
+The $v$ is called vacuum expectation value. In the former case, by assigning the ground state of \ref{eqn:vacuum} the local gauge symmetry is broken spontaneously. This breaks $SU(2)_L \times U(1)_Y$ symmetry.
+%into $U(1)_Q$ ????
+Three of the four degrees of freedom of the gauge field (\ref{eqn:higgsphi}) are absorbed by the $W^\pm$ and Z bosons, and the fourth generates the Higgs boson.
 
-The $v$ is called vacuum expectation value.In the former case, the $SU(2)$ symmetry is broken since the v > 0. The field is parameterized as:
+The field is parameterized as:
 \begin{equation}
 \Phi(x)=\frac{e^{i \tau_{a} \theta_{a}(x) / v}}{\sqrt{2}}\left(\begin{array}{c}
 0 \\
 v+h(x)
 \end{array}\right)
 \end{equation}
-where $h(x)$ represents the Higgs Boson which associated to the higgs fields. 
+where $h(x)$ represents the Higgs Boson which associated to the Higgs fields. 
+%longitudinal???
 
-By replacing the Lagrangian of Higgs (ref{\eqn:Higgs}), the term represents the masse terms and its relations as:
+By replacing the Lagrangian of Higgs (\ref{eqn:Higgs}), the term represents the mass terms and its relations as:
 \begin{equation}
 \begin{aligned}
 \left|\left(i g \frac{\tau_{a}}{2} W_{\mu}^{a}+i g^{\prime} \frac{Y}{2} B_{\mu}\right) \Phi_{0}\right|=&\left(\frac{1}{2} v g\right)^{2} W_{\mu}^{+} W^{\mu-} \\
@@ -233,7 +240,7 @@ By replacing the Lagrangian of Higgs (ref{\eqn:Higgs}), the term represents the 
 &+0 \cdot A_{\mu} A^{\mu}
 \end{aligned}
 \end{equation}
-%Caluculate this!
+%Calculate this!
 which the mass terms of the vector bosons can be written:
 \begin{equation}
 \begin{aligned}
@@ -252,136 +259,135 @@ The parameter $\lambda$ is a free parameter in the theory, so it cannot be predi
 The vacuum expectation value is is determined by the measurements of the Fermi constant $G_F$, which is to be:
 %put reference here (measurement of the Fermi coupling) 
 \begin{equation}
-v=\frac{2 m_{W}}{g}=\frac{1}{\sqrt{\sqrt{2} G_{F}}} \simeq 246.22 \mathrm{GeV}
+v=\frac{2 m_{W}}{g}=\frac{1}{\sqrt{2} G_{F}} \simeq 246.22 \mathrm{GeV}
 \end{equation}
 
-The fermion mass term is also not invariant under the local phase transformations of SU(2)$_L$. It is also generated with the Higgs mechanism,
+The fermion mass term is also not invariant under the local phase transformations of SU(2)$_L$. It is also generated with the Higgs mechanism, using their coupling to the Higgs boson. The newly introduced coupling is called Yukawa coupling.
+It is described as the additional SU(2)$_L$ $\times$ U(1)$_Y$ invariant term to the Lagrangian follwing:
+\begin{equation}
+\mathcal{L}_{\text {Yukawa }}=-G_{l}^{i j} \bar{L}_{L}^{i} \Phi l_{R}^{j}-G_{d}^{i j} \bar{Q}_{L}^{i} \Phi d_{R}^{j}-G_{u}^{i j} \bar{Q}_{L}^{i} \Phi_{C} u_{R}^{j}+\text { h.c. }
+\end{equation}
+where $\bar{L}_{L}^{i}$ is the lepton isospin doublets and the $l_{R}$ is the lepton singlet. For quarks $\bar{Q}_{L}^{i}$ is isospin doublets and the $ u_{R}^{j}$ and $d_{R}^{j}$ is singlet for up and down-type quarks. $G_{l}^{i j}$, $G_{u}^{i j}$ and $G_{d}^{i j}$ represents the coupling constants. $\Phi l_{R}^{j}$ represents:
+\begin{equation}
+\Phi l_{R}^{j} = \sqrt{\frac{1}{2}(v+h(x),0)}
+\end{equation}
+%Calculate this!
+%Yukawa term for electron, for example?
 
+At last, the Standard Model Lagrangian is described as 
+\begin{equation}
+\mathcal{L}_{\mathrm{SM}}=\mathcal{L}_{\mathrm{QCD}}+\mathcal{L}_{\mathrm{EW}}+\mathcal{L}_{\text {Higgs }}+\mathcal{L}_{\text {Yukawa}}
+\end{equation}
+This Lagrangian is invariant under local transformations of SU(3) $\times$ SU(2)$_L$ $\times$ U(1)$_Y$. 
+
+\section{Phenomenology of proton-proton collisions}
 
 \section{Vector Boson Scattering}
-The Vector Boson Scattering diagrams are shown here.
-The EWK VV+jj production is modeled using MadGraph5\_aMC@NLO v2.3.3~\cite{Alwall:2014hca},
-plus \PYTHIA8~\cite{Sjostrand:2007gs} for fragmentation.
-The \textsc{NNPDF30LO} PDF set~\cite{Ball:2012cx} is used.
-The EWK VV+jj\ samples are generated with two on-shell $V$ bosons, with one $V$ boson decaying leptonically
-($Z\to \ell\ell$ with $\ell = e, \mu$, $Z\to \nu\nu$, $W\to \ell \nu$ with $\ell= e, \mu, \tau$),
-and the other $V$ boson decaying hadronically.
-For the $W$ boson, both $W^{+}$ and $W^{-}$ are considered and for $WWjj$, all charge combinations are included
-($W^{+}W^{+}$, $W^{+}W^{-}$, and $W^{-}W^{-}$).
-Table~\ref{tab:VBS_sig_samples} summarizes the EWK VV+jj samples used in this analysis.
-For each sample, all of the purely-electroweak tree-level diagrams (i.e. $\mathcal{O}(\alpha_{EW}^6)$ diagrams)
-that contribute to the final state are included:
-\begin{itemize}
-  \item VBS diagrams, examples of which are shown in Fig.~\ref{fig:feynmanVBS};
-  \item non-VBS electroweak diagrams, without $b$-quarks in the initial final states, some examples of which are shown in Fig.~\ref{fig:feynmanEWKnonVBS} (a)--(d);
-  \item non-VBS electroweak diagrams, with $b$-quarks in the initial final states, some examples of which are shown in Fig.~\ref{fig:feynmanEWKnonVBS} (e)--(f).
-\end{itemize}
+The scattering of two electroweak gauge bosons can probe the structure of the electroweak symmetry breaking (EWSM) mechanism directly. 
+Electroweak gauge boson scattering, or Vector Boson Scattering (VBS) is therefore one of the key process to be investigate in LHC experiment.
+The Vector Boson indicates W,Z,$\gamma$ here, which are fundamental electroweak bosons. Though the massive vector bosons, which is W and Z are only sensitive to the mechanism of the  EWSM, $\gamma$ is also included since it is impossible to fully separate the $\gamma$ and Z contributions experimentally. 
+%<- need this??
+\subsection{Electroweak gauge boson scattering and the Higgs boson}
+As described in Chapter~\ref{ch:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance produces three Goldstone modes. The three Goldstone modes correspond to the longitudinal, massive modes of the weak gauge bosons. Measuring these channels provides informations of the other three degrees of freedon of the Higgs field. The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
 
-%% feynman diagrams, VBS
-%
 \begin{figure}[tbp]
 \begin{center}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynVBS2.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynVBS1.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynVBS3.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynVBS4.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynVBS5.pdf}
-}
+%\subfigure[]{
+ \includegraphics[width=0.50\textwidth,keepaspectratio]{figures/VBS}
+%}
 \caption{
-Examples of VBS diagrams that contribute to the signal.  Note that not all VBS diagrams contain quartic gauge couplings.
-The dashed line represents the Higgs boson.  These and other Feynman diagrams in this note are made
-using the JaxoDraw~\cite{Binosi:2003yf} program. The decays of the bosons are not shown.
+The Feynman diagram of the VBS. The circle includes any connected diagrams with the external lines at leading order.%, as shown in the Figure\ref{}.
 }
-\label{fig:feynmanVBS}
+\label{fig:VBS}
 \end{center}
 \end{figure}
 
-%% feynman diagrams, non-VBS
-%
 \begin{figure}[tbp]
 \begin{center}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBS3.pdf}
+\subfigure{
+ \includegraphics[width=0.20\textwidth,keepaspectratio]{figures/VBS1}
 }
-\subfigure[\label{subfig:feynEWKnonVBSb}]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBS4.pdf}
+\subfigure{
+ \includegraphics[width=0.19\textwidth,keepaspectratio]{figures/VBS2}
 }
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBS5.pdf}
+\subfigure{
+ \includegraphics[width=0.21\textwidth,keepaspectratio]{figures/VBS3}
 }
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBS6.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBS1.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBS2.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBS7.pdf}
+\subfigure{
+ \includegraphics[width=0.21\textwidth,keepaspectratio]{figures/VBS4}
 }
 \caption{
-Examples of non-VBS $\mathcal{O}(\alpha_{EW}^6)$ diagrams that contribute to the signal. The decays of the bosons are not
-explicitly shown, but the counting of powers of $\alpha$ includes the boson decays.
+The VV to VV interaction Feynman diagram at tree-level. Contributions from EW gauge boson interactions.
 }
-\label{fig:feynmanEWKnonVBS}
+\label{fig:VBSEW}
 \end{center}
 \end{figure}
 
-%% feynman diagram, tZb
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynEWKnonVBStZb.pdf}
-\caption{
-The example of the tZb diagram, which included in non-VBS $\mathcal{O}(\alpha_{EW}^6)$ diagrams.
+\subfigure{
+ \includegraphics[width=0.20\textwidth,keepaspectratio]{figures/wHiggs1}
 }
-\label{fig:feynmantZb}
-\end{center}
-\end{figure}
-
-%% feynman diagrams, QCD
-%
-\begin{figure}[tbp]
-\begin{center}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynQCD3.pdf}
+\subfigure{
+ \includegraphics[width=0.20\textwidth,keepaspectratio]{figures/wHiggs2}
 }
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynQCD4.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynQCD5.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynQCD1.pdf}
-}
-\subfigure[]{
- \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/samples/feynQCD2.pdf}
+\subfigure{
+ \includegraphics[width=0.18\textwidth,keepaspectratio]{figures/wHiggs3}
 }
 \caption{
-Examples of $\mathcal{O}(\alpha_{EW}^4 \alpha_{S}^2)$ diagrams that lead to the $VV$+2parton final state. These
-are not included in the signal definition.  The decays of the bosons are not
-explicitly shown, but the counting of powers of $\alpha$ includes the boson decays.
+The VV to VV interaction Feynman diagram at tree-level. Contributions includes Higgs Boson interactions.
 }
-\label{fig:feynmanQCD}
+\label{fig:VBSHiggs}
 \end{center}
 \end{figure}
 
 
+The amplitude of the WW scattering is to be inspected further to see the effect of existence of the Higgs boson for example. The combination of other weak massive bosons like WZ, as well as ZZ can be denoted similarly. 
+%really?
+
+Since the polarization vector of the longitudinal weak vector boson can be written in the form, \ref{}: %put reference!
+\begin{equation}
+\epsilon_{L}^{\mu}=\frac{1}{m_{V}}\left(|\vec{p}|, \frac{\vec{p}}{|\vec{p}|} E\right)=\frac{p^{\mu}}{m_{V}}+\mathcal{O}\left(\frac{m_{V}}{E}\right)
+\end{equation}
+as the pT glows, the yields with massive vector particles in the initial and finals states will be longitudinal-dominant.
+In the unitarity gauge, scattering of longitudinally polarised gauge bosons would have largest amplitudes at high energy. At high-energy limit, the amplitude for $W_L^+W_L^-$ without existing of the Higgs boson (Figure\ref{fig:VBSEW}) can be describes in the form of:
+\begin{equation}
+\mathcal{M}^{\text {gauge}}=-\frac{g_{w}^{2}}{4 m_{W}^{2}} u+\mathcal{O}\left(\left[\frac{E}{m_{W}}\right]^{0}\right)
+\end{equation}
+The remaining amplitude from the second term will rise with energy then it violates the unitarity at the unitarity bound. The amplitude including the Higgs contributions ((Figure\ref{fig:VBShiggs})) is:
+\begin{equation}
+\begin{aligned}
+\mathcal{M}^{\text {Higgs}} &=-\frac{g^{2}}{4 m_{W}^{2}}\left[\frac{\left(s-m_{W}^{2}\right)^{2}}{s-m_{H}^{2}}+\frac{\left(t-m_{W}^{2}\right)^{2}}{t-m_{H}^{2}}\right] \\
+& \approx \frac{g^{2}}{4 m_{W}^{2}} u,
+\end{aligned}
+\end{equation}
+in the high-energy limit s >> $m_{H}^{2}$, $m_{W}^{2}$.
+Therefore the terms affected by the rising energy cancel and leave the constant term, which is not violating the unitarity.
+%The energy scale where the unitarity is violated
+
+\section{Production Cross-Sections and Branching Fractions}
+\\
+\\
 
 \section{Anomalous Quartic Gauge Coupling and Effective Field Theory}
 
-To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces 21 new dim-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry is used.
+\subsection{aQGC}
+The unitarity recovered by the existence of Higgs boson can be broken again by the additional quartic gauge coupling by new physics. This is referred to as anomalous quartic gauge couplings (aQGC). 
+
+\subsection{EFT}
+Since the aQGC can claim many different models, The Effective Field Theory (EFT) is considered as a model-independent way of the interpretation. The EFT models the effects of new physics at energy scale much higher than the currently accessible range by the experiments. The SM is a effective theory at low-energy in this framework.The EFT contains additional operators with higher energy dimension suppressed by the cutoff scale of the new physics, $\Lambda$.
+The EFT Lagrangian is given as:
+\begin{equation}
+\mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}}+\sum_{d>4} \sum_{i} \frac{c_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
+\end{equation}
+where $c_{i}^{(d)}$ are the coefficients of the new operators, $\mathcal{O}_{i}^{(d)}$.
+$\Lambda$ is a cutoff scale, and the d is a mass dimension which fulfill d > 4.
+Any new physics can be modeled in this framework by certain additional operators, where their coefficient is also fixed as long as the new physics scale is above the cutoff scale, $\Lambda$. The SM is a low-energy theory in this framework, i.e. if $\Lambda \rightarrow \infty$, the SM is reproduced.
+\\
+
+To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces 21 new dim-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry is used. 
+
+
 Of these operators, 19 can effect the semileptonic VBS final state.
 As typical for EFT expansions, the modified lagrangian with these new operators $\mathcal{L}_n$ and corresponding Wilson coeffiencts $c_n$ and UV scale $\Lambda$ is:
 \begin{equation*}
