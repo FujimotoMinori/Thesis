@@ -140,6 +140,8 @@ $
 and $\psi_{R}$ is $(u_R)$ and $(d_R)$.
 
 
+
+
 These behave with local phase transformations as:
 \begin{equation}
 \begin{aligned}
@@ -180,17 +182,17 @@ and \ \ Q&=I_{3}+\frac{Y}{2}
 \end{aligned}
 \end{equation}
 The local gauge invariance forbid the introduction of the mass term of the 
-The Lagrangian could include the mass terms of the bosons like $m^2_W W_\mu W^\mu$, while it is not invariant under U(1) local transformations.
+The Lagrangian could include the mass terms of the bosons like $m^2_W W_\mu W^\mu$, while it is not invariant under $SU(2)_L \times U(1)_Y$ local transformations.
 This statement that the local phase invariance in the electroweak model requests the fermions and bosons to be massless particles, is conflicted to the experimental results, where W$^{\pm}$ , Z bosons and fermions are found to be massive.
 \\ \\
 \noindent\textbf{\sf{Spontaneously Symmetry breaking}} \\ 
 The conflict of the electroweak model of forbidding the mass of the fermions and boson can be solved by introducing a spontaneously symmetry breaking.
 The mechanism is known as Brout-Englert-Higgs (BEH) mechanism or “Higgs mechanism” for short.
 
-A complex scalar field, $\Phi$, which is a weak isospin doublet is introduced as the Higgs field:
+A complex scalar field, $\phi$, which is a weak isospin doublet is introduced as the Higgs field and has four degrees of freedom:
 \begin{equation}
 \label{eqn:higgsphi}
-\Phi=\left(\begin{array}{l}
+\phi=\left(\begin{array}{l}
 \phi^{+} \\
 \phi^{0}
 \end{array}\right)=\frac{1}{\sqrt{2}}\left(\begin{array}{l}
@@ -201,84 +203,156 @@ A complex scalar field, $\Phi$, which is a weak isospin doublet is introduced as
 The corresponding Lagrangian is written as:
 \begin{equation}
 \label{eqn:Higgs}
-\mathcal{L}_{\text {Higgs }}=\left(D_{\mu} \Phi\right)^{\dagger}\left(D^{\mu} \Phi\right)-\mu^{2} \Phi^{\dagger} \Phi-\lambda\left(\Phi^{\dagger} \Phi\right)^{2}
+\mathcal{L}_{\text {Higgs }}=\left(D_{\mu} \phi\right)^{\dagger}\left(D^{\mu} \phi\right)-\mu^{2} \phi^{\dagger} \phi-\lambda\left(\phi^{\dagger} \phi\right)^{2}
 \end{equation}
 This is invariant under SU(2)$_l$ $\times$ U(1)$_Y$ phase transformation.
-The potential of $\Phi$ can be parametrize as:
+The potential of $\phi$ can be parametrize as:
 \begin{equation}
-V(\Phi)=\mu^{2} \Phi^{\dagger} \Phi+\lambda\left(\Phi^{\dagger} \Phi\right)^{2}
+V(\phi)=\mu^{2} \Phi^{\dagger} \phi+\lambda\left(\phi^{\dagger} \phi\right)^{2}
 \end{equation}
 where the $\lambda$ > 0. The value of the $\Phi$ at the vacuum is obtained by minimizing $V(\Phi)$. 
 In case $-\mu^{2}>0$, the $V(\Phi)$ has its minimum value at 
 \begin{equation}
 \label{eqn:vacuum}
-\Phi_{0}&=\frac{1}{\sqrt{2}}\left(\begin{array}{l}
+\phi_{0}&=\frac{1}{\sqrt{2}}\left(\begin{array}{l}
 0 \\
 v
 \end{array}\right)
 \end{equation}
-where $v = \sqrt {-\mu^{2}/\lambda}$, while in case $-\mu^{2}<0, \Phi_{0}=0$ gives the minimum of $V(\Phi)$. 
-The $v$ is called vacuum expectation value. In the former case, by assigning the ground state of \ref{eqn:vacuum} the local gauge symmetry is broken spontaneously. This breaks $SU(2)_L \times U(1)_Y$ symmetry.
-%into $U(1)_Q$ ????
+where $v = \sqrt {-\mu^{2}/\lambda}$, while in case $-\mu^{2}<0, \phi_{0}=0$ gives the minimum of $V(\phi)$. 
+The $v$ is called vacuum expectation value. In the former case, by assigning the ground state of the equation~\ref{eqn:vacuum} the local $SU(2)_L \times U(1)_Y$ symmetry of the vacuum is broken spontaneously. 
 Three of the four degrees of freedom of the gauge field (\ref{eqn:higgsphi}) are absorbed by the $W^\pm$ and Z bosons, and the fourth generates the Higgs boson.
+
+%The $\Phi(x)$ can be expanded near its minimum;
+%\begin{equation}
+%\phi=\frac{1}{\sqrt{2}} \exp \left(\frac{i}{2} \tau_{i} \chi^{\prime %i}(x)\right)\left(\begin{array}{c}
+%0 \\
+%v+h(x)
+%\end{array}\right)
+%\end{equation}
+%where h(x) represents the Higgs Boson associated to the Higgs fields. The exponential containing  %$\chi^{\prime i}$ (x = 1,2,3) fields (GoldStone Boson) has three degrees of freedom. The local phase %invariance define a specific $\Phi$ as:
+%\begin{equation}
+%\phi=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+%0 \\
+%v+h(x)
+%\end{array}\right)
+%\end{equation}
+%so compare to the equation ref{eqn:eqn:higgsphi}, $\phi_{1}=\phi_{2}=\phi_{4}=0$ and $\phi_{3} = v + %h(x)$. 
 
 The field is parameterized as:
 \begin{equation}
-\Phi(x)=\frac{e^{i \tau_{a} \theta_{a}(x) / v}}{\sqrt{2}}\left(\begin{array}{c}
+\phi(x)=\frac{e^{i \tau_{a} \theta_{a}(x) / v}}{\sqrt{2}}\left(\begin{array}{c}
 0 \\
 v+h(x)
 \end{array}\right)
 \end{equation}
-where $h(x)$ represents the Higgs Boson which associated to the Higgs fields. 
-%longitudinal???
+where $\theta_{a}(x)$ (a = 1,2,3) and $h(x)$ are the real field, and  $h(x)$ represents the Higgs Boson which associated to the Higgs fields. The exponential term including $\theta_{a}(x)$ is defined to be specifical since local gauge transformation needs to be invariant;
+\begin{equation}
+\phi=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+0 \\
+v+h(x)
+\end{array}\right)
+\end{equation}
+The specific gauge has chosen by defining the vacuum expectation value,which means the symmetry has broken spontaneously. 
 
-By replacing the Lagrangian of Higgs (\ref{eqn:Higgs}), the term represents the mass terms and its relations as:
+The Lagrangian of Higgs (\ref{eqn:Higgs}) can be substituted and 
+%%*****************************************
+%\begin{equation}
+%\left|\left(\partial_{\mu}+i g W_{\mu}^{a} \frac{\tau_{a}}{2}+i g^{\prime} B_{\mu} \frac{Y}{2} %\right) \frac{1}{\sqrt{2}}\left(\begin{array}{l}
+%0 \\
+%v
+%\end{array}\right) \right| -\mu^{2} \Phi^{\dagger} \Phi-\lambda\left(\Phi^{\dagger} %\Phi\right)^{2}
+%\end{equation}
+%%*****************************************
+the term represents the mass terms and its relations are written as:
 \begin{equation}
 \begin{aligned}
-\left|\left(i g \frac{\tau_{a}}{2} W_{\mu}^{a}+i g^{\prime} \frac{Y}{2} B_{\mu}\right) \Phi_{0}\right|=&\left(\frac{1}{2} v g\right)^{2} W_{\mu}^{+} W^{\mu-} \\
+\left|\left(i g \frac{\tau_{a}}{2} W_{\mu}^{a}+i g^{\prime} \frac{Y}{2} B_{\mu}\right) \phi_{0}\right|=&\left(\frac{1}{2} v g\right)^{2} W_{\mu}^{+} W^{\mu-} \\
 &+\left(\frac{1}{2} v g\right)^{2} \frac{1}{2 \cos ^{2} \theta_{W}} Z_{\mu} Z^{\mu} \\
 &+0 \cdot A_{\mu} A^{\mu}
 \end{aligned}
 \end{equation}
-%Calculate this!
-which the mass terms of the vector bosons can be written:
+%%Calculate this!
+%which the mass terms of the vector bosons can be written:
+%\begin{equation}
+%\begin{aligned}
+%m_{W}&=\frac{1}{2} vg \\
+%m_{Z}&=\frac{m_{W}}{\cos \theta_{W}} \\
+%m_{\gamma}&=0
+%\end{aligned}
+%\end{equation}
+The mass terms for the $W_\pm$ and Z bosons naturally obtained through the symmetry breaking of SU(2)$_L$. :
 \begin{equation}
 \begin{aligned}
-m_{W}&=\frac{1}{2} vg \\
-m_{Z}&=\frac{m_{W}}{\cos \theta_{W}} \\
-m_{\gamma}&=0
+m_{\gamma} &=m_{A}=0 \\
+m_{Z} &=\frac{v}{2} \sqrt{g^{2}+g^{\prime 2}} \\
+m_{W} &=\frac{v}{2} g
 \end{aligned}
 \end{equation}
-The mass terms for the $W_\pm$ and Z bosons naturally obtained through the symmetry breaking of SU(2)$_L$. 
-The $A_\mu$ does not acquire the mass term, as the photons are remained to be massless.
-There is a term $-\mu_{\phi}^{2} h^{2}=\lambda v^{2} h^{2}$ and from this term the Higgs boson gains mass itself, which leads to the Higgs boson mass 
+
+%The $A_\mu$ does not acquire the mass term, as the photons are remained to be massless.
+%There is a term $-\mu_{\phi}^{2} h^{2}=\lambda v^{2} h^{2}$ and from this term the Higgs boson %gains mass itself, which leads to the Higgs boson mass 
+%\begin{equation}
+%m_{H}=\sqrt{-2 \mu^{2}}=\sqrt{2 \lambda} v
+%\end{equation}
+%The parameter $\lambda$ is a free parameter in the theory, so it cannot be predicted by the SM.
+%The vacuum expectation value is is determined by the measurements of the Fermi constant $G_F$, %which is to be:
+%%put reference here (measurement of the Fermi coupling) 
+%\begin{equation}
+%v=\frac{2 m_{W}}{g}=\frac{1}{\sqrt{2} G_{F}} \simeq 246.22 \mathrm{GeV}
+%\end{equation}
+
+The fermion mass term is also not invariant under the local phase transformations of SU(2)$_L$. It is also generated with the Higgs mechanism, using their coupling to the Higgs boson. The newly introduced coupling $g_f$ is called Yukawa coupling.
+
+For the down type fermions, the same Higgs field $\phi$ is used, while for the up type fermions, the charge conjugate of the Higgs field $\phi^C$ is used:
 \begin{equation}
-m_{H}=\sqrt{-2 \mu^{2}}=\sqrt{2 \lambda} v
+\phi^{c}=i \tau_{2} \phi^{*}=\left(\begin{array}{c}
+\phi^{0 *} \\
+-\phi^{+*}
+\end{array}\right)
 \end{equation}
-The parameter $\lambda$ is a free parameter in the theory, so it cannot be predicted by the SM.
-The vacuum expectation value is is determined by the measurements of the Fermi constant $G_F$, which is to be:
-%put reference here (measurement of the Fermi coupling) 
+For the quarks, the additional Lagrangian can be described as follows:
 \begin{equation}
-v=\frac{2 m_{W}}{g}=\frac{1}{\sqrt{2} G_{F}} \simeq 246.22 \mathrm{GeV}
+\mathcal{L}_{q}=\left[-g_{d}\left(\bar{\psi}_{L}^{d} \phi \psi_{R}^{d}\right)+\text { h.c. }\right]+\left[-g_{u}\left(\bar{\psi}_{L}^{u} \phi^{c} \psi_{R}^{u}\right)+\text { h.c. }\right]
+\end{equation}
+These are local gauge invariant before the symmetry breaking. After the symmetry breaking, $\phi^C$ can be written as:
+\begin{equation}
+\phi^{c} 
+%\rightarrow 
+=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+v+h \\
+0
+\end{array}\right)
+\end{equation}
+Then the additional Lagrangian substituted into:
+\begin{equation}
+\mathcal{L}_{q}=-\frac{1}{\sqrt{2}} g_{d} v \bar{d}_{L} d_{R}\left(1+\frac{h}{v}\right)-\frac{1}{\sqrt{2}} g_{u} v \bar{u}_{L} u_{R}\left(1+\frac{h}{v}\right)
+\end{equation}
+In case of leptons the original additional Lagrangian is:
+\begin{equation}
+\mathcal{L}_{e}=\left[-g_{e}\left(\bar{\psi}_{L}^{e} \phi \psi_{R}^{e}\right)+\text { h.c. }\right]
+\end{equation}
+then after the symmetry breaking:
+\begin{equation}
+\mathcal{L}_{e}=-\frac{1}{\sqrt{2}} g_{e} v \bar{e}_{L} e_{R}\left(1+\frac{h}{v}\right)
 \end{equation}
 
-The fermion mass term is also not invariant under the local phase transformations of SU(2)$_L$. It is also generated with the Higgs mechanism, using their coupling to the Higgs boson. The newly introduced coupling is called Yukawa coupling.
-It is described as the additional SU(2)$_L$ $\times$ U(1)$_Y$ invariant term to the Lagrangian follwing:
+The mass of the fermions is to be obtained as:
 \begin{equation}
-\mathcal{L}_{\text {Yukawa }}=-G_{l}^{i j} \bar{L}_{L}^{i} \Phi l_{R}^{j}-G_{d}^{i j} \bar{Q}_{L}^{i} \Phi d_{R}^{j}-G_{u}^{i j} \bar{Q}_{L}^{i} \Phi_{C} u_{R}^{j}+\text { h.c. }
+m_{f}=\frac{1}{\sqrt{2}} g_{f} v
 \end{equation}
-where $\bar{L}_{L}^{i}$ is the lepton isospin doublets and the $l_{R}$ is the lepton singlet. For quarks $\bar{Q}_{L}^{i}$ is isospin doublets and the $ u_{R}^{j}$ and $d_{R}^{j}$ is singlet for up and down-type quarks. $G_{l}^{i j}$, $G_{u}^{i j}$ and $G_{d}^{i j}$ represents the coupling constants. $\Phi l_{R}^{j}$ represents:
+
+When summarizing the quarks and leptons, Lagrangian of the Yukawa couplings can be written as:
 \begin{equation}
-\Phi l_{R}^{j} = \sqrt{\frac{1}{2}(v+h(x),0)}
+\mathcal{L}_{\text {Yukawa }}=-g_{l}^{i j} \bar{\Psi}_{L}^{i} \phi l_{R}^{j}-g_{d}^{i j} \bar{\Psi}_{L}^{i} \phi d_{R}^{j}-g_{u}^{i j} \bar{\Psi}_{L}^{i} \phi^{C} u_{R}^{j}+\text { h.c. }
+%?? is this correct ??
 \end{equation}
-%Calculate this!
-%Yukawa term for electron, for example?
 
 At last, the Standard Model Lagrangian is described as 
 \begin{equation}
 \mathcal{L}_{\mathrm{SM}}=\mathcal{L}_{\mathrm{QCD}}+\mathcal{L}_{\mathrm{EW}}+\mathcal{L}_{\text {Higgs }}+\mathcal{L}_{\text {Yukawa}}
 \end{equation}
-This Lagrangian is invariant under local transformations of SU(3) $\times$ SU(2)$_L$ $\times$ U(1)$_Y$. 
+This Lagrangian is invariant under local transformations of SU(3) $\times$ SU(2)$_L$ $\times$ U(1)$_Y$, while the vacuum is breaking the symmetry and not invariant.
 
 \section{Phenomenology of proton-proton collisions}
 
@@ -288,7 +362,8 @@ Electroweak gauge boson scattering, or Vector Boson Scattering (VBS) is therefor
 The Vector Boson indicates W,Z,$\gamma$ here, which are fundamental electroweak bosons. Though the massive vector bosons, which is W and Z are only sensitive to the mechanism of the  EWSM, $\gamma$ is also included since it is impossible to fully separate the $\gamma$ and Z contributions experimentally. 
 %<- need this??
 \subsection{Electroweak gauge boson scattering and the Higgs boson}
-As described in Chapter~\ref{ch:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance produces three Goldstone modes. The three Goldstone modes correspond to the longitudinal, massive modes of the weak gauge bosons. Measuring these channels provides informations of the other three degrees of freedon of the Higgs field. The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
+As described in Chapter~\ref{ch:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance produces three degrees of freedom, which is the GoldStone Bosons and then they are eaten up by the introducing of the Higgs Boson. They correspond to the longitudinal, massive weak gauge bosons. Measuring the VBS channels provides information of the other three degrees of freedom than Higgs field. The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
+%%Correct explanation here????
 
 \begin{figure}[tbp]
 \begin{center}
@@ -350,11 +425,11 @@ Since the polarization vector of the longitudinal weak vector boson can be writt
 \epsilon_{L}^{\mu}=\frac{1}{m_{V}}\left(|\vec{p}|, \frac{\vec{p}}{|\vec{p}|} E\right)=\frac{p^{\mu}}{m_{V}}+\mathcal{O}\left(\frac{m_{V}}{E}\right)
 \end{equation}
 as the pT glows, the yields with massive vector particles in the initial and finals states will be longitudinal-dominant.
-In the unitarity gauge, scattering of longitudinally polarised gauge bosons would have largest amplitudes at high energy. At high-energy limit, the amplitude for $W_L^+W_L^-$ without existing of the Higgs boson (Figure\ref{fig:VBSEW}) can be describes in the form of:
+At high-energy limit, the amplitude for $W_L^+W_L^-$ without existing of the Higgs boson (Figure\ref{fig:VBSEW}) can be describes in the form of:
 \begin{equation}
 \mathcal{M}^{\text {gauge}}=-\frac{g_{w}^{2}}{4 m_{W}^{2}} u+\mathcal{O}\left(\left[\frac{E}{m_{W}}\right]^{0}\right)
 \end{equation}
-The remaining amplitude from the second term will rise with energy then it violates the unitarity at the unitarity bound. The amplitude including the Higgs contributions ((Figure\ref{fig:VBShiggs})) is:
+The remaining amplitude from the second term will rise with energy then it violates the unitarity at the unitarity bound. The amplitude including the Higgs contributions (Figure\ref{fig:VBSHiggs}) is:
 \begin{equation}
 \begin{aligned}
 \mathcal{M}^{\text {Higgs}} &=-\frac{g^{2}}{4 m_{W}^{2}}\left[\frac{\left(s-m_{W}^{2}\right)^{2}}{s-m_{H}^{2}}+\frac{\left(t-m_{W}^{2}\right)^{2}}{t-m_{H}^{2}}\right] \\
@@ -364,6 +439,21 @@ The remaining amplitude from the second term will rise with energy then it viola
 in the high-energy limit s >> $m_{H}^{2}$, $m_{W}^{2}$.
 Therefore the terms affected by the rising energy cancel and leave the constant term, which is not violating the unitarity.
 %The energy scale where the unitarity is violated
+
+This effect also described with the Figure~\ref{fig:violation}.
+The figure shows that if diagrams with Higgs contribution is missing, the electroweak couplings becomes strong around $\sqrt{s}$ ∼ 1 TeV, and the unitarity of the $W_LW_L \rightarrow W_LW_L$ process is violated, which means the SM without the Higgs boson is no longer valid above TeV-scale. 
+
+\begin{figure}[tbp]
+\begin{center}
+%\subfigure[]{
+ \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/violation}
+%}
+\caption{
+Cross section at tree-level %\ref{}
+}
+\label{fig:violation}
+\end{center}
+\end{figure}
 
 \section{Production Cross-Sections and Branching Fractions}
 \\
@@ -385,28 +475,105 @@ $\Lambda$ is a cutoff scale, and the d is a mass dimension which fulfill d > 4.
 Any new physics can be modeled in this framework by certain additional operators, where their coefficient is also fixed as long as the new physics scale is above the cutoff scale, $\Lambda$. The SM is a low-energy theory in this framework, i.e. if $\Lambda \rightarrow \infty$, the SM is reproduced.
 \\
 
-To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces 21 new dim-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry is used. 
+To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces new dimension 8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry is used. 
 
+The lowest dimension operator that leads to quartic interactions and does not exhibit two or three weak gauge boson vertices is dimension 8. 
+This is when we get a weak boson field either from the covariant derivative of Higgs doublet $\Phi$ or from the field strength tensor. 
+In either case the vector field is accompanied by a vacuum expected value or a derivative, therefore the genuine quartic vertices are of dimension 8 or higher.
+%understand this?
+All the corresponding operators are shown hereafter.
 
-Of these operators, 19 can effect the semileptonic VBS final state.
-As typical for EFT expansions, the modified lagrangian with these new operators $\mathcal{L}_n$ and corresponding Wilson coeffiencts $c_n$ and UV scale $\Lambda$ is:
-\begin{equation*}
-  \mathcal{L}=\mathcal{L}_{sm}+\sum_{n}\frac{c_n}{\Lambda^{4}}\mathcal{L}_n
-\end{equation*}
-
-In generality, the matrix-element of a SM process with the addition of new EFT contributions can be written as:
+\begin{itemize}
+\item Operators containing just $D_\mu \Phi$
 \begin{equation}
-  |A_{SM}+c_iA_i|=|A_{SM}^2|+\sum\limits_i c_i^2|A_{i}^2|+ \sum\limits_i 2 c_i \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} c_i c_j \mathrm{Re}(A_i^\star A_j)
+\begin{aligned}
+\mathcal{L}_{S, 0} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\mu} \Phi\right)^{\dagger} D^{\nu} \Phi\right] \\
+\mathcal{L}_{S, 1} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \times\left[\left(D_{\nu} \Phi\right)^{\dagger} D^{\nu} \Phi\right] \\
+\mathcal{L}_{S, 2} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\nu} \Phi\right)^{\dagger} D^{\mu} \Phi\right]
+\end{aligned}
 \end{equation}
-where $|A_SM|^2$ is the SM matrix element, $|A_{i}^2|$ represents the pure-EFT matrix element, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is their corresponding interference term, and $\mathrm{Re}(A_i^\star A_j)$ is the possible interference between EFT amplitudes.
-This structure can be exploited in recent MadGraph5\_aMC@NLO versions which allows the specific generation of each of these terms individually, known as the matrix-element decomposition method.
+\item Operators containing $D_\mu \Phi$ and field strength 
+\begin{equation}
+\begin{aligned}
+\mathcal{L}_{M, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi\right] \\
+\mathcal{L}_{M, 1} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\nu \beta}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \\
+\mathcal{L}_{M, 2} &=\left[B_{\mu \nu} B^{\mu \nu}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi\right] \\
+\mathcal{L}_{M, 3} &=\left[B_{\mu \nu} B^{\nu \beta}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \\
+\mathcal{L}_{M, 4} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} D^{\mu} \Phi\right] \times B^{\beta \nu} \\
+\mathcal{L}_{M, 5} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} D^{\nu} \Phi\right] \times B^{\beta \mu} \\
+\mathcal{L}_{M, 6} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} \hat{W}^{\beta \nu} D^{\mu} \Phi\right] \\
+\mathcal{L}_{M, 7} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} \hat{W}^{\beta \mu} D^{\nu} \Phi\right]
+\end{aligned}
+\end{equation}
+\item Operators containing just the field strength tensor
+\begin{equation}
+\begin{aligned}
+\mathcal{L}_{T, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times \operatorname{Tr}\left[\hat{W}_{\alpha \beta} \hat{W}^{\alpha \beta}\right] \\
+\mathcal{L}_{T, 1} &=\operatorname{Tr}\left[\hat{W}_{\alpha \nu} \hat{W}^{\mu \beta}\right] \times \operatorname{Tr}\left[\hat{W}_{\mu \beta} \hat{W}^{\alpha \nu}\right] \\
+\mathcal{L}_{T, 2} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta}\right] \times \operatorname{Tr}\left[\hat{W}_{\beta \nu} \hat{W}^{\nu \alpha}\right] \\
+\mathcal{L}_{T, 3} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta} \hat{W}^{\nu \alpha}\right] \times B_{\beta \nu} \\
+\mathcal{L}_{T, 4} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\alpha \mu} \hat{W}^{\beta \nu}\right] \times B_{\beta \nu} \\
+\mathcal{L}_{T, 5} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times B_{\alpha \beta} B^{\alpha \beta} \\
+\mathcal{L}_{T, 6} &=\operatorname{Tr}\left[\hat{W}_{\alpha \nu} \hat{W}^{\mu \beta}\right] \times B_{\mu \beta} B^{\alpha \nu} \\
+\mathcal{L}_{T, 7} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta}\right] \times B_{\beta \nu} B^{\nu \alpha} \\
+\mathcal{L}_{T, 8} &=B_{\mu \nu} B^{\mu \nu} B_{\alpha \beta} B^{\alpha \beta} \\
+\mathcal{L}_{T, 9} &=B_{\alpha \mu} B^{\mu \beta} B_{\beta \nu} B^{\nu \alpha}
+\end{aligned}
+\end{equation}
+\end{itemize}
 
-Typically one would need to generate a series of samples for each operator $A_i$ at different $c_i$ values, to derive a series of template functions for $|A_{SM}+c_iA_i|$ which would need to be interpolated between for arbitrary $c_i$. Generating samples with the decomposition method greatly simplifies this procedure as one only now needs to generate for each operator $A_i$ the corresponding pure-EFT and interference terms (as well as cross-interference terms if needed). These templates can then be scaled either quadratically or linear with the corresponding $c_i$ values to generate the required full template $|A_{SM}+c_iA_i|$.
+Since the operator $\mathcal{L}_{S, 2}$ is the Hermite conjugate of the $\mathcal{L}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{L}_{S, 02}$, with the coefficient $f_S02$, respectively.
 
-The Eboli dim-8 EFT processes are modeled using MadGraph5\_aMC@NLO v2.7.2~\cite{Alwall:2014hca} at LO with the  \textsc{NNPDF30LO} PDF set~\cite{Ball:2012cx} plus \PYTHIA8.244~\cite{Sjostrand:2007gs} for fragmentation.
-The matrix-element calculation produces two on-shell $W/Z$ bosons, which are subsequently decayed with \textsc{Madspin}~\cite{Artoisenet:2012st} to simulate the leptonic and hadronic decays of the bosons.
-The use of Madspin is required for use of the matrix-element weighting and requires separate generation for each weak isospin state of the boson (i.e the following processes are simulated separately: $W^+W^-$, $W^+W^+$, $W^-W^-$, $W^+Z$, $W^-Z$, $ZZ$).
-Each of the 19 contributing operators, across the 6 intermediate diboson state processes and 3 final semileptonic final state processes are generated separately for the pure-BSM and interference term.
+The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}.
 
+%table1
+\begin{center}
+\begin{tabular}{|l| c c c c c c c c c|} 
+ \hline
+ operators                                                & $WWWW$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ & $ZZ\gamma \gamma$ & $Z\gamma \gamma \gamma$ & $\gamma \gamma \gamma \gamma \gamma$\\ [0.5ex] 
+ \hline\hline
+ $\mathcal{L}_{S02}$,$\mathcal{L}_{S1}$                   & \checkmark & \checkmark & \checkmark &  &  &　 &　 &　&　\\ 
+ \hline
+ $\mathcal{L}_{M0}$,$\mathcal{L}_{M1}$,$\mathcal{L}_{M7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark &\checkmark & &\\
+ \hline
+ $\mathcal{L}_{M2}$,$\mathcal{L}_{M3}$,$\mathcal{L}_{M4}$,$\mathcal{L}_{M5}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark & &\\
+ \hline
+ $\mathcal{L}_{T0}$,$\mathcal{L}_{T1}$,$\mathcal{L}_{T2}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & &\\
+ \hline
+ $\mathcal{L}_{T5}$,$\mathcal{L}_{T6}$,$\mathcal{L}_{T7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark &\checkmark &\checkmark\\ [1ex] 
+ \hline
+ $\mathcal{L}_{T8}$,$\mathcal{L}_{T9}$                    &  &  & \checkmark &  &  & \checkmark &\checkmark &\checkmark &\checkmark\\ [1ex] 
+ \hline
+\end{tabular}
+\caption{operators and the vertices}
+\label{tab:vertex}
+\end{center}
 
+The aQGCs can be measured by the VBS and the triboson channels.
+The summary of sensitive channel to each operator is shown in the table~\ref{tab:aQGCchannel}
+
+%table2
+\begin{center}
+\begin{tabular}{|l| c c c c c c |} 
+ \hline
+ VVjj final state                                         & $ZZ$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ \\ [0.5ex] 
+ \hline\hline
+ VVV final state                                          & $ZZZ$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ \\ [0.5ex] 
+ \hline\hline
+ $\mathcal{L}_{S02}$,$\mathcal{L}_{S1}$                   & \checkmark & \checkmark & \checkmark &  &  　　　　　　　　 &　 \\ 
+ \hline
+ $\mathcal{L}_{M0}$,$\mathcal{L}_{M1}$,$\mathcal{L}_{M7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark \\
+ \hline
+ $\mathcal{L}_{M2}$,$\mathcal{L}_{M3}$,$\mathcal{L}_{M4}$,$\mathcal{L}_{M5}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
+ \hline
+ $\mathcal{L}_{T0}$,$\mathcal{L}_{T1}$,$\mathcal{L}_{T2}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+ \hline
+ $\mathcal{L}_{T5}$,$\mathcal{L}_{T6}$,$\mathcal{L}_{T7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\ [1ex] 
+ \hline
+ $\mathcal{L}_{T8}$,$\mathcal{L}_{T9}$                    &  &  & \checkmark &  &  & \checkmark \\ [1ex] 
+ \hline
+\end{tabular}
+\caption{operators and the channels}
+\label{tab:aQGCchannel}
+\end{center}
 
