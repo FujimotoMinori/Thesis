@@ -1,16 +1,53 @@
 \chapter{Event selection}
 The event selection has been optimized in order to maximize the signal significance of the signal over backgraound.
 The whole event selection of the analysis is shown in this chapter.
-First the preselection cuts are applied including basic event cleaning and the trigger selections, then the specific event selection is applied to the each 0,1,2-lepton channels.
 
-% pre-selection
-\section{Event pre-selection}
+First the preselection cuts are applied including basic event cleaning and the trigger requirements, then the specific event selection is applied to the each 0,1,2-lepton channels.
+For the main event selection, first the selection of the one $W/Z$ boson decaying leptonically is selected. Then in each channel, the forward jets and the hadronically decaying boson is selected, and the selection to enhance the VBS topology is applied.
 
-\Event cleaning
+%\section{Object selection}
+%The selection of the physics objects (electron, muon, jet, and missing transverse energy) is described in this section.
+%\subsection{Electrons and Muons}
+%The used electron working point described in Section\ref{} is shown.
+%\begin{itemize}
+%    \item "Tight" electron (muon) for selecting $W \rightarrow e\nu$ candidate in 1-lepton channel
+%    \item "Loose" electron (muon) for selecting $Z \rightarrow e^\plus e^\minum$ candidate in 2-lepton channel \\ 
+%   for vetoing events with additional leptons in 0-lepton and 1-lepton channel.
+%\end{itemize}
+%In 2-lepton channel, "Loose" electron (muon) is used which means looser isolation working point is used to keep high signal efficiency at high-$p_T$ region since there are two electron candidates to be close each other.
+%The common jet selection criteria for small-R jets, are $>20 \mathrm{GeV}(|\eta|<2.5)$ and $>30 \mathrm{GeV}(2.5<|\eta|<4.5)$. For Large-R jets, 
 
+\section{0-lepton}
+The $Z \rightarrow \nu\nu$ identification requires no Loose lepton and high missing energy (E$_T^{miss}$ > 200~GeV) in the final state. There are significant QCD multijet background in 0-lepton channel, therefore some cuts suppressing the multijets are applied: \\
+\\
+- $p_{\mathrm{T}}^{\mathrm{miss}}>50 \mathrm{GeV}$ \\
+- $\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, p_{\mathrm{T}}^{\mathrm{miss}}\right)<\pi / 2$ \\
+- $\min \left(\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, j\right)\right)>\pi / 6$ \\
+- $\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, \overrightarrow{\mathbf{V}}_{\mathrm{had}}\right)>\pi / 9$ \\
+where $p_{\mathrm{T}}^{\mathrm{miss}}$ is the track-based missing momentum, and $\min \left(\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, j\right)\right)$ is the minimum azimuthal difference betwween $E_{\mathrm{T}}^{\mathrm{miss}}$ and small-R jets.
 
-The data were collected by the lowest unprescaled single-lepton or $\met$ triggers summarized in Table~\ref{tab:triggers} according to the number of leptons in each channel.
-Table show the selection cuts applied in the CxAOD framework to reduce the data size preliminary. At this stage, all CP recommendations are already applied.
+\section{1-lepton}
+To select the events with $W \rightarrow l\nu$ candidate, exactly one Tight lepton is required.
+In order to suppress the multi-jet background, following cuts are applied for all regions: \\
+- $E_{\mathrm{T}}^{\text {miss }}>80 \mathrm{GeV}$ \\ \\
+- $p_{\mathrm{T}, \ell}>28 \mathrm{GeV}$ \\
+- $m_{J}>50 \mathrm{GeV}$ (merged only) \\
+
+\section{2-lepton}
+The $Z \rightarrow ll$ candidates are selected by requiring two isolated same-flavour Loose leptons. Both leptons required to be $p_T$ > 27~GeV. Opposite charges are required only for muons and not for electrons, since electrons are more sensitive to charge mis-identification due to the conversions of photons from bremsstrahlung, especially at high $E_T$.
+The $m_{ll}$, invariant mass of the dilepton is required to be in the mass window \\ \\
+- $83 < m_{ee}< 99~GeV$ \\ 
+- $\left(85.6-0.0117 p_{\mathrm{T}, \ell \ell}\right)<m_{\mu \mu}<\left(94.0+0.0185 p_{\mathrm{T}, \ell \ell}\right) \mathrm{GeV}$ \\
+The second equation for muons was oprimized from the 2015$\plus$16 analysis~\cite{}. 
+The modeling distribution of lepton distribution in the early stage of the selection is shown in Figure~\ref{fig:2lepLeptons}. The mass peak of Z boson can be seen here.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_llMass_Lin.png}
+    \caption{Lepton distributions in 2-lepton channel. The events before any selections are shown. Z mass peak is shown in $M_{ll}$ distribution.}
+    \label{fig:2lepLeptons}
+\end{figure}
+
 
 \begin{table}[h]
   \caption{List of the \textbf{pre-selections applied in the CxAOD framework} to reduce the data size.
@@ -55,6 +92,8 @@ Number of Loose leptons   & $= 0$ \\
 }
 \end{center}
 \end{table}
+
+
 
 %Event selection
 \section{Event Selection}
@@ -233,7 +272,7 @@ Top veto & Num of $b$-tagged jets outside of large-R jet & \multicolumn{3}{c|}{0
 %%% 2-leptons channel
 \begin{table}[ht!]
 \small
-\caption{A summary of regions event selection for \tlep channel in the merged regime.}
+\caption{A summary of regions event selection for 2-lepton channel in the merged regime.}
 \label{tab:2lep_merged}
 \begin{center}
 \resizebox{\textwidth}{!}{
