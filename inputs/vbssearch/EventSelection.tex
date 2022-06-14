@@ -80,15 +80,22 @@ For the bosons with the lower $p_T$ ranges, the boson decays into the two well-s
 %This signal-jet selecting strategy is changed from the previous round of the analysis..
 %VBS selection and top veto cut
 The event selection is applied to enhance the VBS topology. After categorization the invariant mass of the two tagging jets ($\mathrm{m}_{\mathrm{jj}}^{\text {tag }}$) is greater than $400 \mathrm{GeV}$.
-The additional cut is applied to suppress the top contributions for example tZb diagram from the diagram with the Figure~\ref{fig:feynmantZb} included in the signal sample. The top contribution is not the VBS diagrams, while we cannot separate this diagram in the gauge invariant way. Therefore we decided to reconstruct the top mass with the two signal jets and the third jet which forms the three-jet mass, $m_{jjj}$, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events with each truth particles is shown, and the modeling plot is alos shown in Figure~\ref{fig:TopMass}. 
+The additional cut is applied to suppress the top contributions for example tZb diagram from the diagram with the Figure~\ref{fig:feynmantZb} included in the signal sample. The top contribution is not the VBS diagrams, while we cannot separate this diagram in the gauge invariant way. Therefore we decided to reconstruct the top mass with the two signal jets and the third jet which forms the three-jet mass, $m_{jjj}$, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events with each truth particles is shown, and the modeling plot is also shown in Figure~\ref{fig:2leptopMass}. 
 \begin{figure}[ht]
     \begin{center}
-        \subfigure[$\text{top mass peak}$]{\includegraphics[width=0.4\textwidth]{figures/2lep/topMass/WZjjtopMasspeak}}
-        \subfigure[$\text{top mass in CRVjet}$]{\includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_topMass_Log}}
+        \subfigure[$\text{top mass peak}$]{\includegraphics[width=0.3\textwidth]{figures/2lep/topMass/WZjjtopMasspeak}}
+        \subfigure[$\text{top mass in CRVjet}$]{\includegraphics[width=0.3\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_topMass_Log}}
         \caption{ Mass of 3 jets in the 2-lepton channel CRVjet.}
         \label{fig:2leptopMass}
     \end{center}
 \end{figure}
+
+%Control regions
+There are control regions (CR) are defined to constrain the normalization of the backgrounds. The CRs for the $Z$+jets, $W$+jets, and $t\bar{t}$ events are defined here.
+%V+jets CR
+For the merged CRs, the V+jets CRs are defined for the events failing the 80$\%$ WP of the boson tagger. Resolved CRs are defined with using the mass sideband. It is defined with the same event selection as the resolved SR but outside the mass window, which is $50<m_{i i}<64 \mathrm{GeV}$, or $m_{i i}>106 \mathrm{GeV}$.
+%top CR
+Top CR is defined only for 1-lepton channel, by requiring at least one b-tagged instead of b-veto. This Top CR is used for constraining the normalization of the $t\bar{t}$ control region. 
 
 The summaries of the selections applied in each channel are shown here in tables.
 \ref{tab:0lep_merged}-\ref{tab:0lep_resolved}
@@ -98,7 +105,7 @@ The summaries of the selections applied in each channel are shown here in tables
 %%% 0-lepton channel
 \begin{table}[ht!]
 \small
-\caption{A summary of regions event selection for \zlep channel in the merged regime.}
+\caption{A summary of regions event selection for 0-lepton channel in the merged regime.}
 \label{tab:0lep_merged}
 \begin{center}
 \resizebox{\textwidth}{!}{
@@ -139,7 +146,7 @@ The summaries of the selections applied in each channel are shown here in tables
 
 \begin{table}[ht!]
 \small
-\caption{A summary of regions event selection for \zlep channel in the resolved regime.}
+\caption{A summary of regions event selection for 0-lepton channel in the resolved regime.}
 \label{tab:0lep_resolved}
 \begin{center}
 \resizebox{\textwidth}{!}{
@@ -183,7 +190,7 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{2}{c|}{ $>220$~GeV} \\
 
 %%% 1-lepton channel
 \begin{table}[t]
-  \caption{A summary of regions event selection for \olep channel in the resolved regime.}
+  \caption{A summary of regions event selection for 1-lepton channel in the resolved regime.}
 \label{tab:1lep_resolved}
 \begin{center}
 \resizebox{\textwidth}{!}{
@@ -223,7 +230,7 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{3}{c|}{ $>220$~GeV} \\
 \end{table}
 
 \begin{table}[t]
-\caption{A summary of regions event selection for \olep channel in the merged regime.}
+\caption{A summary of regions event selection for 1-lepton channel in the merged regime.}
 \label{tab:1lep_merged}
 \begin{center}
 \resizebox{\textwidth}{!}{
@@ -304,7 +311,7 @@ Top veto & Num of $b$-tagged jets outside of large-R jet & \multicolumn{3}{c|}{0
 
 \begin{table}[ht!]
 \small
-\caption{A summary of regions event selection for \tlep channel in the resolved regime.}
+\caption{A summary of regions event selection for 2-lepton channel in the resolved regime.}
 \label{tab:2lep_resolved}
 \begin{center}
 \resizebox{\textwidth}{!}{
