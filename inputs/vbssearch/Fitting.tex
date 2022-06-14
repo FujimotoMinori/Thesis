@@ -1,29 +1,72 @@
 \chapter{Statistical treatment}
 
 \section{Likelihood function definition}
-A binned maximum likelihood fit is performed to get the signal strength $\mu$. The likelihood function is written as:
-\begin{equation} \label{eq:Lh1}
-\mathcal{L}\left( N, \tilde{\theta} | \mu, \theta \right)=  P\left( \mu | \mu s +b \right) \cdot p\left( \tilde{\theta} | \theta \right)
- \end{equation}
+Binned maximum likelihood fit is performed to get the signal strength $\mu$. The likelihood fuction is written with the Poisson probability terms as:
+\begin{equation}
+\mathcal{L}_{\text {Meas }}(\mu, \theta)=\prod_{i \in \text { bins }} \operatorname{Pois}\left(N_{i} \mid \mu s_{i}+b_{i}\right)=\prod_{i \in \text { bins }} \frac{\left(\mu s_{i}+b_{i}\right)^{N_{i}}}{N_{i} !} e^{-\left(\mu s_{i}+b_{i}\right)}
+\end{equation}
+where $s_i$ and $b_i$ is the expected number of the signal and the background events yield in bin i, and $N_i$ is the numbers of the observed events from data in the bin. The $\mu$ is also called as the parameter of interest (POI). $\theta$ is a set of nuisance parameters (NPs) associated to the each systematics uncertainty. $\theta$ affects the signal and background yields so it can be written like $s_{i}=s_{i}(\theta)$ and $b_{i}=b_{i}(\theta)$. 
+
+The additional term, $\mathcal{L}_{\text{prior}}$ is multiplied to the likelihood function to represent the supplementary information of the systematics effects.This term is usually referred to as prior. In this analysis, priors are considered to be Gaussian distributed for the majority of uncertainties:
+\begin{equation}
+\mathcal{L}_{\text {prior}}(\theta)=\operatorname{Gauss}(0 \mid \theta, 1)=\frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} \theta^{2}}
+\end{equation}
+Some parameters like some of the background normalization factors are called floating parameters, which is determined completely from the data and do not have priors.
+The statistical uncertainties of the total background is included to the likelihood function as $\gamma$ parameter. The initial $\mathcal{L}_{\text {Meas }}$ is modified by multiplying the background yield $b_i$ by $\gamma_i$ for each bin:
+\begin{equation}
+{Pois}\left(N_{i} \mid \mu s_{i}+\gamma_{i}b_{i}\right)
+\end{equation}
+With this modification the background estimation in each bin about the nominal value of $\gamma = 1$. Another likelihood term is added to represent the statistical uncertainty:
+\begin{equation}
+\mathcal{L}_{\mathrm{BkgStat}}\left(\gamma_{i}\right)=\prod_{i \in \mathrm{bins}} \operatorname{Pois}\left(n_{i} \mid \gamma_{i} n_{i}\right)
+\end{equation}
+% ??? don't understand explanations here
+The full likelihood can be described as:
+\begin{equation}
+\mathcal{L}(\mu, \theta)=\mathcal{L}_{\text {Meas }}\left(\mu, \theta, \gamma_{i}\right) \cdot \mathcal{L}_{\text {Prior }}(\theta) \cdot \mathcal{L}_{\text {BkgStat }}\left(\gamma_{i}\right)
+\end{equation}
+
+%%%%%%%
+
+%A binned maximum likelihood fit is performed to get the signal strength $\mu$. The likelihood function is written as:
+%\begin{equation} \label{eq:Lh1}
+%\mathcal{L}\left( N, \tilde{\theta} | \mu, \theta \right)=  P\left( \mu | \mu s +b %\right) \cdot p\left( \tilde{\theta} | \theta \right)
+% \end{equation}
  
- $P$ is the Poisson probability terms over all the histogram bins:
+% $P$ is the Poisson probability terms over all the histogram bins:
 
- \begin{equation} \label{eq:Lh2}
- P\left( \mu | \mu s +b \right)  =  \prod_{i=1}^{N_{bins}} \frac{{ (\mu s_{i} (\theta)+ b_{i}(\theta))^{N_{i}} e^{ - (\mu s_{i}(\theta) + b_{i}(\theta))} } }{{N_{i}!}}
- \end{equation}
+% \begin{equation} \label{eq:Lh2}
+% P\left( \mu | \mu s +b \right)  =  \prod_{i=1}^{N_{bins}} \frac{{ (\mu s_{i} %(\theta)+ b_{i}(\theta))^{N_{i}} e^{ - (\mu s_{i}(\theta) + b_{i}(\theta))} } %}{{N_{i}!}}
+% \end{equation}
 
-where $\mu s_{i }$, $b_{i }$ is the expected number of signal and background events in bin i, and $N_{i}$ is the number of observed events in the bin. 
-The $p\left( \tilde{\theta} | \theta \right)$ term of equation~\ref{eq:Lh1} is added to represent the additional systematic effects considered in the analysis. This term is usually referred to as prior. 
+%where $\mu s_{i }$, $b_{i }$ is the expected number of signal and background events in bin i, and $N_{i}$ is the number of observed events in the bin. 
+%The $p\left( \tilde{\theta} | \theta \right)$ term of equation~\ref{eq:Lh1} is added to represent the additional systematic effects considered in the analysis. This term is usually referred to as prior. 
 
-Assuming not correlated uncertainties, this term is given by the product of all single uncertainty priors; $ p\left( \tilde{\theta} | \theta \right) =  \prod_{j}p_{j}\left( \tilde{\theta_{j}} | \theta_{j} \right)$, where j is running over all uncertainties and  $\theta_{j}$ is the nuisance parameter associated to the source of systematic uncertainty j. Each of the terms represents the probability of the uncertainty to have a true value equal to $\theta_{j}$ given the best estimate $ \tilde{\theta_j}$ obtained from an auxiliary measurement. 
-In this analysis, priors are considered to be Gaussian distributed for the majority of uncertainties. $\theta_{j} $ are scaled to $\theta_{j} =0$ for the nominal expectation, and $\theta_{j} = \pm 1$ is scaled to the $\pm 1 \sigma$ variations of the systematic source.
+%Assuming not correlated uncertainties, this term is given by the product of all single uncertainty priors; $ p\left( \tilde{\theta} | \theta \right) =  \prod_{j}p_{j}\left( \tilde{\theta_{j}} | \theta_{j} \right)$, where j is running over all uncertainties and  $\theta_{j}$ is the nuisance parameter associated to the source of systematic uncertainty j. Each of the terms represents the probability of the uncertainty to have a true value equal to $\theta_{j}$ given the best estimate $ \tilde{\theta_j}$ obtained from an auxiliary measurement. 
+%In this analysis, priors are considered to be Gaussian distributed for the majority of uncertainties. $\theta_{j} $ are scaled to $\theta_{j} =0$ for the nominal expectation, and $\theta_{j} = \pm 1$ is scaled to the $\pm 1 \sigma$ variations of the systematic source.
+%This parametrization is convenient in order to easily spot constrained nuisance parameters that might be problematic. %Log-normal priors are also used in the case of uncertainties with only normalizations effects.
 
-
-
-
-%corresponds to the nominal expectation while $\theta_{j} = \pm 1$ correspond to the $\pm 1 \sigma$ variations of the systematic source. 
-
-%This parametrization is convenient in order to easily spot constrained nuisance parameters that might be problematic. %Log-normal priors are also used in the case of uncertainties with only normalizations effects. % An estimate on $\mu$ is obtained by maximizing the likelihood function with respect to all the parameters.
+An estimate on $\mu$ is obtained by maximizing the likelihood function with respect to all the parameters. The test statistic $q_{\mu}$ is constructed with:
+\begin{equation}
+q_{\mu}=2 \log \left(\frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}_{\mu}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}\right)
+\end{equation}
+where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize the likelihood and \hat{\hat{\theta}} are the nuisance parameter values that maximize the likelihood for a given value of $\mu$. 
+%p-value and one-sided CL upper limit
+This test statistic is used to measure the compatibility of the hypothesis and the observed data by deriving the p-value:
+\begin{equation}
+p_{\mu}=\int_{q_{\mu, \mathrm{obs}}}^{\infty} f\left(q_{\mu} \mid \mu\right) d q_{\mu}
+\end{equation}
+where the $q_{\mu, \mathrm{obs}}$ is the value of the statistic $q_{\mu}$ observed from the data and $f\left(q_{\mu} \mid \mu\right)$ denotes the probability density function (pdf) of $q_{\mu}$ under the assumption of the signal strength $\mu$.
+%The $p_0$ is case is used for rejecting the background only hypothesis ($\mu = 0$).
+The p-value is often converted into an equivalent significance, Z:
+\begin{equation}
+Z=\Phi^{-1}(1-p)
+\end{equation}
+where $\Phi^{-1}$ is the inverse of the cumulative standard Gaussian.
+Typically significance of Z = 5~$\sigma$ is used as an appropriate level to constitute a discovery ($p_0 = 2.87 \times 10^{-7})$). For excluding a signal hypothesis, threshold of the p-value is set at 0.05 (i.e., 95$\%$ confidence level, Z = 1.64~$\sigma$).
+To obtain the p-value, $f\left(q_{\mu} \mid \mu \right)$ is required and this can be derived by sampling the distributions with the Monte Carlo method, which is a high computationally complex job. Instead, non-central $\chi^2$ distribution can be used.
+%pu here reference
+%for aQGC limit - CI or CL limit
 
 \section{Smoothing}
 The smoothing algorithm is applied to alleviate statistical fluctuations, that might create suspicious effects in the fit.
@@ -43,7 +86,12 @@ The nominal fit result in terms of $\mu$ and $\sigma_{\mu}$ is obtained by maxim
 %The limit set on $\mu$ is then translated into a limit on the signal cross section times branching ratio, using the theoretical cross section and branching ratio for the given signal model.
 
 \section{Fitting strategy}
-A simultaneous fit to the merged and resolved signal and control regions is performed. In the signal regions the RNN score is fitted, while in the CRs the $M^{tag}_{jj}$ is fitted, in order to give a better constrains to the $M^{tag}_{jj}$ reweighting uncertainty. The 2POI fit to the Merged and Resolved region is also performed as a testing purpose. For the blinding strategy, unconditional fits on the Asimov dataset are performed in the full range of the RNN score. Unconditional fit on data are also performed to the left-side bins of the RNN score up to the 75\% of the total signal integral.
+A simultaneous fit to the merged and resolved signal and control regions is performed. In the signal regions the RNN score is fitted, while in the CRs the $M^{tag}_{jj}$ is fitted, in order to give a better constrains to the $m^{tag}_{jj}$ reweighting uncertainty. In the Top CR single bin setting is adapted since this CR is for constraining ttbar background normalization and there is no need to use the shape. 
+%The summary of the distributions used in the likelihood fit for the SRs and CRs for all the categories in each channel is summarized in the Table~\ref{tab:}.
+% need this??
+The 2POI fit to the Merged and Resolved region is also performed as a testing purpose. For the blinding strategy, unconditional fits on the Asimov dataset are performed in the full range of the RNN score. Unconditional fit on data are also performed to the left-side bins of the RNN score up to the 75\% of the total signal integral.
 
+\section{Binning Optimization in SR}
+The binnings of the final discriminan in the SRs are optimized by using the transformaion D. %put reference here
 
 

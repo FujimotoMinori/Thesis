@@ -2,30 +2,99 @@
 
 The results for the model inspection and discuss the goodness of the fit model for the 2-lepton channel is shown in this section.
 
-\subsection{Prefit plots}
+\subsection{Event yields}
+The prefit yields of the 2-lepton channel before fitting is shown in Table~\ref{tab:yields}.
 
-Figure \ref{fig:fit_2lep_prefit} shows the pre-fit plots of the analysis regions entering in the 2-lep fit only model;
-in particular, \mjjtag distributions in \Zjets CRs are shown and the neural network scores distributions are shown in the SRs, only the left side bins are plotted using real data as well.
+\scalebox{0.80}{
+\begin{tabular}{|l|c|}
+\cline{2-2}
+ & \multicolumn{1}{|c|}{Merged V+jet CR}\\ \hline
+W & 3.13 $\pm$ 0.35\\
+Z & 7964.27 $\pm$ 792.98\\
+Diboson & 283.38 $\pm$ 143.63\\
+stop & 8.21 $\pm$ 2.92\\
+ttbar & 194.44 $\pm$ 28.20\\
+\hline
+Bkg & 8453.43 $\pm$ 844.02\\
+\hline
+EW6llqq & 29.67 $\pm$ 3.73\\
+\hline
+Signal & 29.67 $\pm$ 3.73\\
+SignalExpected & 29.67 $\pm$ 3.73\\
+\hline
+S/B & 3.51e-03\\
+S/sqrt(S+B) & 3.22e-01\\
+\hline
+data & 6645\\ \hline
+\end{tabular}
+}
+
+\scalebox{0.80}{
+\begin{tabular}{|l|c|}
+\cline{2-2}
+ & \multicolumn{1}{|c|}{Resolved CR}\\ \hline
+W & 57.63 $\pm$ 11.31\\
+Z & 228206.01 $\pm$ 39622.91\\
+Diboson & 4645.71 $\pm$ 1460.84\\
+stop & 266.54 $\pm$ 88.88\\
+ttbar & 7306.82 $\pm$ 1070.92\\
+\hline
+Bkg & 240482.70 $\pm$ 40883.23\\
+\hline
+EW6llqq & 421.60 $\pm$ 31.07\\
+\hline
+Signal & 421.60 $\pm$ 31.07\\
+SignalExpected & 421.60 $\pm$ 31.07\\
+\hline
+S/B & 1.75e-03\\
+S/sqrt(S+B) & 8.59e-01\\
+\hline
+data & 200097\\ \hline
+\end{tabular}
+}
+
+\scalebox{0.80}{
+\begin{tabular}{ |l|c|}
+\cline{2-2}
+ & \multicolumn{1}{|c|}{SRVBS_LP}\\ \hline
+W & 1.73 $\pm$ 0.25\\
+Z & 3158.10 $\pm$ 272.60\\
+Diboson & 147.28 $\pm$ 75.88\\
+stop & 3.82 $\pm$ 1.28\\
+ttbar & 75.10 $\pm$ 9.62\\
+\hline
+Bkg & 3386.03 $\pm$ 297.69\\
+\hline
+EW6llqq & 29.70 $\pm$ 5.57\\
+\hline
+Signal & 29.70 $\pm$ 5.57\\
+SignalExpected & 29.70 $\pm$ 5.57\\
+\hline
+S/B & 8.77e-03\\
+S/sqrt(S+B) & 5.08e-01\\
+\end{tabular}
+}
+
+\subsection{Prefit plots}
+Figure~\ref{fig:fit_2lep_prefit} shows the pre-fit plots of the analysis regions entering in the 2-lep fit only model;
+in particular, \mjjtag distributions in \Zjets CRs are shown and the RNN scores distributions are shown in the SRs, only the left side bins are plotted using real data as well.
 
 \begin{figure}[ht]
-      \centering
-    \subfigure[Merged HP SR 2lep]{\includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
-    \subfigure[Merged LP SR 2lep]{\includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
-    \subfigure[Resolved SR 2lep]{\includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefit.pdf}}
-\\
-    \subfigure[Merged VjetCR 2lep]{\includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
-    \subfigure[Resolved VjetCR 2lep]{\includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefit.pdf}}
-\\
+    \centering
+    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefit.pdf}
+    \\
+    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefit.pdf}
     \caption{Prefit plots for the 2 lepton channel. Data is blinded in the right bins that contain 75\% signal.}
        \label{fig:fit_2lep_prefit}
 \end{figure}
+\clearpage
 
-%\clearpage
-%\subsection{Prefit tables}
-
-%Table \ref{tab:2lepPrefitYield} shows the expected yields for signal and background processes in all the control and signal regions for the 2-lep channel.
-
-%\input{figures/2lep/yieldTables/Yields_Prefit.tex}
+\subsection{Postfit plots}
+Figure~\ref{fig:fit_2lep_postfit} shows the post-fit plots of the analysis regions entering in the 2-lep fit only model;
+The fit is performed with only the left-bins, which are the bins that contain only 75\% signal.
 
 \clearpage
 

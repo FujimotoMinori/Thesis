@@ -1,8 +1,33 @@
 \chapter{Background Modeling and Estimation}
-The study dedicated to the modeling of the major background is shown in this chapter.
+The study dedicated to the modeling of the major background in 2-lepton channel is shown in this chapter. 
 
 \section{Z+jets modeling}
-There is a known mis-modelling issue with the Sherpa~2.2.1 V+jets samples. This mis-modelling is seen in the $m^{tag}_{jj}$ distribution as a slope when compare the data over MC. (Figure~\ref{fig:2lep_mtag_before_rw}).
+There is a known mis-modelling issue with the Sherpa~2.2.1 V+jets samples. This mis-modelling is seen in the $m^{tag}_{jj}$ distribution as a slope when comparing the data over MC both in merged and the resolved region, as seen in Figure~\ref{fig:2lep_mtag_before_rw}.
+The re-weighting is performed to the Z+jets samples for 2-lepton channel, in order to correct this mis-modeling. A linear fit to the $m^{tag}_{jj}$ in CRs are performed for each merged and resolved CRs. The fit function is defined as:
+\begin{equation}
+\label{eqn:reweight}
+R=p_{0} * m_{jj}^{tag}+p_{1}
+\end{equation}
+where the R = $data/MC$. The correction is performed only for the Z+jets samples, therefore the other MC samples are subtracted at first. The all samples of mc16a+d+e period is used for reweighting, since there is no much difference in fitted value between mc periods when fitted each period separately. All distributions are first normalized then the correction function (\ref{eqn:reweight}) is derived. Only the difference of the shape is corrected, and difference of the normalization is accounted in the final fit.
+The fitted parameter is summarized in the Table~\ref{tab:fit}. These parameters are used as the reweighting factors and applied after the categorizations of the SRs and the CRs. The reweighted distributions are shown in Figure~\ref{fig:2lep_mtag_before_rw}.
+
+\begin{table}[htbp]
+ \footnotesize
+\begin{center}
+\begin{tabular}{ | c | c | c |}
+\hline
+Parameter & Merged CRVjet & Resolved CRVjet  \\
+\hline
+$p_{0}$ (slope) [$\GeV^{-1}$] & $(-23.8 \pm 2.5)e^{-5}$ &  $(-17.5 \pm 0.5)e^{-5}$ \\
+ \hline
+$p_{1}$ (constant)  & $1.298 \pm 0.031$ & $1.187 \pm 0.005$ \\
+\hline
+\end{tabular}
+\caption{\label{tab:fit} Fitted re-weighting parameters for the merged and resolved regions. The errors written here are the uncertainties of the fitted parameters. }
+  \end{center}
+\end{table}
+
+
 
 \begin{figure}[ht]
     \centering
@@ -12,31 +37,40 @@ There is a known mis-modelling issue with the Sherpa~2.2.1 V+jets samples. This 
     \label{fig:2lep_mtag_before_rw}
 \end{figure}
 
-The $Z$+jets production is the leading background for the 2-lepton analysis and contributes significantly for the 0-lepton analysis. The comparison of distributions from data and MC for various kinematic variables after re-weighting in the 2-lepton Z+jets merged and resolved control region are shown in Figure \ref{fig:2lep_zjets_merged_CR} and Figure \ref{fig:2lep_zjets_resolved_CR}
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}}
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_Log.eps}}
+    \caption{ $m^{tag}_{jj}$ distributions after applying reweighting for the merged (a) and resolved (b) control regions in the 2-lepton channel. The slope seen before reweighting is corrected in the Z+jet CR.}
+    \label{fig:2lep_mtag_before_rw}
+\end{figure}
+
+The differences of the $m^{tag}_{jj}$ distributions before and after the reweighting are used as a 1$\sigma$ of the systematics uncertainty.
+
+\section{Z+jets modeling}
+
+The $Z$+jets production is the leading background for the 2-lepton channel. The comparison of distributions from data and MC for various kinematic variables after reweighting in the 2-lepton Z+jets merged and resolved control region are shown in Figure \ref{fig:2lep_zjets_merged_CR} and Figure \ref{fig:2lep_zjets_resolved_CR}
 respectively. 
 
-
 % 2-lepton new merged CR - plots
-%\begin{figure}[ht]
-%    \centering
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}}
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_llMass_Lin.eps}}
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MllJ_Lin.eps}}
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_fatJetMass_Lin.eps}}
-%    \caption{ Various kinematic variables in the Z+jets merged CR in the 2-lepton channel analysis.}
-%    \label{fig:2lep_zjets_merged_CR}
-%\end{figure}
+\begin{figure}[ht]
+ \centering
+   \includegraphics[width=0.30\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_llMass_Lin.eps}
+   \includegraphics[width=0.30\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MllJ_Lin.eps}
+   \includegraphics[width=0.30\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_fatJetMass_Lin.eps}
+    \caption{ Various kinematic variables in the Z+jets merged CR in the 2-lepton channel analysis.}
+    \label{fig:2lep_zjets_merged_CR}
+\end{figure}
 
 
 % 2-lepton resolved CR fiducial- plots
-%\begin{figure}[ht]
-%    \centering
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_Log.eps}}
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_llMass_Lin.eps}}
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_Mlljj_Lin.eps}}
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MVHadRes_Lin.eps}}
-%    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_topMass_Lin.eps}}
- %   \caption{ Various kinematic variables in the Z+jets resolved CR in the 2-lepton channel analysis.}
-  %  \label{fig:2lep_zjets_resolved_CR}
-%\end{figure}
+\begin{figure}[ht]
+    \centering
+   \includegraphics[width=0.30\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_llMass_Lin.eps}
+   \includegraphics[width=0.30\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_Mlljj_Lin.eps}
+  \includegraphics[width=0.30\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MVHadRes_Lin.eps}
+  \caption{ Various kinematic variables in the Z+jets resolved CR in the 2-lepton channel analysis.}
+   \label{fig:2lep_zjets_resolved_CR}
+\end{figure}
 
