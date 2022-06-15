@@ -214,7 +214,9 @@ These b-tagging systematic uncertainties are applied when calculating the SF sin
   \end{table}
 
 \subsection{Quark/Gluon jets uncertainties}
-The Flavour response and the Flavour conposition uncertatinties.
+The Flavour response and the Flavour composition uncertainties are derived specifically.
+These two uncertainties 
+\subsection{Track uncertainties}
 \subsection{Background Modeling uncertainties}
 The systematics uncertainties related to the modeling of the background samples are explained.
 By thinking of this, the the difference of the parton shower modeling is considered as the difference of Phythia and Herwig.
@@ -222,21 +224,23 @@ By thinking of this, the the difference of the parton shower modeling is conside
 
 \section{Theoretical uncertainties}
 The systematic uncertainties related to the determination or the calculation of the MC.
+They are implemented with EWVVjj signal sample and the background samples that have dominant contributions. 
 
 \subsection{Perturbative QCD matrix-element uncertainties}
 \begin{itemize}
 \item PDF + $\alpha_s$ uncertainties\\
 Since PDF sets are obtained by fitting experimental dataset, there are uncertainties on selecting different type of PDF sets, which originated from the experimental uncertainties from the dataset and from the choice of the functional form adapted in the PDF fits.
-The uncertainty from the PDF set choice can be assessed by 2 means. One is by calculating the difference within one PDF set by varying its internal parameters, which is called internal PDF uncertainties. The second is from the difference between the nominal sets of different PDF sets, which is called external PDF uncertainties.
-$\alpha_s$ uncertainties are from the experimental uncertainties in the determination of it and the truncated fixed order calculations are used for the calculation.
+The uncertainty from the PDF set choice can be assessed by 2 means. One is by calculating the difference within one PDF set by varying its internal parameters, which is called internal PDF uncertainties. For this first uncertainty the 100 MC replicas of the NNPDF sets are used. The standard deviation of the mean balue of the 100 MC replicas for each bin is taken as the uncertainty. The second is from the difference between the nominal sets of different PDF sets, which is called external PDF uncertainties. This uncertainty is estimated by comparing the nominal distributions with the alternative PDF sets. The uncertainties are combined by taking the envelope of all uncertainties, which means the most varied uncertainty is taken as the final uncertainty. 
+$\alpha_s$ uncertainties are from the experimental uncertainties in the determination of it and the truncated fixed order calculations are used for the calculation. This is included to the estimation of the external PDF uncertainties. \textcolor{blue}{?}
 \item QCD scale uncertainties\\
 QCD scale uncertainties are determined by using different renormalization and factorization scale factor sets. 
 The renormalization scale $\mu_R$ is the scale at which the strong coupling $\alpha_s$ is evaluated, while the factorization scale $\mu_F$ is the scale to separate the perturbative part of the hard-interaction from the non-perturbative part of PDF. 
-
+This uncertainties are implemented in the fitting as the NP named \texttt{TheoryQCD\_Z} for Z+jets background sample and \texttt{TheoryQCD\_VBS} for the EW VVjj signal sample. They are estimated by taking the envelope of the 6 set of the combination of the $\mu_R$ and $\mu_F$, which are fixed to be 1, 0.5, or 2.0. The envelop of these sets are used as the uncertainty.
+The variation implemented is shown in Appendix~\ref{}. 
 
 \subsection{NLO order EW corrections}
 \color{blue}
-this is not currently considered
+{The uncertainty related to the corrections of the matrix element when adapted the NLO order calculation. The additional sample is needed to estimate this uncertainty, and this is not currently considered in the analysis.}
 \end{itemize}
 
 
