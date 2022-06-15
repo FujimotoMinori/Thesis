@@ -1,6 +1,6 @@
 %%% aQGC %%%
 \chapter{Interpretation with Effective Field Theory}
-\subsection{Introduction}
+\section{Introduction}
 
 The boson field self-interactions respect the $SU(2)\times U(1)_Y$ gauge invariance in the electroweak sector of the
 SM and serve as a very sensitive tool to search the manifestations of beyond SM physics.
@@ -33,7 +33,7 @@ At the matrix-element level there is no way to separate the effects of Wilson co
 It is worth noting that the pure-EFT term scales quadratically with $\frac{c_i}{\Lambda^4}$ and the interference term linearly with $\frac{c_i}{\Lambda^4}$. These two sub-processes are often referenced in the literature as the quadratic and linear terms respectively.
 
 
-\subsection{Binned significance study}
+\section{Binned significance study}
 
 The 2-dimensional binned significance using $m_{VV}$ and RNNScore as discriminant is studied in \tlep channel.
 
@@ -44,16 +44,16 @@ The RNN trained for the SM electroweak signal is also useful to separate aQGC si
 
 \begin{figure}[ht]
     \centering
-    \subfigure[$m_{VV}$ distribution in Merged HP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_HP_aQGC.pdf}}
-    \subfigure[$m_{VV}$ distribution in Merged LP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_LP_aQGC.pdf}}
+    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_HP_aQGC.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_LP_aQGC.pdf}
     \caption{$m_{VV}$ shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeMVV}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \subfigure[RNN score distribution in Merged HP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_HP_aQGC.pdf}}
-    \subfigure[RNN score distribution in Merged LP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_LP_aQGC.pdf}}
+    \includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_HP_aQGC.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_LP_aQGC.pdf}
     \caption{RNN score shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeRNN}
 \end{figure}
@@ -214,7 +214,7 @@ It seems to be the simple and better way to use $m_{VV}$ as the discriminant wit
 
 Following the study of this section, the profile likelihood fit with $m_{VV}$ score is performed and the expected limit is shown in section~\ref{subsec:aqgc_limit}. The fit study with RNN score as discriminant is also shown in section~\ref{subsec:2binapproach}.
 
-\subsection{Expected limit}
+\section{Expected limit}
 \label{subsec:aqgc_limit}
 
 The expected upper limit on each Wilson coefficient by a combined fit of all 3 channels is shown in table~\ref{tab:aQGC_limit}, which is calculated by $\sqrt{\mu_{95\%}} = f_{i} / \Lambda^4$, where $\mu_{95\%}$ is the 95\% upper limit on the signal strength.
@@ -282,7 +282,7 @@ FM7 & 5.37e+2                     \tabularnewline \hline
         \label{fig:2lepFT0}
 \end{figure}
 
-\subsection{2-bin $m_{VV}$ approach}
+\section{2-bin $m_{VV}$ approach}
 \label{subsec:2binapproach}
 
 There is a problem when we use the $m_{VV}$ distribution in the fit.
@@ -333,22 +333,19 @@ Expected limit of Wilson coefficient & 0.44                   & 0.85            
 2-bin fit can constrain the standard model signal, as shown in the uncertainty of Norm sigVBS of table~\ref{tab:2binlimit}. 
 When comparing single bin fit with $m_{VV}$ and 2-bin fit with RNN, 2-bin fit with RNN appears to be able to provide a better limit.
 
-\subsection{Clipping method}
+\section{Clipping method}
 \label{subsec:clipping}
 As the EFT violates unitarity at large energy scale, the clipping method is used to preserve the unitarity at high center of mass energies. The EFT signal is set to zero at $truth m_{VV} > E_{clip}$, where the $E_{clip}$ is [2,3,4,5,$\infty$]~TeV. 5 points are chosen as recommended from the aGC coupling taskforce.\cite{ATL-COM-PHYS-2017-433} 
 The expected limit with all 3 channels with each of the clipping points are shown in figure~\ref{fig:ClippedLimits}. 
 The systematic uncertainties are yet to be included and the fitting only constraints the floated normalization.
 %Fitting includes all systematics uncertainties.
 
-\subsection{Systematic interpretation}
+\section{Systematic interpretation}
 
 The likelihood coefficient is defined same the standard model fitting described in Chapter{}.
-According to the Wild theorem~\ref{}, likelihood coefficient distribution asymptotically converges to a $\kai^2$ distribution. 
-$\kai^2$ distribution may be used to approximately estimate limits for f.
-For a 95\% level of confidence, the limits, which is the boundaries of the corresponding interval of the $\kai^2$ distribution, can be estimated using formula
-$
-\ramda(f,N^i_{obs},0) = 3.84
-$
+According to the Wild theorem~\ref{}, likelihood coefficient distribution asymptotically converges to a $\chi^2$ distribution. 
+$\chi^2$ distribution may be used to approximately estimate limits for $f/\Lambda^4$.
+For a 95\% level of confidence, the limits, which is the boundaries of the corresponding interval of the $\chi^2$ distribution.
 
 The all limits in each clipping calue are shown here.
 
