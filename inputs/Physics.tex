@@ -40,10 +40,10 @@ There are two types of particles described in details below:
 \subsection{SM Lagrangian}
 \label{ch:Lagrangian}
 The SM Lagrangian and its origin is to be shown here in this subsection. 
-The Standard Model consists of several components as discribed in the follwing subsections. They are mathematically described as the Lagrangian density, $\mathcal{L}$, which is denoted as Lagrangian in the following.\\
+The Standard Model consists of several components as discribed in the following subsections. They are mathematically described as the Lagrangian density, $\mathcal{L}$, which is denoted as Lagrangian in the following.\\
 
-\noindent\textbf{\sf{Quantum Electro Dynamis (QED)}} \\ 
-The QED describes the dynamics of fermions and their electromagnatic interactions.
+\noindent\textbf{\sf{Quantum Electro Dynamics (QED)}} \\ 
+The QED describes the dynamics of fermions and their electromagnetic interactions.
 
 The free fermion with the spin 1/2 is described by the Lagrangian\\
 \begin{equation}
@@ -354,11 +354,13 @@ At last, the Standard Model Lagrangian is described as
 \end{equation}
 This Lagrangian is invariant under local transformations of SU(3) $\times$ SU(2)$_L$ $\times$ U(1)$_Y$, while the vacuum is breaking the symmetry and not invariant. \\
 
-The coupling constats appeared in the Lagrangian are determined by the measurement from experiments. The measured valued is summarized in the Table~ref{tab:constants}.  
+The coupling constats appeared in the Lagrangian are determined by the measurement from experiments. The measured valued is summarized in the Table~\ref{tab:constants}.  \\
 
 \begin{tabular}{|l|l|}
-\hline Coupling constants & Measured Value \\
-\hline & $y_{u}=10^{-5}, y_{c}=7 \times 10^{-5}, y_{t}=1,$, \\
+\hline
+Coupling constants & Measured Value \\
+\hline 
+& $y_{u}=10^{-5}, y_{c}=7 \times 10^{-5}, y_{t}=1,$, \\
 Yukawa Couplings & $y_{d}=3 \times 10^{-5}, y_{s}=5 \times 10^{-4}, y_{b}=0.03$ \\
 & $y_{e}=3 \times 10^{-6}, y_{\mu}=6 \times 10^{-4}, y_{\tau}=0.01$ \\
 Fine Structure Constant & $\alpha=1 / 127$ \\
@@ -368,11 +370,52 @@ Higgs Self Coupling Constant & $\lambda=0.1$ \\
 PMNS matrix (parametric representation) & $\theta_{12}=34, \theta_{13}=8.5, \theta_{23}=247, \delta_{C P}=200$ \\
 CKM matrix (parametric representation) & $\theta_{12}=13.0, \theta_{13}=0.2, \theta_{23}=2.4, \delta_{13}=1.2$ \\
 \hline
+\caption{
+ coupling constants
+}
 \label{tab:constants}
 \end{tabular}
 
-\section{Phenomenology of proton-proton collisions}
-\textcoler{red}{This section needs to be added}
+\section{Phenomenology of proton-proton collision}
+The standard model physics can be tested with the scattering experiments like ATLAS experiments located to the LHC.
+Since the LHC is the proton-proton collision collider, the physics related to the proton-proton interaction is described in this section. Using the protons instead of the electrons is its higher mass, which enables to reach the higher center-of-mass energy in spite of the energy loss due to the syncrotoron radiation, which is propotional to $m^{-4}$.
+Since their is a substructure inside the proton, the proton-proton collision cross section needs to be modeled through the formalism of QCD.
+
+\subsection{Factorization}
+
+The scattering cross section can be calculated with perturbative QCD. 
+However, the size of the coupling constant, $\alpha_s$ even at the rather large momentum, $q^2$, the perturbative expansion converges really slow.
+The factorization theorem \cite{} allow us to calculate the total cross section approximately with two part; obtaining parton from the original proton part and the partonic cross section calculation part.
+As illustrated in Figure~\ref{fig:factorization}, the total cross section of the process can be factorized in a long-distance part in the left part of the figure, and a short-distance part illustrated in the right.
+
+
+\begin{figure}[tbp]
+\begin{center}
+%\subfigure[]{
+ \includegraphics[width=0.8\textwidth,keepaspectratio]{figures/factorization}
+%}
+\caption{
+ factorization theorem 
+}
+\label{fig:factorization}
+\end{center}
+\end{figure}
+
+In the scattering process ab$\rightarrow$n at a hadron collider can be written as:
+\begin{equation}
+\label{eqn:qcdxsec}
+\sigma_{a b \rightarrow n}=\sum_{a, b} \int_{0}^{1} \mathrm{~d} x_{a} \mathrm{~d} x_{b} \int \mathrm{d} \Phi_{n} f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right) f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right) \times \frac{1}{2 \hat{s}}\left|\mathcal{M}_{a b \rightarrow n}\right|^{2}\left(\Phi_{n} ; \mu_{F}, \mu_{R}\right)
+\end{equation}
+where a and b is summed over all partonic constituents of the colliding hadrons, $h_1$ and $h_2$, respectively.
+$f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right)$ and $f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right)$ are the parton distribution function (pdf), obtaining the partons from the original colliding hadrons, at a given momentum fraction x. The factorization depends on the arbitrary cutoff scale, referred as factorization scale, $\mu_F$.
+Then the partonic cross section of the hard scattering, $\hat{\sigma}_{a b \rightarrow n}\left(\mu_{F}, \mu_{R}\right)$ can be calculated perturbatively by considering the process $ab\rightarrow n $ with free partons in the initial state. This calculation is done with the Matrix element $\left|\mathcal{M}_{a b \rightarrow n}\right|$ for the phase-space $\Phi_n$.
+When calculating the matrix element of the hard-scattering process, the divergence terms are to be absorbed into the redefinition of fields or parameters via subtractions. This procedure is usually referred as renormalization, and the subtractions scale is called renormalization scale, $\mu_R$. 
+The PDF is estimated by the collision data from previous and current experiments, and extrapolated to the appropriate energy using the DGLAP evolution equations.\cite{}.
+
+\subsection{Parton shower}
+%?
+
+
 
 \section{Vector Boson Scattering}
 The scattering of two electroweak gauge bosons can probe the structure of the electroweak symmetry breaking (EWSM) mechanism directly. 

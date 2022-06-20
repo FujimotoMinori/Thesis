@@ -1,10 +1,61 @@
 \chapter{Reconstruction}
+The physics objects are reconstructed from the signals measured in the detector, and calibrated by the simulated events and observed data. The reconstruction and the calibration process in the current analysis is described in this chapter.
+
+
 \section{Tracks and Vertices}
 \section{Clusters}
+
+
 \section{Electrons}
+%reconstruction
+Electron candidates are reconstructed from energy deposits (topological clusters) in the electromagnetic calorimeter (ECal), matched to a track identified by the inner detector. 
+The associated track requirement in the inner detector is for distinguish electrons from photons. The electron track candidates are reconstructed, using an optimized algorithm to accout for the energy losses due to Bremsstrahlung radiation, then electron candidate are built by matching an electron-track candidate to a calorimeter seed cluster.
+The electron candidate is from the area upto $|\eta|<2.47$, excluding the transition region between barrel and endcap (1.37 < $|\eta|$ < 1.52).
+%identification
+The reconstructed electron is required the transverse energy of $E_T$ > 7~GeV and $|\eta|$ < 2.47. A likelihood-based identification (LHID) \cite{} is required to reduce the backgrounds from leptons or hadron in jets. This LHID combines various identification variables \cite{}, and electron candidates are categorized to LooseLH, MediumLH, and TightLH corresponding to 96\%, 94\%, 88\% of identification efficiencies to signal electrons at $E_T$ = 100~GeV, respectively.
+
+%put calibration things here.....
+The reconstruction efficiency is 
+The identified electron energy is calibrated by comparing the MC simulations and observed data...
+
+Several furthermore requirement is applied for isolation, to reduce the contamination with jets. The isolation working points used in this analysis are FCLoose and FixedCutHighPtCaloOnly, which are determined by the track and ECal informations, respectively. The selections applied in this analysis are shown in the Table~\ref{tab:electron_selection}.
+Furthermore, the track related requirement is applied. $d_0$ is a minimum distance between the primary vertex (PV) and the track, and $\sigma_{d_0}$ is its uncertainty. $z_0$ is the tranverse impact parameter relative to the beamline.
+\begin{table}[ht]
+\resizebox{\textwidth}{!}{
+\begin{tabular}[ht]{|l|c|c|c|}
+  \hline
+  & \emph{Loose} & \emph{Tight}\\
+  \hline
+  \hline
+  $p_T$ & 7~GeV & 30~GeV\\
+  \hline
+  $|\eta|$ & \multicolumn{2}{c|}{$|\eta| < 2.47$ \notin [1.37,1.52]} \\
+  \hline
+  Identification & LooseLH & TightLH \\
+  \hline
+  Isolation &  FCLoose $(p_T <100~GeV)$                   &  FixedCutHighPtCaloOnly \\
+            &  no isolation requirement $( >100~GeV )$ & \\
+  \hline
+  $|d_{0}/\sigma_{d_0}|$ & \multicolumn{2}{c|}{ <~5 }\\ 
+  \hline
+  $| z_{0} \sin{\theta}|$ & \multicolumn{2}{c|}{ <~0.5~mm }\\
+  \hline
+ \end{tabular}}
+ \label{tab:electron_selection}
+ \caption{Summary of electron selection}
+\end{table}
+
+
 \section{Muons}
+Muon is reconstructed by the combination of the tracks in the Inner Detector (ID) and Muon Spectrometer (MS). Several algorithm are used for the reconstruction: combined (CB) muons which require independent tracks both in ID and the MS. VB muons are of highest quality, but least acceptance. Segment-tagged (ST) muons require an ID track with only one hit in the MS, which allows recovering the low-$p_T$ muons. Calorimeter-tagged (CT) muon is reconstructed by requiring one ID track and in addition energy deposits in the calorimeter, which agree with a minimum-ionizing particle. CT muon are used to increase the acceptance in the region of $|\eta| < 0.1$, where the region without the muon cells due to the layout of the calorimeter cables. 
+%reconstruction efficiency of calibration things
+The muon reconstruction efficiency is measured with sample of $J/\Phi \rightarrow \mu\mu$ and $Z\rightarrow \mu\mu$, as well as the momentum scale and resolution.
+The reconstruction efficiency is measured to be close to 99\% over most of the covered phase space ($|\eta|$ < 2.5 and 5 < $p_{T}$ < 100 GeV). The isolation efficiency varies between 93 and 100 \% depending on the selection applied and on the momentum of the muon. Both efficiencies are checked to be well reproduced in MC simulation. 
+In the central region of the detector, the momentum resolution is measured to be 1.7 \% (2.3 \%), and the momentum scale is known with an uncertainty of 0.05 \%. In the region $|\eta|$ > 2.2, the $p_T$ resolution for muons is 2.9 \% while the precision of the momentum scale for low-$p_T$ muons is about 0.2 \% \cite{}.
+\section{Missing Transverse Momentum}
+
 \section{Jets}
 \subsection{small-R Jets}
 \subsection{large-R Jets}
-\section{Missing Transverse Momentum}
+
 
