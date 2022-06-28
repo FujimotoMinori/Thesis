@@ -21,6 +21,7 @@ linkcolor=black,bookmarksnumbered=true,citecolor=black,bookmarks=true]{hyperref}
 \usepackage[small]{caption}
 %\bibliographystyle{junsrt}
 \usepackage{multirow}
+\usepackage{lineno}
 
 %% definition of words
 \newcommand{\postthesisname}{ Thesis}
@@ -42,25 +43,23 @@ linkcolor=black,bookmarksnumbered=true,citecolor=black,bookmarks=true]{hyperref}
   \end{flushright}
 }
 
-\newcommand{\putPrefix}[1]{
-  \title{\vspace*{2.5cm}
-    {\LARGE Doctoral Dissertation, 2022}
-    \vspace{5cm}
-  }
-}
-
 \newcommand{\putTitle}[1]{
-  \title{\vspace*{2.5cm}
+  \title{%\vspace*{2.5cm}
+    \textit{\Large{ Doctoral Dissertation, 2022}}\\[2ex]
+    \vspace{4cm}
     %{\Large \thesisname}\\%[1zw]
-    {\LARGE #1}
-    \vspace{5cm}
+    {\HUGE #1}
+    \vspace{6cm}
   }
 }
 
-\newcommand{\putAuthor}[2]{
+\newcommand{\putAuthor}[1]{
   \author{
+    \textit{\Large{OCHANOMIZU UNIVERSITY}} \\[2ex]
+    \textit{\Large{Graduate School of Humanities and Sciences}} \\[2ex]
+    \textit{\Large{Physics Department}} \\[2ex]
+    \\
     \Large #1\\[2ex]
-    \textit{\large #2}
   }
 }
 

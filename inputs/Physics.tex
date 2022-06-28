@@ -1,8 +1,10 @@
 \chapter{Theoretical Overview}
 
-This chapter describes the physics backgrounds of the semileptonic VBS analysis.
+This chapter describes the physics backgrounds of this thesis.
+%Section~\ref{sec:SM} introduces the Standard Model of the particle physics.
 
 \section{The Standard Model}
+\label{sec:SM}
 
 The Standard Model (SM) represents a description of the elementary particles and their interactions.
 It is proved successful in explaining the results of existing experimental results so far, and predicting the later results.
@@ -36,7 +38,7 @@ There are two types of particles described in details below:
 \end{itemize}
 
 \subsection{SM Lagrangian}
-\label{ch:Lagrangian}
+\label{subsec:Lagrangian}
 The SM Lagrangian and its origin is to be shown here in this subsection. 
 The Standard Model consists of several components as discribed in the following subsections. They are mathematically described as the Lagrangian density, $\mathcal{L}$, which is denoted as Lagrangian in the following.\\
 
@@ -91,7 +93,7 @@ The Lagrangian now restore the invariance with the gauge field A$_\mu$. By using
 The Lagrangian is invariant under the U(1)$_{EM}$ local gauge transformations of fields. The field A$_\mu$ is identified as photon, and the invariance forbids the introduction of a mass term of the A$_\mu$, of the form of $\frac{1}{2}m^2 A_\mu A^\mu$. The photon is requested to be massless, which agrees with all experiment results.
 \\
 
-\noindent\textbf{\sf{Quantum Chromo Dynamis (QCD))}} \\ 
+\noindent\textbf{\sf{Quantum Chromo Dynamis (QCD)}} \\ 
 The QCD describes the strong force interactions between quarks and gluons. The concept of the required invariance is similar to the QED, while an additional degree of freedom is introduced: the charge denoted as color, which is red (r), green(g), and blue(b). The Dirac spinor is replaced with vector of three spinors for quarks:
 \begin{equation}
 \psi=\left(\begin{array}{c}
@@ -300,6 +302,8 @@ m_{W} &=\frac{v}{2} g
 %v=\frac{2 m_{W}}{g}=\frac{1}{\sqrt{2} G_{F}} \simeq 246.22 \mathrm{GeV}
 %\end{equation}
 
+\\ \\
+\noindent\textbf{\sf{Yukawa Coupling}} \\ 
 The fermion mass term is also not invariant under the local phase transformations of SU(2)$_L$. It is also generated with the Higgs mechanism, using their coupling to the Higgs boson. The newly introduced coupling $g_f$ is called Yukawa coupling.
 
 For the down type fermions, the same Higgs field $\phi$ is used, while for the up type fermions, the charge conjugate of the Higgs field $\phi^C$ is used:
@@ -352,27 +356,27 @@ At last, the Standard Model Lagrangian is described as
 \end{equation}
 This Lagrangian is invariant under local transformations of SU(3) $\times$ SU(2)$_L$ $\times$ U(1)$_Y$, while the vacuum is breaking the symmetry and not invariant. \\
 
-The coupling constats appeared in the Lagrangian are determined by the measurement from experiments. The measured valued is summarized in the Table~\ref{tab:constants}.  \\
+The coupling constants appeared in the Lagrangian are determined by the measurement from experiments. The measured valued is summarized in the Table~\ref{tab:constants}.  \\
 
+\begin{center}
 \begin{tabular}{|l|l|}
 \hline
 Coupling constants & Measured Value \\
 \hline 
-& $y_{u}=10^{-5}, y_{c}=7 \times 10^{-5}, y_{t}=1,$, \\
-Yukawa Couplings & $y_{d}=3 \times 10^{-5}, y_{s}=5 \times 10^{-4}, y_{b}=0.03$ \\
-& $y_{e}=3 \times 10^{-6}, y_{\mu}=6 \times 10^{-4}, y_{\tau}=0.01$ \\
-Fine Structure Constant & $\alpha=1 / 127$ \\
-Strong Coupling Constant & $\alpha_{s}=0.12$ \\
-Weinberg Angle & $s_{W}^{2}=0.23$ \\
+                             & $y_{u}=10^{-5}, y_{c}=7 \times 10^{-5}, y_{t}=1,$, \\
+            Yukawa Couplings & $y_{d}=3 \times 10^{-5}, y_{s}=5 \times 10^{-4}, y_{b}=0.03$ \\
+                             & $y_{e}=3 \times 10^{-6}, y_{\mu}=6 \times 10^{-4}, y_{\tau}=0.01$ \\
+     Fine Structure Constant & $\alpha=1 / 127$ \\
+    Strong Coupling Constant & $\alpha_{s}=0.12$ \\
+              Weinberg Angle & $s_{W}^{2}=0.23$ \\
 Higgs Self Coupling Constant & $\lambda=0.1$ \\
-PMNS matrix (parametric representation) & $\theta_{12}=34, \theta_{13}=8.5, \theta_{23}=247, \delta_{C P}=200$ \\
-CKM matrix (parametric representation) & $\theta_{12}=13.0, \theta_{13}=0.2, \theta_{23}=2.4, \delta_{13}=1.2$ \\
+%PMNS matrix (parametric representation) & $\theta_{12}=34, \theta_{13}=8.5, \theta_{23}=247, \delta_{C P}=200$ \\
+%CKM matrix (parametric representation) & $\theta_{12}=13.0, \theta_{13}=0.2, \theta_{23}=2.4, \delta_{13}=1.2$ \\
 \hline
-\caption{
- coupling constants
-}
 \label{tab:constants}
+\caption{coupling constants~\cite{PhysRevD.98.030001}}
 \end{tabular}
+\end{center}
 
 \section{Phenomenology of proton-proton collision}
 The standard model physics can be tested with the scattering experiments like ATLAS experiments located to the LHC.
@@ -380,6 +384,7 @@ Since the LHC is the proton-proton collider, the physics related to the proton-p
 Since their is a substructure inside the proton, the proton-proton collision cross section needs to be modeled through the formalism of QCD.
 
 \subsection{Factorization}
+\label{subsec:factorization}
 
 The scattering cross section can be calculated with perturbative QCD. 
 However, the size of the coupling constant, $\alpha_s$ even at the rather large momentum, $q^2$, the perturbative expansion converges really slow.
@@ -413,22 +418,25 @@ The PDF is estimated by the collision data from previous and current experiments
 Since the matrix-element is calculated at a fixed order, final states of parton-level events calculated so far is neglecting higher-order corrections, which have sizable effect on the particle kinematics. In order to account for effects of higher order QCD correction and hadronization, parton showering and hadronization algorithm are performed.
 
 \subsection{Parton shower}
-The parton shower do the splittings of the outgoing colored partons.  The MC simulations is base on the Markov-chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two other partons, in the limit of the infrared cutoff scale, t$_{cutoff}$, typically $t_{0} \approx 1 \mathrm{GeV}$. The typical generators: PYTHIA~\cite{SJOSTRAND2008852} and HERWIG~\cite{Gieseke2012} use different choices of t$_{cutoff}$.
+\label{subsec:partonshower}
+
+The parton shower do the splittings of the outgoing colored partons.  The MC simulations is base on the Markov-chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two other partons, in the limit of the infrared cutoff scale, t$_{cutoff}$, typically $t_{0} \approx 1 \mathrm{GeV}$. The typical generators: Pythia~\cite{SJOSTRAND2008852} and Herwig~\cite{Gieseke2012} use different choices of t$_{cutoff}$.
 The parton shower doesn't affect to the total cross section, since the final state particles emitted to every directions.
 \subsection{Hadoronization}
-The partons resulted afterparton shower are combined to form hadrons. Hadronization is performed in completely non-pertabative way, based on several models. PYTHIA and HERWIG adopt different phenomenological models: String Model, based on linear confinement of partons and Cluster Model, based on the preconfinement of parton showers.
+The partons resulted afterparton shower are combined to form hadrons. Hadronization is performed in completely non-pertabative way, based on several models. Phytia and Herwig adopt different phenomenological models: String Model, based on linear confinement of partons and Cluster Model, based on the preconfinement of parton showers.
 %\subsection{MC generators}
 %description of MC generators, up to where and what they do
 
 
-
 \section{Vector Boson Scattering}
+\label{sec:VBS}
+
 The scattering of two electroweak gauge bosons can probe the structure of the electroweak symmetry breaking (EWSM) mechanism directly. 
 Electroweak gauge boson scattering, or Vector Boson Scattering (VBS) is therefore one of the key process to be investigate in LHC experiment.
 The Vector Boson indicates W,Z,$\gamma$ here, which are fundamental electroweak bosons. Though the massive vector bosons, which are W and Z are only sensitive to the mechanism of the  EWSM, $\gamma$ is also included since it is impossible to fully separate the $\gamma$ and Z contributions experimentally. 
 %<- need this??
 \subsection{Electroweak gauge boson scattering and the Higgs boson}
-As described in Chapter~\ref{ch:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance produces three degrees of freedom, which is the GoldStone Bosons and then they are eaten up by the introducing of the Higgs boson. They correspond to the longitudinal, massive weak gauge bosons. Measuring the VBS channels provides information of the other three degrees of freedom than Higgs field. The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
+As described in section~\ref{subsec:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance produces three degrees of freedom, which is the GoldStone Bosons and then they are eaten up by the introducing of the Higgs boson. They correspond to the longitudinal, massive weak gauge bosons. Measuring the VBS channels provides information of the other three degrees of freedom than Higgs field. The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
 %%Correct explanation here????
 
 \begin{figure}[tbp]
@@ -486,7 +494,7 @@ The VV to VV interaction Feynman diagram at tree-level. Contributions includes H
 The amplitude of the WW scattering is to be inspected further to see the effect of existence of the Higgs boson for example. The combination of other weak massive bosons like WZ, as well as ZZ can be denoted similarly. 
 %really?
 
-Since the polarization vector of the longitudinal weak vector boson can be written in the form, \ref{}: %put reference!
+Since the polarization vector of the longitudinal weak vector boson can be written in the form, \cite{Rindani_2009}: 
 \begin{equation}
 \epsilon_{L}^{\mu}=\frac{1}{m_{V}}\left(|\vec{p}|, \frac{\vec{p}}{|\vec{p}|} E\right)=\frac{p^{\mu}}{m_{V}}+\mathcal{O}\left(\frac{m_{V}}{E}\right)
 \end{equation}
@@ -521,9 +529,27 @@ Cross section at tree-level %\ref{}
 \end{center}
 \end{figure}
 
-\section{Production Cross-Sections and Branching Fractions}
-\\
-\\
+\section{Several decay channels in VBS analysis}
+\textcolor{blue}{put description about the several decay channels and the good point of the semi-leptonic channel here}　\\
+There are several decay channels in VBS analysis with respect to the boson type and its decay products. The latest significance obtained by ATLAS and CMS in each channels are summarized in the Table.
+
+\begin{tabular}{|c|c|c|c|}
+\hline \multicolumn{2}{|c|}{}                                   & ATLAS             & CMS\\
+\hline
+\hline \multirow{3}{*}{ Full-leptonic }      & ssWW -> Ivlv     & $6.5      \sigma$ &    \\
+\cline { 2 - 4 }                             & osWW             & $-$               &    \\
+\cline { 2 - 4 }                             & WZ -> Ivll       & $5.3(3.2) \sigma$ &    \\
+\cline { 2 - 4 }                             & ZZ -> IIll/llvv  & $5.5(4.3) \sigma$ &    \\
+\hline \multicolumn{2}{|c|}{ Semi-leptonic }                    & $2.7(2.5) \sigma$ &    \\
+\hline \multicolumn{2}{|c|}{ Full-hadronic }                    & $-$               &    \\
+\hline
+\end{tabular}
+
+The VBS process has already observed in the full-leptonic channel.
+In this thesis, semi-leptonic channel is studied. One of the two weak vector boson (W or Z) decay into leptons ( electrons or muons or neutrino) and the other decays into hadrons.
+
+\section{Previous analysis results of the VBS semi-leptonic channel}
+\textcolor{blue}{put previous analysis results here}
 
 \section{Anomalous Quartic Gauge Coupling and Effective Field Theory}
 
@@ -588,9 +614,15 @@ All the corresponding operators are shown hereafter.
 \end{equation}
 \end{itemize}
 
-Since the operator $\mathcal{L}_{S, 2}$ is the Hermite conjugate of the $\mathcal{L}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{L}_{S, 02}$, with the coefficient $f_S02$, respectively. It is found via simulations that the tensor operators produce purely transversely polarized $W/Z$ bosons, while the scalar operators longitudinal bosons.
+Since the operator $\mathcal{L}_{S, 2}$ is the Hermite conjugate of the $\mathcal{L}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{L}_{S02}$, with the coefficient $f_S02$, respectively. It is found via simulations that the tensor operators produce purely transversely polarized $W/Z$ bosons, while the scalar operators longitudinal bosons.
 
-The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}.
+The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}. The VBS semi-leptonic channel has both WZ and ZZ for the weak vector bosons, therefore can get the limits for all 
+
+\subsection{Latest limit for the dimension-8 operators}
+The latest limits on the Wilson coefficients of the 8-dimension operators are shown in Table~\ref{tab:}.
+The most stringent limits are obtained by CMS in *** channel. 
+
+
 
 %table1
 \begin{center}
@@ -615,31 +647,31 @@ The summary of the correspondences of the operators and the vertices are summari
 \label{tab:vertex}
 \end{center}
 
-The aQGCs can be measured by the VBS and the triboson channels.
-The summary of sensitive channel to each operator is shown in the table~\ref{tab:aQGCchannel}. \textcolor{blue}{need to think and modify this table}
+%The aQGCs can be measured by the VBS and the triboson channels.
+%The summary of sensitive channel to each operator is shown in the table~\ref{tab:aQGCchannel}. \textcolor{blue}{need to think and modify this table}
 
 %table2
-\begin{center}
-\begin{tabular}{|l| c c c c c c |} 
- \hline
- VVjj final state                                         & $ZZ$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ \\ [0.5ex] 
- \hline\hline
- VVV final state                                          & $ZZZ$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ \\ [0.5ex] 
- \hline\hline
- $\mathcal{L}_{S02}$,$\mathcal{L}_{S1}$                   & \checkmark & \checkmark & \checkmark &  &  　　　　　　　　 &　 \\ 
- \hline
- $\mathcal{L}_{M0}$,$\mathcal{L}_{M1}$,$\mathcal{L}_{M7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark \\
- \hline
- $\mathcal{L}_{M2}$,$\mathcal{L}_{M3}$,$\mathcal{L}_{M4}$,$\mathcal{L}_{M5}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
- \hline
- $\mathcal{L}_{T0}$,$\mathcal{L}_{T1}$,$\mathcal{L}_{T2}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
- \hline
- $\mathcal{L}_{T5}$,$\mathcal{L}_{T6}$,$\mathcal{L}_{T7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\ [1ex] 
- \hline
- $\mathcal{L}_{T8}$,$\mathcal{L}_{T9}$                    &  &  & \checkmark &  &  & \checkmark \\ [1ex] 
- \hline
-\end{tabular}
-\caption{operators and the channels}
-\label{tab:aQGCchannel}
-\end{center}
+%\begin{center}
+%\begin{tabular}{|l| c c c c c c |} 
+% \hline
+% VVjj final state                                         & $ZZ$ & $WWZZ$ & %$ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ \\ [0.5ex] 
+% \hline\hline
+% VVV final state                                          & $ZZZ$ & $WWZZ$ & %$ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ \\ [0.5ex] 
+% \hline\hline
+% $\mathcal{L}_{S02}$,$\mathcal{L}_{S1}$                   & \checkmark & %\checkmark & \checkmark &  &  　　　　　　　　 &　 \\ 
+% \hline
+% $\mathcal{L}_{M0}$,$\mathcal{L}_{M1}$,$\mathcal{L}_{M7}$ & \checkmark & %\checkmark & \checkmark & \checkmark & \checkmark &\checkmark \\
+% \hline
+% $\mathcal{L}_{M2}$,$\mathcal{L}_{M3}$,$\mathcal{L}_{M4}$,$\mathcal{L}_{M5}$ &  & %\checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
+% \hline
+% $\mathcal{L}_{T0}$,$\mathcal{L}_{T1}$,$\mathcal{L}_{T2}$ &  & \checkmark & %\checkmark & \checkmark & \checkmark & \checkmark \\
+% \hline
+% $\mathcal{L}_{T5}$,$\mathcal{L}_{T6}$,$\mathcal{L}_{T7}$ & \checkmark & %\checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\ [1ex] 
+% \hline
+% $\mathcal{L}_{T8}$,$\mathcal{L}_{T9}$                    &  &  & \checkmark &  & % & \checkmark \\ [1ex] 
+% \hline
+%\end{tabular}
+%\caption{operators and the channels}
+%\label{tab:aQGCchannel}
+%\end{center}
 

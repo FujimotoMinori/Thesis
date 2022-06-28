@@ -1,7 +1,10 @@
 \chapter{Event selection}
-The event selection has been optimized in order to maximize the significance of the signal over backgraound.
-The whole event selection of the analysis is shown in this chapter.
+The event selection has been optimized in order to maximize the significance of the signal over background.
+The detail of the whole event selection for 2-lepton channel is shown in this chapter. The event selection in other 0/1-lepton channel is summarized in the appendices.
 
+\Section{Preselection}
+The preselection 
+%%%%%%
 %overview
 First the preselection cuts are applied including basic event cleaning and the trigger requirements, then the specific event selection is applied to the each 0,1,2-lepton channels.
 For the main event selection, first the selection of the one $W/Z$ boson decaying leptonically is selected. Then in each channel, the forward jets and the hadronically decaying boson is selected and the Signal region (SR) and the Control region (CR) is defined, finally the selection to enhance the VBS topology is applied before using the machine learning approach to get the final discriminant.
@@ -9,9 +12,38 @@ For the main event selection, first the selection of the one $W/Z$ boson decayin
 The events are categorized into two regions depends on the type of the jets included. The events has one or more large-R jets are categorized as merged region, otherwise resolved region. In the merged region, forward jets are selected by choosing two small-R jets with the highest invariant mass ($m_{jj}^{tag}$), then the large-R jet with the highest $p_T$ is chosed as the merged jets decayed from $W/Z$ boson $(V_{had})$. In the resolved region, forward jets are selected same as in the merged region, then two jets with the higest and the second highest $p_T$ is selected from the rest of the small-R jets as the jets decaying from $V_{had}$.
 
 Further details are shown hereafter.
+\section{Boson decaying leptonically}
+The selection of the $W/Z$ boson decaying leptonically is applied before categorizing of the signal region (SR) and the control region (CR).
+In 2-lepton channel, the $Z\rightarrow ll $ candidates are identified by requiring two isolated same-flavour leptons. Both leptons are required to be $p_T > 27$GeV.
+Opposite charges are required for the muon pairs, not for electrons due to their higher mis-identification rate because of the conversions of photons from bremsstrahlung, especially at high $E_T$. The dilepton invariant mass $m_ll$ is required to be close to the Z boson mass.
+For electrons, mass window is required as:
+\begin{equation}
+83<m_{e e}<99 \mathrm{GeV}
+\end{equation}
+while for muons, the $p_{T,ll}$-dependent mass window is required:
+\begin{equation}
+\left(85.6-0.0117 p_{\mathrm{T}, \ell \ell}\right)<m_{\mu \mu}<\left(94.0+0.0185 p_{\mathrm{T}, \ell \ell}\right) \mathrm{GeV}
+\end{equation}
+This $p_T,ll$ requirement,which is optimized from the analysis of 2015+16 \cite{} is adopted because of the effect of dimuon mass resolution degradation at high-$p_{T,ll}$.
+Data and MC distributions of relevant lepton distribution at the early stage of the selection are shown in Figure~\ref{fig:2lepLeptons}.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el1Pt_Log}
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el2Pt_Log} 
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_mu1Pt_Log}
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_mu2Pt_Log} 
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_llMass_Lin}
+    \caption{Lepton distributions in 2-lepton channel. The events before any selections are shown. Z mass peak can be seen in $M_{ll}$ distribution.}
+    \label{fig:2lepLeptons}
+\end{figure}
 
-\section{Common selection}
-The selection of the $W/Z$ boson decaying leptonically is applied before categorizing of the signal region (SR) and the control region (CR) is described here.　\\
+\section{VBS topology selection}
+The VBS event requires to have a pair of small-R jets as a candidate of the forward jets, referred as tagging jets.
+
+The hadronically decaying W/Z boson is reconstructed as either two small-R jets of one large-R jets, which referred as signal jets. Requiring these signal jets 
+\section{Hadronically decaying boson}
+The W/Z boson decaying hadronically is selected by requiring the pair of small-R jets 
+
 \noindent \textbf{0-lepton}\\
 The $Z \rightarrow \nu\nu$ identification requires no Loose lepton and high missing energy (E$_T^{miss}$ > 200~GeV) in the final state. There are significant QCD multijet background in 0-lepton channel, therefore some cuts suppressing the multijets are applied: \\
 \\
@@ -83,8 +115,8 @@ The event selection is applied to enhance the VBS topology. After categorization
 The additional cut is applied to suppress the top contributions for example tZb diagram from the diagram with the Figure~\ref{fig:feynmantZb} included in the signal sample. The top contribution is not the VBS diagrams, while we cannot separate this diagram in the gauge invariant way. Therefore we decided to reconstruct the top mass with the two signal jets and the third jet which forms the three-jet mass, $m_{jjj}$, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events with each truth particles is shown, and the modeling plot is also shown in Figure~\ref{fig:2leptopMass}. 
 \begin{figure}[ht]
     \begin{center}
-        \subfigure[$\text{top mass peak}$]{\includegraphics[width=0.3\textwidth]{figures/2lep/topMass/WZjjtopMasspeak}}
-        \subfigure[$\text{top mass in CRVjet}$]{\includegraphics[width=0.3\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_topMass_Log}}
+      \includegraphics[width=0.45\textwidth]{figures/2lep/topMass/WZjjtopMasspeak}
+      \includegraphics[width=0.45\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_topMass_Log}
         \caption{ Mass of 3 jets in the 2-lepton channel CRVjet.}
         \label{fig:2leptopMass}
     \end{center}

@@ -4,15 +4,18 @@
 %\usepackage[backend=biber,style=ieee]{biblatex}
 
 \setcounter{secnumdepth}{3} % show subsubsection numbers
-%\putPrefix
+\linenumbers
+
 \putTitle{Search for Vector Boson Scattering in semileptonic final state with the ATLAS detector using LHC Run-2 data}
 \putAuthor{FUJIMOTO Minori}
-%\date{September,2022}
+\date{\today}
 
 \begin{document}
+
 \maketitle
 \frontmatter
 \putAbstract{inputs/abst}
+\input{inputs/Acknowledgement}
 \tableofcontents
 
 \mainmatter
@@ -23,21 +26,17 @@
 \input{inputs/VBSSearch}
 \input{inputs/aQGC}
 \input{inputs/Conclusion}
-\input{inputs/Acknowledgement}
-\input{inputs/bibliography}
+
+%-------------------------------------------------------------------------------
+\clearpage
+\appendix
+\part*{Appendices}
+\addcontentsline{toc}{part}{Appendices}
 
 \input{inputs/Appendix}
+%-------------------------------------------------------------------------------
+\input{inputs/bibliography}
 
-%bibliography
-%\bibliography{bib/ATLAS}
-%\bibliography{bib/CMS}
-%\bibliography{bib/PubNotes}
-%\bibliography{bib/ConfNotes}
-%\bibliography{bib/ANA-STDM-2018-27-INT1}
-
-%\printbibliography[title=Bibliography]
-
-\appendix
 \listoffigures
 \listoftables
 
