@@ -99,7 +99,7 @@ Figure~\ref{fig:Mtagjj} shows the $m^{tag}_{jj}$ distribution before selecting t
 The $m^{tag}_{jj}$ reweighting, which is described in Chapter~\ref{}, is applied before defining the SRs and CRs to correct the Z+jet modeling.
 
 \section{Hadronically decaying boson, Signal Region (SR) definitions}
-Signal regions (SR) are defined to enhance the signal purity, and for background  components the control region (CR). They are defined by requiring the signal jet selections. Defining order starts from merged categories, then move to the resolved category. Each events are categorized into the regions in following order in Figure~\ref{fig:order}. The events failed the previous selection goes to the next selection, therefore there is no events overlapped.
+Signal regions (SR) are defined to enhance the signal purity, and for background  components the control region (CR). They are defined by requiring the signal jet selections. Defining order starts from merged categories, then move to the resolved category. Each events are categorized into the regions in following order in Figure~\ref{fig:order}. The event selection is performed subsequently, which means only the events failed the previous selection goes to the next selection, therefore there is no events overlapped.
 These five regions are simultaneously fitted in the final fitting.
 
 \begin{figure}[H]
@@ -374,3 +374,114 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{2}{c|}{ $>220$~GeV} \\
 \end{center}
 \caption{A summary of regions event selection for 2-lepton channel in the resolved regime.}
 \end{table}
+
+\section{Event selection cutflow}
+The cutflow of the event selection in three SRs (HPSR, LPSR, Resolved SR) is shown in Table~\ref{tab:2lep_HPSR},\ref{tab:2lep_LPSR},\ref{tab:2lep_ResolvedSR}. After applying all event selection described here, the signal over background ratio is increased, yet still small, which is about 3~\% in HPSR.
+
+%%% HPSR
+\begin{table}[ht!]
+\small
+\begin{center}
+\resizebox{\textwidth}{!}{
+ \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  || r r r r r |}
+ \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & W & WZ & WW & Z & ZZ & stopWtDilep & stops & stopt & ttbar & S & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
+ \hline
+All & 768630 & 118757 & 7549.85 & 2.69014e+07 & 75904.3 & 219335 & 1566.79 & 30086.3 & 3.4463e+06 & 8530.6 &3.15695e+07&0.00027 & 1.5\tabularnewline \hline
+passCommon & 8949.67 & 73105.4 & 138.511 & 1.59613e+07 & 48170 & 22208.8 & 61.7359 & 1002.7 & 361153 & 3577.38&1.64761e+07&0.00021 & 0.88\tabularnewline \hline
+TwoTagMerJets & 5430.67 & 41182 & 83.2249 & 9.38413e+06 & 24924.9 & 14016.8 & 33.1233 & 711.353 & 243694 & 2890.74&9.7142e+06&0.00029 & 0.92\tabularnewline \hline
+PtTagMerJet1 & 4846.86 & 39715 & 80.198 & 7.66047e+06 & 23830.9 & 13522.8 & 31.7876 & 687.684 & 240045 & 2881.49 &7.98323e+06&0.00036 & 1.01\tabularnewline \hline
+PtTagMerJet2 & 2692.05 & 26366.4 & 51.0517 & 3.74324e+06 & 14613 & 8652.04 & 19.427 & 455.492 & 180641 & 2527.77 &3.97673e+06&0.00063 & 1.26\tabularnewline \hline
+AtLeastOneFatJet & 73.9896 & 1355.28 & 2.49747 & 54043.4 & 401.963 & 194.503 & 0.683082 & 9.52178 & 4071.51 & 190.792 &60153.4&0.0031 & 0.77\tabularnewline \hline
+PtFatJet200 & 73.9896 & 1355.28 & 2.49747 & 54043.4 & 401.963 & 194.503 & 0.683082 & 9.52178 & 4071.51 & 190.792 &60153.4&0.0031 & 0.77\tabularnewline \hline
+EtaFatJet2p0 & 73.9896 & 1355.28 & 2.49747 & 54043.4 & 401.963 & 194.503 & 0.683082 & 9.52178 & 4071.51 & 190.792 &60153.4&0.0031 & 0.77\tabularnewline \hline
+dRL-eptonFatjet & 65.6967 & 1241.31 & 2.08247 & 50386.7 & 372.277 & 176.007 & 0.617677 & 8.85472 & 3270.23 & 177.47 &55523.8&0.0031 & 0.75\tabularnewline \hline
+MFatJetLow & 26.3573 & 593.162 & 1.36814 & 17874.7 & 176.377 & 57.5099 & 0.147335 & 3.37462 & 1340.61 & 120.588 &20073.6&0.0060 & 0.85\tabularnewline \hline
+SFLeptons & 8.29704 & 592.425 & 0.528064 & 17868.5 & 176.306 & 19.6953 & 0.0648612 & 1.36886 & 425.456 & 120.184 &19092.6&0.0062 & 0.86\tabularnewline \hline
+MFatJet50 & 3.97632 & 321.546 & 0.150938 & 8269.29 & 98.0685 & 9.3015 & 0.0648612 & 0.426969 & 201.394 & 77.5594 &8904.22&0.0087 & 0.82\tabularnewline \hline
+D2FatJet50 & 1.6553 & 164.963 & 0.150938 & 3032.68 & 52.9234 & 5.01844 & 0.0207499 & 0.246388 & 81.719 & 50.0044 & 3339.37&0.014 & 0.86\tabularnewline \hline
+NTrkFatJet50 & 1.24764 & 114.689 & 0.150938 & 1527.16 & 36.5107 & 2.48592 & 0.0207499 & 0.213116 & 41.1061 & 40.9103 &1723.59&0.023 & 0.98\tabularnewline \hline
+WZFatJet50 & 0.655411 & 112.269 & 0.150938 & 1469.7 & 35.6488 & 2.48592 & 0.0207499 & 0.213116 & 39.669 & 40.1491 &1660.82&0.024 & 0.98\tabularnewline \hline
+MTagMerJets400 & 0.608311 & 89.745 & 0.150938 & 1247.25 & 27.2269 & 2.34095 & 0.0207499 & 0.0789171 & 33.3017 & 37.6674 &1400.73&0.026 & 1.00\tabularnewline \hline
+\end{tabular}
+}
+\caption{Cutflow table for HPSR region in 2-lepton channel}
+\label{tab:2lep_HPSR}
+\end{center}
+\end{table}
+
+%%% LPSR
+\begin{table}[ht!]
+\small
+\begin{center}
+\resizebox{\textwidth}{!}{
+ \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  || r r r r r |}
+ \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & W & WZ & WW & Z & ZZ & stopWtDilep & stops & stopt & ttbar &  S & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
+ \hline
+All & 768630 & 118757 & 7549.85 & 2.69014e+07 & 75904.3 & 219335 & 1566.79 & 30086.3 & 3.4463e+06 & 8530.6&3.15695e+07&0.00027 & 1.51\tabularnewline \hline
+FailMergedSR50 & 768630 & 118667 & 7549.7 & 2.69001e+07 & 75877.1 & 219333 & 1566.77 & 30086.3 & 3.44627e+06 & 8492.93&3.15681e+07&0.00026 & 1.51\tabularnewline \hline
+Trigger & 562963 & 108010 & 5681.35 & 2.40927e+07 & 69318 & 195862 & 1133.62 & 21873.2 & 3.02893e+06 & 7222.22 &2.80865e+07&0.00025 & 1.36\tabularnewline \hline
+BothLepPt & 67751.3 & 90649.8 & 1147.71 & 2.07619e+07 & 59529.4 & 156592 & 304.094 & 4763.36 & 2.38282e+06 & 4798.78 &2.35255e+07&0.00020 & 0.98\tabularnewline \hline
+LeadLepPt & 67452.8 & 90574.8 & 1141.41 & 2.0715e+07 & 59477 & 156269 & 301.881 & 4729.08 & 2.37606e+06 & 4792.64 &2.3471e+07&0.00020 & 0.98\tabularnewline \hline
+MuonEtaLt2p5 & 66379 & 89424.2 & 1118.34 & 2.04089e+07 & 58762.6 & 155201 & 291.395 & 4617.26 & 2.3588e+06 & 4734.01 &2.31435e+07&0.00020 & 0.98\tabularnewline \hline
+OSMuons & 65152 & 89398.7 & 1101.67 & 2.04087e+07 & 58761 & 155164 & 263.104 & 4354.02 & 2.35796e+06 & 4696.69 &2.31409e+07&0.00020 & 0.97\tabularnewline \hline
+Mll & 8949.06 & 73015.6 & 138.36 & 1.596e+07 & 48142.8 & 22206.4 & 61.7151 & 1002.62 & 361120 & 3539.71 &1.64747e+07&0.00021 & 0.87\tabularnewline \hline
+TwoTagMerJets & 5430.07 & 41092.3 & 83.0739 & 9.38288e+06 & 24897.7 & 14014.5 & 33.1025 & 711.274 & 243660 & 2853.07&9.7128e+06&0.00029 & 0.91\tabularnewline \hline
+PtTagMerJet1 & 4846.25 & 39625.3 & 80.047 & 7.65922e+06 & 23803.7 & 13520.5 & 31.7668 & 687.605 & 240012  & 2843.82&7.98183e+06&0.00035 & 1.00\tabularnewline \hline
+PtTagMerJet2 & 2691.44 & 26276.6 & 50.9008 & 3.74199e+06 & 14585.8 & 8649.7 & 19.4063 & 455.413 & 180607  & 2490.1&3.97533e+06&0.00062 & 1.24\tabularnewline \hline
+AtLeastOneFatJet & 73.3813 & 1265.54 & 2.34653 & 52796.2 & 374.736 & 192.162 & 0.662332 & 9.44287 & 4038.21 & 153.125&58752.7&0.0026 & 0.63\tabularnewline \hline
+PtFatJet200 & 73.3813 & 1265.54 & 2.34653 & 52796.2 & 374.736 & 192.162 & 0.662332 & 9.44287 & 4038.21  & 153.125&58752.7&0.0026 & 0.63\tabularnewline \hline
+EtaFatJet2p0 & 73.3813 & 1265.54 & 2.34653 & 52796.2 & 374.736 & 192.162 & 0.662332 & 9.44287 & 4038.21  & 153.125&58752.7&0.0026 & 0.63\tabularnewline \hline
+dRLeptonFatjet & 65.0884 & 1151.57 & 1.93153 & 49139.4 & 345.05 & 173.666 & 0.596927 & 8.7758 & 3236.93  & 139.803&54123&0.0025 & 0.60\tabularnewline \hline
+MFatJetLow & 25.749 & 503.417 & 1.2172 & 16627.4 & 149.15 & 55.1689 & 0.126585 & 3.29571 & 1307.31 & 82.921 &18672.9&0.0044 & 0.60\tabularnewline \hline
+SFLeptons & 7.68872 & 502.68 & 0.377126 & 16621.2 & 149.079 & 17.3543 & 0.0441112 & 1.28994 & 392.155 & 82.5162 &17691.9&0.0046 & 0.62\tabularnewline \hline
+MFatJet80 & 4.50972 & 305.264 & 0.0531649 & 9708.43 & 92.5334 & 9.79512 & 0.0441112 & 0.8637 & 230.263 & 53.3019 &10351.8&0.0051& 0.52\tabularnewline \hline
+D2FatJet80 & 3.0742 & 220.826 & 0 & 6606.32 & 67.506 & 8.12447 & 0 & 0.652429 & 167.653 & 40.3886 &7074.16&0.0057 & 0.48\tabularnewline \hline
+NTrkFatJet80 & 1.80329 & 175.492 & 0 & 4548.12 & 53.5843 & 4.93659 & 0 & 0.58877 & 106.823 & 36.0306 &4891.35&0.0073 & 0.51\tabularnewline \hline
+WZFatJet80 & 1.80329 & 170.838 & 0 & 4389.69 & 52.4945 & 4.55232 & 0 & 0.58877 & 103.266 & 35.429 &4723.23&0.0075 & 0.51\tabularnewline \hline
+MTagMerJets400 & 1.67793 & 123.578 & 0 & 3541.1 & 35.3674 & 3.94765 & 0 & 0.454571 & 80.232 & 30.8227 &3786.36&0.0081 & 0.50\tabularnewline \hline
+\end{tabular}
+}
+\caption{Cutflow table for LPSR region in 2-lepton channel}
+\label{tab:2lep_LPSR}
+\end{center}
+\end{table}
+
+%% Resolved SR
+\begin{table}[ht!]
+\small
+\begin{center}
+\resizebox{\textwidth}{!}{
+ %\begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  r || r r r r r |}
+ \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  || r r r r r |}
+ \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & W & WZ & WW & Z & ZZ & stopWtDilep & stops & stopt & ttbar & S  & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
+ \hline
+All & 768630 & 118757 & 7549.85 & 2.69014e+07 & 75904.3 & 219335 & 1566.79 & 30086.3 & 3.4463e+06 & 8530.6 &3.15695e+07&0.00027 & 1.51\tabularnewline \hline
+FailMergedSR50 & 768630 & 118667 & 7549.7 & 2.69001e+07 & 75877.1 & 219333 & 1566.77 & 30086.3 & 3.44627e+06 & 8492.93&3.15681e+07&0.00026 & 1.51\tabularnewline \hline
+FailMergedSR80 & 768628 & 118544 & 7549.7 & 2.68966e+07 & 75841.7 & 219329 & 1566.77 & 30085.8 & 3.44619e+06 & 8462.11&3.15643e+07&0.00026 & 1.50\tabularnewline \hline
+Trigger & 562961 & 107887 & 5681.35 & 2.40892e+07 & 69282.7 & 195858 & 1133.62 & 21872.7 & 3.02885e+06 & 7191.4 &2.80827e+07&0.00025 & 1.35\tabularnewline \hline
+BothLepPt & 67749.6 & 90526.2 & 1147.71 & 2.07584e+07 & 59494 & 156588 & 304.094 & 4762.91 & 2.38274e+06 & 4767.96 &2.35217e+07&0.00020 & 0.98\tabularnewline \hline
+LeadLepPt & 67451.1 & 90451.2 & 1141.41 & 2.07115e+07 & 59441.7 & 156265 & 301.881 & 4728.63 & 2.37598e+06 & 4761.82 &2.34672e+07&0.00020 & 0.98\tabularnewline \hline
+MuonEtaLt2p5 & 66377.3 & 89300.6 & 1118.34 & 2.04053e+07 & 58727.3 & 155197 & 291.395 & 4616.81 & 2.35872e+06 & 4703.18 &2.31397e+07&0.00020 & 0.97\tabularnewline \hline
+OSMuons & 65150.4 & 89275.1 & 1101.67 & 2.04052e+07 & 58725.7 & 155160 & 263.104 & 4353.56 & 2.35788e+06 & 4665.87 &2.31371e+07&0.00020 & 0.97\tabularnewline \hline
+Mll & 8947.38 & 72892.1 & 138.36 & 1.59565e+07 & 48107.4 & 22202.5 & 61.7151 & 1002.17 & 361040 & 3508.89 &1.64709e+07&0.00021 & 0.86\tabularnewline \hline
+TwoTagResJets & 5428.39 & 40968.7 & 83.0739 & 9.37934e+06 & 24862.3 & 14010.5 & 33.1025 & 710.82 & 243580 & 2822.25&9.70902e+06&0.00029 & 0.90\tabularnewline \hline
+PtTagResJet1 & 4844.57 & 39501.7 & 80.047 & 7.65568e+06 & 23768.3 & 13516.5 & 31.7668 & 687.15 & 239932 & 2813 &7.97804e+06&0.00035 & 0.99\tabularnewline \hline
+PtTagResJet2 & 2689.76 & 26153.1 & 50.9008 & 3.73845e+06 & 14550.4 & 8645.75 & 19.4063 & 454.958 & 180527 & 2459.28 &3.97154e+06&0.00061 & 1.23\tabularnewline \hline
+TwoSigJets & 1224.28 & 15670.2 & 27.3266 & 1.35255e+06 & 7188.69 & 3383.22 & 6.95563 & 193.559 & 97769.1 & 1983.71 &1.47801e+06&0.0013 & 1.63\tabularnewline \hline
+PtSignalJet1 & 895.835 & 12934.8 & 23.2614 & 908980 & 5628.78 & 2675.5 & 5.30779 & 148.163 & 83593 & 1796.12 &1.01488e+06&0.0017 & 1.78\tabularnewline \hline
+PtSignalJet2 & 895.835 & 12934.8 & 23.2614 & 908980 & 5628.78 & 2675.5 & 5.30779 & 148.163 & 83593 & 1796.12 &1.01488e+06&0.0017 & 1.78\tabularnewline \hline
+MVHadResLow & 786.438 & 11881.2 & 21.6767 & 797009 & 5103.81 & 2390.64 & 4.78611 & 135.01 & 75903.6 & 1690.66&893237&0.0018 & 1.78\tabularnewline \hline
+SFLeptons & 238.494 & 11869.8 & 8.04294 & 796752 & 5102.21 & 738.483 & 1.51008 & 43.6911 & 23211.2 & 1673.08&837966&0.0019 & 1.82\tabularnewline \hline
+MVHadRes & 82.6204 & 3972.79 & 2.81781 & 251182 & 1838.78 & 204.164 & 0.436533 & 12.379 & 6566.27 & 782.652&263862&0.0029 & 1.52\tabularnewline \hline
+MTagResJets400 & 36.9849 & 1922.17 & 1.59711 & 139844 & 814.46 & 100.109 & 0.263526 & 9.07562 & 3048.05 & 581.914&145777&0.0039 & 1.52\tabularnewline \hline
+passMjjjRes & 15.7732 & 479.481 & 0.603948 & 37458.8 & 189.746 & 32.6127 & 0.0863601 & 3.17091 & 888.228 & 177.763&39068.5&0.0045 & 0.89\tabularnewline \hline
+\end{tabular}
+}
+\caption{Cutflow table for Resolved SR region in 2-lepton channel}
+\label{tab:2lep_ResolvedSR}
+\end{center}
+\end{table}
+
+
+
+

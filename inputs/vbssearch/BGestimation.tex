@@ -3,7 +3,7 @@ The study dedicated to the modeling of the major background in 2-lepton channel 
 
 \section{$m_{jj}^{tag}$ reweighting}
 There is a known mis-modelling issue with the Sherpa~2.2.1 V+jets samples. This mis-modelling is seen in the $m^{tag}_{jj}$ distribution as a slope when comparing the data over MC both in merged and the resolved region, as seen in Figure~\ref{fig:2lep_mtag_before_rw}.
-The re-weighting is performed to the Z+jets samples for 2-lepton channel, in order to correct this mis-modeling. A linear fit to the $m^{tag}_{jj}$ in CRs are performed for each merged and resolved CRs. The fit function is defined as:
+The re-weighting is performed to the Z+jets samples for 2-lepton channel, in order to correct this mis-modeling before defining the SRs and CRs. A linear fit to the $m^{tag}_{jj}$ in CRs are performed for each merged and resolved CRs. The fit function is defined as:
 \begin{equation}
 \label{eqn:reweight}
 R=p_{0} * m_{jj}^{tag}+p_{1}
@@ -31,17 +31,16 @@ $p_{1}$ (constant)  & $1.298 \pm 0.031$ & $1.187 \pm 0.005$ \\
 
 \begin{figure}[ht]
     \centering
-    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}}
-    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_Log.eps}}
+    \includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}
+    \includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_Log.eps}
     \caption{ $m^{tag}_{jj}$ distributions before applying reweighting for the merged (a) and resolved (b) control regions in the 2-lepton channel.}
     \label{fig:2lep_mtag_before_rw}
 \end{figure}
 
-
 \begin{figure}[ht]
     \centering
-    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}}
-    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_Log.eps}}
+    \includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}
+    \includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_Log.eps}
     \caption{ $m^{tag}_{jj}$ distributions after applying reweighting for the merged (a) and resolved (b) control regions in the 2-lepton channel. The slope seen before reweighting is corrected in the Z+jet CR.}
     \label{fig:2lep_mtag_before_rw}
 \end{figure}

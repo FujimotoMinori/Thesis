@@ -1,51 +1,45 @@
 \chapter{Multi-Variate Analysis}
 
-\textcolor{red}{This chapter needs revising and more detailed desctiptions} \\
-The target signal in this analysis is the $EW VV+jj$ production and, specifically, the VBS-diagram like events.
-These events are not characterized by any resonant variable,
-despite some sensitive variables like the $\eta$ of the VBS-like jets as well as
-the invariant mass of the VBS jets and of the diboson system.
-Indeed, the VBS signal toplogy is carachterised by two extra hard jets that are produced in the two opposite
-forward regions of the detector, both of them have usually high $\eta$ and high energy
-and the di-jets pair is carachterised by high invariant mass and high angular separation.
+The difficulty of the VBS semi-leptonic channel is its low signal background ratio. Even after applying the event selection described in Chapter~\ref{}, they are still many backgrounds. In order to improve the sensitivity of the EW VVjj signals with respect to the other backgrounds to get better significance, a machine learning approach is used for this analysis.
+The idea is to make use of several features that has difference between signal and background, and make new phase space optimized to show better separation. The output is used for the discriminant of the final fitting.
 
-In order to improve the separation with respect to the other SM background processes,
-we use a Machine Learning (ML) approach for this analysis.
-The baseline approach is based on a Recurrent Neural Network (RNN) architecture;
-we tested also other approaches like a high-level BDT in the \tlep channel (similar to the previous round)
-and a NN approach in the \zlep channel.
-
-In particular, we decided to use a Deep Learning (DL) approach meaning using Neural Networks in the deep regime;
-in order to exploit the deep regime as much as possible we focus on the lowest level variables available
-at the analysis level, i.e. the 4-momentum of the jets.
-Indeed, using low-level input variable the ML approach trained in a deep regime is able to reconstruct all the
-high-level information we might think to build by hand at the event levent and use as input.
-
-In particular, the jets reconstructed in the event bring information of both the VBS jets both the signal jets
-coming from the hadronic $V \rightarrow qq$ decay; therefore, a deep network using low-level information is able
-to learn not only high-level features related to the VBS di-jets pars but also features about the V-hadronic
-as well as correlation among the VBS jets and the V-hadronic.
+The architecture used for this analysis is a Recurrent Neural Network (RNN), as described in this Chapter.
+The RNN uses the lowest level variables, i.e. the 4-momentum of the jets as the inputs, and it enables to learn all the high-level information, since inputs bring not only the features related to both of the forward jets and the V-hadronic jets as well as correlation among both of those jets.
 
 \section{RNN}
-
-The DL (or sometimes referred as RNN) approach means to use a network in the DL regime and, in particular, use RNN layers in the architecture. For this approach, we focused on the 4-momentum components of the jets and on other sub-structure variable like tracks multiplicity.
-
-The main idea is to use all the jets reconstructed in the event in order to let the network understand all the hidden correlation and exploit the target signal topology.
-Since the jets multiplicity is a variable feature event by event given its own nature, we can not have fixed inputs values unless to use some default (-99 or something) values. Therefore, one architecture that allows to naturally attack this kind of input sequences is the RNN. Given the good and wide usage of this network in ATLAS recentely, we decided to use this architecture for this analysis.
+RNN~\cite{Sherstinsky_2020} is a class of the neural network architecture, recently used for the flavour tagging~\cite{ATL-PHYS-PUB-2017-003} or VV semi-leptonic resonannt search~\cite{HDBS-2018-10} that has the similar final states with diboson  with extra jets in ATLAS experiment.
+One of the general feature of the RNN is it can use the variable length sequences of inputs, which is suitable to jet tracks for example.
+The idea is to use all the jets reconstructed in the event in order to let the network learn all the hidden correlation and get the signal topology.
+Since the jet multiplicity is a variable feature event by event and cannot be fixed as inputs value, the RNN can handle this kind of input sequence naturally.
+The RNN is built with the Keras~\cite{chollet2015keras}, and the Tensorflow package~\cite{tensorflow2015-whitepaper} is used as backend for the mathematical computation. The RNN has 2 hidden layer with 25 recurrent cells to exploit the hidden correlation of the input sequence.
 
 \section{Input variables}
+The 4-momentum of the jets, $p_T, \eta, phi, E$, as well as the track multiplicity ($n_{Tracks}$ are the used as inputs in a recurrent way. As an actual input information, they have 5 sequences (4-momentum and the $n_{Tracks}$) and a variable length given by the jets multiplicity, which maximum length is fixed to be 5 in this analysis. This maximum length (i.e. jet multiplicty) is defined to get the significance to some extent and rather small modeling uncertainty.
 
-We use the 4-momentum of the jets, \pt, $\eta$, $\phi$, $E$, as well as the tracks multiplicity ($n_{Tracks}$) as the RNN inputs in a recurrent way.
-In particular, we build sequences of float values for each of the input variable, using the jets reconstructed in the event; therefore, 5 sequences (4-momentum + $n_{Tracks}$) and they have a maximum lenght given by the maximum jets multiplicity considered; in particular, this value has been fine tune to be 5 for this analysis, check Section \ref{subsec:RNN_nJetsX} for details. Each sequence will not be fully filled given the variable lenght nature of the jets collection in our physics events, but it will contains the information for all the jets available. For instance, if the event there are just 3 reconstructed jets the 5 sequences will have lenght equal to 3, if there are 4 jets they will have lenght equal to 4 and so on.
-In summary, the actual input of the network are 5 sequences with variable lenght according to the jets multiplicity in the that particular event, but the maximum lenght is set to be equal to 5.
+The input variables are the distributions of  4-momentum and $n_{Tracks}$ passed all event selections.The input distributions for the signal and the background processes are shown in Figure~\ref{}.
 
 
 \section{Setup and training}
+The RNN model is trained to separate the signal from the background. The output scores are then not used as a categorization variable by applying cut on it, but used as a final discriminant for the final fitting.
+The simple visualization of the training is shown in Figure~\ref{feg:simplenode}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/simplenode}
+    \caption{The visualization of the training in resolved region
+    }
+    \label{fig:simplenode}
+\end{figure}
 
-The RNN model is trained to separate the signal from the other SM background processes; the output scores are then not use as a categorization variable (meaning no cut is applied on it) but it is used as final discriminant in the analysis result. In order to build such discriminant the architecture has been designed to exploit the recurrent features across a couple of RNN layers and then the last RNN layer has been design to not return the full sequence but just the last step in order then to build a single last node; the simplified picture in Figure \ref{fig:RNNArchitecturePic} gives a simplified visualisation of the architecture.
+The training is performed in each lepton channel due to the different background composition, and separately in merged and resolved regions.
+Further details on the technical setups are summarized in the Appendix.
+
+\section{Training for merged regime}
+In addition to the small-R jets information, large-R jet candidate information (4-momentum) is used to further enhance the separation in the merged region. It is added and used in the combined RNN-DNN network, which is able to exploit the correlation across the tagging jets and the signal jets topology.
+The extra large-R information used as inputs are shown in Figure~\ref{}.
 
 \section{Optimization of the binning}
 The optimization of the binning is needed to get the optimal performance of the RNN. The transformation of the RNN output to optimise the effect of the final sensitivity and reduction in the number of bins is implemented.
-
 The Transformation D~\cite{ATL-PHYS-PUB-2019-009} is implemented.
-For the current analysis, z$_s$ = 10, z$_b$ = 5 is used for the optimal parameter. In addition, MC statistical uncertainty in each bin is required to be $<$ 20~\% to minimise the bias on fitted $\mu$~\cite{ATL-PHYS-PUB-2019-009}.
+The binning of the RNN score starts from 100~bins and summed up from the right-side until get the best sensitivity. 
+MC statistical uncertainty in each bin is required to be $<$ 20~\% to minimise the bias on fitted $\mu$~\cite{ATL-PHYS-PUB-2019-009}.
+For the current analysis, z$_s$ = 10, z$_b$ = 5 is used for the optimal parameter and basically final discriminant has 15 bins.  
