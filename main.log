@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2022.4.6)  1 JUN 2022 20:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=latex 2022.4.6)  15 JUN 2022 09:36
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -287,8 +286,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip52
 ) (/usr/local/texlive/2022/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty
 
-/usr/local/texlive/2022/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty:12: LaTeX
- Error: This file needs format `pLaTeX2e'
+! LaTeX Error: This file needs format `pLaTeX2e'
                but this is `LaTeX2e'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -298,24 +296,643 @@ Type  H <return>  for immediate help.
 l.12 \NeedsTeXFormat{pLaTeX2e}
                               
 ? 
-/usr/local/texlive/2022/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty:12: Emerg
-ency stop.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen162
+\lightrulewidth=\dimen163
+\cmidrulewidth=\dimen164
+\belowrulesep=\dimen165
+\belowbottomsep=\dimen166
+\aboverulesep=\dimen167
+\abovetopsep=\dimen168
+\cmidrulesep=\dimen169
+\cmidrulekern=\dimen170
+\defaultaddspace=\dimen171
+\@cmidla=\count287
+\@cmidlb=\count288
+\@aboverulesep=\dimen172
+\@belowrulesep=\dimen173
+\@thisruleclass=\count289
+\@lastruleclass=\count290
+\@thisrulewidth=\dimen174
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen175
+\enit@toks=\toks23
+\enit@inbox=\box53
+\enit@count@id=\count291
+\enitdp@description=\count292
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup6
+\symitalic=\mathgroup7
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen176
+\captionmargin=\dimen177
+\caption@leftmargin=\dimen178
+\caption@rightmargin=\dimen179
+\caption@width=\dimen180
+\caption@indent=\dimen181
+\caption@parindent=\dimen182
+\caption@hangindent=\dimen183
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count293
+\c@continuedfloat=\count294
+Package caption Info: hyperref package is loaded.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count295
+\multirow@dima=\skip55
+\bigstrutjot=\dimen184
+))
+Runaway argument?
+{ \Large FUJIMOTO Minori\\[2ex] \textit {\large 
+! Paragraph ended before \author  was complete.
+<to be read again> 
+                   \par 
+l.11 
+     
+? 
+! Too many }'s.
+\putAuthor ...\Large #1\\[2ex] \textit {\large #2}
+                                                   } 
+l.11 
+     
+? 
+! Too many }'s.
+\putAuthor ...arge #1\\[2ex] \textit {\large #2} }
+                                                   
+l.11 
+     
+? 
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
+2.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2022-02-07 L3 backend support: dvips
+\l__pdf_internal_box=\box54
+\g__pdf_backend_object_int=\count296
+\l__pdf_backend_content_box=\box55
+\l__pdf_backend_model_box=\box56
+\g__pdf_backend_annotation_int=\count297
+\g__pdf_backend_link_int=\count298
+\g__pdf_backend_link_sf_int=\count299
+)
+No file main.aux.
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 49.79231pt
+* modes: twoside 
+* h-part:(L,W,R)=(33.08621pt, 465.0pt, 49.62935pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=465.0pt
+* \textheight=674.33032pt
+* \oddsidemargin=10.60854pt
+* \evensidemargin=-22.64064pt
+* \topmargin=-18.78552pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=106.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 12.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count300
+)
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
+ 14.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
+ 14.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
+ 14.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
+ 14.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+
+
+LaTeX Warning: No \author given.
+
+[1
+
+
+] [2
+
+] (./inputs/abst.tex
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 2.
+) [1
+
+] [2
+
+]
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [3] [4
+
+] (./inputs/Introduction.tex
+Chapter 1 .
+
+LaTeX Warning: Citation `STDM-2017-19' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Citation `CMS-SMP-20-001' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Citation `Longhitano:1980tm' on page 1 undefined on input line 8
+.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+) (./inputs/Physics.tex [1
+
+] [2
+
+]
+Chapter 2 .
+
+LaTeX Warning: Reference `fig:SM' on page 3 undefined on input line 16.
+
+File: figures/SM.png Graphic file (type bmp)
+<figures/SM.png>
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+1.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 33--38
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+[4]
+
+LaTeX Warning: Reference `eqn:QED' on page 5 undefined on input line 64.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+[6]
+
+LaTeX Warning: Reference `eqn:QEDLagrangian' on page 7 undefined on input line 
+177.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--191
+
+ []
+
+! Misplaced alignment tab character &.
+l.217 \phi_{0}&
+               =\frac{1}{\sqrt{2}}\left(\begin{array}{l}
+? 
+
+LaTeX Warning: Reference `eqn:vacuum' on page 7 undefined on input line 223.
+
+
+LaTeX Warning: Reference `eqn:higgsphi' on page 7 undefined on input line 224.
+
+[7]
+
+LaTeX Warning: Reference `eqn:Higgs' on page 8 undefined on input line 258.
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 354--356
+
+ []
+
+[9]
+
+LaTeX Warning: Reference `ch:Lagrangian' on page 10 undefined on input line 382
+.
+
+
+LaTeX Warning: Reference `fig:VBS' on page 10 undefined on input line 382.
+
+File: figures/VBS.png Graphic file (type bmp)
+<figures/VBS.png>
+! Undefined control sequence.
+l.399 \subfigure
+                {
+? 
+File: figures/VBS1.png Graphic file (type bmp)
+<figures/VBS1.png>
+! Undefined control sequence.
+l.402 \subfigure
+                {
+? 
+File: figures/VBS2.png Graphic file (type bmp)
+<figures/VBS2.png>
+! Undefined control sequence.
+l.405 \subfigure
+                {
+? 
+File: figures/VBS3.png Graphic file (type bmp)
+<figures/VBS3.png>
+! Undefined control sequence.
+l.408 \subfigure
+                {
+? 
+File: figures/VBS4.png Graphic file (type bmp)
+<figures/VBS4.png>
+! Undefined control sequence.
+l.420 \subfigure
+                {
+? 
+File: figures/wHiggs1.png Graphic file (type bmp)
+<figures/wHiggs1.png>
+! Undefined control sequence.
+l.423 \subfigure
+                {
+? 
+File: figures/wHiggs2.png Graphic file (type bmp)
+<figures/wHiggs2.png>
+! Undefined control sequence.
+l.426 \subfigure
+                {
+? 
+File: figures/wHiggs3.png Graphic file (type bmp)
+<figures/wHiggs3.png>
+
+LaTeX Warning: Reference `' on page 10 undefined on input line 440.
+
+
+LaTeX Warning: Reference `fig:VBSEW' on page 10 undefined on input line 445.
+
+[10]
+
+LaTeX Warning: Reference `fig:VBSHiggs' on page 11 undefined on input line 449.
+
+
+
+LaTeX Warning: Reference `fig:violation' on page 11 undefined on input line 460
+.
+
+
+! LaTeX Error: Unicode character ∼ (U+223C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \NeedsTeXFormat{pLaTeX2e}
-                              
-The current input file will not be processed further,
-because it was written for some other flavor of TeX.
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.461 ...ings becomes strong around $\sqrt{s}$ ∼
+                                                   1 TeV, and the unitarity ...
 
+? 
+File: figures/violation.png Graphic file (type bmp)
+<figures/violation.png>
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.477 \\
+        
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.478 
+      
+? 
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 489--494
+
+ []
+
+
+LaTeX Warning: Citation `eboli2006p' on page 12 undefined on input line 495.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+
+LaTeX Warning: Reference `tab:vertex' on page 13 undefined on input line 544.
+
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.552 ...mark & \checkmark & \checkmark &  &  &　
+                                                   &　 &　&　\\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.552 ...& \checkmark & \checkmark &  &  &　 &　
+                                                   &　&　\\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.552 ...eckmark & \checkmark &  &  &　 &　 &　
+                                                  &　\\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.552 ...ark & \checkmark &  &  &　 &　 &　&　
+                                                  \\
+? 
+
+! Package caption Error: \caption outside float.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.565 \caption
+              {operators and the vertices}
+? 
+
+Overfull \hbox (8.58371pt too wide) in paragraph at lines 548--567
+ [] 
+ []
+
+[13]
+
+LaTeX Warning: Reference `tab:aQGCchannel' on page 14 undefined on input line 5
+70.
+
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ...kmark & \checkmark & \checkmark &  &  　
+                                                  　　　　　　　 &　 \\
+
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ...rk & \checkmark & \checkmark &  &  　　
+                                                  　　　　　　 &　 \\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ...& \checkmark & \checkmark &  &  　　　
+                                                  　　　　　 &　 \\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ...checkmark & \checkmark &  &  　　　　
+                                                  　　　　 &　 \\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ...ckmark & \checkmark &  &  　　　　　
+                                                  　　　 &　 \\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ...ark & \checkmark &  &  　　　　　　
+                                                  　　 &　 \\
+? 
+! Interruption.
+\GenericError  ...                                
+                                                  \endgroup 
+l.580 ...ark & \checkmark &  &  　　　　　　
+                                                  　　 &　 \\
+? 
+
+! LaTeX Error: Unicode character 　 (U+3000)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.580 ... & \checkmark &  &  　　　　　　　
+                                                  　 &　 \\
+? .q
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? X
  
 Here is how much of TeX's memory you used:
- 9034 strings out of 478269
- 137284 string characters out of 5846374
- 428422 words of memory out of 5000000
- 27178 multiletter control sequences out of 15000+600000
- 469559 words of font info for 29 fonts, out of 8000000 for 9000
+ 11733 strings out of 478269
+ 190050 string characters out of 5846374
+ 495171 words of memory out of 5000000
+ 29776 multiletter control sequences out of 15000+600000
+ 501174 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,0n,78p,238b,36s stack positions out of 10000i,1000n,20000p,200000b,200000s
-No pages of output.
+ 75i,10n,78p,851b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on main.dvi (19 pages, 60340 bytes).
