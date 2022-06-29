@@ -1,18 +1,58 @@
 \chapter{Event selection}
-The event selection has been optimized in order to maximize the significance of the signal over background.
+The event selection has been optimized to get phase space which has more signal compared to the background.
 The detail of the whole event selection for 2-lepton channel is shown in this chapter. The event selection in other 0/1-lepton channel is summarized in the appendices.
 
-\section{Selection strategy}
-%overview
-
-\section{Preselection}
 %overview
 First the preselection cuts are applied including basic event cleaning and the trigger requirements, then the specific event selection is applied to the each 0,1,2-lepton channels.
-For the main event selection, first the selection of the one $W/Z$ boson decaying leptonically is selected. Then in each channel, the forward jets and the hadronically decaying boson is selected and the Signal region (SR) and the Control region (CR) is defined, finally the selection to enhance the VBS topology is applied before using the machine learning approach to get the final discriminant.
-%merged and resolved region 
-The events are categorized into two regions depends on the type of the jets included. The events has one or more large-R jets are categorized as merged region, otherwise resolved region. In the merged region, forward jets are selected by choosing two small-R jets with the highest invariant mass ($m_{jj}^{tag}$), then the large-R jet with the highest $p_T$ is chosed as the merged jets decayed from $W/Z$ boson $(V_{had})$. In the resolved region, forward jets are selected same as in the merged region, then two jets with the higest and the second highest $p_T$ is selected from the rest of the small-R jets as the jets decaying from $V_{had}$.
+For the main event selection, first the selection of the one $W/Z$ boson decaying leptonically is selected. 
+The events are categorized into two regions depends on the type of the jets included. The events has one or more large-R jets are categorized as merged category, otherwise resolved category.  
+Then in each channel, the forward jets and the hadronically decaying boson is selected and the Signal region (SR) and the Control region (CR) is defined separately in merged category and resolved category. Finally the selection to enhance the VBS topology is applied before using the machine learning approach to get the final discriminant. The SRs are the regions optimized to maximize the significance of the signal over background, and the CRs are region which is the specifical background-dominant, used for constraining the backgrounds. 
+\section{Preselection}
+Firstly some pre-selection on the Triggers, event cleaning selections are applied to get the available events and to reject the problematic events. The same selection is applied both for data and MC samples.
+The selections with respect to the number of jets and leptons at minimum is applied, as summarized in Table~\ref{tab:presel_CxAOD}.
+\begin{table}[H]
+\begin{center}
+\resizebox{0.55\textwidth}{!}{
+\begin{tabular}{|l|c|}
+\hline\hline
+\multicolumn{2}{|c|}{ Common } \\
+\hline\hline
+Trigger & listed in Table~\ref{tab:triggers} \\
+\hline
+Event Cleaning & listed in Section~\ref{subsec:event_cleaning} \\
+\hline
+Number of jets & $N_j \geq 2$ or $N_J^{\textrm{LCTopo}} \geq 1$ \\
+\hline\hline\hline
+%\multicolumn{2}{|c|}{ 1-lepton channel } \\
+%\hline
+%Number of Tight leptons   & $=1$ \\
+%\hline
+%Number of additional Loose leptons   & $=0$ \\
+%\hline
+%\ptlv                     & $>75\,\GeV$ \\
+%\hline\hline
+\multicolumn{2}{|c|}{ 2-lepton channel } \\
+\hline\hline
+Number of Loose leptons   & $=2$ \\
+\hline
+The leading lepton \pt    & $> 25$~GeV \\
+\hline\hline
+%\multicolumn{2}{|c|}{ 0-lepton channel } \\
+%\hline\hline
+%Number of Loose leptons   & $= 0$ \\
+%\hline
+%\met                      & $> 140\,\GeV$ \\
+%\hline\hline
+\end{tabular}
+}
+\end{center}
+\caption{List of the pre-selections applied.
+%Definitions of Tight and Loose leptons are found in Sections~\ref{subsec:electron_selection}--\ref{subsec:muon_selection}.
+%$N_j$ is the number of signal- and VBF-jets defined in Section~\ref{subsec:jet_selection}.
+%$N_J^{\textrm{LCTopo}}$ is the number of large-R jets with $\pt>200\,\GeV$ and $\left| \eta \right| < 2.5$.
+} \label{tab:presel_CxAOD}
+\end{table}
 
-Further details are shown hereafter.
 \section{Leptonically decaying Boson}
 The selection of the $W/Z$ boson decaying leptonically is applied before categorizing of the signal region (SR) and the control region (CR).
 In 2-lepton channel, the $Z\rightarrow ll $ candidates are identified by requiring two isolated same-flavour leptons. Both leptons are required to be $p_T > 27$GeV.
@@ -27,7 +67,7 @@ while for muons, the $p_{T,ll}$-dependent mass window is required:
 \end{equation}
 This $p_T,ll$ requirement,which is optimized from the analysis of 2015+16 \cite{} is adopted because of the effect of dimuon mass resolution degradation at high-$p_{T,ll}$.
 Data and MC distributions of relevant lepton distribution at the early stage of the selection are shown in Figure~\ref{fig:2lepLeptons}.
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el1Pt_Log}
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el2Pt_Log} 
@@ -47,7 +87,7 @@ The selection strategy is to first select tagging jets and then select signal je
 The tagging jets are required to be b-vetoed to suppress the contribution of the diagrams with $Wtb$ vertex in the electroweak VVjj signals. The fJVT selection to pass the Loose fJVT working point is applied to the small-R jets to suppress the pileup jets contributions.
 Tagging jets pair is selected from the oppsite hemisphere, $\eta_{\operatorname{tag} j_{1}} \cdot \eta_{\operatorname{tag} j_{2}}<0$, and to have the highest dijet invariant mass according to its topological features.
 Selected tagging jets are required to be $p_T > 30$GeV, and the dijet invariant mass ($m^{tag}_{jj}$) is required to be $m^{tag}_{jj} > 400$GeV.
-Figure~\ref{} shows the $m^{tag}_{jj}$ distribution before selecting the SR or CR. 
+Figure~\ref{fig:Mtagjj} shows the $m^{tag}_{jj}$ distribution before selecting the SR or CR. 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_MergedCommon_MTagMerJets_Log}
@@ -56,11 +96,13 @@ Figure~\ref{} shows the $m^{tag}_{jj}$ distribution before selecting the SR or C
     \label{fig:Mtagjj}
 \end{figure}
 
+The $m^{tag}_{jj}$ reweighting, which is described in Chapter~\ref{}, is applied before defining the SRs and CRs to correct the Z+jet modeling.
+
 \section{Hadronically decaying boson, Signal Region (SR) definitions}
 Signal regions (SR) are defined to enhance the signal purity, and for background  components the control region (CR). They are defined by requiring the signal jet selections. Defining order starts from merged categories, then move to the resolved category. Each events are categorized into the regions in following order in Figure~\ref{fig:order}. The events failed the previous selection goes to the next selection, therefore there is no events overlapped.
 These five regions are simultaneously fitted in the final fitting.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/order}
     \caption{The order of defining the SR and the CR. The merged SR are defined at first, and the events failed the merged SR selections goes to the selection of the resolved SR, therefore there are no overlapped events within several SR and CRs.}
@@ -72,35 +114,50 @@ These five regions are simultaneously fitted in the final fitting.
 The hadronic decaying $W/Z$ bosons with $p_{T}(W / Z \rightarrow q q) \geq ~200 \mathrm{GeV}$, can be reconstructed with jets as large-R jets. This merged region requires at least one large-R jet outside of the tagging jets of $|\Delta R|<1.4$. 
 The boson-tagger is required to find the reconstructed $W/Z$ bosons and the SRs and CRs are defined. The events passed the boson-tagger working point (WP) at 50$\%$ is categorized to be in the High Purity (HP) Merged SR. The events failed the 50$\%$ WP and passed 80$\%$ goes to the Low Purity (LP) Merged SR. 
 The Merged region definition is shown in the Figure~\ref{fig:MergedRegion}.
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/MergedRegion}
     \caption{The selection of the merged SR and CR are shown. The CR definition is what was changed from the previous round of the analysis, in order to fulfill the requirement to derive the scale factors.}
     \label{fig:MergedRegion}
 \end{figure}
 The data and MC distribution of the mass of the large-R jet before and after applying the boson tagger is shown in Figure~\ref{fig:2lepfatJet}.
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el1Pt_Log}
-    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el2Pt_Log} 
-    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_mu1Pt_Log}
-    \caption{mass of the large-R jet distribution before and after applying the boson tagger.}
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_MergedCommon_fatJetMass_Log} \\
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_SRVBS_HP_fatJetMass_Log} 
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_SRVBS_LP_fatJetMass_Log}
+    \caption{mass of the large-R jet distribution before and after applying the boson tagger. The boson mass peak can be seen. The second peak shown in the first distribution before applying tagger comes from the top contribution, for example from the process including the Wtb vertex.}
     \label{fig:2lepfatJet}
 \end{figure}
 
-
-
-%%%%%%%%%%%%%%%%%%%%
+The 50~\% working point (WP) $W/Z$-tagging scale factor is applied for the HP SR, and a custom scale factor is defined for the LP SR:
+\begin{equation}
+S F_{L P}=\frac{\epsilon_{loose} S F_{eff, loose}-\epsilon_{tight} S F_{eff, tight}}{\epsilon_{loose}-\epsilon_{tight}}
+\end{equation}
+where "loose" refers to the 80\% WP and "tight" refers to the 50\% WP.
 
 The boson-tagger is optimized to maximize the sensitivity to the longitudinally-polarized $W/Z$ bosons. 
 The previous study showed that the HPSR is not so sensitive to the fully-transversed aQGC signals, which makes us to keep the LPSR for the aQGC searches. 
+
 \subsection{Resolved category}
-For the bosons with the lower $p_T$ ranges, the boson decays into the two well-separated jets. This is cotegorized as resolved region, with having two signal jets. The two small-R jets are selected from the rest of the jets after tagging jets selection. The leading signal jet is required to be $p_T$ > 40~GeV. The events are categorized to the resolved SR when pass the mass window of 64 < $m_{jj}$ 106~GeV. Figure~\ref{fig:MVHadResSR} shows that the reconstructed boson peak.
-%This signal-jet selecting strategy is changed from the previous round of the analysis..
-%VBS selection and top veto cut
-The event selection is applied to enhance the VBS topology. After categorization the invariant mass of the two tagging jets ($\mathrm{m}_{\mathrm{jj}}^{\text {tag }}$) is greater than $400 \mathrm{GeV}$.
-The additional cut is applied to suppress the top contributions for example tZb diagram from the diagram with the Figure~\ref{fig:feynmantZb} included in the signal sample. The top contribution is not the VBS diagrams, while we cannot separate this diagram in the gauge invariant way. Therefore we decided to reconstruct the top mass with the two signal jets and the third jet which forms the three-jet mass, $m_{jjj}$, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events with each truth particles is shown, and the modeling plot is also shown in Figure~\ref{fig:2leptopMass}. 
-\begin{figure}[ht]
+For the bosons with the lower $p_T$ ranges, the boson decays into the two well-separated jets. This is cotegorized as resolved region, with having two signal jets. The two leading-$p_T$ small-R jets are selected from the rest of the jets after tagging jets selection. The leading signal jet is required to be $p_T$ > 40~GeV. 
+The events are categorized to the resolved SR when pass the mass window of 64 < $m_{jj}$ < 106~GeV. Figure~\ref{fig:MVHadResSR} shows that the reconstructed boson peak before and after requiring the mass window.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_ResolvedCommon_MVHadRes_Log}
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_SRVBS_MVHadRes_Log}
+    \caption{Invariant mass of the two signal jets before and after requiring the mass window. 
+    %Before the mass window cut, the $m^{tag}_{jj}$ reweighting is not applied while after mass window cut it is applied, which leads to the difference of the normalization between two plots.
+    }
+    \label{fig:MVHadResSR}
+\end{figure}
+
+After categorization, the invariant mass of the two tagging jets ($\mathrm{m}_{\mathrm{jj}}^{\text {tag}}$) is required to be greater than $400~\mathrm{GeV}$ to enhance the VBS-like topology, both for merged and resolved categories.
+
+\subsection{EW top production veto}
+The contribution of the EW top production is found to be still significant after applying the b-veto for the tagging jets, which is about 30~\% of the EW VVjj signal in the resolved category after all SR selections so far.
+The additional cut is applied to suppress the top contributions for example tZb diagram from the diagram with the Figure~\ref{fig:feynmantZb} included in the EW VVjj signal sample. The top contribution is not the VBS diagrams, while we cannot separate this diagram from VBS ones in the gauge invariant way. Therefore a cut to the reconstructed top mass,$m_{jjj}$ > 200~GeV is decided to be applied. The $m_{jjj}$ is derived with the two signal jets and the third jet which forms the three-jet mass, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events with each truth particles is shown, and the modeling plot is also shown in Figure~\ref{fig:2leptopMass}. 
+\begin{figure}[H]
     \begin{center}
       \includegraphics[width=0.45\textwidth]{figures/2lep/topMass/WZjjtopMasspeak}
       \includegraphics[width=0.45\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_topMass_Log}
@@ -108,42 +165,71 @@ The additional cut is applied to suppress the top contributions for example tZb 
         \label{fig:2leptopMass}
     \end{center}
 \end{figure}
-%Control regions
+This top-mass cut can reduce the top contributions, as shown in Table~\ref{fig:TruthTop2LepPurity} in resolved category, therefore the resolved SR is defined with this additional cut to get more VBS-like phase space. In merged category top-mass cut does little thing to enhance the VBS signals since top contribution is already small without the top mass cut, hence this cut is not added to the merged SR definition.
+\begin{figure}[H]
+    \centering
+    \resizebox{0.95\textwidth}{!}{
+    \begin{tabular}{|c||c|c|c|c|}
+         \hline
+                        & SRVBS (resolved) & VBS enhanced (resolved) & SRVBS (merged) & VBS enhanced (merged) \\ \hline
+        Truth Top       & 0.48             & 0.14                    & 0.14           & 0.10                  \\ \hline
+        Truth VVV       & 0.03             & 0.03                    & 0.08           & 0.08                  \\ \hline
+        Truth VBS       & 0.49             & 0.83                    & 0.78           & 0.82                  \\ \hline
+    \end{tabular}
+        }
+        \caption{Fraction of event yields for 2lepton channel. The truth information is used to know if the event includes each contributions. Only EWWZjj events are checked here since there are no Top contributions in EWZZjj events.}
+        \label{fig:TruthTop2LepPurity}
+\end{figure}
+
+\section{Control Region (CR) definitions}
 $V+jets$ CR is defined to constrain the normalization of the backgrounds. For 2-lepton channel, V means Z, which is the main background.
 %V+jets CR
-For the merged CRs, the V+jets CRs are defined for the events failing the 80$\%$ WP of the boson tagger. Resolved CRs are defined with using the mass sideband. It is defined with the same event selection as the resolved SR but outside the mass window, which is $50<m_{i i}<64 \mathrm{GeV}$, or $m_{i i}>106 \mathrm{GeV}$.
-
-%%%%%%%%%%%%
-\noindent \textbf{0-lepton}\\
-The $Z \rightarrow \nu\nu$ identification requires no Loose lepton and high missing energy (E$_T^{miss}$ > 200~GeV) in the final state. There are significant QCD multijet background in 0-lepton channel, therefore some cuts suppressing the multijets are applied: \\
-\\
-- $p_{\mathrm{T}}^{\mathrm{miss}}>50 \mathrm{GeV}$ \\
-- $\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, p_{\mathrm{T}}^{\mathrm{miss}}\right)<\pi / 2$ \\
-- $\min \left(\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, j\right)\right)>\pi / 6$ \\
-- $\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, \overrightarrow{\mathbf{V}}_{\mathrm{had}}\right)>\pi / 9$ \\ \\
-where $p_{\mathrm{T}}^{\mathrm{miss}}$ is the track-based missing momentum, and $\min \left(\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, j\right)\right)$ is the minimum azimuthal difference betwween $E_{\mathrm{T}}^{\mathrm{miss}}$ and small-R jets. \\
-
-\noindent\textbf{1-lepton} \\
-To select the events with $W \rightarrow l\nu$ candidate, exactly one Tight lepton is required.
-In order to suppress the multi-jet background, following cuts are applied for all regions: \\ \\
-- $E_{\mathrm{T}}^{\text {miss }}>80 \mathrm{GeV}$ \\ 
-- $p_{\mathrm{T}, \ell}>28 \mathrm{GeV}$ \\
-- $m_{J}>50 \mathrm{GeV}$ (merged only) \\ \\
-
-\noindent\textbf{2-lepton} \\
-The $Z \rightarrow ll$ candidates are selected by requiring two isolated same-flavour Loose leptons. Both leptons required to be $p_T$ > 27~GeV. Opposite charges are required only for muons and not for electrons, since electrons are more sensitive to charge mis-identification due to the conversions of photons from bremsstrahlung, especially at high $E_T$.
-The $m_{ll}$, invariant mass of the dilepton is required to be in the mass window \\ \\
-- $83 < m_{ee}< 99~GeV$ \\ 
-- $\left(85.6-0.0117 p_{\mathrm{T}, \ell \ell}\right)<m_{\mu \mu}<\left(94.0+0.0185 p_{\mathrm{T}, \ell \ell}\right) \mathrm{GeV}$ \\ \\
-The second equation for muons was oprimized from the 2015+16 analysis~\cite{}. 
-The modeling distribution of lepton distribution in the early stage of the selection is shown in Figure~\ref{fig:2lepLeptons}. The mass peak of Z boson can be seen here.
-
-\begin{figure}[ht]
+For the merged CRs, the single V+jets CRs are defined for the events failing the 80$\%$ WP of the boson tagger. Resolved CRs are defined with using the mass sideband. It is defined with the same event selection as the resolved SR but outside the mass window, which is $50<m_{i i}<64 ~\mathrm{GeV}$, or $m_{i i}>106 ~\mathrm{GeV}$.
+The data/MC distribution with respect to the hadronically decaying boson mass for resolved CRs is shown in Figure~\ref{fig:CRVjet}.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_llMass_Lin.png}
-    \caption{Lepton distributions in 2-lepton channel. The events before any selections are shown. Z mass peak is shown in $M_{ll}$ distribution.}
-    \label{fig:2lepLeptons}
+    %\includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_MVHadRes_Log}
+    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_Fid_MVHadRes_Log}
+    \caption{Mass of reconstructed boson in the resolved CR}
+    \label{fig:CRVjet}
 \end{figure}
+
+In the merged CR, the inefficiency scale factors $SF_{ineff,loose}$ calaculated for the 80\% working point tagger are applied:
+\begin{equation}
+S F_{i n e f f}=\frac{1-\epsilon \times S F_{e f f}}{1-\epsilon}
+\end{equation}
+where $\epsilon$ is the efficiency estimated in ttbat events for signal and $\gamma$+jet and multi-jet events for background.
+%%%%%%%%%%%%
+%\noindent \textbf{0-lepton}\\
+%The $Z \rightarrow \nu\nu$ identification requires no Loose lepton and high missing energy (E$_T^{miss}$ > 200~GeV) in the final state. There are significant QCD multijet background in 0-lepton channel, therefore some cuts suppressing the multijets are applied: \\
+%\\
+%- $p_{\mathrm{T}}^{\mathrm{miss}}>50 \mathrm{GeV}$ \\
+%- $\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, p_{\mathrm{T}}^{\mathrm{miss}}\right)<\pi / 2$ \\
+%- $\min \left(\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, j\right)\right)>\pi / 6$ \\
+%- $\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, \overrightarrow{\mathbf{V}}_{\mathrm{had}}\right)>\pi / 9$ \\ \\
+%where $p_{\mathrm{T}}^{\mathrm{miss}}$ is the track-based missing momentum, and $\min \left(\Delta \phi\left(E_{\mathrm{T}}^{\mathrm{miss}}, j\right)\right)$ is the minimum azimuthal difference betwween $E_{\mathrm{T}}^{\mathrm{miss}}$ and small-R jets. \\
+
+%\noindent\textbf{1-lepton} \\
+%To select the events with $W \rightarrow l\nu$ candidate, exactly one Tight lepton is required.
+%In order to suppress the multi-jet background, following cuts are applied for all regions: \\ \\
+%- $E_{\mathrm{T}}^{\text {miss }}>80 \mathrm{GeV}$ \\ 
+%- $p_{\mathrm{T}, \ell}>28 \mathrm{GeV}$ \\
+%- $m_{J}>50 \mathrm{GeV}$ (merged only) \\ \\
+
+%\noindent\textbf{2-lepton} \\
+%The $Z \rightarrow ll$ candidates are selected by requiring two isolated same-flavour Loose leptons. Both leptons required to be $p_T$ > 27~GeV. Opposite charges are required only for muons and not for electrons, since electrons are more sensitive to charge mis-identification due to the conversions of photons from bremsstrahlung, especially at high $E_T$.
+%The $m_{ll}$, invariant mass of the dilepton is required to be in the mass window \\ \\
+%- $83 < m_{ee}< 99~GeV$ \\ 
+%- $\left(85.6-0.0117 p_{\mathrm{T}, \ell \ell}\right)<m_{\mu \mu}<\left(94.0+0.0185 p_{\mathrm{T}, \ell \ell}\right) \mathrm{GeV}$ \\ \\
+%The second equation for muons was oprimized from the 2015+16 analysis~\cite{}. 
+%The modeling distribution of lepton distribution in the early stage of the selection is shown in Figure~\ref{fig:2lepLeptons}. The mass peak of Z boson can be seen here.
+
+%\begin{figure}[ht]
+%    \centering
+%    \includegraphics[width=0.5\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_llMass_Lin}
+%    \caption{Lepton distributions in 2-lepton channel. The events before any selections are shown. Z mass peak is shown in $M_{ll}$ distribution.}
+%    \label{fig:2lepLeptons}
+%\end{figure}
 
 %\section{Signal Regions and Control Regions}
 %In all three channels events are required to have a small-R jets pair as a candidate of the forward jets, referred as tagging jets. The another jets pair which is the candidate of the jets hadronically decayed from $W/Z$boson, referred as signal jet is selected as two small-R jets or one large-R jet.
@@ -198,181 +284,16 @@ The modeling distribution of lepton distribution in the early stage of the selec
 %top CR
 %Top CR is defined only for 1-lepton channel, by requiring at least one b-tagged instead of b-veto. This %Top CR is used for constraining the normalization of the $t\bar{t}$ control region. 
 
+\section{Summary of the event selections}
+The summary of the whole event selection applied to the 2-lepton channel is shown here in the Table~\ref{tab:2lep_merged},\ref{tab:2lep_resolved}.
 The summaries of the selections applied in each channel are shown here in tables.
-\ref{tab:0lep_merged}-\ref{tab:0lep_resolved}
-\ref{tab:1lep_merged}-\ref{tab:1lep_resolved}
-\ref{tab:2lep_merged}-\ref{tab:2lep_resolved}
-
-%%% 0-lepton channel
-\begin{table}[ht!]
-\small
-\caption{A summary of regions event selection for 0-lepton channel in the merged regime.}
-\label{tab:0lep_merged}
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|l|l|c|c|c|}
-\hline
-\multicolumn{2}{|l|}{\multirow{2}{*}{Selection}} & \multicolumn{2}{c|}{SR}  &  $V$ CR \\
-\cline{3-5}
-\multicolumn{2}{|l|}{} & HP & LP & inclusive \\
-\hline
-\multirow{3}{*}{$Z \to \nu\nu$}  &  Number of Loose leptons & \multicolumn{3}{c|}{0} \\
-\cline{2-5}
-    & \met                                     & \multicolumn{3}{c|}{ > 200 GeV }                  \\
-\cline{2-5}
-    & \mpt                                     & \multicolumn{3}{c|}{ > 50 GeV}                    \\
-\hline
-
-\multirow{3}{*}{anti-QCD}  & min($\Delta\Phi$(\met,small-R jets))     & \multicolumn{3}{c|}{ $> \pi/6$} \\
-\cline{2-5}
-    & $\Delta\Phi$(\met,\mpt)                  & \multicolumn{3}{c|}{ $< \pi/2$}                   \\
-\cline{2-5}
-    & $\Delta\phi(\met, Sig-J)$                & \multicolumn{3}{c|}{ $> \pi/9$}                   \\
-\hline
-\multirow{3}{*}{VBS jets candidates} & Leading Tag jet \pt & \multicolumn{3}{c|}{ $>30\,\GeV$ } \\
-\cline{2-5}
-                          & Subleading Tag jet \pt & \multicolumn{3}{c|}{ $>30\,\GeV$ }\\
-\cline{2-5}
-                          & $m_{jj}$ & \multicolumn{3}{c|}{ $> 400 \GeV$ } \\
-\hline
-\multirow{2}{*}{$W/Z \to J$} & Num of large-R jets & \multicolumn{3}{c|}{$\geq 1$} \\
-\cline{2-5}
-& 3-Var Tagger & pass50WP & pass80WP \&\& !pass50WP & fail80WP \\
-\hline
-\end{tabular}
-}
-\end{center}
-\end{table}
-
-
-\begin{table}[ht!]
-\small
-\caption{A summary of regions event selection for 0-lepton channel in the resolved regime.}
-\label{tab:0lep_resolved}
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|l|l|c|c|}
-\hline
-\multicolumn{2}{|l|}{Selection} & SR  & $V$ CR \\
-\hline
-\multirow{3}{*}{$Z \to \nu\nu$}  &  Number of Loose leptons & \multicolumn{2}{c|}{0} \\
-\cline{2-4}
-    & \met                                     & \multicolumn{2}{c|}{ > 200 GeV }                  \\
-\cline{2-4}
-    & \mpt                                     & \multicolumn{2}{c|}{ > 50 GeV}                    \\
-\hline
-
-\multirow{3}{*}{anti-QCD}  & min($\Delta\Phi$(\met,small-R jets))     & \multicolumn{2}{c|}{ $> \pi/6$} \\
-\cline{2-4}
-    & $\Delta\Phi$(\met,\mpt)                  & \multicolumn{2}{c|}{ $< \pi/2$}                   \\
-\cline{2-4}
-    & $\Delta\phi(\met, Sig-J)$                & \multicolumn{2}{c|}{ $> \pi/9$}                   \\
-\hline
-\multirow{3}{*}{VBS jets candidates} & Leading Tag jet \pt & \multicolumn{2}{c|}{ $>30\,\GeV$ } \\
-\cline{2-4}
-                          & Subleading Tag jet \pt & \multicolumn{2}{c|}{ $>30\,\GeV$ }\\
-\cline{2-4}
-                          & $m_{jj}$ & \multicolumn{2}{c|}{ $> 400 \GeV$ } \\
-\hline
-\multirow{4}{*}{$W/Z \to jj$} & Num of signal small-R jets & \multicolumn{2}{c|}{2} \\
-\cline{2-4}
-              & Leading signal jet \pt & \multicolumn{2}{c|}{ $>40\,\GeV$ }\\
-\cline{2-4}
-              & Subleading signal jet \pt & \multicolumn{2}{c|}{ $>20\,\GeV$ }\\
-\cline{2-4}
-              &$Z \to q\bar{q}$ and $W \to q\bar{q}$     &   $64 < m_{jj} < 106 \gev$ & $50<m_{jj}<64 \,GeV$ or $m_{jj}>106$ \\
-\hline
-VBS enhancing & $m_{jjj}$ & \multicolumn{2}{c|}{ $>220$~GeV} \\
-\hline
-\end{tabular}
-}
-\end{center}
-\end{table}
-
-%%% 1-lepton channel
-\begin{table}[t]
-  \caption{A summary of regions event selection for 1-lepton channel in the resolved regime.}
-\label{tab:1lep_resolved}
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|l|l|c|c|c|}
-\hline
-\multicolumn{2}{|l|}{cuts} & SR & $W$ CR (WR) & \ttbar CR (TR) \\
-\hline
-\multirow{4}{*}{$W\rightarrow \ell\nu$ } & Number of Tight leptons & \multicolumn{3}{c|}{ 1 } \\
-\cline{2-5}
-&Number of Loose leptons & \multicolumn{3}{c|}{ 0 }  \\
-\cline{2-5}
-&\met & \multicolumn{3}{c|}{ $>80\,\GeV$ } \\
-\cline{2-5}
-&$\pt(\ell)$ & \multicolumn{3}{c|}{ $>30\,\GeV$ } \\
-\hline
-\multirow{3}{*}{VBS jets candidates} & Leading Tag jet \pt & \multicolumn{3}{c|}{ $>30\,\GeV$ } \\
-\cline{2-5}
-                          & Subleading Tag jet \pt & \multicolumn{3}{c|}{ $>30\,\GeV$ }\\
-\cline{2-5}
-                          & $m_{jj}$ & \multicolumn{3}{c|}{ $> 400 \GeV$ } \\
-\hline
-\multirow{4}{*}{$W/Z\rightarrow jj$ } & Number of small-R jets & \multicolumn{3}{c|}{ $\geq 4$ } \\ %$\geq 2$ & $\geq 2$ & $\geq 2$  \\
-\cline{2-5}
-& Leading jet \pt & \multicolumn{3}{c|}{ $>40$~GeV}\\
-\cline{2-5}
-& Subleading jet \pt & \multicolumn{3}{c|}{ $>20$~GeV}\\
-\cline{2-5}
- &$Z \to q\bar{q}$ and $W \to q\bar{q}$     &   $64 < m_{jj} < 106 \gev$ & $50<m_{jj}<64 \,GeV$ or $m_{jj}>106$ & $64 < m_{jj} < 106 \gev$ \\
-\hline
-Top veto &  Number of additional $b$-tagged jets & \multicolumn{2}{c|}{0} & $\geq 1$ \\
-\hline
-VBS enhancing & $m_{jjj}$ & \multicolumn{3}{c|}{ $>220$~GeV} \\
-\hline
-\end{tabular}
-}
-\end{center}
-\end{table}
-
-\begin{table}[t]
-\caption{A summary of regions event selection for 1-lepton channel in the merged regime.}
-\label{tab:1lep_merged}
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|l|l|c|c|c|c|c|}
-\hline
-\multicolumn{2}{|l|}{\multirow{2}{*}{Selection}} & \multicolumn{2}{c|}{SR}  &  $W$ CR (WR)  & \multicolumn{2}{c|}{$t\bar{t}$ CR (TR)} \\
-\cline{3-7}
-\multicolumn{2}{|l|}{} & HP & LP & incl & HP & LP \\
-\hline
-\multirow{4}{*}{$W\rightarrow \ell\nu$} & Num of Tight leptons & \multicolumn{5}{c|}{ 1 } \\
-\cline{2-7}
-&Num of Loose leptons & \multicolumn{5}{c|}{ 0 }  \\
-\cline{2-7}
-&\vphantom{\Large B} \met & \multicolumn{5}{c|}{ $>80\,\GeV$ } \\
-\cline{2-7}
-&$\pt(\ell)$ & \multicolumn{5}{c|}{ $>30\,\GeV$ } \\
-\hline
-\multirow{3}{*}{VBS jets candidates} & Leading Tag jet \pt & \multicolumn{5}{c|}{ $>30\,\GeV$ } \\
-\cline{2-7}
-                          & Subleading Tag jet \pt & \multicolumn{5}{c|}{ $>30\,\GeV$ }\\
-\cline{2-7}
-                          & $m_{jj}$ & \multicolumn{5}{c|}{ $> 400 \GeV$ } \\
-\hline
-\multirow{2}{*}{$W/Z\rightarrow J$} & Num of large-$R$ jets & \multicolumn{5}{c|}{ $\geq 1$ } \\
-\cline{2-7}
-& 3-Var Tagger & pass50WP & pass80WP \&\& !pass50WP & fail80WP & pass50WP & pass80WP \&\& !pass50WP \\
-%& \vphantom{\Large B} $D_2/n_{Tracks}$ cut & pass & fail & pass & fail & pass & fail \\
-%\cline{2-8}
-%& $W/Z$ mass window cut & pass & pass & fail & fail & pass & pass\\
-\hline
-Top veto & Num of $b$-tagged jets outside of large-R jet & \multicolumn{3}{c|}{0} & \multicolumn{2}{c|}{$\geq 1$} \\
-\hline
-\end{tabular}
-}
-\end{center}
-\end{table}
+%\ref{tab:0lep_merged}-\ref{tab:0lep_resolved}
+%\ref{tab:1lep_merged}-\ref{tab:1lep_resolved}
+%\ref{tab:2lep_merged}-\ref{tab:2lep_resolved}
 
 %%% 2-leptons channel
 \begin{table}[ht!]
 \small
-\caption{A summary of regions event selection for 2-lepton channel in the merged regime.}
 \label{tab:2lep_merged}
 \begin{center}
 \resizebox{\textwidth}{!}{
@@ -408,11 +329,11 @@ Top veto & Num of $b$-tagged jets outside of large-R jet & \multicolumn{3}{c|}{0
 \end{tabular}
 }
 \end{center}
+\caption{A summary of regions event selection for 2-lepton channel in the merged regime.}
 \end{table}
 
 \begin{table}[ht!]
 \small
-\caption{A summary of regions event selection for 2-lepton channel in the resolved regime.}
 \label{tab:2lep_resolved}
 \begin{center}
 \resizebox{\textwidth}{!}{
@@ -451,4 +372,5 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{2}{c|}{ $>220$~GeV} \\
 \end{tabular}
 }
 \end{center}
+\caption{A summary of regions event selection for 2-lepton channel in the resolved regime.}
 \end{table}
