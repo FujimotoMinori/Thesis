@@ -206,37 +206,37 @@ It seems to be the simple and better way to use $m_{VV}$ as the discriminant wit
 
 Following the study of this section, the profile likelihood fit with $m_{VV}$ score is performed and the expected limit is shown in section~\ref{subsec:aqgc_limit}. The fit study with RNN score as discriminant is also shown in section~\ref{subsec:2binapproach}.
 
-\section{Expected limit}
-\label{subsec:aqgc_limit}
+%\section{Expected limit}
+%\label{subsec:aqgc_limit}
 
-The expected upper limit on each Wilson coefficient by a combined fit of all 3 channels is shown in table~\ref{tab:aQGC_limit}, which is calculated by $\sqrt{\mu_{95\%}} = f_{i} / \Lambda^4$, where $\mu_{95\%}$ is the 95\% upper limit on the signal strength.
-The $m_{VV}$ distributions without any additional cuts are used in the fit.
-The systematic uncertainties are yet to be included.
-Figures~\ref{fig:0lepFT0} and ~\ref{fig:1lepFT0}, ~\ref{fig:2lepFT0} show the prefit plots of $m_{VV}$ distribution. FT0 signal is overlaid.
+%The expected upper limit on each Wilson coefficient by a combined fit of all 3 channels is shown in table~\ref{tab:aQGC_limit}, which is calculated by $\sqrt{\mu_{95\%}} = f_{i} / \Lambda^4$, where $\mu_{95\%}$ is the 95\% upper limit on the signal strength.
+%The $m_{VV}$ distributions without any additional cuts are used in the fit.
+%The systematic uncertainties are yet to be included.
+%Figures~\ref{fig:0lepFT0} and ~\ref{fig:1lepFT0}, ~\ref{fig:2lepFT0} show the prefit plots of %$m_{VV}$ distribution. FT0 signal is overlaid.
 
-\begin{table}[ht!]
-\small
-\begin{center}
-\resizebox{0.30\textwidth}{!}{
- \begin{tabular}{ | r || r |}
-    & Expected limit (TeV$^{-4})$ \tabularnewline \hline
-FT0 & 0.14                        \tabularnewline \hline
-FT1 & 0.14                        \tabularnewline \hline
-FS02& 2.90                        \tabularnewline \hline
-FS1 & 4.56e+6                     \tabularnewline \hline
-FM0 & 0.85                        \tabularnewline \hline
-FM1 & 2.55                        \tabularnewline \hline
-FM2 & 1.26                        \tabularnewline \hline
-FM3 & 4.69e+2                     \tabularnewline \hline
-FM4 & 2.07                        \tabularnewline \hline
-FM5 & 81.3                        \tabularnewline \hline
-FM7 & 5.37e+2                     \tabularnewline \hline
-\end{tabular}
-}
-\caption{Expected upper limits of each Wilson coefficient. All 3 channels are combined.}
-\label{tab:aQGC_limit}
-\end{center}
-\end{table}
+%\begin{table}[ht!]
+%\small
+%\begin{center}
+%\resizebox{0.30\textwidth}{!}{
+% \begin{tabular}{ | r || r |}
+%    & Expected limit (TeV$^{-4})$ \tabularnewline \hline
+%FT0 & 0.14                        \tabularnewline \hline
+%FT1 & 0.14                        \tabularnewline \hline
+%FS02& 2.90                        \tabularnewline \hline
+%FS1 & 4.56e+6                     \tabularnewline \hline
+%FM0 & 0.85                        \tabularnewline \hline
+%FM1 & 2.55                        \tabularnewline \hline
+%FM2 & 1.26                        \tabularnewline \hline
+%FM3 & 4.69e+2                     \tabularnewline \hline
+%FM4 & 2.07                        \tabularnewline \hline
+%FM5 & 81.3                        \tabularnewline \hline
+%FM7 & 5.37e+2                     \tabularnewline \hline
+%\end{tabular}
+%}
+%\caption{Expected upper limits of each Wilson coefficient. All 3 channels are combined.}
+%\label{tab:aQGC_limit}
+%\end{center}
+%\end{table}
 
 \begin{figure}[ht]
     \centering
@@ -274,56 +274,6 @@ FM7 & 5.37e+2                     \tabularnewline \hline
         \label{fig:2lepFT0}
 \end{figure}
 
-\section{2-bin $m_{VV}$ approach}
-\label{subsec:2binapproach}
-
-There is a problem when we use the $m_{VV}$ distribution in the fit.
-The normalization of the SM electroweak signal cannot be determined, since its shape is similar to the other background processes, as shown in Figure~\ref{fig:2lepaQGCshapeMVV}.
-%RNN score shows the separation between standard model and the background, so the 2D fit of $m_{VV}$ and RNN score can be useful since we can use both separation powers. Spliting $m_{VV}$ in 2-bin is studied as the minimum case of 2D fit.
-
-Unconditional asimov fit for FT0 signal in only \tlep channel is performed and compared in two options :
-\begin{itemize}
-  \item Fit $m_{VV}$ distribution as discriminant, as shown in section~\ref{subsec:aqgc_limit}
-  \item Split the $m_{VV}$ into 2 bins ;  \\
-        LowMVV : $m_{VV}$ $< 2000$~GeV \\
-        HighMVV : $m_{VV}$ $\geq 2000$~GeV \\
-        then fit simultaneously with RNN score as discriminant
-\end{itemize}
-Prefit plots are shown in figure~\ref{fig:2lepTwoBin} in the second option.
-The expected limits and uncertainty of the expected signal strength of FT0 signal are shown in table~\ref{tab:2binlimit}.
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-        \caption{Prefit plots for 2-bin strategy is shown. The RNN score is used as discriminant for signal regions. operator FT0 in \tlep channel are shown. The standard model EW signal is floated as the background.}
-        \label{fig:2lepTwoBin}
-\end{figure}
-
-\begin{table}[ht!]
-\small
-\begin{center}
-\resizebox{0.9\textwidth}{!}{
-\begin{tabular}{ | l || l | l | l |}
-                                    & single bin fit with $m_{VV}$& single bin fit with RNN  & 2-bin fit with RNN   \tabularnewline \hline
-Unconditional fitted $\mu$          & -2.7e-06 $\pm$ 0.067   & 3.38e-05 $\pm0.038$      & 3.35e-05 $\pm0.029$  \tabularnewline \hline
-Norm sigVBS                         & 1 $\pm$ 2.1            & 1 $\pm$ 0.94             & 1 $\pm$ 0.48         \tabularnewline \hline
-Norm Z                              & 1 $\pm$ 0.036          & 1 $\pm$ 0.029            & 1 $\pm$ 0.027        \tabularnewline \hline
-Norm VV                             & 1 $\pm$ 1.13           & 1 $\pm$ 0.71             & 0.99 $\pm$ 0.64      \tabularnewline \hline
-Expected limit of $\mu$             & 0.19                   & 0.72                     & 0.10                 \tabularnewline \hline
-Expected limit of Wilson coefficient & 0.44                   & 0.85                     & 0.35                 \tabularnewline \hline
-\end{tabular}
-}
-\caption{Expected signal strength and limits in each two options. only \tlep channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normarizations fitted for standard model signal, and Z and diboson backgrounds are shown as Norm in the table.}
-\label{tab:2binlimit}
-\end{center}
-\end{table}
-
-2-bin fit can constrain the standard model signal, as shown in the uncertainty of Norm sigVBS of table~\ref{tab:2binlimit}. 
-When comparing single bin fit with $m_{VV}$ and 2-bin fit with RNN, 2-bin fit with RNN appears to be able to provide a better limit.
 
 \section{Clipping method}
 \label{subsec:clipping}
@@ -391,6 +341,58 @@ The all limits in each clipping value are shown here. \\
 \end{figure}
 
 The expected limits for each wilson coefficient is shown in the Table~\ref{}, in two cases. One is when the clipping value is 2~TeV and the other is when clipping value is $\infinity$, which means no clipping value is set.
+
+
+\section{2-bin $m_{VV}$ approach}
+\label{subsec:2binapproach}
+
+There is a problem when we use the $m_{VV}$ distribution in the fit.
+The normalization of the SM electroweak signal cannot be determined, since its shape is similar to the other background processes, as shown in Figure~\ref{fig:2lepaQGCshapeMVV}.
+%RNN score shows the separation between standard model and the background, so the 2D fit of $m_{VV}$ and RNN score can be useful since we can use both separation powers. Spliting $m_{VV}$ in 2-bin is studied as the minimum case of 2D fit.
+
+Unconditional asimov fit for FT0 signal in only \tlep channel is performed and compared in two options :
+\begin{itemize}
+  \item Fit $m_{VV}$ distribution as discriminant, as shown in section~\ref{subsec:aqgc_limit}
+  \item Split the $m_{VV}$ into 2 bins ;  \\
+        LowMVV : $m_{VV}$ $< 2000$~GeV \\
+        HighMVV : $m_{VV}$ $\geq 2000$~GeV \\
+        then fit simultaneously with RNN score as discriminant
+\end{itemize}
+Prefit plots are shown in figure~\ref{fig:2lepTwoBin} in the second option.
+The expected limits and uncertainty of the expected signal strength of FT0 signal are shown in table~\ref{tab:2binlimit}.
+
+\begin{figure}[ht]
+    \centering
+    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+        \caption{Prefit plots for 2-bin strategy is shown. The RNN score is used as discriminant for signal regions. operator FT0 in \tlep channel are shown. The standard model EW signal is floated as the background.}
+        \label{fig:2lepTwoBin}
+\end{figure}
+
+\begin{table}[ht!]
+\small
+\begin{center}
+\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{ | l || l | l | l |}
+                                    & single bin fit with $m_{VV}$& single bin fit with RNN  & 2-bin fit with RNN   \tabularnewline \hline
+Unconditional fitted $\mu$          & -2.7e-06 $\pm$ 0.067   & 3.38e-05 $\pm0.038$      & 3.35e-05 $\pm0.029$  \tabularnewline \hline
+Norm sigVBS                         & 1 $\pm$ 2.1            & 1 $\pm$ 0.94             & 1 $\pm$ 0.48         \tabularnewline \hline
+Norm Z                              & 1 $\pm$ 0.036          & 1 $\pm$ 0.029            & 1 $\pm$ 0.027        \tabularnewline \hline
+Norm VV                             & 1 $\pm$ 1.13           & 1 $\pm$ 0.71             & 0.99 $\pm$ 0.64      \tabularnewline \hline
+Expected limit of $\mu$             & 0.19                   & 0.72                     & 0.10                 \tabularnewline \hline
+Expected limit of Wilson coefficient & 0.44                   & 0.85                     & 0.35                 \tabularnewline \hline
+\end{tabular}
+}
+\caption{Expected signal strength and limits in each two options. only \tlep channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normarizations fitted for standard model signal, and Z and diboson backgrounds are shown as Norm in the table.}
+\label{tab:2binlimit}
+\end{center}
+\end{table}
+
+2-bin fit can constrain the standard model signal, as shown in the uncertainty of Norm sigVBS of table~\ref{tab:2binlimit}. 
+When comparing single bin fit with $m_{VV}$ and 2-bin fit with RNN, 2-bin fit with RNN appears to be able to provide a better limit.
 
 
 

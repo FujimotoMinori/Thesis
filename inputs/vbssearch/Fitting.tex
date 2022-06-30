@@ -90,3 +90,66 @@ A simultaneous fit to the merged and resolved signal and control regions is perf
 %The summary of the distributions used in the likelihood fit for the SRs and CRs for all the categories in each channel is summarized in the Table~\ref{tab:}.
 % need this??
 The 2POI fit to the Merged and Resolved region is also performed as a testing purpose. For the blinding strategy, unconditional fits on the Asimov dataset are performed in the full range of the RNN score. Unconditional fit on data are also performed to the left-side bins of the RNN score up to the 75\% of the total signal integral.
+
+\section{Fiducial cross section extraction}
+In addition to the observation of the EW VVjj production, the cross section measurement is performed at the same time.
+The fiducial cross section, which is the cross section that takes the detector acceptance into account is exploited allows easier comparisons with other theoretical predictions.
+The fiducial selection is done with only the truth particle information, and these cuts are chosen to be similar to those at reconstruction level selection as described in Chapter~\ref{}.
+These selections are summarized in the Table~\ref{tbl:vbs_fid_sel}. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|c|c|c|} \hline
+%
+\multicolumn{4}{|c|}{Object selection} \\ \hline
+%
+Leptons      & \multicolumn{3}{c|}{$\pt > 27$~GeV, $|\eta| < 2.5$ } \\
+%
+Small-R jets & \multicolumn{3}{c|}{$\pt > 20$~GeV if $|\eta| < 2.5$ and $\pt > 30$~GeV if $2.5 < |\eta| < 4.5$} \\
+%
+Large-R jets & \multicolumn{3}{c|}{$\pt > 200$~GeV, $|\eta| < 2.0$ } \\
+%
+\hline
+\multicolumn{4}{|c|}{Event selection} \\
+\hline
+%
+\multirow{3}{*}{Leptonic $V$ selection}
+  &  0-lep & 1-lep & 2-lep \\
+  &  $\met > 200$~GeV & One lepton       & Two leptons \\
+  &                   & $\met > 80$~GeV  &             \\
+\cline{2-4}
+%
+\multirow{2}{*}{Tagging jets}
+  & \multicolumn{3}{c|}{$\eta_{\mathrm{tag}\ j_1} \cdot \eta_{\mathrm{tag}\ j_2} < 0$, highest $M_{jj}$} \\
+  & \multicolumn{3}{c|}{$p^{tag\ jet_{1,2}}_{T} > 30$~\textrm{GeV}, $M_{jj}$>400~\textrm{GeV}}  \\
+  & \multicolumn{3}{c|}{b-hadron associated jets veto} \\
+\cline{2-4}
+%
+\multirow{4}{*}{Hadronic $V$ selection}
+  & Merged  & \multicolumn{2}{c|}{One large-R jet, leading $p_T$} \\
+%
+  & \multirow{3}{*}{Resolved}
+    & \multicolumn{2}{c|}{Two small-R jets, leading $p_T$} \\
+  & & \multicolumn{2}{c|}{$p^{j_{1}}_{T}>$40~GeV, $p^{j_{2}}_{T}>$20~GeV } \\
+  & & \multicolumn{2}{c|}{$64 < M_{jj} < 106$~\textrm{GeV} } \\
+\cline{2-4}%
+\multirow{1}{*}{Additional (EW)TopVeto selection}
+  & \multicolumn{3}{c|}{ $M_{jjj} > 220 GeV$ (Resolved) } \\
+%
+\hline
+
+\end{tabular}
+\caption{Summary of the event selection performed at the particle level to define the fiducial regions.}
+\label{tbl:vbs_fid_sel}
+\end{center}
+\end{table}
+
+
+The event yields after applying the fiducial selection is shown in Table~\ref{}.
+The predicted fiducial cross section using the truth event yields and the luminosity is shown in Figure~\ref{}.
+
+The expected cross section, $\sigma_{\mathrm{EW} V V j j}^{\mathrm{fid}, \mathrm{pred}}$, is derived by the event yields with these fiducial selection, then the observed cross section, $\sigma_{\mathrm{EW} V V j j}^{\mathrm{fid}, \mathrm{obs}}$, is defined using the fitted result, observed $\mu_{\mathrm{EW} V V j j}$ as:
+\begin{equation}
+\sigma_{\mathrm{EW} V V j j}^{\mathrm{fid}, \mathrm{obs}}=\mu_{\mathrm{EW} V V j j} \cdot \sigma_{\mathrm{EW} V V j j}^{\mathrm{fid}, \mathrm{pred} }
+\end{equation}
+
