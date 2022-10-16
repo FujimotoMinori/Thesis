@@ -1,13 +1,12 @@
 \chapter{Systematic uncertainties}
+\label{chap:systematics}
 In this section, systematic uncertainties considered in the analysis are described. The uncertainties are divided into two categories:
 Experimental uncertainties and Theoretical uncertainties.
-Background modeling uncertainties, Theoretical uncertainties. 
 Each systematic uncertainty is treated as a nuisance parameter in the final fitting.
-The all systematic uncertainties are summarized in table in Appendix.
+%The all systematic uncertainties are summarized in table in Appendix.
 %The systematic variations are estimated on the final discriminant described in Chapter{}.
 
 \section{Experimental uncertainties}
-
 \subsection{Luminosity}
 The uncertainty on the integrated luminosity. 
 For the 2015+2016 dataset, this uncertainty is 2.1\%, and 2.4\% for the 2017 dataset. The uncertainty for the 2018 data alone is 2.0\%, and the uncertainty for the combined run-2 dataset (2015-2018) is 1.7\% The combined uncertainty is applied to all MC samples. \cite{AtlasLumiRun2}.
@@ -19,7 +18,8 @@ Systematic uncertainites on the efficiency of the electron or muon triggers are 
 The systematics uncertainties related to the muon and electron are applied to the difference between data and MC. The identification and reconstruction efficiencies are measured using the $Z$ mass peak. The scale factor and its uncertainty are derived using the $Z$ mass peak as well. The energy and momentum scales are measured with $Z$ mass line shape, and the track-to vertex association efficiency is applied only for muons.
 \subsection{Small-$R$ Jet Energy Scale (JES) and Resolution (JER) Uncertainty}
 The jet energy scale (JES) uncertainties and jet energy resolution (JER) are measured by calculating the response between MC and data in various kinematic phase space ~\cite{JetUncertainties}.
-What is used in this analysis is 30 JES uncertainty and 8 JER uncertainty components. The uncertainty on jet vertex tagger (JVT) efficiency~\cite{JVTCalib} and forward jet vertex tagger (fJvt) efficiency are also considered.
+%What is used in this analysis is 30 JES uncertainty and 8 JER uncertainty components. 
+The uncertainty on jet vertex tagger (JVT) efficiency~\cite{JVTCalib} and forward jet vertex tagger (fJvt) efficiency are also considered.
 %We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config}
 \subsection{Large-$R$ Jet Energy Scale (JES) and jet energy resolution (JER) Uncertainty}
 \label{sec:fatjetUncert}
@@ -34,15 +34,15 @@ They are uncertainties on the scaling factor for taking account for the disagree
 These b-tagging systematic uncertainties are applied when calculating the SF since they are uncertainties on the SF. b-tagging SF is firstly calculated with all small-R jets (PFlowJets) and applied to the events after having selected non b-tagged tagging jets, same as the uncertainties. 
 \subsection{Quark/Gluon jets uncertainties}
 The Flavour response and the Flavour composition uncertainties are derived specifically to this analysis.
-These two uncertainties explains the different jet response to quark and gluon-initiated jets. The flavour response uncertainty is derived by using the dijet events used the alternative samples, which are Phythia~8 and Herwig~$\plus\plus$. The flavour composition uncertainty is usually derived by assuming 50\% quarks and 50\% gluons and takes conservative uncertainty of 100\%, though it is too conservative uncertainties and can limit the sensitivities in topology of this analysis, where quark enriched regions are
-expected. In order to reduce these uncertainties, the gluon fraction is studied and these uncertainties are re-derived using specific gluon fraction.
+These two uncertainties explain the different jets response to quark and gluon-initiated jets. The flavour response uncertainty is derived by using the dijet events used the alternative samples, which are Phythia~8 and Herwig~$\plus\plus$. The flavour composition uncertainty is usually derived by assuming 50\% quarks and 50\% gluons and takes conservative uncertainty of 100\%, though it is too conservative uncertainties and can limit the sensitivities in topology of this analysis, where quark enriched regions are expected. In order to reduce these uncertainties, the gluon fraction is studied and these uncertainties are re-derived using specific gluon fraction.
+
 %how to derive this 
 The gluon fraction in each of the analysis regions and different samples is estimated as a function of the $p_T$ and $\eta$ for small-R jets. Truth parton label information is used to estimating the number of quarks and gluons. All jets except the b-quark-initiated jets are into account.
 The gluon fraction for a given bin of the 2D histograms of $p_T$ and $eta$ after summing up all the region is taken as the nominal gluon fraction. As to describe the uncertainty on the gluon fraction, it is given by:
 \begin{equation}
 \sigma_{gfrac}=\sqrt{\sigma_{\text {region }}^{2}+\sigma_{g e n}^{2}}
 \end{equation}
-where $\sigma_{region}$ is the maximum difference in nominal gluon fraction and the one analysis region, and $\sigma_{gen}$ is the generator uncertainty derived using alternative Pythia 8 and Jerwig MC samples. For Signal samples there is no alternative MC sample available, only region uncertainty is considered.
+where $\sigma_{region}$ is the maximum difference in nominal gluon fraction and the one analysis region, and $\sigma_{gen}$ is the generator uncertainty derived using alternative Pythia 8 and Herwig MC samples. For Signal samples there is no alternative MC sample available, only region uncertainty is considered.
 %Figure~\ref{} shows the impact of these flavour related variation on 2 lepton resolved control regions.
 \subsection{Track uncertainties}
 Some uncertainties on the tracks reconstruction especially for the small-R jets are taken into account. There are five main components for this uncertainty: 
@@ -57,37 +57,37 @@ The impacts from these uncertainties are expected to be low, as they are less th
 
 \section{Theoretical uncertainties}
 The systematic uncertainties related to the determination or the calculation of the MC.
-They are implemented with EWVVjj signal sample and the background samples that have dominant contributions. For the background samples, only shapes of these theoretical uncertainties are considered in the final fitting, and the normalization is not included in the fitting, since the normalization can be fitted with the norm factors of each background samples.
+They are implemented with EWVVjj signal samples, and the background samples that have dominant contributions. For the background samples, only shapes of these theoretical uncertainties are considered in the final fitting. The normalization is not included in the fitting, since the normalization can be fitted with the norm factors of each background samples.
 \subsection{Perturbative QCD matrix-element uncertainties}
 \begin{itemize}
 \item PDF + $\alpha_s$ uncertainties\\
-Since PDF sets are obtained by fitting experimental dataset, there are uncertainties on selecting different type of PDF sets, which originated from the experimental uncertainties from the dataset and from the choice of the functional form adapted in the PDF fits.
-The uncertainty from the PDF set choice can be assessed by 2 means. One is by calculating the difference within one PDF set by varying its internal parameters, which is called internal PDF uncertainties. For this first uncertainty the 100 MC replicas of the NNPDF sets are used. The standard deviation of the mean balue of the 100 MC replicas for each bin is taken as the uncertainty. The second is from the difference between the nominal sets of different PDF sets, which is called external PDF uncertainties. This uncertainty is estimated by comparing the nominal distributions with the alternative PDF sets. The uncertainties are combined by taking the envelope of all uncertainties, which means the most varied uncertainty is taken as the final uncertainty. 
-$\alpha_s$ uncertainties are from the experimental uncertainties in the determination of it and the truncated fixed order calculations are used for the calculation. This is included to the estimation of the external PDF uncertainties. \textcolor{blue}{?}
+Since PDF sets are obtained by fitting experimental dataset, there are uncertainties on selecting different type of PDF sets, which originated from the experimental uncertainties from the datasets and from the choice of the functional form adapted in the PDF fits.
+The uncertainty from the PDF set choice can be assessed by 2 means. One is by calculating the difference within one PDF set by varying its internal parameters, which is called internal PDF uncertainties. For this first uncertainty the 100 MC replicas of the NNPDF sets are used. The standard deviation of the mean value of the 100 MC replicas for each bin is taken as the uncertainty. The second is from the difference between the nominal sets of different PDF sets, which is called external PDF uncertainties. This uncertainty is estimated by comparing the nominal distributions with the alternative PDF sets. The uncertainties are combined by taking the envelope of all uncertainties, which means the most varied uncertainty is taken as the final uncertainty. 
+$\alpha_s$ uncertainties are defined from the experimental uncertainties in the determination of it. This is included to the estimation of the external PDF uncertainties. \textcolor{blue}{?}
 \item QCD scale uncertainties\\
 QCD scale uncertainties are determined by using different renormalization and factorization scale factor sets. 
 The renormalization scale $\mu_R$ is the scale at which the strong coupling $\alpha_s$ is evaluated, while the factorization scale $\mu_F$ is the scale to separate the perturbative part of the hard-interaction from the non-perturbative part of PDF. 
 This uncertainties are implemented in the fitting as the NP named \texttt{TheoryQCD\_Z} for Z+jets background sample and \texttt{TheoryQCD\_VBS} for the EW VVjj signal sample. They are estimated by taking the envelope of the 6 set of the combination of the $\mu_R$ and $\mu_F$, which are fixed to be 1, 0.5, or 2.0. The envelop of these sets are used as the uncertainty.
-The variation implemented is shown in Appendix~\ref{}. 
 \end{itemize}
 
 \color{blue}
 {
 \subsection{NLO order EW corrections}
-The uncertainty related to the corrections of the matrix element when adapted the NLO order calculation. The additional sample is needed to estimate this uncertainty, and this is not currently considered in the analysis. Maybe erase this part.
+The uncertainty related to the corrections of the matrix element when adapted the NLO order calculation. The additional sample is needed to estimate this uncertainty, and this is not currently considered in the analysis. Erase this part.
 }
+
 \color{black}
 \subsection{Background Modeling uncertainties}
-The systematics uncertainties related to the modeling of the background samples are described. This uncertainty is the difference between the modeling of the alternative sample, MadGraph + Phytia 8 and the nominal sample (Shelpa 2.2.1). Since there is a large mismodelling in the nominal Shelpa 2.2.1 sample, and the alternative sample has a better modeling, this uncertainty is expected to be large.
-Figure~\ref{} shows the variation of this modeling uncertainty in 2-lepton channel. The plots are normalized to see the shape effect.
-The difference of the parton shower modeling is also taken into account in this uncertainty\textcolor{blue}{?}
+The systematics uncertainties related to the modeling of the background samples are described. This uncertainty is the difference between the modeling of the alternative sample (MadGraph + Phythia 8)  and the nominal sample (Shelpa 2.2.1). Since there is a large mismodelling in the nominal Shelpa 2.2.1 sample and the alternative sample has a better modeling, this uncertainty is expected to be large.
+%Figure~\ref{} shows the variation of this modeling uncertainty in 2-lepton channel. The plots are normalized to see the shape effect.
+%The difference of the parton shower modeling is also taken into account in this uncertainty\textcolor{blue}{?}
 \subsection{Reweighting uncertainties}
 The $m^{tag}_{jj}$ reweighting is applied. The uncertainty for this reweighting is assigned considering a 100~\% uncertainty on the linear fit parameters. 
-Figure~\ref{} shows the impact of $m^{tag}_{jj}$ reweighting uncertainty on the final discriminant. The plots are normalized to see the nominal shape effect.
+%Figure~\ref{} shows the impact of $m^{tag}_{jj}$ reweighting uncertainty on the final discriminant. The plots are normalized to see the nominal shape effect.
 
 \section{Normalization}
 The list of the normalization of the backgrounds is shown in Table~\ref{tab:prior}.
-Some backgrounds are free floated, and others have gaussian priors. Since the Diboson background has a similar distribution with the electroweak signal (POI), it is difficult to constraints the normalization of the Diboson as a free floating parameter, therefore prior is set.
+Some backgrounds are free floated, and others have gaussian priors. Since the Diboson background has a similar distribution with the electroweak signal (POI), it is difficult to constraints the normalization of the Diboson as a free floating parameter, therefore prior is set on it.
 \begin{center}
 \begin{tabular}{ |c|c|c|c|c| } 
 \hline

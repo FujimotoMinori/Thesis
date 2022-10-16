@@ -1,6 +1,7 @@
 \chapter{Multi-Variate Analysis}
+\label{chap:MVA}
 
-The difficulty of the VBS semi-leptonic channel is its low signal background ratio. Even after applying the event selection described in Chapter~\ref{}, they are still many backgrounds. In order to improve the sensitivity of the EW VVjj signals with respect to the other backgrounds to get better significance, a machine learning approach is used for this analysis.
+The difficulty of the VBS semi-leptonic channel is its low signal background ratio. Even after applying the event selection described in Chapter~\ref{chapter:eventselection}, they are still many backgrounds. In order to improve the sensitivity of the EW VVjj signals with respect to the other backgrounds to get better significance, a machine learning approach is used for this analysis.
 The idea is to make use of several features that has difference between signal and background, and make new phase space optimized to show better separation. The output is used for the discriminant of the final fitting.
 
 The architecture used for this analysis is a Recurrent Neural Network (RNN), as described in this Chapter.
@@ -14,12 +15,12 @@ Since the jet multiplicity is a variable feature event by event and cannot be fi
 The RNN is built with the Keras~\cite{chollet2015keras}, and the Tensorflow package~\cite{tensorflow2015-whitepaper} is used as backend for the mathematical computation. The RNN has 2 hidden layer with 25 recurrent cells to exploit the hidden correlation of the input sequence. \textcolor{blue}{(?)}
 
 \section{Input variables}
-The 4-momentum of the jets, $p_T, \eta, \phi, E$, as well as the track multiplicity ($n_{Tracks}$) are used as inputs in a recurrent way. As an actual input informations, they have 5 sequences (4-momentum and the $n_{Tracks}$) and a variable length given by the jets multiplicity, which maximum length is fixed to be 5 in this analysis. The values are filled with a masking balue if the jet is not reconstructed in the event, then the tool knows to consider only the actual jets during the training phase according to the Keras RNN implementation. The maximum length (i.e. jet multiplicty) is defined to get the significance to some extent and rather small modeling uncertainty.
-The input variables are the distributions of 4-momentum and $n_{Tracks}$ passed all event selections, which is shown in Figure~\ref{}.
+The $p_T, \eta, \phi, E$, of the jets as well as the track multiplicity ($n_{Tracks}$) are used as inputs in a recurrent way. As an actual input informations, they have 5 sequences ($p_T, \eta, \phi, E$, and the $n_{Tracks}$) and a variable length given by the jets multiplicity, which maximum length is fixed to be 5 in this analysis. The values are filled with a masking value if the jet is not reconstructed in the event, then the tool knows to consider only the actual jets during the training phase according to the Keras RNN implementation. 
+%The maximum length (i.e. jet multiplicty) is defined to get the significance to some extent and rather small modeling uncertainty.
+The input variables are the distributions of 4-momentum and $n_{Tracks}$ passed all event selections, which is shown in Figure... \textcolor{blue}{put input plots here}
 
 \section{Setup and training}
-The RNN model is trained to separate the signal from the background. The output scores are then not used as a categorization variable by applying cut on it, but used as a final discriminant for the final fitting.
-The simple visualization of the training is shown in Figure~\ref{fig:simplenode}.
+The RNN model is trained to separate the signal from the background. The output scores are then not used as a categorization variable by applying cut on it, but used as a final discriminant for the final fitting. The simple visualization of the training is shown in Figure~\ref{fig:simplenode}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/simplenode}
@@ -27,19 +28,16 @@ The simple visualization of the training is shown in Figure~\ref{fig:simplenode}
     }
     \label{fig:simplenode}
 \end{figure}
-
 The training is performed in each lepton channel due to the different background composition, and separately in merged and resolved regions.
-Further details on the technical setups are summarized in the Appendix.
+%Further details on the technical setups are summarized in the Appendix.
 
 \section{Training for merged regime}
-In addition to the small-R jets information, large-R jet candidate information (4-momentum) is used to further enhance the separation in the merged region. It is added and used in the combined RNN-DNN network, which is able to exploit the correlation across the tagging jets and the signal jets topology.
-The extra large-R information used as inputs are shown in Figure~\ref{}.
+In addition to the small-R jets information, large-R jet candidate information ($p_T, \eta, \phi, E$) is used to further enhance the separation in the merged region. It is added and used in the combined RNN-DNN network, which is able to exploit the correlation across the tagging jets and the signal jets topology.
+The extra large-R information used as inputs are shown in Figure... \textcolor{blue}{put input plots here}
 
-The output RNN score in 2-lepton channel in each SRs are shown in Figure~\ref{}.
+The output RNN score in 2-lepton channel in each SRs are shown in Figure... \textcolor{blue}{put output plots here}
 
 \section{Optimization of the binning}
-The optimization of the binning is needed to get the optimal performance of the RNN. The transformation of the RNN output to optimise the effect of the final sensitivity and reduction in the number of bins is implemented.
-The Transformation D~\cite{ATL-PHYS-PUB-2019-009} is implemented.
+The optimization of the binning is needed to get the optimal performance of the RNN, in order to get better significance. The transformation (~\cite{ATL-PHYS-PUB-2019-009}) of the RNN output to optimise the effect of the final sensitivity and reduction in the number of bins is implemented.
 The binning of the RNN score starts from 100~bins and summed up from the right-side of the distribution until getting the best sensitivity. 
-MC statistical uncertainty in each bin is required to be $<$ 20~\% to minimise the bias on fitted $\mu$~\cite{ATL-PHYS-PUB-2019-009}.
-For the current analysis, z$_s$ = 10, z$_b$ = 5 is used for the optimal parameter and basically final discriminant has 15 bins.  
+MC statistical uncertainty in each bin is required to be $<$ 20~\% to minimise the bias on fitted $\mu$~\cite{ATL-PHYS-PUB-2019-009}. For the current analysis, binning is required to have 15 bins.

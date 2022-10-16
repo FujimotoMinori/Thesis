@@ -1,9 +1,16 @@
 \chapter{Background Modeling and Estimation}
-The study dedicated to the modeling of the major background in 2-lepton channel is shown in this chapter. 
+\label{chap:modeling}
+The study dedicated to the modeling of the major background is shown in this chapter. There are two types of control regions for constraining two dominant backgrounds, which are V (Z,W) + jets and ttbar. The modeling of the MC is needed to be confirmed, thereby data/MC needs to be matched well to estimate the Background modeling.
+
+\section{V+jets background modeling}
+V+jets is the dominant background for all of three channels, therefore there are 3 control regions for each three lepton channels. The mismodeling due to the theoretical QCD calculation is corrected in each control regions. 
 
 \section{$m_{jj}^{tag}$ reweighting}
-There is a known mis-modelling issue with the Sherpa~2.2.1 V+jets samples. This mis-modelling is seen in the $m^{tag}_{jj}$ distribution as a slope when comparing the data over MC both in merged and the resolved region, as seen in Figure~\ref{fig:2lep_mtag_before_rw}.
-The re-weighting is performed to the Z+jets samples for 2-lepton channel, in order to correct this mis-modeling before defining the SRs and CRs. A linear fit to the $m^{tag}_{jj}$ in CRs are performed for each merged and resolved CRs. The fit function is defined as:
+There is a known mis-modelling issue with the Sherpa~2.2.1 V+jets samples. This mis-modelling is seen in the $m^{tag}_{jj}$ distribution as a slope when comparing the data over MC both in merged and the resolved region, as seen in Figure~\ref{fig:2lep_mtag_before_rw}. 
+This mis-modeling is founded to be related to the theoretical calculation of the colinear jets. 
+The re-weighting is performed to the Z+jets samples for 2-lepton channel, in order to correct this mis-modeling before defining the SRs and CRs. A linear fit to the $m^{tag}_{jj}$ in CRs are performed for each merged and resolved CRs. 
+
+The fit function is defined as:
 \begin{equation}
 \label{eqn:reweight}
 R=p_{0} * m_{jj}^{tag}+p_{1}
@@ -28,7 +35,6 @@ $p_{1}$ (constant)  & $1.298 \pm 0.031$ & $1.187 \pm 0.005$ \\
 \end{table}
 
 
-
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}
@@ -45,9 +51,13 @@ $p_{1}$ (constant)  & $1.298 \pm 0.031$ & $1.187 \pm 0.005$ \\
     \label{fig:2lep_mtag_before_rw}
 \end{figure}
 
-The differences of the $m^{tag}_{jj}$ distributions before and after the reweighting are used as a 1$\sigma$ of the systematics uncertainty.
+The uncertainty for this reweighting is assigned in the fitting, considering a 100~\% uncertainty on the linear fit parameters.
 
-\section{Z+jets modeling}
+%************write something about MadGraph and the dedicated modeling uncertainty here**********
+%There is alternative samples using MadGraph instread of Shelpa. The modeling of the MadGraph samples in CRs are shown in Figure.
+%The MadGraph has better modeling in our phase space which requires high $m^{tag}_{jj}$. However Shelpa is used as the baseline sample, since it has much statistics.
+
+\section{Z+jets modeling after reweighting}
 
 The $Z$+jets production is the leading background for the 2-lepton channel. The comparison of distributions from data and MC for various kinematic variables after reweighting in the 2-lepton Z+jets merged and resolved control region are shown in Figure \ref{fig:2lep_zjets_merged_CR} and Figure \ref{fig:2lep_zjets_resolved_CR}
 respectively. 
@@ -72,4 +82,7 @@ respectively.
   \caption{ Various kinematic variables in the Z+jets resolved CR in the 2-lepton channel analysis.}
    \label{fig:2lep_zjets_resolved_CR}
 \end{figure}
+
+\section{ttbar modeling}
+In 1-lepton channel the ttbar is the dominat background.
 
