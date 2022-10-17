@@ -7,15 +7,19 @@ This chapter describes the physics backgrounds of this thesis.
 \label{sec:SM}
 
 The Standard Model (SM) represents a description of the elementary particles and their interactions.
-It is proved successful in explaining the results of existing experimental results so far, and predicting the later results.
-All particles predicted by SM has been confirmed its existence, most recently the Higgs boson found with ATLAS and CMS.
-The SM predicts the existence of elementary particles which form the matter, which is fermion, classified into leptons and quarks.
-The interactions of them are described by the gauge field mediated by the exchange of particles named bosons.
-With these particles the model is describing three of the four known forces, which are the electromagnetic, the weak and the strong force. 
-The theoretical description is given with the Quantum Field Theory (QFT) framework. The gauge invariance, which is the invariance of the local gauge transformation is the key of the framework. The underlying symmetry is described with the gauge group, SU(3)$_C \times$ SR(2)$_L \times$ U(1)$_Y$, which described in this section. These underlying structure of gauge theories can be described by Lie groups.
+It is a successful theory model to explain the experimental results until today, and it has predicted a lot of parameters e.g. top-quark and higgs-boson masses.
+All particles predicted by SM has been confirmed, most recently the Higgs boson was discovered by ATLAS and CMS in 2012.
+The SM predicts the existence of elementary particles which form the matter, fermions, consisting of leptons and quarks.
+The interactions of them are described by gauge fields mediated by the exchange of corresponding gauge bosons.
+There are four types of known interactions in nature, namely electromagnetic, weak and strong force, and gravitational interactions.
+The first three of them are described by the SM.
+
+The theoretical description is given with the Quantum Field Theory (QFT) framework. 
+The invariance under the local gauge transformation is the key of the framework. 
+The underlying symmetry described by Lie groups is written by SU(3)$_C \times$ SR(2)$_L \times$ U(1)$_Y$ gauge group, and some more details are discussed in the following subsections. 
 
 \subsection{Particle Content}
-The 17 fundamental particles, which means particles with no substructure are considered in SM as the Figure~\ref{fig:SM} shows.
+Figure~\ref{fig:SM} shows 17 fundamental particles, consisting of the SM.
 \begin{figure}[tbp]
 \begin{center}
 %\subfigure[]{
@@ -28,19 +32,23 @@ All particles exist in the SM %\ref{}
 \end{center}
 \end{figure}
 
-There are two types of particles described in details below:
+They are classified into two types following Fermi-Dirac or Bose-Einstein statistics.
 \begin{itemize}
     \item Fermion \\
-    Fermions are the elementary particles with spin 1/2. There are three generations called flavors. The generations are classified only by the particle masses, increasing from first generation to the third generation. They are two types of fermions, quarks and leptons, each has 6 particles. Leptons do not act through the strong force, unlike the quarks.
+    Fermions are the elementary particles with spin 1/2. There have three generations also known as flavors.  The particle mass is increased from first to the third generations. The other parameters are exactly the same for those in the same category. They are two types of fermions, quarks and leptons, each has 6 particles. Quark has up-type and down-type quark and lepton has charged and neutral lepton, classified by its charge. Leptons do not act through the strong force, unlike the quarks.
     \item Boson \\
     Bosons are integer-spin particles and mediate the interaction of the fermions.
-    The photons ($\gamma$) are mediator of the electromagnetic forces. The photons are massless and stable, and the electromagnetic force can be interact with infinite ranges. The photons interact with every particles with electric charges.The gluons (g) are the intermediate particles of the strong force. Also gluons are massless, and interact with the quarks and the gluons itselves.The W$^\pm$ and the Z bosons carry weak force. They are massive particles and interact with all particles carrying the weak hyper charges. The W$^\pm$ can change the flavor of the quarks. 
+    The photon ($\gamma$) is the mediator of the electromagnetic force. The photon is massless and stable, hence the electromagnetic force can reach infinite ranges. 
+    The photons interact with every particles with electric charges.
+    The gluon (g) is the intermediate particle of the strong force. The gluon is also massless, and interact with particles with the color charge, i.e. quarks.
+    In addition, due to the non-Abelian nature of the SU(3) gauge group, gluons have a self coupling and they can interact with each other.
+    The W$^\pm$ and the Z bosons carry the weak force. They are massive particles and interact with all particles carrying the weak hyper charges. The W$^\pm$ can change the flavor of the quarks. 
 \end{itemize}
 
 \subsection{SM Lagrangian}
 \label{subsec:Lagrangian}
-The SM Lagrangian and its origin is to be shown here in this subsection. 
-The Standard Model consists of several components as discribed in the following subsections. They are mathematically described as the Lagrangian density, $\mathcal{L}$, which is denoted as Lagrangian in the following.\\
+The SM Lagrangian and its origin are shown in this subsection. 
+They are mathematically described as the Lagrangian density, $\mathcal{L}$, and hereafter it is denoted as Lagrangian.\\
 
 \noindent\textbf{\sf{Quantum Electro Dynamics (QED)}} \\ 
 The QED describes the dynamics of fermions and their electromagnetic interactions.
@@ -51,25 +59,25 @@ The free fermion with the spin 1/2 is described by the Lagrangian\\
 \mathcal{L}=i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi-m \bar{\psi} \psi
 \end{equation}
 The $\psi$ here is the spinor of the fermion field, $\gamma^{\mu}$  ($\mu$ = 0,1,2,3) is the Dirac gamma 4$\times$4 matrix. $\partial_{\mu}$ = $\frac{\delta}{\delta x_{\mu}}$ are the partial derivatives, and the $\bar{\psi}=\psi^{\dagger} \gamma^{0}$.
-For describing the equation of motion, the Dirac equation is given for $\psi$:
+Solving the lagrangian equation fo this yields, the Dirac equation of motion for $\psi$:
 \begin{equation}
 \left(i \gamma^{\mu} \partial_{\mu}-m\right) \psi=0
 \end{equation}
-The Lagrangian needs to be invariant with the "local" gauge transformation, i.e. the guage transformation parameter depends on x:
+The Lagrangian needs to be invariant under the "local" gauge transformation, i.e. the guage transformation parameter depends on x:
 \begin{equation}
 \psi(x) \rightarrow \psi^{\prime}(x)=e^{i \alpha(x)} \psi(x)
 \end{equation}
-where the local phase is given by $\alpha(x)$, depends on space and time. 
-This transformation form the abelian unitary group U(1) with e$^{i\alpha(x)}$ can be written as the 1$\times$1 matrix with $U^{\dagger} U=1$.
-The first term of the Lagrangian (\ref{eqn:QED}) is calculated and it is not invariant under this transformation:
+where the local phase is given by $\alpha(x)$, depending on space and time. 
+This transformation form the Abelian unitary group U(1) with e$^{i\alpha(x)}$ written as the 1$\times$1 matrix with $U^{\dagger} U=1$.
+The first term of the Lagrangian (\ref{eqn:QED}) is not invariant under this transformation:
 \begin{equation}
 \partial_{\mu} \psi \rightarrow \partial_{\mu} \psi^{\prime}=e^{i \alpha(x)} \partial_{\mu} \psi+i e^{i \alpha(x)} \psi \partial_{\mu} \alpha(x)
 \end{equation}
-The requirement of the invariance leads us to introduce an additional field A$_\mu$, transforming as:
+The requirement of the invariance leads to introduce an additional field A$_\mu$, transforming as:
 \begin{equation}
 A_{\mu} \rightarrow A_{\mu}^{\prime}=A_{\mu}+\frac{1}{e} \partial_{\mu} \alpha(x)
 \end{equation}
-where e is a coupling constant, which is elementary electric charge. 
+where e is a coupling constant, which is the elementary electric charge 
 and $\partial_{\mu}$ is replaced with the covariant derivative D$_\mu$:
 \begin{equation}
 D_{\mu}=\partial_{\mu}-i e A_{\mu}
@@ -85,7 +93,7 @@ which leads the Lagrangian as:
 &=\bar{\psi}\left(i \gamma^{\mu} \partial_{\mu}-m\right) \psi+e \bar{\psi} \gamma^{\mu} \psi A_{\mu}
 \end{aligned}
 \end{equation}
-The Lagrangian now restore the invariance with the gauge field A$_\mu$. By using the strength tensor $F_{\mu \nu}=\partial_{\mu} A_{\nu}-\partial_{\nu} A_{\mu}$, the Lagrangian of QED is defined as:
+The Lagrangian now restores the invariance with the gauge field A$_\mu$. By using the strength tensor $F_{\mu \nu}=\partial_{\mu} A_{\nu}-\partial_{\nu} A_{\mu}$, the Lagrangian of QED is defined as:
 \begin{equation}
 \label{eqn:QEDLagrangian}
 \mathcal{L}_{\mathrm{QED}}=i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi-m \bar{\psi} \psi+e \bar{\psi} \gamma^{\mu} \psi A_{\mu}-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
@@ -94,7 +102,8 @@ The Lagrangian is invariant under the U(1)$_{EM}$ local gauge transformations of
 \\
 
 \noindent\textbf{\sf{Quantum Chromo Dynamis (QCD)}} \\ 
-The QCD describes the strong force interactions between quarks and gluons. The concept of the required invariance is similar to the QED, while an additional degree of freedom is introduced: the charge denoted as color, which is red (r), green(g), and blue(b). The Dirac spinor is replaced with vector of three spinors for quarks:
+The QCD describes the strong force interactions between quarks and gluons. The concept of the required invariance is similar to the QED, while an additional degree of freedom is introduced: the charge denoted as color, red (r), green(g), and blue(b). 
+The Dirac spinor is replaced with vector of three spinors for quarks:
 \begin{equation}
 \psi=\left(\begin{array}{c}
 \psi_{r} \\
@@ -107,7 +116,7 @@ The Lagrangian of QCD is described as:
 \mathcal{L}_{\mathrm{QCD}}=i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi-m \bar{\psi} \psi-g_{s}\left(\bar{\psi} \gamma^{\mu} \frac{\lambda_{a}}{2} \psi\right) G_{\mu}^{a}-\frac{1}{4} G_{\mu \nu}^{a} G_{a}^{\mu \nu}
 \end{equation}
 with the gauge fields $G_{\mu}^{a}$ (a = 1,2,...,8) represents the gluons.
-QED is an Abelian gauge theory since the underlying Lie group is the Abelian group U(1)$_{EW}$. For QCD, the underlying group is the non-Abelian group SU(3)$_C$, whose generators are T$_a$ = $\lambda_{a}/2$. $\lambda_{a}$ are callsed Gell-Mann matrices. They satisfy the commutator relation:
+While QED is an Abelian gauge theory, for QCD, the underlying group is the non-Abelian group SU(3)$_C$, whose generators are T$_a$ = $\lambda_{a}/2$. $\lambda_{a}$ are callsed Gell-Mann matrices. They satisfy the commutator relation:
 \begin{equation}
 \left[\frac{\lambda_{a}}{2}, \frac{\lambda_{b}}{2}\right]=i f_{a b c} \frac{\lambda_{c}}{2}
 \end{equation}
@@ -122,7 +131,7 @@ The non-Abelian group structure produces the last term of the field strength, wh
 \noindent\textbf{\sf{ElectroWeak Model}} \\
 It is shown by experiments that the weak interaction only acts on left-handed fermions. In the electroweak model, the SU(2)$_L \times$ U(1)$_Y$ symmetry is conserved. Here the left-handed fermions are assigned to SU(2)$_L$ doublets with weak isospin I = 1/2, and gauge field W$^a_\mu$. The right-handed fermions are assigned to  U(1)$_Y$ singlets with weak isospin I = 0, and gauge field B$_\mu$.
 %table of the quantum numbers
-The left-handed doublets and right-handed singlet denote as $\chi_{L}$ and $\psi_{R}$ ,respectively. Specifically $\chi_{L}$ is written as 
+The left-handed doublets and right-handed singlets are denoted as $\chi_{L}$ and $\psi_{R}$ ,respectively. Specifically $\chi_{L}$ is written as 
 $
 \left(\begin{array}{c}
 \nu_{L} \\
@@ -142,7 +151,7 @@ and $\psi_{R}$ is $(u_R)$ and $(d_R)$.
 
 
 
-These behave with local phase transformations as:
+These behave under the local gauge transformations as:
 \begin{equation}
 \begin{aligned}
 \chi_{L}(x) \rightarrow \chi_{L}^{\prime}(x) &=e^{i \alpha_{a}(x) \tau_{a}} e^{i \beta(x) Y} \chi_{L} \\
@@ -181,13 +190,12 @@ e&=g \sin \theta_{W}=g^{\prime} \cos \theta_{W} \\
 and \ \ Q&=I_{3}+\frac{Y}{2}
 \end{aligned}
 \end{equation}
-The local gauge invariance forbid the introduction of the mass term of the 
-The Lagrangian could include the mass terms of the bosons like $m^2_W W_\mu W^\mu$, while it is not invariant under $SU(2)_L \times U(1)_Y$ local transformations.
+The local gauge invariance forbids the introduction of the mass term of the bosons like $m^2_W W_\mu W^\mu$, since it is not invariant under $SU(2)_L \times U(1)_Y$ local transformations.
 This statement that the local phase invariance in the electroweak model requests the fermions and bosons to be massless particles, is conflicted against the experimental results, where W$^{\pm}$ , Z bosons and fermions are found to be massive.
 \\ \\
 \noindent\textbf{\sf{Spontaneously Symmetry breaking}} \\ 
-The conflict of the electroweak model of forbidding the masses of the fermions and boson can be solved by introducing a spontaneously symmetry breaking.
-The mechanism is known as Brout-Englert-Higgs (BEH) mechanism or “Higgs mechanism” for short.
+The disagreement of the electroweak model forbidding the masses of the fermions and bosons with the experimental results can be solved by introducing a spontaneously symmetry breaking.
+It is known as Brout-Englert-Higgs (BEH) mechanism or “Higgs mechanism” for short.
 
 A complex scalar field, $\phi$, which is a weak isospin doublet is introduced as the Higgs field and has four degrees of freedom:
 \begin{equation}
