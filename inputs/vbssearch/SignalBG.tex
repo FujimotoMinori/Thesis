@@ -1,11 +1,11 @@
 \chapter{Signal and Background processes}
 \label{chap:sigbkg}
 
-This analysis aims at the VBS semi-leptonic process. The considerable processes in the EWVVjj signal and the background, as well as the experimental characterization of each process is shown.
+The details of the signal and the background modeling in the Monte-Carlo simulation are discussed in this chapter.
 
 \section{Signal process}
-The signals are modeled as the electroweak VV $\plus$ jj production. The signal samples are generated with two on-shell V bosons (V is Z or W), with one V boson decaying leptonically, and the other V boson decaying hadronically. The leptonically decaying process ($Z \rightarrow ll$ with $l = e,\mu$, $Z \rightarrow \nu\nu$, $W\rightarrow l\nu$ with $l = e,\mu)$ is classified into three lepton channel, 0, 1, 2-lepton channel with respect to the number of the visible leptons in the detectors. The signal includes all purely-electroweak tree-level diagrams, therefore there are both VBS and non-VBS diagrams.
-The VBS diagrams includes the scattering of two vector bosons, shown in Figure~\ref{fig:feynmanVBS}.
+The signal samples are generated with two on-shell V bosons (V is Z or W), one of which decays leptonically, and the other hadronically (semi-leptonic final states).
+Theoretically, VBS processes shown in Fig~\ref{fig:feynmanVBS} cannot be distinguished from the other electroweak VV+jj proceses like diagrams shown in Fig~\ref{fig:feynmanEWKnonVBS2} and Fig~\ref{fig:feynmantZb}, for the gauge invariant conservation, hence they are generated altogether as electroweak (EW) VV+jj production.
 
 %% feynman diagrams, VBS
 \begin{figure}[H]
@@ -50,7 +50,7 @@ non-VBS diagrams contribute to the signal, which include top.
 \end{center}
 \end{figure}
 
-These VBS and non-VBS diagrams cannot be separated in production, since gauge invariant must be conserved. Therefore non-VBS diagrams are also included in the signal samples. Especially the contribution from electroweak ttbar process is included about 50~\% of the whole EWVVjj signal samples, which can be suppressed by applying b-veto (not requiring the b-tagged jets). After applying b-veto in the event selection, there is still non-negligible contributions from tZb process, which is shown in Figure~\ref{fig:feynmanVBS}. 
+Especially the contribution from electroweak ttbar process is included about 50~\% of the whole EW VV+jj signal samples, which can be suppressed by applying b-veto (not requiring the b-tagged jets). After applying b-veto in the event selection, there is still non-negligible contributions from tZb process, which is shown in Figure~\ref{fig:feynmanVBS}. 
 
 %% feynman diagram, tZb
 \begin{figure}[H]
@@ -65,7 +65,6 @@ The example of the tZb diagram, which included in non-VBS diagrams.
 
 
 This contributions are reduced by applying additional cut descibed in Section~\ref{subsec:topveto}.
-
 The production cross-section calculated by the MadGraph is shown in the table~\ref{tab:VBS_sig_samples}.
 \begin{table}[!htbp]
 \begin{center}
@@ -73,7 +72,7 @@ The production cross-section calculated by the MadGraph is shown in the table~\r
 \begin{tabular}{|l|l|}
 \hline
 Process & cross-section~(pb) \\
-\hline
+%\hline
 %$W(l\nu)W(qq\prime)jj,b-veto$     & 1.99    \\
 %$W(l\nu)W(qq\prime)jj,b-filter$   &  1.97   \\
 $W(l\nu)W(qq\prime)jj$   &  3.96   \\
@@ -84,14 +83,12 @@ $Z(\nu\nu)Z(qq\prime)jj$          &  0.032  \\
 $Z(ll)Z(qq\prime)jj$              &  0.0096 \\
 \hline
 \end{tabular}
-\caption{List of production cross sections of the signal samples.
-}
+\caption{List of production cross sections of the signal samples.}
 \label{tab:VBS_sig_samples}
 \end{center}
 \end{table}
 
-The EWK VV+jj production is modeled using MadGraph5\_aMC@NLO v2.3.3~\cite{Alwall:2014hca},
-plus PYTHIA8~\cite{Sjostrand:2007gs} for fragmentation.
+The EWK VV+jj production is modeled using MadGraph5\_aMC@NLO v2.3.3~\cite{Alwall:2014hca}, plus PYTHIA8~\cite{Sjostrand:2007gs} for fragmentation.
 The \textsc{NNPDF30LO} PDF set~\cite{Ball:2012cx} is used.
 
 
@@ -157,6 +154,7 @@ All simulated events are processed with the same trigger and reconstruction algo
 %\caption{An integrated luminosity used in this analysis. }
 %\end{table}
 
+\section{aQGC signal process}
 
 
 

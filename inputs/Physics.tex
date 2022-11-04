@@ -125,7 +125,9 @@ g$_s$ denotes the strong coupling constatnt, and $G_{a}^{\mu \nu}$ is the field 
 G_{\mu \nu}^{a}=\partial_{\mu} G_{\nu}^{a}-\partial_{\nu} G_{\mu}^{a}-g_{s} f_{a b c} G_{\mu}^{b} G_{\nu}^{c}
 \end{equation}
 The non-Abelian group structure produces the last term of the field strength, which enables the gluons to interact with themselves differently from QED. Gluons are also requested to be massless from the gauge transformation of the fields.
-%The whole Lagrangian for QCD??
+%quark 
+%asymptotic freedom 
+
 \\ \\
 
 \noindent\textbf{\sf{ElectroWeak Model}} \\
@@ -387,17 +389,19 @@ Higgs Self Coupling Constant & $\lambda=0.1$ \\
 \end{center}
 
 \section{Phenomenology of proton-proton collision}
-The standard model physics can be tested with the scattering experiments like ATLAS experiments located to the LHC.
-Since the LHC is the proton-proton collider, the physics related to the proton-proton interaction is described in this section. Using the protons instead of the electrons is its higher mass, which enables to reach the higher center-of-mass energy in spite of the energy loss due to the syncrotoron radiation, which is propotional to $m^{-4}$.
-Since their is a substructure inside the proton, the proton-proton collision cross section needs to be modeled through the formalism of QCD.
+The standard model physics can be tested with the scattering experiments like pp collisions at LHC.
+The physics related to the proton-proton interaction is described in this section. 
+%Using the protons instead of the electrons is its higher mass, which enables to reach the higher center-of-mass energy in spite of the energy loss due to the syncrotoron radiation, which is propotional to $m^{-4}$.
+Since there is a substructure inside the proton, the proton-proton collision cross section needs to be modeled through the formalism of QCD.
 
 \subsection{Factorization}
 \label{subsec:factorization}
 
 The scattering cross section can be calculated with perturbative QCD. 
 However, the size of the coupling constant, $\alpha_s$ even at the rather large momentum, $q^2$, the perturbative expansion converges really slow.
-The factorization theorem \cite{} allow us to calculate the total cross section approximately with two part; obtaining parton from the original proton part and the partonic cross section calculation part.
-As illustrated in Figure~\ref{fig:factorization}, the total cross section of the process can be factorized in a long-distance part in the left part of the figure, and a short-distance part, or so called the hard scattering part, illustrated in the right.
+The factorization theorem \cite{} allows us to calculate the total cross section approximately with two parts; 
+(1) obtaining initial parton that contribute to the hard scattering from the original proton, 
+(2) the partonic cross section calculation as illustrated in Figure~\ref{fig:factorization}
 
 \begin{figure}[tbp]
 \begin{center}
@@ -419,7 +423,7 @@ In the scattering process ab$\rightarrow$n at a hadron collider can be written a
 where a and b is summed over all partonic constituents of the colliding hadrons, $h_1$ and $h_2$, respectively.
 $f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right)$ and $f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right)$ are the parton distribution function (pdf), obtaining the partons from the original colliding hadrons, at a given momentum fraction x. The factorization depends on the arbitrary cutoff scale, referred as factorization scale, $\mu_F$.
 Then the partonic cross section of the hard scattering, $\hat{\sigma}_{a b \rightarrow n}\left(\mu_{F}, \mu_{R}\right)$ can be calculated perturbatively with Feynman-diagrams technique by considering the process $ab\rightarrow n $ with free partons in the initial state. This calculation is done with the Matrix element $\left|\mathcal{M}_{a b \rightarrow n}\right|$ for the phase-space $\Phi_n$.
-When calculating the matrix element of the hard-scattering process, the divergence terms are to be absorbed into the redefinition of fields or parameters via subtractions. This procedure is usually referred as renormalization, and the subtractions scale is called renormalization scale, $\mu_R$. 
+When calculating the matrix element of the hard-scattering process, the divergence terms are absorbed into the redefinition of fields or parameters via subtractions. This procedure is usually referred as renormalization, and the subtractions scale is called renormalization scale, $\mu_R$. 
 The PDF is estimated by the collision data from previous and current experiments, and extrapolated to the appropriate energy using the DGLAP evolution equations.\cite{}.
 %this reference can be found in "VBS2014"
 
@@ -439,12 +443,15 @@ The partons resulted afterparton shower are combined to form hadrons. Hadronizat
 \section{Vector Boson Scattering}
 \label{sec:VBS}
 
-The scattering of two electroweak gauge bosons can probe the structure of the electroweak symmetry breaking (EWSM) mechanism directly. 
-Electroweak gauge boson scattering, or Vector Boson Scattering (VBS) is therefore one of the key process to be investigate in LHC experiment.
+The scattering of two electroweak vector gauge bosons can probe the structure of the electroweak symmetry breaking (EWSM) mechanism directly. 
+The Vector Boson Scattering (VBS) is therefore one of the key process as to be investigated in the LHC experiment.
 The Vector Boson indicates W,Z,$\gamma$ here, which are fundamental electroweak bosons. Though the massive vector bosons, which are W and Z are only sensitive to the mechanism of the  EWSM, $\gamma$ is also included since it is impossible to fully separate the $\gamma$ and Z contributions experimentally. 
 %<- need this??
-\subsection{Electroweak gauge boson scattering and the Higgs boson}
-As described in section~\ref{subsec:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance produces three degrees of freedom, which is the GoldStone Bosons and then they are eaten up by the introducing of the Higgs boson. They correspond to the longitudinal, massive weak gauge bosons. Measuring the VBS channels provides information of the other three degrees of freedom than Higgs field. The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
+%\subsection{Electroweak gauge boson scattering and the Higgs boson}
+As described in section~\ref{subsec:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance with the Higgs field
+introduces the masses of the longitudinal, massive weak gauge bosons. 
+Measuring the VBS processes provides the information related to that mechanism.
+The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
 %%Correct explanation here????
 
 \begin{figure}[tbp]
@@ -499,14 +506,13 @@ The VV to VV interaction Feynman diagram at tree-level. Contributions includes H
 \end{figure}
 
 
-The amplitude of the WW scattering is to be inspected further to see the effect of existence of the Higgs boson for example. The combination of other weak massive bosons like WZ, as well as ZZ can be denoted similarly. 
-%really?
+Here, the amplitude of the longitudinal WW scattering is dscussed further to see the effect of existence of the Higgs boson for example. The combination of other weak massive bosons like WZ, as well as ZZ can be denoted similarly. 
 
 Since the polarization vector of the longitudinal weak vector boson can be written in the form, \cite{Rindani_2009}: 
 \begin{equation}
 \epsilon_{L}^{\mu}=\frac{1}{m_{V}}\left(|\vec{p}|, \frac{\vec{p}}{|\vec{p}|} E\right)=\frac{p^{\mu}}{m_{V}}+\mathcal{O}\left(\frac{m_{V}}{E}\right)
 \end{equation}
-as the pT glows, the yields with massive vector particles in the initial and finals states will be longitudinal-dominant.
+as the $p_{T}$ glows, the yields with massive vector particles in the initial and finals states will be longitudinal-dominant.
 At high-energy limit, the amplitude for $W_L^+W_L^-$ without existing of the Higgs boson (Figure\ref{fig:VBSEW}) can be describes in the form of:
 \begin{equation}
 \mathcal{M}^{\text {gauge}}=-\frac{g_{w}^{2}}{4 m_{W}^{2}} u+\mathcal{O}\left(\left[\frac{E}{m_{W}}\right]^{0}\right)
@@ -537,7 +543,8 @@ Cross section at tree-level %\ref{}
 \end{center}
 \end{figure}
 
-\section{Several decay channels in VBS analysis}
+%\section{Several decay channels in VBS analysis}
+\section{Experimental results in VBS analysis}
 \textcolor{blue}{put description about the several decay channels and the good point of the semi-leptonic channel here}　\\
 There are several decay channels in VBS analysis with respect to the boson type and its decay products. The latest significance obtained by ATLAS and CMS in each channels are summarized in the Table.
 
@@ -556,16 +563,18 @@ There are several decay channels in VBS analysis with respect to the boson type 
 The VBS process has already observed in the full-leptonic channel.
 In this thesis, semi-leptonic channel is studied. One of the two weak vector boson (W or Z) decay into leptons ( electrons or muons or neutrino) and the other decays into hadrons.
 
-\section{Previous analysis results of the VBS semi-leptonic channel}
 \textcolor{blue}{put previous analysis results here}
 
 \section{Anomalous Quartic Gauge Coupling and Effective Field Theory}
 
-\subsection{aQGC}
+\textcolor{blue}{discuss about dependent models for example compositeness. Then introduce EFT to see them model-independently.}
+%\subsection{aQGC}
 The unitarity recovered by the existence of Higgs boson can be broken again by the additional quartic gauge coupling by new physics. This is referred to as anomalous quartic gauge couplings (aQGC). 
 
 \subsection{EFT}
-Since the aQGC can claim many different models, The Effective Field Theory (EFT) is considered as a model-independent way of the interpretation. The EFT models the effects of new physics at energy scale much higher than the currently accessible range by the experiments. The SM is regarded as an effective theory at low-energy in this framework.The EFT contains additional operators with higher energy dimension suppressed by the cutoff scale of the new physics, $\Lambda$.
+%Since the aQGC can claim many different models, the Effective Field Theory (EFT) is considered as a model-independent way of the interpretation. 
+New physics contribution is generally described by the effective field theory (EFT) as a model-independent way of the interpretation.
+The EFT models the effects of new physics at energy scale much higher than the currently accessible range by the experiments. The SM is regarded as an effective theory at low-energy in this framework.The EFT contains additional operators with higher energy dimension suppressed by the cutoff scale of the new physics, $\Lambda$.
 The EFT Lagrangian is given as:
 \begin{equation}
 \mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}}+\sum_{d>4} \sum_{i} \frac{c_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
@@ -584,7 +593,7 @@ In either case the vector field is accompanied by a vacuum expected value or a d
 All the corresponding operators are shown hereafter.
 
 \begin{itemize}
-\item Operators containing just $D_\mu \Phi$
+\item Operators containing just $D_\mu \Phi$ : (Scalor type)
 \begin{equation}
 \begin{aligned}
 \mathcal{L}_{S, 0} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\mu} \Phi\right)^{\dagger} D^{\nu} \Phi\right] \\
@@ -592,7 +601,7 @@ All the corresponding operators are shown hereafter.
 \mathcal{L}_{S, 2} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\nu} \Phi\right)^{\dagger} D^{\mu} \Phi\right]
 \end{aligned}
 \end{equation}
-\item Operators containing $D_\mu \Phi$ and field strength 
+\item Operators containing $D_\mu \Phi$ and field strength : ( Mixed type)
 \begin{equation}
 \begin{aligned}
 \mathcal{L}_{M, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi\right] \\
@@ -605,7 +614,7 @@ All the corresponding operators are shown hereafter.
 \mathcal{L}_{M, 7} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} \hat{W}^{\beta \mu} D^{\nu} \Phi\right]
 \end{aligned}
 \end{equation}
-\item Operators containing just the field strength tensor
+\item Operators containing just the field strength tensor (Tensor type)
 \begin{equation}
 \begin{aligned}
 \mathcal{L}_{T, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times \operatorname{Tr}\left[\hat{W}_{\alpha \beta} \hat{W}^{\alpha \beta}\right] \\
@@ -622,7 +631,7 @@ All the corresponding operators are shown hereafter.
 \end{equation}
 \end{itemize}
 
-Since the operator $\mathcal{L}_{S, 2}$ is the Hermite conjugate of the $\mathcal{L}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{L}_{S02}$, with the coefficient $f_S02$, respectively. It is found via simulations that the tensor operators produce purely transversely polarized $W/Z$ bosons, while the scalar operators longitudinal bosons.
+Since the operator $\mathcal{L}_{S, 2}$ is the Hermite conjugate of the $\mathcal{L}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{L}_{S02}$, with the coefficient $f_{S02}$, respectively. It is found via simulations that the tensor operators produce purely transversely polarized $W/Z$ bosons, while the scalar operators longitudinal bosons.
 
 The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}. The VBS semi-leptonic channel has both WZ and ZZ for the weak vector bosons, therefore can get the limits for all 
 
@@ -631,12 +640,11 @@ The latest limits on the Wilson coefficients of the 8-dimension operators are sh
 The most stringent limits are obtained by CMS in *** channel. 
 
 
-
 %table1
 \begin{center}
 \begin{tabular}{|l| c c c c c c c c c|} 
  \hline
- operators                                                & $WWWW$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ & $ZZ\gamma \gamma$ & $Z\gamma \gamma \gamma$ & $\gamma \gamma \gamma \gamma \gamma$\\ [0.5ex] 
+ operators                                                & $WWWW$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ & $ZZ\gamma \gamma$ & $Z\gamma \gamma \gamma$ & $\gamma \gamma \gamma \gamma $\\ [0.5ex] 
  \hline\hline
  $\mathcal{L}_{S02}$,$\mathcal{L}_{S1}$                   & \checkmark & \checkmark & \checkmark &  &  &　 &　 &　&　\\ 
  \hline
