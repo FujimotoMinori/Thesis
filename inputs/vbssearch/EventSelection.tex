@@ -1,59 +1,63 @@
 \chapter{Event selection}
 \label{chap:eventselection}
-
 The event selection has been optimized to get phase space which has more signal compared to the background.
-The detail of the whole event selection for 2-lepton channel is shown in this chapter. The event selection in other 0/1-lepton channel is summarized in the appendices.
-
+First the object definition is shown in section~\ref{sec:object}, then the detail of the whole event selection is presented in section~\ref{sec:eventselection}.
+\section{Object definition}
+\label{sec:object}
+\textcolor{blue}{Object definition of triggers, leptons, jets are needed here ??}
+\section{Event selection}
+\label{sec:eventselection}
 %overview
 First the preselection cuts are applied including basic event cleaning and the trigger requirements, then the specific event selection is applied to the each 0,1,2-lepton channels.
 For the main event selection, first the selection of the one $W/Z$ boson decaying leptonically is selected. 
 The events are categorized into two regions depends on the type of the jets included. The events has one or more large-R jets are categorized as merged category, otherwise resolved category.  
 Then in each channel, the forward jets and the hadronically decaying boson is selected and the Signal region (SR) and the Control region (CR) is defined separately in merged category and resolved category. Finally the selection to enhance the VBS topology is applied before using the machine learning approach to get the final discriminant. The SRs are the regions optimized to maximize the significance of the signal over background, and the CRs are region which is the specifical background-dominant, used for constraining the backgrounds. 
-\section{Preselection}
-Firstly some pre-selection on the Triggers, event cleaning selections are applied to get the available events and to reject the problematic events. The same selection is applied both for data and MC samples.
-The selections with respect to the number of jets and leptons at minimum is applied, as summarized in Table~\ref{tab:presel_CxAOD}.
-\begin{table}[H]
-\begin{center}
-\resizebox{0.55\textwidth}{!}{
-\begin{tabular}{|l|c|}
-\hline\hline
-\multicolumn{2}{|c|}{ Common } \\
-\hline\hline
-Trigger & listed in Table~\ref{tab:triggers} \\
-\hline
-Event Cleaning & listed in Section~\ref{subsec:event_cleaning} \\
-\hline
-Number of jets & $N_j \geq 2$ or $N_J^{\textrm{LCTopo}} \geq 1$ \\
-\hline\hline\hline
-%\multicolumn{2}{|c|}{ 1-lepton channel } \\
-%\hline
-%Number of Tight leptons   & $=1$ \\
-%\hline
-%Number of additional Loose leptons   & $=0$ \\
-%\hline
-%\ptlv                     & $>75\,\GeV$ \\
+
+%\section{Preselection}
+%Firstly some pre-selection on the Triggers, event cleaning selections are applied to get the available events and to reject the problematic events. The same selection is applied both for data and MC samples.
+%The selections with respect to the number of jets and leptons at minimum is applied, as summarized in Table~\ref{tab:presel_CxAOD}.
+%\begin{table}[H]
+%\begin{center}
+%\resizebox{0.55\textwidth}{!}{
+%\begin{tabular}{|l|c|}
 %\hline\hline
-\multicolumn{2}{|c|}{ 2-lepton channel } \\
-\hline\hline
-Number of Loose leptons   & $=2$ \\
-\hline
-The leading lepton \pt    & $> 25$~GeV \\
-\hline\hline
-%\multicolumn{2}{|c|}{ 0-lepton channel } \\
+%\multicolumn{2}{|c|}{ Common } \\
 %\hline\hline
-%Number of Loose leptons   & $= 0$ \\
+%Trigger & listed in Table~\ref{tab:triggers} \\
 %\hline
-%\met                      & $> 140\,\GeV$ \\
+%Event Cleaning & listed in Section~\ref{subsec:event_cleaning} \\
+%\hline
+%Number of jets & $N_j \geq 2$ or $N_J^{\textrm{LCTopo}} \geq 1$ \\
+%\hline\hline\hline
+%%\multicolumn{2}{|c|}{ 1-lepton channel } \\
+%%\hline
+%%Number of Tight leptons   & $=1$ \\
+%%\hline
+%%Number of additional Loose leptons   & $=0$ \\
+%%\hline
+%%\ptlv                     & $>75\,\GeV$ \\
+%%\hline\hline
+%\multicolumn{2}{|c|}{ 2-lepton channel } \\
 %\hline\hline
-\end{tabular}
-}
-\end{center}
-\caption{List of the pre-selections applied.
-%Definitions of Tight and Loose leptons are found in Sections~\ref{subsec:electron_selection}--\ref{subsec:muon_selection}.
-%$N_j$ is the number of signal- and VBF-jets defined in Section~\ref{subsec:jet_selection}.
-%$N_J^{\textrm{LCTopo}}$ is the number of large-R jets with $\pt>200\,\GeV$ and $\left| \eta \right| < 2.5$.
-} \label{tab:presel_CxAOD}
-\end{table}
+%Number of Loose leptons   & $=2$ \\
+%\hline
+%The leading lepton \pt    & $> 25$~GeV \\
+%\hline\hline
+%%\multicolumn{2}{|c|}{ 0-lepton channel } \\
+%%\hline\hline
+%%Number of Loose leptons   & $= 0$ \\
+%%\hline
+%%\met                      & $> 140\,\GeV$ \\
+%%\hline\hline
+%\end{tabular}
+%}
+%\end{center}
+%\caption{List of the pre-selections applied.
+%%Definitions of Tight and Loose leptons are found in Sections~\ref{subsec:electron_selection}--\ref{subsec:muon_selection}.
+%%$N_j$ is the number of signal- and VBF-jets defined in Section~\ref{subsec:jet_selection}.
+%%$N_J^{\textrm{LCTopo}}$ is the number of large-R jets with $\pt>200\,\GeV$ and $\left| \eta \right| < 2.5$.
+%} \label{tab:presel_CxAOD}
+%\end{table}
 
 \section{Leptonically decaying Boson}
 The selection of the $W/Z$ boson decaying leptonically is applied before categorizing of the signal region (SR) and the control region (CR).
@@ -80,7 +84,8 @@ Data and MC distributions of relevant lepton distribution at the early stage of 
     \label{fig:2lepLeptons}
 \end{figure}
 
-\section{VBS topology selection}
+%\section{VBS topology selection}
+\section{Tagging jet selection}
 The VBS event requires to have a pair of small-R jets as a candidate of the forward jets, referred as tagging jets.
 The hadronically decaying W/Z boson is reconstructed as either two small-R jets of one large-R jets, which referred as signal jets. The Signal region (SR) and the Control region(CR) is set by requiring these signal jets.
 

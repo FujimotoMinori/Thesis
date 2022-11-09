@@ -41,10 +41,9 @@ The schematic of the process is shown in Figure~\ref{}.
 %\end{center}
 %\end{figure}
 
-
 The analysis is spirited into three channels, due to the numbers of the charged leptons decayed from one of the bosons: 0-lepton, 1-lepton, 2-lepton. 
 In 0-lepton channel, Z $\rightarrow \nu \nu$ is considered, experimentally reconstructed as missing transverse energy (MET). In 1-lepton channel one of the bosons decays as W $\rightarrow \nu l$ where we can find $l = e, \mu, \tau$ with MET. In 2-lepton channel Z $\rightarrow l l$ is required with $l = e, \mu$. 
-In all three channels, the process requires hadronically decaying boson candidate, with 2 additional jets. These additional 2 jets are initially from the quarks from VBS production, referred as tagging jets. The hadronic decaying objects are reconstructed as a pair of small-R jets or as single large-R jet. The former case is called as resolved selection, and the latter as merged selection. More details about the objects in each category is shown in section~\ref{}.
+In all three channels, the process requires hadronically decaying boson candidate, with 2 additional jets. These additional 2 jets are initially from the quarks from VBS production, referred as tagging jets. The hadronic decaying objects are reconstructed as a pair of small-R jets or as single large-R jet. The former case is called as resolved selection, and the latter as merged selection. More details about the objects in each category is shown in section~\ref{sec:object}.
 
 The relevant background processes include W/Z + jets, single top (t) and tt-bar (t$\bar{\mathrm{t}}$) process, QCD diboson process, and QCD multijet process.
 In 0-lepton channel, all of the background processes contribute significantly. In 1-lepton channel W + jets and the t$\bar{\mathrm{t}}$ process dominate, and in 2-lepton channel Z + jets process is the dominant process.
@@ -163,7 +162,7 @@ The $W$/$Z$ + jets background is modeled using Sherpa~2.2.1~\cite{Gleisberg:2008
 Matrix element is calculated for up to 2 partons at next-to-leading order (NLO), and 4 partons at leading order (LO) with Comix~\cite{Gleisberg:2008fv} and OpenLoops\cite{Cascioli:2011va} matrix element generators, with the Sherpa parton shower~\cite{Schumann:2007mg} using the ME+PS@NLO prescription~\cite{Hoeche:2012yf}.
 The NNPDF3.0NNLO PDF set is used in association to authors' tuning. The resulting events are normalized to the NNLO cross sections.
 
-The QCD diboson background is also generated with Sherpa~2.2.1 generator.
+The QCD diboson background is also generated with Sherpa~2.2.1 generator. 
 
 %The $t\bar{t}$ proceess has the same final state as EWVVjj signal process, which has two jets include b-hadron, and two W bosons decay to the leptons and hadrons. This can be the large background in 1-lepton channel, and can be reduced by requiring not to have b-tagged jets. There are minor contributions from single-top process, which is also suppressed by b-vetoing.
 Single-top and $t\bar{t}$ backgrounds are generated with the Powheg-Box~\cite{Alioli:2010xd} generator with the NNPDF3.0NLO PDF\cite{Ball:2014uwa} sets in the matrix element calculation. The top mass is set to $172.5~\mathrm{GeV}$. The parton shower and the hadronization is simulated using \textsc{Pythia}8.230. \\
@@ -174,6 +173,27 @@ Single-top and $t\bar{t}$ backgrounds are generated with the Powheg-Box~\cite{Al
 All simulated events are processed with the same trigger and reconstruction algorithm as the data.
 Additional $pp$ collisions generated with \textsc{Pythia}~8.186\cite{Sjostrand:2008vc} are overlaid to model the effect of the pileup, the particles coming from secondary collisions in the same data-taking timing, for all MC events.
 In order to take into account the detector geometry and the reconstruction efficiency, samples are processed through the full ATLAS detector simulation\cite{SOFT-2010-01} based on \textsc{GEANT4}\cite{Agostinelli:2002hh}.
+
+\subsection{aQGC signal process Monte Carlo simulation}
+To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces 21 new dim-8 operators is used as described in section~\ref{subsec:EFT}.
+Of these operators, 19 can effect the semileptonic VBS final state.
+%As typical for EFT expansions, the modified lagrangian with these new operators $\mathcal{L}_n$ and corresponding Wilson coeffiencts $c_n$ and UV scale $\Lambda$ is:
+%\begin{equation*}
+%  \mathcal{L}=\mathcal{L}_{sm}+\sum_{n}\frac{c_n}{\Lambda^{4}}\mathcal{L}_n
+%\end{equation*}
+
+In generality, the matrix-element of a SM process with the addition of new EFT contributions can be written as:
+\begin{equation}
+  |A_{SM}+c_iA_i|=|A_{SM}|^2+\sum\limits_i c_i^2|A_{i}|^2+ \sum\limits_i 2 c_i \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} c_i c_j \mathrm{Re}(A_i^\star A_j)
+\end{equation}
+where $|A_{SM}|^2$ is the SM matrix element, $|A_{i}|^2$ represents the pure-EFT matrix element, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is their corresponding interference term, and $\mathrm{Re}(A_i^\star A_j)$ is the possible interference between EFT amplitudes.
+This structure can be exploited in recent MadGraph5\_aMC@NLO versions which allows the specific generation of each of these terms individually, known as the matrix-element decomposition method.
+
+Typically one would need to generate a series of samples for each operator $A_i$ at different $c_i$ values, to derive a series of template functions for $|A_{SM}+c_iA_i|$ which would need to be interpolated between for arbitrary $c_i$. Generating samples with the decomposition method greatly simplifies this procedure as one only now needs to generate for each operator $A_i$ the corresponding pure-EFT and interference terms (as well as cross-interference terms if needed). These templates can then be scaled either quadratically or linear with the corresponding $c_i$ values to generate the required full template $|A_{SM}+c_iA_i|$.
+
+The Eboli dim-8 EFT processes are modeled using MadGraph5\_aMC@NLO v2.7.2~\cite{Alwall:2014hca} at LO with the \textsc{NNPDF30LO} PDF set~\cite{Ball:2012cx} plus \PYTHIA8.244~\cite{Sjostrand:2007gs} for fragmentation.
+The matrix-element calculation produces two on-shell $W/Z$ bosons, which are subsequently decayed with \textsc{Madspin}~\cite{Artoisenet:2012st} to simulate the leptonic and hadronic decays of the bosons.
+The use of Madspin is required for use of the matrix-element weighting and requires separate generation for each weak isospin state of the boson (i.e the following processes are simulated separately: $W^+W^-$, $W^+W^+$, $W^-W^-$, $W^+Z$, $W^-Z$, $ZZ$). \\ \\
 
 
 %\subsection{Data sets}
