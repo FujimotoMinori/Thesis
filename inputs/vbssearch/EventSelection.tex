@@ -4,6 +4,10 @@ The event selection has been optimized to get phase space which has more signal 
 First the object definition is shown in section~\ref{sec:object}, then the detail of the whole event selection is presented in section~\ref{sec:eventselection}.
 \section{Object definition}
 \label{sec:object}
+\subsection{Triggrs}
+\subsection{Leptons}
+\subsection{small-R jet}
+\subsection{large-R jet}
 \textcolor{blue}{Object definition of triggers, leptons, jets are needed here ??}
 \section{Event selection}
 \label{sec:eventselection}
@@ -59,53 +63,62 @@ Then in each channel, the forward jets and the hadronically decaying boson is se
 %} \label{tab:presel_CxAOD}
 %\end{table}
 
-\section{Leptonically decaying Boson}
-The selection of the $W/Z$ boson decaying leptonically is applied before categorizing of the signal region (SR) and the control region (CR).
-In 2-lepton channel, the $Z\rightarrow ll $ candidates are identified by requiring two isolated same-flavour leptons. Both leptons are required to be $p_T > 27$GeV.
-Opposite charges are required for the muon pairs, not for electrons due to their higher mis-identification rate because of the conversions of photons from bremsstrahlung, especially at high $E_T$. The dilepton invariant mass $m_ll$ is required to be close to the Z boson mass.
-For electrons, mass window is required as:
-\begin{equation}
-83<m_{e e}<99 ~\mathrm{GeV}
-\end{equation}
-while for muons, the $p_{T,ll}$-dependent mass window is required:
-\begin{equation}
+\subsection{Selection of the leptonically decaying Boson}
+The selection to reconstruct the leptonically decaying $W/Z$ boson is applied separately in each lepton channel. \\ \\
+\noindent\textbf{\sf{0-lepton}}  \\
+In 0-lepton channel, a high amount of MET is expected originated from two neutrinos in the final state. Cuts on $E^{miss}_T$ ( $>$ 200~GeV) and $E^{miss,track}_T$ ( $>$ 50~GeV) is applied. The QCD-induced multijet background is significant in 0-lep channel. 
+To suppress its contribution, several cuts are applied related to the direction of MET and the jet which can be significantly mis-measured : $\Delta\phi(\met,\mpt) < \pi/2$, $\min(\Delta\phi(\met,j)) > \pi/6$ and, $\Delta\phi(\met, V_{had}) > \pi/9$. \\ \\ 
+\noindent\textbf{\sf{1-lepton}}  \\
+One tight-lepton with $p_T > 28~\mathrm{GeV}$ and $E^{miss}_T > 80~\mathrm{GeV}$is required. In 1-lepton channel there are significant contribution from t\bar{t} background hence b-veto is applied to reduce its contribution.\\ \\
+\noindent\textbf{\sf{2-lepton}}  \\
+Two same flavor loose-leptons with the leading (sub leading) lepton satisfying $p_T$ > 28~GeV ( $p_T$ > 20~GeV) and an invariant mass of the lepton system ( m$_{ll}$ ) close to the Z boson mass are requested. Depending on the lepton pair (ee, $\mu\mu$) different mass
+window requirements are applied; For electrons, $83<m_{ee}<99 ~\mathrm{GeV}$ is applied. For muons $p_{T,ll}$-dependent mass window is required in order to recover the dimuon mass resolution degradation at high-$p_{T,ll}$ \cite{EXOT-2016-29}.
+\begin{equation*}
 \left(85.6-0.0117 p_{\mathrm{T}, \ell \ell}\right)<m_{\mu \mu}<\left(94.0+0.0185 p_{\mathrm{T}, \ell \ell}\right) ~\mathrm{GeV}
-\end{equation}
-This $p_T,ll$ requirement,which is optimized from the analysis of 2015+16 \cite{} is adopted because of the effect of dimuon mass resolution degradation at high-$p_{T,ll}$.
-Data and MC distributions of relevant lepton distribution at the early stage of the selection are shown in Figure~\ref{fig:2lepLeptons}.
+\end{equation*}
+In addition, muons are required to be within an |$\eta$| < 2.5 and to be of opposite charge. 
+The opposite charge requirement is not requested for electrons which are more susceptible to mis-identification due to the conversions of photons from bremsstrahlung.
+
+%Data and MC distributions of relevant lepton distribution at the early stage of the selection are shown in Figure~\ref{fig:2lepLeptons}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el1Pt_Log}
-    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el2Pt_Log} 
-    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_mu1Pt_Log}
-    \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_mu2Pt_Log} 
+    %\includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el1Pt_Log}
+    %\includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_el2Pt_Log} 
+    %\includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_mu1Pt_Log}
+    %\includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_mu2Pt_Log} 
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_ALL_llMass_Lin}
     \caption{Lepton distributions in 2-lepton channel. The events before any selections are shown. Z mass peak can be seen in $M_{ll}$ distribution.}
     \label{fig:2lepLeptons}
 \end{figure}
 
 %\section{VBS topology selection}
-\section{Tagging jet selection}
-The VBS event requires to have a pair of small-R jets as a candidate of the forward jets, referred as tagging jets.
-The hadronically decaying W/Z boson is reconstructed as either two small-R jets of one large-R jets, which referred as signal jets. The Signal region (SR) and the Control region(CR) is set by requiring these signal jets.
-
-The selection strategy is to first select tagging jets and then select signal jets in order to select the production topology first and then move to the identification of the objects for the decay part of the process.
-
-The tagging jets are required to be b-vetoed to suppress the contribution of the diagrams with $Wtb$ vertex in the electroweak VVjj signals. The fJVT selection to pass the Loose fJVT working point is applied to the small-R jets to suppress the pileup jets contributions.
-Tagging jets pair is selected from the oppsite hemisphere, $\eta_{\operatorname{tag} j_{1}} \cdot \eta_{\operatorname{tag} j_{2}}<0$, and to have the highest dijet invariant mass according to its topological features.
-Selected tagging jets are required to be $p_T > 30$GeV, and the dijet invariant mass ($m^{tag}_{jj}$) is required to be $m^{tag}_{jj} > 400$GeV.
-Figure~\ref{fig:Mtagjj} shows the $m^{tag}_{jj}$ distribution before selecting the SR or CR. 
+\subsection{Selection of the tagging jet}
+It is expected for VBS process to have a pair of small-R jets in the forward-backward directions, referred to as tagging jets.
+Requiring the tagging jets is the particular feature of the VBS process, and it helps separating signal process a lot from the main backgrounds.
+The tagging jets are selected from the small-R jets, and must not be identified as b-tagged jets to suppress the contribution of the top-quark background. 
+The fJVT selection is applied to suppress the pileup jets contibutions. Tagging jet candidates are selected from the pairs of the jets in opposite hemisphere, $\eta_{\operatorname{tag} j_{1}} \cdot \eta_{\operatorname{tag} j_{2}}<0$, each of which have p$_T > 30~\mathrm{GeV}$ and $|\eta| < 4.5$, and the one with the highest dijet invariant mass is chosen.  
+Selected tagging jets are required to have the dijet invariant mass, $m^{tag}_{jj} > 400$GeV.
+The tagging jets are selected prior to the signal jets. This order of the jet selection is optimized to maximize the signal sensitivity.
+Figure~\ref{fig:Mtagjj} shows the $m^{tag}_{jj}$ distribution before selecting the analysis regions in 2-lepton channel.
+The $m^{tag}_{jj}$ reweighting, which is described in Chapter~\ref{chap:modeling}, is applied before defining the analysis regions to correct the Z+jet modeling.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_MergedCommon_MTagMerJets_Log}
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_ResolvedCommon_MTagResJets_Log} 
-    \caption{$m^{tag}_{jj}$ distribution before defining the SRs. The known slope due to the Z+jets modeling issue can be seen. Details are described in Chapter~\ref{}.}
+    \caption{$m^{tag}_{jj}$ distribution before defining the SRs. The known slope due to the Z+jets modeling issue can be seen. Details are described in Chapter~\ref{chap:modeling}. $m^{tag}_{jj} > 400$GeV cut will be applied to these distribution to enhance the signal sensitivity.}
     \label{fig:Mtagjj}
 \end{figure}
 
-The $m^{tag}_{jj}$ reweighting, which is described in Chapter~\ref{}, is applied before defining the SRs and CRs to correct the Z+jet modeling.
+\subsection{Selection of hadronically decaying boson}
+Hadronically decaying boson ($V_{had}$) is reconstructed as a single large-R jet or a pair of small-R jets in each merged selection or resolved selection. \\ \\
+\noindent\textbf{\sf{Merged selection}}  \\
+The signal large-R jet candidate (sigJ) is selected after removing overlapping with tagging jets of $|\Delta R|<1.4$. The sigJ is required to have a $p_{T} \geq ~200 \mathrm{GeV}$, $|\eta| < 2.0$, and not overlapping with leptons of $|\Delta R|<1.0$.
 
-\section{Hadronically decaying boson, Signal Region (SR) definitions}
+In order to select events including sigJ coming from the W/Z hadronically decay, the boson-tagger is applied. The events passing the boson-tagger 50~\% efficiency working point is categorized in the so-called high-purity (HP) signal region (SRVBS\_HP), while failing 50~\% working point but passing 80~\% working point are considered in the low-purity (LP) signal region (SRVBS\_LP). \\ \\ 
+
+\noindent\textbf{\sf{Resolved selection}}  \\
+
+
 Signal regions (SR) are defined to enhance the signal purity, and for background  components the control region (CR). They are defined by requiring the signal jet selections. Defining order starts from merged categories, then move to the resolved category. Each events are categorized into the regions in following order in Figure~\ref{fig:order}. The event selection is performed subsequently, which means only the events failed the previous selection goes to the next selection, therefore there is no events overlapped.
 These five regions are simultaneously fitted in the final fitting.
 
@@ -116,7 +129,7 @@ These five regions are simultaneously fitted in the final fitting.
     \label{fig:order}
 \end{figure}
 
-\subsection{Merged category}
+subsection{Merged category}
 %merged selection
 The hadronic decaying $W/Z$ bosons with $p_{T}(W / Z \rightarrow q q) \geq ~200 \mathrm{GeV}$, can be reconstructed with jets as large-R jets. This merged region requires at least one large-R jet outside of the tagging jets of $|\Delta R|<1.4$. 
 The boson-tagger is required to find the reconstructed $W/Z$ bosons and the SRs and CRs are defined. The events passed the boson-tagger working point (WP) at 50$\%$ is categorized to be in the High Purity (HP) Merged SR. The events failed the 50$\%$ WP and passed 80$\%$ goes to the Low Purity (LP) Merged SR. 
