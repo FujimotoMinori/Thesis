@@ -105,7 +105,7 @@ The $m^{tag}_{jj}$ reweighting, which is described in Chapter~\ref{chap:modeling
     \centering
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_MergedCommon_MTagMerJets_Log}
     \includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_ResolvedCommon_MTagResJets_Log} 
-    \caption{$m^{tag}_{jj}$ distribution before defining the SRs. The known slope due to the Z+jets modeling issue can be seen. Details are described in Chapter~\ref{chap:modeling}. $m^{tag}_{jj} > 400$GeV cut will be applied to these distribution to enhance the signal sensitivity.}
+    \caption{$m^{tag}_{jj}$ distribution before defining the SRs in merged selection (left) and in resolved selection (right). The known slope due to the Z+jets modeling issue can be seen. Details are described in Chapter~\ref{chap:modeling}. $m^{tag}_{jj} > 400$GeV cut will be applied to these distribution to enhance the signal sensitivity.}
     \label{fig:Mtagjj}
 \end{figure}
 
@@ -117,6 +117,40 @@ The signal large-R jet candidate (sigJ) is selected after removing overlapping w
 In order to select events including sigJ coming from the W/Z hadronically decay, the boson-tagger is applied. The events passing the boson-tagger 50~\% efficiency working point is categorized in the so-called high-purity (HP) signal region (SRVBS\_HP), while failing 50~\% working point but passing 80~\% working point are considered in the low-purity (LP) signal region (SRVBS\_LP). \\ \\ 
 
 \noindent\textbf{\sf{Resolved selection}}  \\
+For the bosons with the lower $p_T$ ranges, the boson decays into the two well-separated jets. The two leading-$p_T$ small-R jets are selected as the signal jets candidate, from the rest of the jets after tagging jets selection. Leading-p$_T$ jets selection is optimized to avoid the artificial peak in the backgrounds and to get better sensitivity compared to the former jets selection, where selected two jets with invariant mass closest to the W/Z mass. 
+The leading jet is required to have p$_T > 40~\mathrm{GeV}$ and the subleading, p$_T > 20~\mathrm{GeV}$. Their invariant mass (M$^{sig}_{jj}$) should be inside the mass window of 64 < $m_{jj}$ < 106~GeV, near the W/Z mass. Figure~\ref{fig:MVHadResSR} shows that the reconstructed boson peak before requiring the mass window.
+
+%top mass cut
+The additional cut is applied to suppress the top contributions discussed in section~\ref{}. A cut to the reconstructed top mass, $m_{jjj}$ > 200~GeV is decided to be applied in the resolved selection. The $m_{jjj}$ is derived with the two signal jets and the third jet which forms the three-jet mass, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events with each truth particles is shown, and the modeling plot is also shown in Figure~\ref{fig:2leptopMass}. 
+\begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=0.45\textwidth]{figures/2lep/topMass/WZjjtopMasspeak}
+      \includegraphics[width=0.45\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_topMass_Log}
+        \caption{ Mass of 3 jets in the 2-lepton channel CRVjet.}
+        \label{fig:2leptopMass}
+    \end{center}
+\end{figure}
+This top-mass cut can reduce the top contributions, as shown in Table~\ref{fig:TruthTop2LepPurity} in resolved selection, therefore the resolved signal region (denoted as SRVBS\Tight) is defined with this additional cut to get more VBS-like phase space. In merged selection top-mass cut does little thing to enhance the VBS signals since top contribution is already small without the top mass cut, hence this cut is not added to the merged selection.
+\begin{figure}[H]
+    \centering
+    \resizebox{0.95\textwidth}{!}{
+    \begin{tabular}{|c||c|c|c|c|}
+         \hline
+                        & SRVBS (resolved) & VBS enhanced (resolved) & SRVBS (merged) & VBS enhanced (merged) \\ \hline
+        Truth Top       & 0.48             & 0.14                    & 0.14           & 0.10                  \\ \hline
+        Truth VVV       & 0.03             & 0.03                    & 0.08           & 0.08                  \\ \hline
+        Truth VBS       & 0.49             & 0.83                    & 0.78           & 0.82                  \\ \hline
+    \end{tabular}
+        }
+        \caption{Fraction of event yields for 2lepton channel. The truth information is used to know if the event includes each contributions. Only EWWZjj events are checked here since there are no Top contributions in EWZZjj events.}
+        \label{fig:TruthTop2LepPurity}
+\end{figure}
+
+
+\subsection{Selection of analysis regions}
+The signal regions are defined each for merged (SRVBS\_HP, SRVBS\_LP) and resolved (SRVBS\_Tight) selection, according to the selection of the hadronically decaying boson candidates. The all selections applied to define the SRs in each lepton channel is listed in the table.
+The control regions 
+
 
 
 Signal regions (SR) are defined to enhance the signal purity, and for background  components the control region (CR). They are defined by requiring the signal jet selections. Defining order starts from merged categories, then move to the resolved category. Each events are categorized into the regions in following order in Figure~\ref{fig:order}. The event selection is performed subsequently, which means only the events failed the previous selection goes to the next selection, therefore there is no events overlapped.
@@ -129,11 +163,11 @@ These five regions are simultaneously fitted in the final fitting.
     \label{fig:order}
 \end{figure}
 
-subsection{Merged category}
+%subsection{Merged category}
 %merged selection
-The hadronic decaying $W/Z$ bosons with $p_{T}(W / Z \rightarrow q q) \geq ~200 \mathrm{GeV}$, can be reconstructed with jets as large-R jets. This merged region requires at least one large-R jet outside of the tagging jets of $|\Delta R|<1.4$. 
-The boson-tagger is required to find the reconstructed $W/Z$ bosons and the SRs and CRs are defined. The events passed the boson-tagger working point (WP) at 50$\%$ is categorized to be in the High Purity (HP) Merged SR. The events failed the 50$\%$ WP and passed 80$\%$ goes to the Low Purity (LP) Merged SR. 
-The Merged region definition is shown in the Figure~\ref{fig:MergedRegion}.
+%The hadronic decaying $W/Z$ bosons with $p_{T}(W / Z \rightarrow q q) \geq ~200 \mathrm{GeV}$, can be reconstructed with jets as large-R jets. This merged region requires at least one large-R jet outside of the tagging jets of $|\Delta R|<1.4$. 
+%The boson-tagger is required to find the reconstructed $W/Z$ bosons and the SRs and CRs are defined. The events passed the boson-tagger working point (WP) at 50$\%$ is categorized to be in the High Purity (HP) Merged SR. The events failed the 50$\%$ WP and passed 80$\%$ goes to the Low Purity (LP) Merged SR. 
+%The Merged region definition is shown in the Figure~\ref{fig:MergedRegion}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/MergedRegion}
