@@ -130,7 +130,7 @@ The additional cut is applied to suppress the top contributions discussed in sec
         \label{fig:2leptopMass}
     \end{center}
 \end{figure}
-This top-mass cut can reduce the top contributions, as shown in Table~\ref{fig:TruthTop2LepPurity} in resolved selection, therefore the resolved signal region (denoted as SRVBS\Tight) is defined with this additional cut to get more VBS-like phase space. In merged selection top-mass cut does little thing to enhance the VBS signals since top contribution is already small without the top mass cut, hence this cut is not added to the merged selection.
+This top-mass cut can reduce the top contributions, as shown in Table~\ref{fig:TruthTop2LepPurity} in resolved selection, therefore the resolved signal region (denoted as SRVBS\_Tight) is defined with this additional cut to get more VBS-like phase space. In merged selection top-mass cut is applied to the $m_{Jj}$, invariant mass of the large signal jet and the additional jet which make the closest invariant mass to the top mass. It does little thing to enhance the VBS signals since top contribution is already small without the top mass cut, hence this cut is not added to the merged selection.
 \begin{figure}[H]
     \centering
     \resizebox{0.95\textwidth}{!}{
@@ -146,15 +146,14 @@ This top-mass cut can reduce the top contributions, as shown in Table~\ref{fig:T
         \label{fig:TruthTop2LepPurity}
 \end{figure}
 
-
 \subsection{Selection of analysis regions}
 The signal regions are defined each for merged (SRVBS\_HP, SRVBS\_LP) and resolved (SRVBS\_Tight) selection, according to the selection of the hadronically decaying boson candidates. The all selections applied to define the SRs in each lepton channel is listed in the table.
-The control regions 
+The control regions (CR) are also defined by converting the definitions of the signal regions to constraint the main background sources.
+There are two merged and resolved CR for V+jet (V is Z/W for 0-lepton, W for 1-lepton, Z for 2-lepton channel). There is also Top CR only to constrain the top normalization. Top CR only exists in 1-lepton channel, where contains plenty of top background. To summarize there are 9 SRs and the 6 V+jet CR and one Top CR. All of these are fitted simultaneously in the final statistical imperpretation. 
 
 
-
-Signal regions (SR) are defined to enhance the signal purity, and for background  components the control region (CR). They are defined by requiring the signal jet selections. Defining order starts from merged categories, then move to the resolved category. Each events are categorized into the regions in following order in Figure~\ref{fig:order}. The event selection is performed subsequently, which means only the events failed the previous selection goes to the next selection, therefore there is no events overlapped.
-These five regions are simultaneously fitted in the final fitting.
+%Signal regions (SR) are defined to enhance the signal purity, and for background  components the control region (CR). They are defined by requiring the signal jet selections. Defining order starts from merged categories, then move to the resolved category. Each events are categorized into the regions in following order in Figure~\ref{fig:order}. The event selection is performed subsequently, which means only the events failed the previous selection goes to the next selection, therefore there is no events overlapped.
+%These five regions are simultaneously fitted in the final fitting.
 
 \begin{figure}[H]
     \centering
