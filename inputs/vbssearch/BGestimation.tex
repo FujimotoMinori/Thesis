@@ -1,20 +1,24 @@
 \chapter{Background Modeling}
 \label{chap:modeling}
+
 The study dedicated to the modeling of the major background is shown in this chapter.
 The modeling of the MC is needed to be confirmed, thereby data/MC needs to be matched well to estimate the background modeling.
 The V+jets is the dominant background for all three channels. 
 
+
 \section{$m_{jj}^{tag}$ reweighting}
 There is a known mis-modelling issue with the Sherpa~2.2.1 V+jets samples. This mis-modelling is seen in the $m^{tag}_{jj}$ distribution as a slope when comparing the data over MC both in merged and the resolved region, as seen in Figure~\ref{fig:2lep_mtag_before_rw}. 
-This mis-modeling is founded to be related to the theoretical calculation of the colinear jets. 
-The re-weighting is performed to the Z+jets samples for 2-lepton channel, in order to correct this mis-modeling before defining the SRs and CRs. A linear fit to the $m^{tag}_{jj}$ in CRs are performed for each merged and resolved CRs. 
+This mis-modeling is founded to be related to the theoretical calculation of the colinear jets, and this issued is also reported in the previous publication\cite{ref:}. 
+The re-weighting is performed to the V+jets samples for each lepton channel, in order to count this mis-modeling into account, before defining the SRs and CRs. A linear fit to the $m^{tag}_{jj}$ in CRs are performed for each merged and resolved CRs. 
 
 The fit function is defined as:
 \begin{equation}
 \label{eqn:reweight}
 R=p_{0} * m_{jj}^{tag}+p_{1}
 \end{equation}
-where the R = $data/MC$. The correction is performed only for the Z+jets samples, therefore the other MC samples are subtracted at first. The all samples of mc16a+d+e period is used for reweighting, since there is no much difference in fitted value between mc periods when fitted each period separately. All distributions are first normalized then the correction function (\ref{eqn:reweight}) is derived. Only the difference of the shape is corrected, and difference of the normalization is accounted in the final fit.
+where the R = $data/MC$. The fitting and the  correction is performed only for the Z+jets samples, therefore the other MC samples are subtracted at first. The all samples of mc16a+d+e period is used for reweighting, since there is no much difference in fitted value between mc periods when fitted each period separately. All distributions are first normalized then the correction function (\ref{eqn:reweight}) is derived. Only the difference of the shape is corrected, and difference of the normalization is accounted in the final fit.
+The reweighting function is subtracted in each control regions, then applied to the signal regions as weight.
+In the merged region the reweighting linear function is derived using the barycenter in each bins, since the stat in high 
 The fitted parameter is summarized in the Table~\ref{tab:fit}. These parameters are used as the reweighting factors and applied after the categorizations of the SRs and the CRs. The reweighted distributions are shown in Figure~\ref{fig:2lep_mtag_before_rw}.
 
 \begin{table}[htbp]
@@ -82,6 +86,7 @@ respectively.
    \label{fig:2lep_zjets_resolved_CR}
 \end{figure}
 
+%?
 \section{ttbar modeling}
 In 1-lepton channel the ttbar is the dominat background.
 
