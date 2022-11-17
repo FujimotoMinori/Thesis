@@ -12,7 +12,7 @@ The mis-modelling is seen as a slope in the ratio of data/MC in both regions.
 These discrepancies have been known in the previous analysis round, as well as in other ATLAS analyses. 
 This effect is believed to be related to the theoretical calculation of the collinear jets.
 The reweighting is applied to the V+jets background sample to compensate this mis-modeling before defining the SRs and CRs. 
-A simple linear fit is perfomed to the $m^{tag}_{jj}$ distribution in each V+jets CRsto prameterize the data/MC ratio. 
+A simple linear fit is perfomed to the ratio between V+jets MC and the observed data in $m^{tag}_{jj}$ distribution, in each V+jets CRs. 
 
 The fit function is defined as:
 \begin{equation}
@@ -21,17 +21,17 @@ R=p_{0} * m_{jj}^{tag}+p_{1}
 \end{equation}
 where the R = $\frac{\mathrm{data}}{\mathrm{MC}}$. 
 The fitting and the correction is performed only for the V+jets samples, therefore the other MC samples are subtracted at first. 
-The all samples of mc16a+d+e period, which (対応する) to the full Run-2 dataset, is used for deriving the reweighting function, since there is no much difference in fitted value between mc periods when fitted each period separately. 
+The all samples of mc16a+d+e period, same period as the full Run-2 dataset, is used for deriving the reweighting function, since there is no much difference in fitted value between mc periods when fitted each period separately. 
 Both distributions are first normalized then the correction function (\ref{eqn:reweight}) is derived. 
 In figure~\ref{}, the fitted line as a function of $m^{tag}_{jj}$ is shown. 
-Each bin is defined to include at least 100 events, which 
-In merged control region, due to the large statistic difference, the barycenter of each bin is used as a fitting point, while in resolved region the bin center is used.
+Each bin is defined to include at least 100 Z+jets events in order to have less than 5~\% statistical uncertainty. 
+In merged control region, due to the large statistic difference between the low mass region and the high mass region, the barycenter of each bin is used as a fitting point, while in resolved region the bin center is used.
 
 The estimated reweighting factor is applied as the event-by-event weight. 
 Only the difference of the shape is corrected by this reweighting procedure, and difference of the normalization is accounted in the final fitting.
 The reweighting function is subtracted in each control regions, then applied to the signal regions as weight.
-In the merged region the reweighting linear function is derived using the barycenter in each bins, since the stat in high 
-The fitted parameter is summarized in the Table~\ref{tab:fit}. These parameters are used as the reweighting factors and applied after the categorizations of the SRs and the CRs. The reweighted distributions are shown in Figure~\ref{fig:2lep_mtag_before_rw}.
+The fitted parameter is summarized in the Table~\ref{tab:fit}. 
+The reweighted distributions are shown in Figure~\ref{fig:2lep_mtag_before_rw}.
 
 \begin{table}[htbp]
  \footnotesize
@@ -66,16 +66,8 @@ $p_{1}$ (constant)  & $1.298 \pm 0.031$ & $1.187 \pm 0.005$ \\
     \label{fig:2lep_mtag_before_rw}
 \end{figure}
 
-The uncertainty for this reweighting is assigned in the fitting, considering a 100~\% uncertainty on the linear fit parameters.
-
-%************write something about MadGraph and the dedicated modeling uncertainty here**********
-%There is alternative samples using MadGraph instread of Shelpa. The modeling of the MadGraph samples in CRs are shown in Figure.
-%The MadGraph has better modeling in our phase space which requires high $m^{tag}_{jj}$. However Shelpa is used as the baseline sample, since it has much statistics.
-
-\section{Z+jets modeling after reweighting}
-
-The $Z$+jets production is the leading background for the 2-lepton channel. The comparison of distributions from data and MC for various kinematic variables after reweighting in the 2-lepton Z+jets merged and resolved control region are shown in Figure \ref{fig:2lep_zjets_merged_CR} and Figure \ref{fig:2lep_zjets_resolved_CR}
-respectively. 
+The comparison of distributions from data and MC for various kinematic variables after reweighting in the 2-lepton Z+jets merged and resolved control region are shown in Figure \ref{fig:2lep_zjets_merged_CR} and Figure \ref{fig:2lep_zjets_resolved_CR}
+respectively. The data/MC ratios are flat, indicating the successfull reweighting.
 
 % 2-lepton new merged CR - plots
 \begin{figure}[ht]
@@ -98,7 +90,10 @@ respectively.
    \label{fig:2lep_zjets_resolved_CR}
 \end{figure}
 
-%?
-\section{ttbar modeling}
-In 1-lepton channel the ttbar is the dominat background.
+%************write something about MadGraph and the dedicated modeling uncertainty here**********
+There is alternative samples using MadGraph instread of Shelpa~2.2.1 as generator. 
+The modeling of the MadGraph, as well as new version of Shelpa~2.2.11 samples in 2-lepton Z+jets CRs are shown in Figure~\ref{}. No reweight is applied here for comparing. Backgrounds are normalized to the data to see the shapes of the MC. 
+This $m^{tag}_{jj}$ MadGraph has better modeling in our phase space which requires high $m^{tag}_{jj}$. However Shelpa is used as the baseline sample, since it has much statistics.
+This difference between two generator is included in the final fitting as a theoretical uncertainty, discribed the detail in chapter~\ref{chap:systematic}.
 
+$The reweighting is also applied in  the other lepton chnaaels. In 1-lepgon channel, the similar procedue 
