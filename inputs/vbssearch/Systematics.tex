@@ -1,20 +1,23 @@
 \chapter{Systematic uncertainties}
 \label{chap:systematics}
-In this section, systematic uncertainties considered in the analysis are described. The uncertainties are divided into two categories:
-Experimental uncertainties and Theoretical uncertainties.
-Each systematic uncertainty is treated as a nuisance parameter in the final fitting.
-%The all systematic uncertainties are summarized in table in Appendix.
-%The systematic variations are estimated on the final discriminant described in Chapter{}.
+In this section, all systematic uncertainties considered in the analysis are described. 
+Systematic uncertainty is treated as nuisance parameter in the statistical analysis, and is estimated with respect to the final dicriminants.
+Each systematic uncertainty is considered to be the combination of two elements, normalization uncertainty and the shape uncertainty. 
+Normalization uncerintainty is the uncertainty of the yields compared to the nominal yields in each region, while shape uncertainty is the variation of the shape of the distribution of the discriminant, when the yields are normalized.
+The source of the uncertainties are classified into two categories; the experimental uncertainties, mainly come from the reconstruction and calibration of the physics objects, and the theory uncertainties, come from the modeling or the theoretical calculation of the signal and background MC samples.
+Each uncertainty in two categories considered in the analysis is discussed in the following sections.
 
 \section{Experimental uncertainties}
-\subsection{Luminosity}
-The uncertainty on the integrated luminosity. 
-For the 2015+2016 dataset, this uncertainty is 2.1\%, and 2.4\% for the 2017 dataset. The uncertainty for the 2018 data alone is 2.0\%, and the uncertainty for the combined run-2 dataset (2015-2018) is 1.7\% The combined uncertainty is applied to all MC samples. \cite{AtlasLumiRun2}.
-\subsection{Pileup reweighting}
-The uncertainty associated with the pileup reweighting is considered\cite{ExtendedPileupReweighting} as PRW\_DATASF. To cover the uncertainty on the ratio between the predicted and measure inelastic cross-section in the fiducial volume is covered. The fiducial volume is defined by $M_X > 13\,\GeV$ where $M_X$ is the mass of the non-diffractive hadronic system~\cite{STDM-2015-05}.
-\subsection{Trigger}
-Systematic uncertainites on the efficiency of the electron or muon triggers are evaluated based on the difference between data and MC \cite{PERF-2016-01}, \cite{MUON-2018-03}. The uncertainty from $E_{\mathrm{T}}^{\text {miss }}$ trigger comes from the estimation on scale factor which contains the contributions from statistics and the efficiency discrepancy between MC samples.
-\subsection{Muons and Electrons}
+\noindent\textbf{\sf{Luminosity}}\\
+The uncertainty on the integrated luminosity, obtained using the LUCID-2 detector for the primary luminosity measurements for the 2015+2016 dataset is 2.1\%, and 2.4\% for the 2017 dataset.The uncertainty for the 2018 data alone is 2.0\%, and the uncertainty for the combined run-2 dataset (2015-2018) is 1.7\% The combined uncertainty is applied to all MC samples. \cite{AtlasLumiRun2}. \\ 
+\\
+\noindent\textbf{\sf{Pileup reweighting}}\\
+The MC events are weighted in order to match $\mu$ of the MC, the average number of interactions per bunch crossing, to that of data. 
+The pileup reweighting uncertainty is estimated by changing its scailing. \\
+\\
+\noindent\textbf{\sf{Leptons}}\\
+The uncertainties related to the lepton triggers are negligible, since their efficiencies are almost 100~\%.
+
 The systematics uncertainties related to the muon and electron are applied to the difference between data and MC. The identification and reconstruction efficiencies are measured using the $Z$ mass peak. The scale factor and its uncertainty are derived using the $Z$ mass peak as well. The energy and momentum scales are measured with $Z$ mass line shape, and the track-to vertex association efficiency is applied only for muons.
 \subsection{Small-$R$ Jet Energy Scale (JES) and Resolution (JER) Uncertainty}
 The jet energy scale (JES) uncertainties and jet energy resolution (JER) are measured by calculating the response between MC and data in various kinematic phase space ~\cite{JetUncertainties}.

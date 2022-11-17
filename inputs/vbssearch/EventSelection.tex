@@ -126,14 +126,14 @@ The leading jet is required to have p$_T > 40~\mathrm{GeV}$ and the subleading, 
      \includegraphics[width=0.40\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_ResolvedCommon_MVHadRes_Log}
     %\includegraphics[width=0.4\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_SRVBS_MVHadRes_Log}
     \caption{Invariant mass of the two signal jets before requiring the boson tagger in merged region (left) and before requiring the mass window in resolved region (right), in 2-lepton channel. 
-    The second peak shown in the first distribution before applying tagger comes from the top contribution, for example from the process including the Wtb vertex.
+    The second peak shown in the signal sample in merged region comes from the top contribution, for example from the process including the Wtb vertex.
     %Before the mass window cut, the $m^{tag}_{jj}$ reweighting is not applied while after mass window cut it is applied, which leads to the difference of the normalization between two plots.
     }
     \label{fig:MVHadResSR}
 \end{figure}
 
 %top mass cut
-The additional cut is applied to suppress the top contributions discussed in section~\ref{subsec:sigbgMC}. A cut to the reconstructed top mass, $m_{jjj}$ > 200~GeV is decided to be applied in the resolved selection. The $m_{jjj}$ is derived with the two signal jets and the third jet which forms the three-jet mass, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events including truth particle of top, triboson, and the others is shown in figure~\ref{fig:2leptopMass}. The reconstructed top mass peak can be seen.
+The additional cut is applied to suppress the top contributions discussed in section~\ref{subsec:sigbgMC}. A cut to the reconstructed top mass, $m_{jjj}$ > 220~GeV is decided to be applied in the resolved selection. The $m_{jjj}$ is derived with the two signal jets and the third jet which forms the three-jet mass, the closest to the Top mass (172.76~GeV). The $m_{jjj}$ with events including truth particle of top, triboson, and the others is shown in figure~\ref{fig:2leptopMass}. The reconstructed top mass peak can be seen.
 \begin{figure}[H]
     \begin{center}
       \includegraphics[width=0.4\textwidth]{figures/2lep/topMass/WZjjtopMasspeak}
@@ -159,11 +159,10 @@ This top-mass cut can reduce the top contributions, as shown in Table~\ref{fig:T
 \end{figure}
 
 \subsection{Selection of analysis regions}
-The signal regions (SR) are defined each for merged (SRVBS\_HP, SRVBS\_LP) and resolved (SRVBS\_Tight) selection, according to the selection of the hadronically decaying boson candidates. The all selections applied to define the SRs in each lepton channel is listed in the table.
-The region with little signals which is called control regions (CR) are also defined to constraint main backgrounds within our signal regions. 
-CRs should be defined by the similar way with the SRs in order to background modeling does not change when moving from CRs to SRs, so it is defined by inverting the definitions of the SRs.
+The signal regions (SR) are defined each for merged (SRVBS\_HP, SRVBS\_LP) and resolved (SRVBS\_Tight) selection, according to the selection of the hadronically decaying boson candidates. The all selections applied to define the SRs in each lepton channel is listed in the table in section~\ref{sec:sumES}.
+The signal depleted region which is called control region (CR) is also defined to constraint the normalization of the main backgrounds within our signal region. 
+CRs should be defined by the similar way with the SRs in order to background modeling does not change when moving from CRs to SRs, so it is defined by inverting the definitions of the SRs, with the common event selections up to the definition of the SRs.
 The dedicated CRs to the V+jets and t$\bar{\mathrm{t}}$ background events are defined in this analysis. \\ \\
-
 
 \noindent\textbf{\sf{V+jets CR}}  \\
 There are merged and resolved CR for V+jet (V is Z/W for 0-lepton, W for 1-lepton, Z for 2-lepton channel) background.
