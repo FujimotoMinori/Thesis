@@ -3,7 +3,7 @@
 In this section, all systematic uncertainties considered in the analysis are described. 
 Systematic uncertainty is treated as nuisance parameter in the statistical analysis, and is estimated with respect to the final dicriminants.
 Each systematic uncertainty is considered to be the combination of two elements, normalization uncertainty and the shape uncertainty. 
-Normalization uncerintainty is the uncertainty of the yields compared to the nominal yields in each region, while shape uncertainty is the variation of the shape of the distribution of the discriminant, when the yields are normalized.
+Normalization uncerintainty is the uncertainty of the yields compared to the nominal yields in each region, while shape uncertainty is the variation of the shape of the discriminant, when the yields are normalized.
 The source of the uncertainties are classified into two categories; the experimental uncertainties, mainly come from the reconstruction and calibration of the physics objects, and the theory uncertainties, come from the modeling or the theoretical calculation of the signal and background MC samples.
 Each uncertainty in two categories considered in the analysis is discussed in the following sections.
 
@@ -17,46 +17,32 @@ The pileup reweighting uncertainty is estimated by changing its scailing. \\
 \\
 \noindent\textbf{\sf{Leptons}}\\
 The uncertainties related to the lepton triggers are negligible, since their efficiencies are almost 100~\%.
+The uncertainties from the reconstruction and identification, and the calibration of the energy scale and resolution described in chapter~\ref{} is considered. The vatiations are order of 1~\%. \\
+\\
+\noindent\textbf{\sf{Small-R jets}}\\
+Uncertainties on the jet energy scale (JES)  and the jet energy resolution (JER) are considered.
+The JES and JER are measured in situ by calculating the response between MC and data, as detaild in chapter~\ref{}. 
+The uncertainties on the efficiency of the pile-up jets and the forward vertex tagger, and the tracking reconstruction uncertainties are also considered, as well as b-tagging tool uncertainties.
+%Flavour response/composition uncertainties 
+The impacts from these uncertainties are expected to be low, as they are less than 5~\% in the high RNN bins of the signal regions. \\
+\\
+\noindent\textbf{\sf{Large-R jets}}\\
+JES and JER calibrations are considered with large-R jet.  
+There are boson tagger efficiency scale factors (SFs) \cite{} applied. The scale factors are derived from data using t$\bar{\mathrm{t}}$ events for signal-like labelled jets, while extracted from $\gamma$+jet and multijet events for background jets.
+There are several sources of uncertinaties, including the theoretical uncertainty in the MC samples used for deriving the SFs, as well as, reconstruction of calibration of the physics objets. These uncertainties affect 
+The one with the largest impact is the $\gamma$+jet modeling uncertainty.
 
-The systematics uncertainties related to the muon and electron are applied to the difference between data and MC. The identification and reconstruction efficiencies are measured using the $Z$ mass peak. The scale factor and its uncertainty are derived using the $Z$ mass peak as well. The energy and momentum scales are measured with $Z$ mass line shape, and the track-to vertex association efficiency is applied only for muons.
-\subsection{Small-$R$ Jet Energy Scale (JES) and Resolution (JER) Uncertainty}
-The jet energy scale (JES) uncertainties and jet energy resolution (JER) are measured by calculating the response between MC and data in various kinematic phase space ~\cite{JetUncertainties}.
-%What is used in this analysis is 30 JES uncertainty and 8 JER uncertainty components. 
-The uncertainty on jet vertex tagger (JVT) efficiency~\cite{JVTCalib} and forward jet vertex tagger (fJvt) efficiency are also considered.
-%We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config}
-\subsection{Large-$R$ Jet Energy Scale (JES) and jet energy resolution (JER) Uncertainty}
-\label{sec:fatjetUncert}
-The uncertainty on the $p_T$ scale of jets is evaluated by $R_{trk}$ method. It is evaluated by comparing of the ratio of the jet $p_T$ to track-jet $p_T$ in dijet data and MC.
-Additionaly to this baseline uncertainty, the uncertainties on track measurements, differences of the modeling between Pythia and Sherpa dijet simulations and the statistical uncertainty of dijet data are considered.
-\subsection{Missing transverse energy}
-The missing transverse energy is calculated using physics objects, muons, electron, taus, photon, and jets. Therefore the all of the systematic errors on those objects like JES are propagated to the $E^T_{miss}$ uncertainty.
-Additionally there is an uncertainty called the soft term from the unassociated tracks.
-\subsection{B-tagging uncertainties}
-The systematic uncertainties associated to the b-tagging.
-They are uncertainties on the scaling factor for taking account for the disagreement of the b-tag efficiency between data and MC. Each separated scale factors and corresponding systematic uncertainties are provided for b-,c-, and light-flavor jets from several measurements.
-These b-tagging systematic uncertainties are applied when calculating the SF since they are uncertainties on the SF. b-tagging SF is firstly calculated with all small-R jets (PFlowJets) and applied to the events after having selected non b-tagged tagging jets, same as the uncertainties. 
-\subsection{Quark/Gluon jets uncertainties}
-The Flavour response and the Flavour composition uncertainties are derived specifically to this analysis.
-These two uncertainties explain the different jets response to quark and gluon-initiated jets. The flavour response uncertainty is derived by using the dijet events used the alternative samples, which are Phythia~8 and Herwig~$\plus\plus$. The flavour composition uncertainty is usually derived by assuming 50\% quarks and 50\% gluons and takes conservative uncertainty of 100\%, though it is too conservative uncertainties and can limit the sensitivities in topology of this analysis, where quark enriched regions are expected. In order to reduce these uncertainties, the gluon fraction is studied and these uncertainties are re-derived using specific gluon fraction.
+%\subsection{Quark/Gluon jets uncertainties}
+%The Flavour response and the Flavour composition uncertainties are derived specifically to this analysis.
+%These two uncertainties explain the different jets response to quark and gluon-initiated jets. The flavour response uncertainty is derived by using the dijet events used the alternative samples, which are Phythia~8 and Herwig~$\plus\plus$. The flavour composition uncertainty is usually derived by assuming 50\% quarks and 50\% gluons and takes conservative uncertainty of 100\%, though it is too conservative uncertainties and can limit the sensitivities in topology of this analysis, where quark enriched regions are expected. In order to reduce these uncertainties, the gluon fraction is studied and these uncertainties are re-derived using specific gluon fraction.
 
 %how to derive this 
-The gluon fraction in each of the analysis regions and different samples is estimated as a function of the $p_T$ and $\eta$ for small-R jets. Truth parton label information is used to estimating the number of quarks and gluons. All jets except the b-quark-initiated jets are into account.
-The gluon fraction for a given bin of the 2D histograms of $p_T$ and $eta$ after summing up all the region is taken as the nominal gluon fraction. As to describe the uncertainty on the gluon fraction, it is given by:
-\begin{equation}
-\sigma_{gfrac}=\sqrt{\sigma_{\text {region }}^{2}+\sigma_{g e n}^{2}}
-\end{equation}
-where $\sigma_{region}$ is the maximum difference in nominal gluon fraction and the one analysis region, and $\sigma_{gen}$ is the generator uncertainty derived using alternative Pythia 8 and Herwig MC samples. For Signal samples there is no alternative MC sample available, only region uncertainty is considered.
-%Figure~\ref{} shows the impact of these flavour related variation on 2 lepton resolved control regions.
-\subsection{Track uncertainties}
-Some uncertainties on the tracks reconstruction especially for the small-R jets are taken into account. There are five main components for this uncertainty: 
-\begin{itemize}
-    \item fake track efficiency : track mis-reconstruction rate  
-    \item track efficiency : track reconstruction efficiency
-    \item experimental : charged particle multiplicity 
-    \item PDF : theory uncertainty from PDF
-    \item matrix element : from matrix element calculation
-\end{itemize}
-The impacts from these uncertainties are expected to be low, as they are less than 5~\% in the high RNN bins of the signal regions.
+%The gluon fraction in each of the analysis regions and different samples is estimated as a function of the $p_T$ and $\eta$ for small-R jets. Truth parton label information is used to estimating the number of quarks and gluons. All jets except the b-quark-initiated jets are into account.
+%The gluon fraction for a given bin of the 2D histograms of $p_T$ and $eta$ after summing up all the region is taken as the nominal gluon fraction. As to describe the uncertainty on the gluon fraction, it is given by:
+%\begin{equation}
+%\sigma_{gfrac}=\sqrt{\sigma_{\text {region }}^{2}+\sigma_{g e n}^{2}}
+%\end{equation}
+%where $\sigma_{region}$ is the maximum difference in nominal gluon fraction and the one analysis region, and $\sigma_{gen}$ is the generator uncertainty derived using alternative Pythia 8 and Herwig MC samples. For Signal samples there is no alternative MC sample available, only region uncertainty is considered.
 
 \section{Theoretical uncertainties}
 The systematic uncertainties related to the determination or the calculation of the MC.
@@ -73,13 +59,6 @@ The renormalization scale $\mu_R$ is the scale at which the strong coupling $\al
 This uncertainties are implemented in the fitting as the NP named \texttt{TheoryQCD\_Z} for Z+jets background sample and \texttt{TheoryQCD\_VBS} for the EW VVjj signal sample. They are estimated by taking the envelope of the 6 set of the combination of the $\mu_R$ and $\mu_F$, which are fixed to be 1, 0.5, or 2.0. The envelop of these sets are used as the uncertainty.
 \end{itemize}
 
-\color{blue}
-{
-\subsection{NLO order EW corrections}
-The uncertainty related to the corrections of the matrix element when adapted the NLO order calculation. The additional sample is needed to estimate this uncertainty, and this is not currently considered in the analysis. Erase this part.
-}
-
-\color{black}
 \subsection{Background Modeling uncertainties}
 The systematics uncertainties related to the modeling of the background samples are described. This uncertainty is the difference between the modeling of the alternative sample (MadGraph + Phythia 8)  and the nominal sample (Shelpa 2.2.1). Since there is a large mismodelling in the nominal Shelpa 2.2.1 sample and the alternative sample has a better modeling, this uncertainty is expected to be large.
 %Figure~\ref{} shows the variation of this modeling uncertainty in 2-lepton channel. The plots are normalized to see the shape effect.
