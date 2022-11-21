@@ -545,30 +545,30 @@ Cross section at tree-level %\ref{}
 \end{figure}
 
 %\section{Several decay channels in VBS analysis}
-\section{Experimental results in VBS analysis}
-\textcolor{blue}{put description about the several decay channels and the good point of the semi-leptonic channel here}　\\
-There are several decay channels in VBS analysis with respect to the boson type and its decay products. The latest significance obtained by ATLAS and CMS in each channels are summarized in the Table.
+%\section{Experimental results in VBS analysis}
+%\textcolor{blue}{put description about the several decay channels and the good point of the semi-leptonic channel here}　\\
+%There are several decay channels in VBS analysis with respect to the boson type and its decay products. The latest significance obtained by ATLAS and CMS in each channels are summarized in the Table.
 
-\begin{tabular}{|c|c|c|c|}
-\hline \multicolumn{2}{|c|}{}                                   & ATLAS             & CMS\\
-\hline
-\hline \multirow{3}{*}{ Full-leptonic }      & ssWW -> Ivlv     & $6.5      \sigma$ &    \\
-\cline { 2 - 4 }                             & osWW             & $-$               &    \\
-\cline { 2 - 4 }                             & WZ -> Ivll       & $5.3(3.2) \sigma$ &    \\
-\cline { 2 - 4 }                             & ZZ -> IIll/llvv  & $5.5(4.3) \sigma$ &    \\
-\hline \multicolumn{2}{|c|}{ Semi-leptonic }                    & $2.7(2.5) \sigma$ &    \\
-\hline \multicolumn{2}{|c|}{ Full-hadronic }                    & $-$               &    \\
-\hline
-\end{tabular}
+%\begin{tabular}{|c|c|c|c|}
+%\hline \multicolumn{2}{|c|}{}                                   & ATLAS             & CMS\\
+%\hline
+%\hline \multirow{3}{*}{ Full-leptonic }      & ssWW -> Ivlv     & $6.5      \sigma$ &    \\
+%\cline { 2 - 4 }                             & osWW             & $-$               &    \\
+%\cline { 2 - 4 }                             & WZ -> Ivll       & $5.3(3.2) \sigma$ &    \\
+%\cline { 2 - 4 }                             & ZZ -> IIll/llvv  & $5.5(4.3) \sigma$ &    \\
+%\hline \multicolumn{2}{|c|}{ Semi-leptonic }                    & $2.7(2.5) \sigma$ &    \\
+%\hline \multicolumn{2}{|c|}{ Full-hadronic }                    & $-$               &    \\
+%\hline
+%\end{tabular}
 
-The VBS process has already observed in the full-leptonic channel.
-In this thesis, semi-leptonic channel is studied. One of the two weak vector boson (W or Z) decay into leptons ( electrons or muons or neutrino) and the other decays into hadrons.
+%The VBS process has already observed in the full-leptonic channel.
+%In this thesis, semi-leptonic channel is studied. One of the two weak vector boson (W or Z) decay into leptons ( electrons or muons or neutrino) and the other decays into hadrons.
 
-\textcolor{blue}{put previous analysis results here}
+%\textcolor{blue}{put previous analysis results here}
 
 \section{Anomalous Quartic Gauge Coupling and Effective Field Theory}
 
-\textcolor{blue}{discuss about dependent models for example compositeness. Then introduce EFT to see them model-independently.}
+\textcolor{blue}{Discuss about dependent models for example compositeness. Then introduce EFT to see them model-independently.} \\
 %\subsection{aQGC}
 The unitarity recovered by the existence of Higgs boson can be broken again by the additional quartic gauge coupling by new physics. This is referred to as anomalous quartic gauge couplings (aQGC). 
 
@@ -576,91 +576,103 @@ The unitarity recovered by the existence of Higgs boson can be broken again by t
 \label{subsec:EFT}
 %Since the aQGC can claim many different models, the Effective Field Theory (EFT) is considered as a model-independent way of the interpretation. 
 New physics contribution is generally described by the effective field theory (EFT) as a model-independent way of the interpretation.
-The EFT models the effects of new physics at energy scale much higher than the currently accessible range by the experiments. The SM is regarded as an effective theory at low-energy in this framework.The EFT contains additional operators with higher energy dimension suppressed by the cutoff scale of the new physics, $\Lambda$.
-The EFT Lagrangian is given as:
+The EFT models the effects of new physics at energy scale much higher than the currently accessible range by the experiments. 
+%The SM is regarded as an effective theory at low-energy in this framework.
+%The EFT contains additional operators with higher energy dimension suppressed by the cutoff scale of the new physics, $\Lambda$.
+They are based on the following expansion of the EFT Lagrangian;
 \begin{equation}
-\mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}}+\sum_{d>4} \sum_{i} \frac{c_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
+\label{eq:EFTLagrangian}
+\mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}}+\sum_{d>4} \sum_{i} \frac{f_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
 \end{equation}
-where $c_{i}^{(d)}$ are the Wilson coefficients of the new operators, $\mathcal{O}_{i}^{(d)}$.
-$\Lambda$ is a cutoff scale, and the d is a mass dimensions which fulfill d > 4.
-Any new physics can be modeled in this framework by certain additional operators, where their coefficient is also fixed as long as the new physics scale is above the cutoff scale, $\Lambda$. The SM is a low-energy theory in this framework, i.e. if $\Lambda \rightarrow \infty$, the SM is reproduced.
+where $\Lambda$ is the typical scale of new physics, called cutoff scale. $f_{i}^{(d)}$ are the Wilson coefficients, the dimensionless coupling-strength coefficients of the new operators, $\mathcal{O}_{i}^{(d)}$.
+Any new physics can be modeled in this framework by certain additional operators, where their coefficient is also fixed as long as the new physics scale is above $\Lambda$. 
+The SM is a low-energy theory in this framework, i.e. if $\Lambda \rightarrow \infty$, the SM is reproduced.
 \\
-
-To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces new dimension 8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry are used. 
-
+The operators are constructed out of the following fields;
+\begin{itemize}
+    \item Higgs double field $\Phi$,
+    \item covariant derivative $D^{\mu}$,
+    \item field strength tensors $W^{\mu\nu}$, $B^{\mu\nu}$,
+    \item fermion fields $\psi$
+\end{itemize}
+In general, all operators with an odd number of dimensions involve fermion fields and lead to lepton or baryon number violation. Therefore we need to consider even dimension only, starting from d = 6.
+Equation~\ref{eq:EFTLagrangian} is then written like;
+\begin{equation}
+\label{eq:EFTLagrangian}
+\mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}} + \sum_{i} \frac{f_{i}^{(d)}}{\Lambda^{2}} \mathcal{O}_{i}^{(d)} +  \sum_{j} \frac{f_{j}^{(d)}}{\Lambda^{4}} \mathcal{O}_{j}^{(d)} + \cdots
+\end{equation}
+where the second term represents the dimension-6 operators which affect triple and quartic couplings, and the third term represnets the dimension-8 operators, which affect only quartic couplings.
+%Numbers of the collider experiments probe triple gauge couplings (TGC) in the pair production of electroweak gauge bosons, while the study of quartic gauge couplings (QGC) requires the production of three electroweak vector bosons, or the VBS of electroweak vector boson pairs. 
+%Therefore, the Wilson coeffients of effective operators that contain both TGC and QGC are more strongly constrained through the study of their TGC component, hence most of the present LHC serches for effects of QGC focus on the operators that generate QGC but do not have any TGC associated with them. 
+To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p},introduces new dimension-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry are used. Here only dimension-8 operators are focused to constrain $genuine$ QGC
 The lowest dimension operator that leads to quartic interactions and does not exhibit two or three weak gauge boson vertices is dimension 8. 
-This is when we get a weak boson field either from the covariant derivative of Higgs doublet $\Phi$ or from the field strength tensor. 
+This is when we get a operator with weak boson field either from the covariant derivative of Higgs doublet $\Phi$ or from the field strength tensor. 
 In either case the vector field is accompanied by a vacuum expected value or a derivative, therefore the genuine quartic vertices are of dimension 8 or higher.
 %understand this?
 All the corresponding operators are shown hereafter.
-
 \begin{itemize}
 \item Operators containing just $D_\mu \Phi$ : (Scalor type)
 \begin{equation}
 \begin{aligned}
-\mathcal{L}_{S, 0} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\mu} \Phi\right)^{\dagger} D^{\nu} \Phi\right] \\
-\mathcal{L}_{S, 1} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \times\left[\left(D_{\nu} \Phi\right)^{\dagger} D^{\nu} \Phi\right] \\
-\mathcal{L}_{S, 2} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\nu} \Phi\right)^{\dagger} D^{\mu} \Phi\right]
+\mathcal{O}_{S, 0} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\mu} \Phi\right)^{\dagger} D^{\nu} \Phi\right] \\
+\mathcal{O}_{S, 1} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \times\left[\left(D_{\nu} \Phi\right)^{\dagger} D^{\nu} \Phi\right] \\
+\mathcal{O}_{S, 2} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi\right] \times\left[\left(D^{\nu} \Phi\right)^{\dagger} D^{\mu} \Phi\right]
 \end{aligned}
 \end{equation}
 \item Operators containing $D_\mu \Phi$ and field strength : ( Mixed type)
 \begin{equation}
 \begin{aligned}
-\mathcal{L}_{M, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi\right] \\
-\mathcal{L}_{M, 1} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\nu \beta}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \\
-\mathcal{L}_{M, 2} &=\left[B_{\mu \nu} B^{\mu \nu}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi\right] \\
-\mathcal{L}_{M, 3} &=\left[B_{\mu \nu} B^{\nu \beta}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \\
-\mathcal{L}_{M, 4} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} D^{\mu} \Phi\right] \times B^{\beta \nu} \\
-\mathcal{L}_{M, 5} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} D^{\nu} \Phi\right] \times B^{\beta \mu} \\
-\mathcal{L}_{M, 6} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} \hat{W}^{\beta \nu} D^{\mu} \Phi\right] \\
-\mathcal{L}_{M, 7} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} \hat{W}^{\beta \mu} D^{\nu} \Phi\right]
+\mathcal{O}_{M, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi\right] \\
+\mathcal{O}_{M, 1} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\nu \beta}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \\
+\mathcal{O}_{M, 2} &=\left[B_{\mu \nu} B^{\mu \nu}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi\right] \\
+\mathcal{O}_{M, 3} &=\left[B_{\mu \nu} B^{\nu \beta}\right] \times\left[\left(D_{\beta} \Phi\right)^{\dagger} D^{\mu} \Phi\right] \\
+\mathcal{O}_{M, 4} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} D^{\mu} \Phi\right] \times B^{\beta \nu} \\
+\mathcal{O}_{M, 5} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} D^{\nu} \Phi\right] \times B^{\beta \mu} \\
+\mathcal{O}_{M, 6} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} \hat{W}^{\beta \nu} D^{\mu} \Phi\right] \\
+\mathcal{O}_{M, 7} &=\left[\left(D_{\mu} \Phi\right)^{\dagger} \hat{W}_{\beta \nu} \hat{W}^{\beta \mu} D^{\nu} \Phi\right]
 \end{aligned}
 \end{equation}
 \item Operators containing just the field strength tensor (Tensor type)
 \begin{equation}
 \begin{aligned}
-\mathcal{L}_{T, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times \operatorname{Tr}\left[\hat{W}_{\alpha \beta} \hat{W}^{\alpha \beta}\right] \\
-\mathcal{L}_{T, 1} &=\operatorname{Tr}\left[\hat{W}_{\alpha \nu} \hat{W}^{\mu \beta}\right] \times \operatorname{Tr}\left[\hat{W}_{\mu \beta} \hat{W}^{\alpha \nu}\right] \\
-\mathcal{L}_{T, 2} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta}\right] \times \operatorname{Tr}\left[\hat{W}_{\beta \nu} \hat{W}^{\nu \alpha}\right] \\
-\mathcal{L}_{T, 3} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta} \hat{W}^{\nu \alpha}\right] \times B_{\beta \nu} \\
-\mathcal{L}_{T, 4} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\alpha \mu} \hat{W}^{\beta \nu}\right] \times B_{\beta \nu} \\
-\mathcal{L}_{T, 5} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times B_{\alpha \beta} B^{\alpha \beta} \\
-\mathcal{L}_{T, 6} &=\operatorname{Tr}\left[\hat{W}_{\alpha \nu} \hat{W}^{\mu \beta}\right] \times B_{\mu \beta} B^{\alpha \nu} \\
-\mathcal{L}_{T, 7} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta}\right] \times B_{\beta \nu} B^{\nu \alpha} \\
-\mathcal{L}_{T, 8} &=B_{\mu \nu} B^{\mu \nu} B_{\alpha \beta} B^{\alpha \beta} \\
-\mathcal{L}_{T, 9} &=B_{\alpha \mu} B^{\mu \beta} B_{\beta \nu} B^{\nu \alpha}
+\mathcal{O}_{T, 0} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times \operatorname{Tr}\left[\hat{W}_{\alpha \beta} \hat{W}^{\alpha \beta}\right] \\
+\mathcal{O}_{T, 1} &=\operatorname{Tr}\left[\hat{W}_{\alpha \nu} \hat{W}^{\mu \beta}\right] \times \operatorname{Tr}\left[\hat{W}_{\mu \beta} \hat{W}^{\alpha \nu}\right] \\
+\mathcal{O}_{T, 2} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta}\right] \times \operatorname{Tr}\left[\hat{W}_{\beta \nu} \hat{W}^{\nu \alpha}\right] \\
+\mathcal{O}_{T, 3} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta} \hat{W}^{\nu \alpha}\right] \times B_{\beta \nu} \\
+\mathcal{O}_{T, 4} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\alpha \mu} \hat{W}^{\beta \nu}\right] \times B_{\beta \nu} \\
+\mathcal{O}_{T, 5} &=\operatorname{Tr}\left[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}\right] \times B_{\alpha \beta} B^{\alpha \beta} \\
+\mathcal{O}_{T, 6} &=\operatorname{Tr}\left[\hat{W}_{\alpha \nu} \hat{W}^{\mu \beta}\right] \times B_{\mu \beta} B^{\alpha \nu} \\
+\mathcal{O}_{T, 7} &=\operatorname{Tr}\left[\hat{W}_{\alpha \mu} \hat{W}^{\mu \beta}\right] \times B_{\beta \nu} B^{\nu \alpha} \\
+\mathcal{O}_{T, 8} &=B_{\mu \nu} B^{\mu \nu} B_{\alpha \beta} B^{\alpha \beta} \\
+\mathcal{O}_{T, 9} &=B_{\alpha \mu} B^{\mu \beta} B_{\beta \nu} B^{\nu \alpha}
 \end{aligned}
 \end{equation}
 \end{itemize}
 
-Since the operator $\mathcal{L}_{S, 2}$ is the Hermite conjugate of the $\mathcal{L}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{L}_{S02}$, with the coefficient $f_{S02}$, respectively. It is found via simulations that the tensor operators produce purely transversely polarized $W/Z$ bosons, while the scalar operators longitudinal bosons.
-
-The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}. The VBS semi-leptonic channel has both WZ and ZZ for the weak vector bosons, therefore can get the limits for all 
-
-\subsection{Latest limit for the dimension-8 operators}
-The latest limits on the Wilson coefficients of the 8-dimension operators are shown in Table~\ref{tab:}.
-The most stringent limits are obtained by CMS in *** channel. 
-
+Since the operator $\mathcal{O}_{S, 2}$ is the Hermite conjugate of the $\mathcal{O}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{O}_{S02}$, with the coefficient $f_{S02}$, respectively. It is found via simulations that the tensor type operators produce purely transversely polarized $W/Z$ bosons, while the scalar type operators longitudinal bosons.
+The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}. The VBS semi-leptonic channel has both WZ and ZZ for the weak vector bosons, therefore can get the limits for all these 18 operators.
 
 %table1
 \begin{center}
+\begin{table}
 \begin{tabular}{|l| c c c c c c c c c|} 
  \hline
  operators                                                & $WWWW$ & $WWZZ$ & $ZZZZ$ & $WW\gamma Z$ & $WW\gamma \gamma$ & $ZZZ\gamma$ & $ZZ\gamma \gamma$ & $Z\gamma \gamma \gamma$ & $\gamma \gamma \gamma \gamma $\\ [0.5ex] 
  \hline\hline
- $\mathcal{L}_{S02}$,$\mathcal{L}_{S1}$                   & \checkmark & \checkmark & \checkmark &  &  &　 &　 &　&　\\ 
+ $\mathcal{O}_{S02}$,$\mathcal{O}_{S1}$                   & \checkmark & \checkmark & \checkmark &  &  &　 &　 &　&　\\ 
  \hline
- $\mathcal{L}_{M0}$,$\mathcal{L}_{M1}$,$\mathcal{L}_{M7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark &\checkmark & &\\
+ $\mathcal{O}_{M0}$,$\mathcal{O}_{M1}$,$\mathcal{O}_{M7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark &\checkmark & &\\
  \hline
- $\mathcal{L}_{M2}$,$\mathcal{L}_{M3}$,$\mathcal{L}_{M4}$,$\mathcal{L}_{M5}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark & &\\
+ $\mathcal{O}_{M2}$,$\mathcal{O}_{M3}$,$\mathcal{O}_{M4}$,$\mathcal{O}_{M5}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark & &\\
  \hline
- $\mathcal{L}_{T0}$,$\mathcal{L}_{T1}$,$\mathcal{L}_{T2}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & &\\
+ $\mathcal{O}_{T0}$,$\mathcal{O}_{T1}$,$\mathcal{O}_{T2}$ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & &\\
  \hline
- $\mathcal{L}_{T5}$,$\mathcal{L}_{T6}$,$\mathcal{L}_{T7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark &\checkmark &\checkmark\\ [1ex] 
+ $\mathcal{O}_{T5}$,$\mathcal{O}_{T6}$,$\mathcal{O}_{T7}$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &\checkmark &\checkmark &\checkmark\\ [1ex] 
  \hline
- $\mathcal{L}_{T8}$,$\mathcal{L}_{T9}$                    &  &  & \checkmark &  &  & \checkmark &\checkmark &\checkmark &\checkmark\\ [1ex] 
+ $\mathcal{O}_{T8}$,$\mathcal{O}_{T9}$                    &  &  & \checkmark &  &  & \checkmark &\checkmark &\checkmark &\checkmark\\ [1ex] 
  \hline
 \end{tabular}
+\end{table}
 \caption{operators and the vertices}
 \label{tab:vertex}
 \end{center}
@@ -692,4 +704,11 @@ The most stringent limits are obtained by CMS in *** channel.
 %\caption{operators and the channels}
 %\label{tab:aQGCchannel}
 %\end{center}
+
+\subsection{Unitarity bound}
+
+
+\subsection{Latest limit for the dimension-8 operators}
+The latest limits on the Wilson coefficients of the 8-dimension operators are shown in Table~\ref{tab:}.
+The most stringent limits are obtained by CMS in *** channel. 
 
