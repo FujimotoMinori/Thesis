@@ -595,21 +595,21 @@ The operators are constructed out of the following fields;
     \item field strength tensors $W^{\mu\nu}$, $B^{\mu\nu}$,
     \item fermion fields $\psi$
 \end{itemize}
-In general, all operators with an odd number of dimensions involve fermion fields and lead to lepton or baryon number violation. Therefore we need to consider even dimension only, starting from d = 6.
+In general, all operators with an odd number of dimensions involve fermion fields and lead to lepton or baryon number violation~\cite{PhysRevLett.43.1566}. Therefore we need to consider even dimension only, starting from d = 6.
 Equation~\ref{eq:EFTLagrangian} is then written like;
 \begin{equation}
 \label{eq:EFTLagrangian}
 \mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}} + \sum_{i} \frac{f_{i}^{(d)}}{\Lambda^{2}} \mathcal{O}_{i}^{(d)} +  \sum_{j} \frac{f_{j}^{(d)}}{\Lambda^{4}} \mathcal{O}_{j}^{(d)} + \cdots
 \end{equation}
-where the second term represents the dimension-6 operators which affect triple and quartic couplings, and the third term represnets the dimension-8 operators, which affect only quartic couplings.
+where the second term represents the dimension-6 operators which affect triple and quartic couplings, and the third term represents the dimension-8 operators, which affect only quartic couplings.
 %Numbers of the collider experiments probe triple gauge couplings (TGC) in the pair production of electroweak gauge bosons, while the study of quartic gauge couplings (QGC) requires the production of three electroweak vector bosons, or the VBS of electroweak vector boson pairs. 
 %Therefore, the Wilson coeffients of effective operators that contain both TGC and QGC are more strongly constrained through the study of their TGC component, hence most of the present LHC serches for effects of QGC focus on the operators that generate QGC but do not have any TGC associated with them. 
-To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p},introduces new dimension-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry are used. TGC is already strongly constrained through the study using dimension-6 operators via the pair production of electroweak gauge bosons. To focus more on the effect of QGC, only dimension-8 operators are considered here, as the operators that generate QGC but do no have any TGC associated with them.
+To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p}, introduces new dimension-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry are used. TGC is already strongly constrained through the study using dimension-6 operators via the pair production of electroweak gauge bosons. To focus more on the effect of QGC, only dimension-8 operators are considered here, as the operators that generate QGC but do no have any TGC associated with them.
 %The lowest dimension operator that leads to quartic interactions and does not exhibit two or three weak gauge boson vertices is dimension 8. 
 %This is when we get a operator with 
 These operators are with weak boson field either from the covariant derivative of Higgs doublet $\Phi$ or from the field strength tensor. 
-In either case the vector field is accompanied by a vacuum expected value or a derivative, therefore the genuine quartic vertices are of dimension 8 or higher.
-All the corresponding operators are shown hereafter.
+%In either case the vector field is accompanied by a vacuum expected value or a derivative, therefore the genuine quartic vertices are of dimension 8 or higher.
+All the corresponding operators are shown hereafter. The analysis usually focus on these operators on a one-by-one basis.
 \begin{itemize}
 \item Operators containing just $D_\mu \Phi$ : (Scalor type)
 \begin{equation}
@@ -649,8 +649,12 @@ All the corresponding operators are shown hereafter.
 \end{equation}
 \end{itemize}
 
-Since the operator $\mathcal{O}_{S, 2}$ is the Hermite conjugate of the $\mathcal{O}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{O}_{S02}$, with the coefficient $f_{S02}$, respectively. It is found via simulations that the tensor type operators produce purely transversely polarized $W/Z$ bosons, while the scalar type operators longitudinal bosons.
-The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}. The VBS semi-leptonic channel has both WZ and ZZ for the weak vector bosons, therefore can get the limits for all these 18 operators.
+It is found via simulations that the tensor type operators produce purely transversely polarized $W/Z$ bosons, while the scalar type operators longitudinal bosons.
+The summary of the correspondences of the operators and the vertices are summarized in the table~\ref{tab:vertex}. 
+Since the operator $\mathcal{O}_{S, 2}$ is the Hermite conjugate of the $\mathcal{O}_{S, 0}$, those 2 operators are treated as single operator denoted as $\mathcal{O}_{S02}$, with the coefficient $f_{S02}$, respectively. 
+The operator $\mathcal{O}_{T, 3}$ and $\mathcal{O}_{T, 4}$ vanish identically. For $\mathcal{O}_{T, 3}$, the trace is symmetric under permutation of indices $\beta$ and $\nu$, while the field-strenth tensor $B_{\beta \nu}$ is anti-symmetric, and for $\mathcal{O}_{T, 4}$, the trace itself vanishes.
+The operator $\mathcal{O}_{M, 6}$ is equivalent to $\mathcal{O}_{M, 0}$.
+The VBS semi-leptonic channel has both WZ and ZZ for the weak vector bosons, therefore can get the limits for all these 17 operators.
 
 %table1
 \begin{center}
@@ -672,9 +676,9 @@ The summary of the correspondences of the operators and the vertices are summari
  $\mathcal{O}_{T8}$,$\mathcal{O}_{T9}$                    &  &  & \checkmark &  &  & \checkmark &\checkmark &\checkmark &\checkmark\\ [1ex] 
  \hline
 \end{tabular}
-\end{table}
 \caption{operators and the vertices}
 \label{tab:vertex}
+\end{table}
 \end{center}
 
 %The aQGCs can be measured by the VBS and the triboson channels.
@@ -705,10 +709,48 @@ The summary of the correspondences of the operators and the vertices are summari
 %\end{center}
 
 \subsection{Unitarity bound}
+The departures of the TGC and QGC from the SM predictions lead to the growth of scattering amplitude eventually leads to unitarity violation.
+When probing anomalous QGC, we must verify whether unitarity is satisfied to guarantee consistency of the anlyses.
+This unitarity bound can be calculated from the partial wave function of the process of two-to-two scattering of electroweak gauge bosons~\cite{PhysRevD.101.113003}.
+These are used as the theoretical unitarity bound in this analysis.
 
+In experiment side, how to treat and deal with the unitarity problem depends on each analysis. 
+There are basically two mainstreams currently;
+\begin{itemize}
+    \item Disregard unitarity limits \\
+    This is what is done in most of the CMS analysis. It is technically simplest way to implement, and it's fair to quantify the relative precision of different measurements and its agreement/disagreement with the SM. The unitarity violation usually occurs well within the measured range.
+    \item Clipping method \\
+    Define some cut-off scale $\Lambda$ as "Clipping energy", and take only SM contribution above that clipping energy. This method can offer the most conservative signal estimate that gives limits guaranteed to be true, when compared to the theoretical unitarity bound. The limits on $f$ can only be determined for an assumed value of $\Lambda$, thus the limits are in 2 dimensions.
+\end{itemize}
+In this analysis clipping method is used as well as the unitarity-disregarding limits. 
+More detailed description will be shown in chapter~\ref{chap:aQGC}.
 
 
 \subsection{Latest limit for the dimension-8 operators}
-The latest limits on the Wilson coefficients of the 8-dimension operators are shown in Table~\ref{tab:}.
-The most stringent limits are obtained by CMS in *** channel. 
+The latest limits on the Wilson coefficients of the 8-dimension operators obtained by the CMS and ATLAS is shown in figure~\ref{fig:limitFT},\ref{fig:limitFM},\ref{fig:limitFS}. All of these limits are disregarding the unitarity.
+\begin{figure}[tbp]
+\begin{center}
+ \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/aQGC/aQGC_ft.png}
+\caption{CMS limits on FT operatos}
+\label{fig:limitFT}
+\end{center}
+\end{figure}
+
+\begin{figure}[tbp]
+\begin{center}
+ \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/aQGC/aQGC_fm.png}
+\caption{CMS limits on FM operatos}
+\label{fig:limitFM}
+\end{center}
+\end{figure}
+
+\begin{figure}[tbp]
+\begin{center}
+ \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/aQGC/aQGC_fs.png}
+\caption{CMS limits on FS operatos}
+\label{fig:limitFS}
+\end{center}
+\end{figure}
+
+%The most stringent limits are obtained by CMS in *** channel. 
 
