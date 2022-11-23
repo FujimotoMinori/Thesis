@@ -115,49 +115,30 @@ $s_i$ and $b_i$ is the expected number of the signal and the background events y
 The $\mu$ is also called as the parameter of interest (POI). $\theta$ is a set of nuisance parameters (NPs) associated with each systematic uncertainty. $\theta$ affects the signal and background yields so it can be written like $s_{i}=s_{i}(\theta)$ and $b_{i}=b_{i}(\theta)$. 
 The second term in equation~\ref{eq:poisson} is often called penalty term, to represent the supplementary information of the systematic uncertainty effect. It is a product from all single uncertainty $\theta_j$; $G(\theta) = \prod_{j}G_{j}(\theta_{j}$). 
 In this analysis, this term is given by the Gaussian distribution with a standard deviation of $\sigma = 1$. It is designed so that $\theta_j = \pm 1$ corresponds to the $\pm 1 \sigma$ variations of the systematic source. 
+Some parameters for example Z+jets background normalization factors are called floating parameters, which is determined completely from the data and do not have this penalty terms.
 
-
-
-
-The additional term, $\mathcal{L}_{\text{prior}}$ is multiplied to the likelihood function to represent the supplementary information of the systematics effects.This term is usually referred to as prior. In this analysis, priors are considered to be Gaussian distributed for the majority of uncertainties:
-\begin{equation}
-\mathcal{L}_{\text {prior}}(\theta)=\operatorname{Gauss}(0 \mid \theta, 1)=\frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} \theta^{2}}
-\end{equation}
-Some parameters like some of the background normalization factors are called floating parameters, which is determined completely from the data and do not have priors.
-The statistical uncertainties of the total background is included to the likelihood function as $\gamma$ parameter. The initial $\mathcal{L}_{\text {Meas }}$ is modified by multiplying the background yield $b_i$ by $\gamma_i$ for each bin:
-\begin{equation}
-{Pois}\left(N_{i} \mid \mu s_{i}+\gamma_{i}b_{i}\right)
-\end{equation}
-With this modification the background estimation in each bin about the nominal value of $\gamma = 1$. Another likelihood term is added to represent the statistical uncertainty:
-\begin{equation}
-\mathcal{L}_{\mathrm{BkgStat}}\left(\gamma_{i}\right)=\prod_{i \in \mathrm{bins}} \operatorname{Pois}\left(n_{i} \mid \gamma_{i} n_{i}\right)
-\end{equation}
+The statistical uncertainties of the total background is also included to the likelihood function as $\gamma$ parameter. 
+The additinal nuisance parameter is added to the initial $\mathcal{L}$ as $\gamma_i$ for each bin, where $\gamma_i$ is the total statistical uncertainty of a specific histogram bin i. 
+The poisson distribution is expected for the gamma parameters, conventionally they are paremetrized so that the nominal expectation is 1 and its variation corresponds to $\pm 1 \sigma$, where the $\sigma$ is the MC statistical uncertainty of the bin i.
+%\begin{equation}
+%{Pois}\left(N_{i} \mid \mu s_{i}+\gamma_{i}b_{i}\right)
+%\end{equation}
+%With this modification the background estimation in each bin about the nominal value of $\gamma = 1$. 
+%Another likelihood term is added to represent the statistical uncertainty:
+%\begin{equation}
+%\mathcal{L}_{\mathrm{BkgStat}}\left(\gamma_{i}\right)=\prod_{i \in \mathrm{bins}} \operatorname{Pois}\left(n_{i} \mid \gamma_{i} n_{i}\right)
+%\end{equation}
 % ??? don't understand explanations here
-The full likelihood can be described as:
-\begin{equation}
-\mathcal{L}(\mu, \theta)=\mathcal{L}_{\text {Meas }}\left(\mu, \theta, \gamma_{i}\right) \cdot \mathcal{L}_{\text {Prior }}(\theta) \cdot \mathcal{L}_{\text {BkgStat }}\left(\gamma_{i}\right)
-\end{equation}
+%The full likelihood can be described as:
+%\begin{equation}
+%\mathcal{L}(\mu, \theta)=\mathcal{L}_{\text {Meas }}\left(\mu, \theta, \gamma_{i}\right) \cdot \mathcal{L}_{\text {Prior }}(\theta) \cdot \mathcal{L}_{\text {BkgStat }}\left(\gamma_{i}\right)
+%\end{equation}
+An estimate on $\mu$ is obtained by maximizing the likelihood function~\ref{eq:poisson} with respect to all the parameters.  
 
-%%%%%%%
 
-%A binned maximum likelihood fit is performed to get the signal strength $\mu$. The likelihood function is written as:
-%\begin{equation} \label{eq:Lh1}
-% \end{equation}
- 
-% $P$ is the Poisson probability terms over all the histogram bins:
 
-% \begin{equation} \label{eq:Lh2}
-% P\left( \mu | \mu s +b \right)  =  \prod_{i=1}^{N_{bins}} \frac{{ (\mu s_{i} %(\theta)+ b_{i}(\theta))^{N_{i}} e^{ - (\mu s_{i}(\theta) + b_{i}(\theta))} } %}{{N_{i}!}}
-% \end{equation}
 
-%where $\mu s_{i }$, $b_{i }$ is the expected number of signal and background events in bin i, and $N_{i}$ is the number of observed events in the bin. 
-%The $p\left( \tilde{\theta} | \theta \right)$ term of equation~\ref{eq:Lh1} is added to represent the additional systematic effects considered in the analysis. This term is usually referred to as prior. 
-
-%Assuming not correlated uncertainties, this term is given by the product of all single uncertainty priors; $ p\left( \tilde{\theta} | \theta \right) =  \prod_{j}p_{j}\left( \tilde{\theta_{j}} | \theta_{j} \right)$, where j is running over all uncertainties and  $\theta_{j}$ is the nuisance parameter associated to the source of systematic uncertainty j. Each of the terms represents the probability of the uncertainty to have a true value equal to $\theta_{j}$ given the best estimate $ \tilde{\theta_j}$ obtained from an auxiliary measurement. 
-%In this analysis, priors are considered to be Gaussian distributed for the majority of uncertainties. $\theta_{j} $ are scaled to $\theta_{j} =0$ for the nominal expectation, and $\theta_{j} = \pm 1$ is scaled to the $\pm 1 \sigma$ variations of the systematic source.
-%This parametrization is convenient in order to easily spot constrained nuisance parameters that might be problematic. %Log-normal priors are also used in the case of uncertainties with only normalizations effects.
-
-An estimate on $\mu$ is obtained by maximizing the likelihood function with respect to all the parameters. The test statistic $q_{\mu}$ is constructed with:
+The test statistic $q_{\mu}$ is constructed with:
 \begin{equation}
 q_{\mu}=2 \log \left(\frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}_{\mu}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}\right)
 \end{equation}
