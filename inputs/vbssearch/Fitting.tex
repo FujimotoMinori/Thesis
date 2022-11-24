@@ -114,7 +114,7 @@ where the P is the Poisson probability terms:
 $s_i$ and $b_i$ is the expected number of the signal and the background events yield in bin $i$, and $N_i$ is the numbers of the observed events from data in the bin. 
 The $\mu$ is also called as the parameter of interest (POI). $\theta$ is a set of nuisance parameters (NPs) associated with each systematic uncertainty. $\theta$ affects the signal and background yields so it can be written like $s_{i}=s_{i}(\theta)$ and $b_{i}=b_{i}(\theta)$. 
 The second term in equation~\ref{eq:poisson} is often called penalty term, to represent the supplementary information of the systematic uncertainty effect. It is a product from all single uncertainty $\theta_j$; $G(\theta) = \prod_{j}G_{j}(\theta_{j}$). 
-In this analysis, this term is given by the Gaussian distribution with a standard deviation of $\sigma = 1$. It is designed so that $\theta_j = \pm 1$ corresponds to the $\pm 1 \sigma$ variations of the systematic source. 
+In this analysis, this term is given by the Gaussian distribution with a standard deviation of $\sigma = 1$. It is designed so that $\theta_j = 0$ is at its nominal value, and $\theta_j = \pm 1$ corresponds to the $\pm 1 \sigma$ variations of the systematic source. 
 Some parameters for example Z+jets background normalization factors are called floating parameters, which is determined completely from the data and do not have this penalty terms.
 
 The statistical uncertainties of the total background is also included to the likelihood function as $\gamma$ parameter. 
@@ -135,20 +135,27 @@ The poisson distribution is expected for the gamma parameters, conventionally th
 %\end{equation}
 An estimate on $\mu$ is obtained by maximizing the likelihood function~\ref{eq:poisson} with respect to all the parameters.  
 
-
-
-
-The test statistic $q_{\mu}$ is constructed with:
+The profile likelihood is given to test a hypothesized value of $\mu$:
 \begin{equation}
-q_{\mu}=2 \log \left(\frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}_{\mu}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}\right)
+\lambda(\mu) = \frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}_{\mu}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}
 \end{equation}
-where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize the likelihood and \hat{\hat{\theta}} are the nuisance parameter values that maximize the likelihood for a given value of $\mu$. 
-%p-value and one-sided CL upper limit
-This test statistic is used to measure the compatibility of the hypothesis and the observed data by deriving the p-value:
+where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize $\mathcal{L}$, and $\hat{\hat{\theta}}$ is the best fit value that masimize $\mathcal{L}$ for a certain signal strength $\mu$.
+A test statistic is constructed with:
+\begin{equation}
+q_{\mu}= -2 \log \lamda (\mu)
+\end{equation}
+The higher $q_{\mu}$ values show the incompatibility of a specific hypothesis $\mu$ and the observed data.
+% need this?
+The level of the incompatibility is quantified by the p-value:
 \begin{equation}
 p_{\mu}=\int_{q_{\mu, \mathrm{obs}}}^{\infty} f\left(q_{\mu} \mid \mu\right) d q_{\mu}
 \end{equation}
-where the $q_{\mu, \mathrm{obs}}$ is the value of the statistic $q_{\mu}$ observed from the data and $f\left(q_{\mu} \mid \mu\right)$ denotes the probability density function (pdf) of $q_{\mu}$ under the assumption of the signal strength $\mu$.
+where the $q_{\mu, \mathrm{obs}}$ is the value of the test statistic $q_{\mu}$ observed from the data, and $f\left(q_{\mu} \mid \mu\right)$ denotes the probability density function (pdf) of $q_{\mu}$ under the assumption of the signal strength $\mu$.
+%
+The significance Z is estimated by calculating the $q_{\mu}$ for the background only hypothesis,
+
+
+%p-value and one-sided CL upper limit
 %The $p_0$ is case is used for rejecting the background only hypothesis ($\mu = 0$).
 The p-value is often converted into an equivalent significance, Z:
 \begin{equation}
