@@ -69,37 +69,14 @@ Fiducial cross-section is evaluated by scailing the measured signal strength $\m
 \mu = \frac{\sigma_{EW VVjj \mathrm{, \ obs}}}{\sigma_{EW VVjj \mathrm{, \ SM}}}
 \end{equation}
 where $\sigma_{EW VVjj \mathrm{, \ obs}}$ is the cross-section of the EW VV+jj process observed with data, the exact fiducial cross section we finally want to measure.
-The $\mu$ will be obtained in section~\ref{sec:likelihood}.
-
-\section{Fitting setups}
-A simultaneous fit to all the merged and resolved signal and control regions is performed.
-The final discriminant in each region is summarized in table.
-\begin{table}[htbp]
- \footnotesize
-\begin{center}
-\begin{tabular}{ | c | c | c | c |} \hline
-                      & 0-lepton        & 1-lepton       & 2-lepton  \\ \hline \hline
-Merged HP SR          &  RNN score      &  RNN score     & RNN score     \\ \hline
-Merged LP SR          &  RNN score      &  RNN score     & RNN score     \\ \hline
-Resolved SR           &  RNN score      &  RNN score     & RNN score     \\ \hline \hline
-V+jet Merged CR       & $m^{tag}_{jj}$  & $m^{tag}_{jj}$ & $m^{tag}_{jj}$\\ \hline 
-V+jet Resolved CR     & $m^{tag}_{jj}$  & $m^{tag}_{jj}$ & $m^{tag}_{jj}$\\ \hline
-Top Merged CR         &                 & yields         &               \\ \hline
-Top Resolved CR       &                 & yields         &               \\ \hline
-\end{tabular}
-\caption{\label{tab:discriminant} Final discriminant in each region used in the fitting. }
-\end{center}
-\end{table}
-In the signal regions the RNN score is used, while in the CRs the $m^{tag}_{jj}$ is employed in order to give a better constrains to the $m^{tag}_{jj}$ reweighting uncertainty. In the Top CR single bin setting is adapted since this CR is for constraining $t\bar{t}$ background normalization and there is no need to use the shape. 
-The background is estimated using the MC for the RNN shape in SRs, while the normalization is estimated using the data in CRs.
-The normalization in SR is extrapolated from the CR. 
-The ratio of the normalization in SR and in CR rely on the nominal MC modeling, while the theoretical variation is taken into account as systematic as described in section~\ref{sec:TheoryUnc}.
-The another NP which changes the ratio of the SR and CR is the uncertainties on boson tagging scale factor, as described in section~\ref{sec:ExperimUnc}.
-All systematic uncertainties are included in the fit as nuisance parameter. Since the definition of the CR is basically same but inverted the mass window or the boson tagging, it is designed that most of the NPs are expected to be canceled each other out.
+How to obtain $\mu$ is described in section~\ref{sec:likelihood}.
+%The $\mu$ will be obtained in section~\ref{sec:likelihood}.
 
 \section{Likelihood function definition}
 \label{sec:likelihood}
-Binned maximum likelihood fit is performed to get the signal strength $\mu$. The likelihood fuction is written as:
+Binned maximum likelihood fit is performed to get the signal strength $\mu$. 
+%Following description is adapted from Ref.~\cite{} and the implementation is done with RooStat tools~\cite{}.
+The likelihood function is written as:
 \begin{equation}
 \label{eq:poisson}
 \mathcal{L}(\mu, \theta) = \operatorname{P}\left(N_{i} \mid \mu s_{i}+b_{i}\right) \cdot G(\theta) 
@@ -114,11 +91,10 @@ where the P is the Poisson probability terms:
 $s_i$ and $b_i$ is the expected number of the signal and the background events yield in bin $i$, and $N_i$ is the numbers of the observed events from data in the bin. 
 The $\mu$ is also called as the parameter of interest (POI). $\theta$ is a set of nuisance parameters (NPs) associated with each systematic uncertainty. $\theta$ affects the signal and background yields so it can be written like $s_{i}=s_{i}(\theta)$ and $b_{i}=b_{i}(\theta)$. 
 The second term in equation~\ref{eq:poisson} is often called penalty term, to represent the supplementary information of the systematic uncertainty effect. It is a product from all single uncertainty $\theta_j$; $G(\theta) = \prod_{j}G_{j}(\theta_{j}$). 
-In this analysis, this term is given by the Gaussian distribution with a standard deviation of $\sigma = 1$. It is designed so that $\theta_j = 0$ is at its nominal value, and $\theta_j = \pm 1$ corresponds to the $\pm 1 \sigma$ variations of the systematic source. 
+In this analysis, this term is given by the Gaussian distribution with a standard deviation of $\sigma = 1$. It is designed so that $\theta_j = 0$ corresponds to the nominal value, and $\theta_j = \pm 1$ corresponds to the $\pm 1 \sigma$ variations of the systematic source. 
 Some parameters for example Z+jets background normalization factors are called floating parameters, which is determined completely from the data and do not have this penalty terms.
-
 The statistical uncertainties of the total background is also included to the likelihood function as $\gamma$ parameter. 
-The additinal nuisance parameter is added to the initial $\mathcal{L}$ as $\gamma_i$ for each bin, where $\gamma_i$ is the total statistical uncertainty of a specific histogram bin i. 
+The additinal nuisance parameter called gamma parameter is also added to the initial $\mathcal{L}$ as $\gamma_i$ for each bin, where $\gamma_i$ is the total statistical uncertainty of a specific histogram bin i. 
 The poisson distribution is expected for the gamma parameters, conventionally they are paremetrized so that the nominal expectation is 1 and its variation corresponds to $\pm 1 \sigma$, where the $\sigma$ is the MC statistical uncertainty of the bin i.
 %\begin{equation}
 %{Pois}\left(N_{i} \mid \mu s_{i}+\gamma_{i}b_{i}\right)
@@ -137,48 +113,103 @@ An estimate on $\mu$ is obtained by maximizing the likelihood function~\ref{eq:p
 
 The profile likelihood is given to test a hypothesized value of $\mu$:
 \begin{equation}
-\lambda(\mu) = \frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}_{\mu}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}
+\lambda(\mu) = \frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}
 \end{equation}
-where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize $\mathcal{L}$, and $\hat{\hat{\theta}}$ is the best fit value that masimize $\mathcal{L}$ for a certain signal strength $\mu$.
-A test statistic is constructed with:
+where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize $\mathcal{L}$, and $\hat{\hat{\theta}}$ is the best fit value that maximize $\mathcal{L}$ for a certain signal strength $\mu$.
+A test statistic to test $\mu$ is constructed with:
 \begin{equation}
-q_{\mu}= -2 \log \lamda (\mu)
+t_{\mu}= -2 \log \lambda (\mu)
 \end{equation}
-The higher $q_{\mu}$ values show the incompatibility of a specific hypothesis $\mu$ and the observed data.
-% need this?
+The higher $t_{\mu}$ values correspond to increasing incompatibility between a specific hypothesis $\mu$ and the observed data.
 The level of the incompatibility is quantified by the p-value:
 \begin{equation}
-p_{\mu}=\int_{q_{\mu, \mathrm{obs}}}^{\infty} f\left(q_{\mu} \mid \mu\right) d q_{\mu}
+p_{\mu}=\int_{t_{\mu, \mathrm{obs}}}^{\infty} f\left(t_{\mu} \mid \mu\right) d t_{\mu}
 \end{equation}
-where the $q_{\mu, \mathrm{obs}}$ is the value of the test statistic $q_{\mu}$ observed from the data, and $f\left(q_{\mu} \mid \mu\right)$ denotes the probability density function (pdf) of $q_{\mu}$ under the assumption of the signal strength $\mu$.
+where the $t_{\mu, \mathrm{obs}}$ is the value of the test statistic $t_{\mu}$ observed from the data, and $f\left(t_{\mu} \mid \mu\right)$ denotes the probability density function (pdf) of $t_{\mu}$ under the assumption of the signal strength $\mu$.
 %
-The significance Z is estimated by calculating the $q_{\mu}$ for the background only hypothesis,
-
-
-%p-value and one-sided CL upper limit
-%The $p_0$ is case is used for rejecting the background only hypothesis ($\mu = 0$).
 The p-value is often converted into an equivalent significance, Z:
 \begin{equation}
 Z=\Phi^{-1}(1-p)
 \end{equation}
 where $\Phi^{-1}$ is the inverse of the cumulative standard Gaussian.
-Typically significance of Z = 5~$\sigma$ is used as an appropriate level to constitute a discovery ($p_0 = 2.87 \times 10^{-7})$). For excluding a signal hypothesis, threshold of the p-value is set at 0.05 (i.e., 95$\%$ confidence level, Z = 1.64~$\sigma$).
-To obtain the p-value, $f\left(q_{\mu} \mid \mu \right)$ is required and this can be derived by sampling the distributions with the Monte Carlo method, which is a high computationally complex job. Instead, non-central $\chi^2$ distribution can be used.
+A given hypothesis is excluded if the p-value is sufficiently small, that is, Z is sufficiently large.
+
+To reject the background-only hypothesis and claim the discovery a new phenomenon, the significance is estimated for the background-only hypothesis, corresponds to $\mu = 0$.
+This background-only hypothesis in case of $p_0$ is regarded as null hypothesis. 
+This is to be tested against the alternative hypothesis, which includes both background and the EW VV+jj signal.
+Typically significance of Z = 5~$\sigma$ is used as an appropriate level to constitute a discovery ($p_0 = 2.87 \times 10^{-7}$). 
+%p-value and one-sided CL upper limit
+%The $f\left(t_{\mu} \mid \mu\right)$ 
+
+%On the other hand, for purpose of excluding a signal hypothesis, threshold of the p-value is often set at 0.05 (i.e., 95$\%$ confidence level, Z = 1.64~$\sigma$).
+%To obtain the p-value, $f\left(q_{\mu} \mid \mu \right)$ is required and this can be derived by sampling the distributions with the Monte Carlo method, which is a high computationally complex job. Instead, non-central $\chi^2$ distribution can be used.
 %pu here reference
 %for aQGC limit - CI or CL limit
 
-\section{Smoothing}
-The smoothing algorithm is applied to alleviate statistical fluctuations, that might create suspicious effects in the fit.
+\section{Fitting setups}
+A simultaneous likelihood fit to all 18 merged and resolved signal and control regions is performed.
+The final discriminant in each region is summarized in table.
+\begin{table}[htbp]
+ \footnotesize
+\begin{center}
+\begin{tabular}{ | c | c | c | c |} \hline
+                      & 0-lepton        & 1-lepton       & 2-lepton  \\ \hline \hline
+Merged HP SR          &  RNN score      &  RNN score     & RNN score     \\ \hline
+Merged LP SR          &  RNN score      &  RNN score     & RNN score     \\ \hline
+Resolved SR           &  RNN score      &  RNN score     & RNN score     \\ \hline \hline
+V+jet Merged CR       & $m^{tag}_{jj}$  & $m^{tag}_{jj}$ & $m^{tag}_{jj}$\\ \hline 
+V+jet Resolved CR     & $m^{tag}_{jj}$  & $m^{tag}_{jj}$ & $m^{tag}_{jj}$\\ \hline
+Top Merged HP CR      &                 & yields         &               \\ \hline
+Top Merged LP CR      &                 & yields         &               \\ \hline
+Top Resolved CR       &                 & $m^{tag}_{jj}$ &               \\ \hline
+\end{tabular}
+\caption{\label{tab:discriminant} Final discriminant in each region used in the fitting. }
+\end{center}
+\end{table}
+In the signal regions the RNN score is used, while in the CRs the $m^{tag}_{jj}$ is employed in order to give a better constrains to the $m^{tag}_{jj}$ reweighting uncertainty. 
+In the Top merged CRs single bin setting is adapted since these CR is for constraining $t\bar{t}$ background normalization and there is no need to use the shape. 
+The background is estimated using the MC for the RNN shape in SRs, while the normalization is estimated using the data in CRs.
+The normalization in the SR is designed to be extrapolated from the CR with the ratio of SR/CR obtained by the nominal MC modeling.
+As the NPs which change the ratio of the normalization of SR/CR, theoretical variation and the boson tagging scale factor uncertainty is taken into account.
+All systematic uncertainties are included in the fit as NPs with penalty terms or floating parameters as described in section~\ref{sec:likelihood}. Since the definition of the CR is basically same as SR but inverted the mass window or the boson tagging, it is designed that most of the NPs are expected to be canceled each other out.
+
+The normalization of the dominant background is assigned as the floating parameter, while background with small contribution which has small impact on the signal extraction is assigned as the NP with penalty term of a certain amount of the error.
+The treatment of each background normalization is shown in table~\ref{tab:bkgnorm}
+The amount of the error of the penalty term is estimated by comparing the nominal MC yields to that of the alternative sample in each analysis region.
+An extrapolation uncertainty in the combined fit is also added to take into account differences in the background composition coming from the different lepton channels. The error is obtained from the double ratio between the channel with the largest yield and another channel.
+\begin{table}[htbp]
+ \footnotesize
+\begin{center}
+\begin{tabular}{ | c | c | c | c |} \hline
+Normalization name        & treatment   & \multicolumn{2}{|c|}{error of the penalty term} \\ \hline \hline
+\multicolumn{2}{|c|}{}                     & Merged    & Resolved  \\ \hline 
+Z norm.             & Float       &      &\\ \hline
+W norm.             & Float       &       &\\ \hline 
+$t\bar{t}$ norm.    & Float       &       &\\ \hline
+diboson norm.     &             & 0.5    &  0.3 \\ \hline
+single top norm           &             & \multicolumn{2}{|c|}{0.3}\\ \hline \hline
+Z norm 2lep to 0lep        &             & 0.234  &   0.293 \\ \hline
+Z norm 2lep to 1lep       &             & 0.454  &  0.410  \\ \hline
+W norm 1lep to 0lep       &             & 0.127     & 0.094\\ \hline
+$t\bar{t}$ norm 1lep to 0lep     &             & 0.304     & 0.601\\ \hline
+diboson norm 1lep to 0lep    &             & 0.061     &0.078 \\ \hline
+diboson norm 1lep to 2lep       &             & 0.152     & 0.098\\ \hline
+\end{tabular}
+\caption{\label{tab:bkgnorm} The treatment of the background normalization. }
+\end{center}
+\end{table}
+
+\section{Smoothing and pruning}
+The smoothing algorithm is applied to the the variation of the systematic uncertainties enter into the likelihood fit to alleviate statistical fluctuations, that might create suspicious effects in the fit.
 During this procedure bins are migrated from left to right until the statistical uncertainty per bin to be less than 5$\%$. The nominal and smoothed variation histograms are then compared to derive the up and down uncertainties. The resulting uncertainties are associated to the initial finer binned distribution. 
 
-\section{Pruning}
-Systematic variations that have a very small effect and are negligible for the measurement are pruned away. The uncertainties removed are:
+Systematic variations that have a very small effect and are negligible for the measurement are neglected for speeding up the fitting, this procedure is called pruning. 
+The uncertainties removed are:
   \begin{itemize}
-   \item  Normalization uncertainties with a less than 5$\%$ relative variation effects or same sign effects (relative variation being positive (or negative) for both the up and down uncertainty)
-   \item  Shape uncertainties with less than 0.5$\%$ effect for all bins of the distribution or missing one of the up or down variations.
+   \item  Normalization uncertainties with a less than 1~$\%$ relative variation effects or same sign effects (relative variation being positive (or negative) for both the up and down uncertainty)
+   \item  Shape uncertainties with less than 1~$\%$ effect for all bins of the distribution or missing one of the up or down variations.
     \end{itemize}
-    
-The nominal fit result in terms of $\mu$ and $\sigma_{\mu}$ is obtained by maximizing the likelihood function with respect to all parameters which was not pruned away.
+%The nominal fit result in terms of $\mu$ and $\sigma_{\mu}$ is obtained by maximizing the likelihood function with respect to all parameters which was not pruned away.
 %This is referred to as the maximized log-likelihood value, MLL.
 %The test statistic $q_\mu$ is then constructed according to the profile likelihood: $q_\mu = 2 \ln (\mathcal{L} (\mu, \hat{\hat{\theta_\mu}})/\mathcal{L} (\hat{\mu}, \hat{\theta}))$, where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize the likelihood (with the constraint $0 \leq \hat{\mu} \leq \mu$), and $\hat{\hat{\theta}}_\mu$ are the nuisance parameter values that maximize the likelihood for a given $\mu$.
 %This test statistic is used to measure the compatibility of the background-only model with the observed data and for exclusion intervals derived with the $CL_s$ method~\cite{Cowan:2010js}.
