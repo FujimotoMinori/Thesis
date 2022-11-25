@@ -74,6 +74,7 @@ How to obtain $\mu$ is described in section~\ref{sec:likelihood}.
 
 \section{Likelihood function definition}
 \label{sec:likelihood}
+This section describes how to extract the signal strength $\mu$ and the significance.
 Binned maximum likelihood fit is performed to get the signal strength $\mu$. 
 %Following description is adapted from Ref.~\cite{} and the implementation is done with RooStat tools~\cite{}.
 The likelihood function is written as:
@@ -116,6 +117,7 @@ The profile likelihood is given to test a hypothesized value of $\mu$:
 \lambda(\mu) = \frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}
 \end{equation}
 where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize $\mathcal{L}$, and $\hat{\hat{\theta}}$ is the best fit value that maximize $\mathcal{L}$ for a certain signal strength $\mu$.
+
 A test statistic to test $\mu$ is constructed with:
 \begin{equation}
 t_{\mu}= -2 \log \lambda (\mu)

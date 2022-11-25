@@ -1,6 +1,6 @@
 \chapter{Event selection}
 \label{chap:eventselection}
-The event selection has been optimized to identify the phase space which enhances the signal with respect to the background.
+The event selection has been optimized for the SM VBS signals against the background processes.
 First the object definition is shown in section~\ref{sec:object}, then the detail of the whole event selection is presented in section~\ref{sec:eventselection}.
 \section{Object definition}
 \label{sec:object}
@@ -8,6 +8,10 @@ In this section object definition employed in the analysis is shown.
 %\subsection{Triggrs}
 %Trigger selection is applied in order to select events that are interesting. Single 
 \subsection{Leptons}
+The electrons and muons used in this analysis are selected at first.
+"Tight" or "Loose" selection is applied, as the table~\ref{} shows. 
+Both electrons and muons are required to have a transvers impact aparameter significance relative to the beam line ($|d_0/|sigma_{d_0}|$) cut.
+They are also required to satisfy isolation citeria based on both track and calorimeter isolation variables by requiring several isolation critaria.
 
 \subsection{small-R jet}
 Small-R jets are used to reconstruct the hadronically decaying boson.
@@ -16,10 +20,9 @@ Small-R jets are used to reconstruct the hadronically decaying boson.
 \section{Event selection}
 \label{sec:eventselection}
 %overview
-First the preselection cuts are applied including basic event cleaning and the trigger requirements, then the specific event selection is applied to the each 0,1,2-lepton channels.
-For the main event selection, first the selection of the $W/Z$ boson decaying leptonically is selected. 
-The events are categorized into two regions depends on the type of the jets included. The events has one or more large-R jets are categorized as merged category, otherwise resolved category.  
-Then in each channel, the forward jets and the hadronically decaying boson is selected and the Signal region (SR) and the Control region (CR) is defined separately in merged category and resolved category. Finally the selection to enhance the VBS topology is applied before using the machine learning approach to get the final discriminant. The SRs are the regions optimized to maximize the significance of the signal over background, and the CRs are region which is the specifical background-dominant, used for constraining the backgrounds. 
+The preselection cuts are applied including event cleaning and the trigger requirements, followed by the specific event selection to the each 0,1,2-lepton channel.
+For the main event selection, first the $W/Z$ boson decaying leptonically is selected. 
+A pair of the forward jets to enhance the VBS topology is selected, and the signal region (SR) and the control region (CR) are defined by the hadronically decaying W/Z boson reconstruction. Several CRs dedicated to main background processes (V+jets, $t\bar{t}$) are defined separately, and they are used to estimate the normalization of the simulated background events from the data.
 
 %\section{Preselection}
 %Firstly some pre-selection on the Triggers, event cleaning selections are applied to get the available events and to reject the problematic events. The same selection is applied both for data and MC samples.
