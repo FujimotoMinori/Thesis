@@ -1,6 +1,6 @@
 \chapter{Event selection}
 \label{chap:eventselection}
-The event selection has been optimized for the SM VBS signals against the background processes.
+The event selection has been optimized for the EW VV+jj signals against the background processes.
 First the object definition is shown in section~\ref{sec:object}, then the detail of the whole event selection is presented in section~\ref{sec:eventselection}.
 \section{Object definition}
 \label{sec:object}
@@ -8,15 +8,20 @@ In this section object definition employed in the analysis is shown.
 %\subsection{Triggrs}
 %Trigger selection is applied in order to select events that are interesting. Single 
 \subsection{Leptons}
-The electrons and muons used in this analysis are selected at first.
-"Tight" or "Loose" selection is applied, as the table~\ref{} shows. 
-Both electrons and muons are required to have a transvers impact aparameter significance relative to the beam line ($|d_0/|sigma_{d_0}|$) cut.
-They are also required to satisfy isolation citeria based on both track and calorimeter isolation variables by requiring several isolation critaria.
+Electrons are required to have: $p_T$ > 30~GeV in 1-lepton channel and $p_T$ > 7~GeV in 2-lepton channel, and pseudorapidity $|\eta|$ < 2.47 while muons should satisfy: $p_T$ > 30~GeV in 1-lepton channel and $p_T$ > 7~GeV in 2-lepton channel, and $|\eta|$ < 2.5. 
+"Tight" identified electron in "tight" isolation criteria, described in chapter~\ref{chap:reconstruction}, is used for 1-lepton channel, while "Loose" electron candidate in "loose" isolation criteria only in $p_T < 100~$GeV region is used in 2-lepton channel. 
+Both electrons and muons are required to have a transverse impact parameter significance relative to the beam line ($|d_0|/\sigma_{d_0}|$) smaller than 5 and 3, respectively, and a logitudinal impact parameter $|z_0 \times sin \theta | < 0.5$~mm relative to the primary vertex.
 
-\subsection{small-R jet}
-Small-R jets are used to reconstruct the hadronically decaying boson.
-\subsection{large-R jet}
-\textcolor{blue}{Object definition of triggers, leptons, jets are needed here ??}
+\subsection{Jets}
+\noindent\textbf{\sf{Small-R jets}} \\ 
+Small-R jets are reconstructed using the PFlow algorithm described in chapter~\ref{chap:reconstruction}.
+Small-R jets in $|\eta|$ < 2.5 (central jets) are required to have a $p_T$ > 20~GeV while jets with $|\eta|$ > 2.5 (forward jets) requires $p_T$ > 30~GeV. 
+In order to reassure that the selected jets are coming from the hard-scatter vertex, the "tight" JVT cut, introduced in chapter~\ref{chap:reconstruction}, is applied for jets with $p_T$ < 60~GeV and $|\eta|$ < 2.4. \\ 
+\\
+\noindent\textbf{\sf{Large-R jets}} \\ 
+Large-R jets are required to have $p_T$ > 200~GeV, $|\eta|$ < 2.0 and $m > $50~GeV. 
+In order to to classify a selected large-R jet as decaying from a W/Z boson as opposed to a jet originating from gluons or quarks, a 3-variable W/Z tagger described in chapter~\ref{chap:reconstruction} is employed. 
+
 \section{Event selection}
 \label{sec:eventselection}
 %overview
@@ -78,7 +83,7 @@ To suppress its contribution, several cuts are applied related to the direction 
 \noindent\textbf{\sf{1-lepton}}  \\
 One tight-lepton with $p_T > 28~\mathrm{GeV}$ and $E^{miss}_T > 80~\mathrm{GeV}$ is required. In 1-lepton channel there are significant contribution from t$\bar{\mathrm{t}}$ background hence b-veto is applied to all small-R jets to reduce its contribution.\\ \\
 \noindent\textbf{\sf{2-lepton}}  \\
-Two same flavor loose-leptons with the leading (sub leading) lepton satisfying $p_T$ > 28~GeV ( $p_T$ > 20~GeV) and an invariant mass of the lepton system ( m$_{ll}$ ) close to the Z boson mass are requested. Figure~\ref{fig:2lepLeptons} shows nice peak of the invariant mass of the two selected leptons around the Z boson mass. Depending on the lepton pair (ee, $\mu\mu$) different mass
+Two same flavor loose-leptons with the leading (sub leading) lepton satisfying $p_T$ > 27~GeV ( $p_T$ > 27~GeV) and an invariant mass of the lepton system ( m$_{ll}$ ) close to the Z boson mass are requested. Figure~\ref{fig:2lepLeptons} shows nice peak of the invariant mass of the two selected leptons around the Z boson mass. Depending on the lepton pair (ee, $\mu\mu$) different mass
 window requirements are applied; For electrons, $83<m_{ee}<99 ~\mathrm{GeV}$ is applied. For muons $p_{T,ll}$-dependent mass window is required in order to recover the dimuon mass resolution degradation at high-$p_{T,ll}$ \cite{EXOT-2016-29}.
 \begin{equation*}
 \left(85.6-0.0117 p_{\mathrm{T}, \ell \ell}\right)<m_{\mu \mu}<\left(94.0+0.0185 p_{\mathrm{T}, \ell \ell}\right) ~\mathrm{GeV}

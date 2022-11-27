@@ -91,9 +91,9 @@ where the P is the Poisson probability terms:
 %\end{equation}
 $s_i$ and $b_i$ is the expected number of the signal and the background events yield in bin $i$, and $N_i$ is the numbers of the observed events from data in the bin. 
 The $\mu$ is also called as the parameter of interest (POI). $\theta$ is a set of nuisance parameters (NPs) associated with each systematic uncertainty. $\theta$ affects the signal and background yields so it can be written like $s_{i}=s_{i}(\theta)$ and $b_{i}=b_{i}(\theta)$. 
-The second term in equation~\ref{eq:poisson} is often called penalty term, to represent the supplementary information of the systematic uncertainty effect. It is a product from all single uncertainty $\theta_j$; $G(\theta) = \prod_{j}G_{j}(\theta_{j}$). 
+The second term in equation~\ref{eq:poisson}, $G(\theta)$ is often called penalty term, to represent the supplementary information of the systematic uncertainty effect, and to constraint each uncertainty. It is a product from all single uncertainty $\theta_j$; $G(\theta) = \prod_{j}G_{j}(\theta_{j}$). 
 In this analysis, this term is given by the Gaussian distribution with a standard deviation of $\sigma = 1$. It is designed so that $\theta_j = 0$ corresponds to the nominal value, and $\theta_j = \pm 1$ corresponds to the $\pm 1 \sigma$ variations of the systematic source. 
-Some parameters for example Z+jets background normalization factors are called floating parameters, which is determined completely from the data and do not have this penalty terms.
+Some parameters for example Z+jets background normalization factors do not have this penalty terms and are determined completely from the data, called floating parameters.
 The statistical uncertainties of the total background is also included to the likelihood function as $\gamma$ parameter. 
 The additinal nuisance parameter called gamma parameter is also added to the initial $\mathcal{L}$ as $\gamma_i$ for each bin, where $\gamma_i$ is the total statistical uncertainty of a specific histogram bin i. 
 The poisson distribution is expected for the gamma parameters, conventionally they are paremetrized so that the nominal expectation is 1 and its variation corresponds to $\pm 1 \sigma$, where the $\sigma$ is the MC statistical uncertainty of the bin i.
@@ -112,7 +112,7 @@ The poisson distribution is expected for the gamma parameters, conventionally th
 %\end{equation}
 An estimate on $\mu$ is obtained by maximizing the likelihood function~\ref{eq:poisson} with respect to all the parameters.  
 
-The profile likelihood is given to test a hypothesized value of $\mu$:
+In order to test a hypothesized value of $\mu$, the profile likelihood is given:
 \begin{equation}
 \lambda(\mu) = \frac{\mathcal{L}\left(\mu, \hat{\hat{\theta}}\right)}{\mathcal{L}(\hat{\mu}, \hat{\theta})}
 \end{equation}
@@ -176,7 +176,7 @@ As the NPs which change the ratio of the normalization of SR/CR, theoretical var
 All systematic uncertainties are included in the fit as NPs with penalty terms or floating parameters as described in section~\ref{sec:likelihood}. Since the definition of the CR is basically same as SR but inverted the mass window or the boson tagging, it is designed that most of the NPs are expected to be canceled each other out.
 
 The normalization of the dominant background is assigned as the floating parameter, while background with small contribution which has small impact on the signal extraction is assigned as the NP with penalty term of a certain amount of the error.
-The treatment of each background normalization is shown in table~\ref{tab:bkgnorm}
+The treatment of each background normalization is shown in table~\ref{tab:bkgnorm}.
 The amount of the error of the penalty term is estimated by comparing the nominal MC yields to that of the alternative sample in each analysis region.
 An extrapolation uncertainty in the combined fit is also added to take into account differences in the background composition coming from the different lepton channels. The error is obtained from the double ratio between the channel with the largest yield and another channel.
 \begin{table}[htbp]
