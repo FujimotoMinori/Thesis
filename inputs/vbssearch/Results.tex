@@ -3,6 +3,10 @@
 
 This chapter shows the results of the likelihood fit introduced in section~\ref{sec:likelihood}.
 \section{Post fit plots}
+The distributions used in the final fitting are shown to check if it performed well.
+The $m^{tag}_{jj}$ distributions in each CRs after fitting are shown in figure~\ref{fig:postCR} and \ref{fig:postCRTop}.
+The MCs match to the data well in all CRs used in the fitting.
+%Control region
 \begin{figure}[H]
     \centering
     %0lep
@@ -27,65 +31,48 @@ This chapter shows the results of the likelihood fit introduced in section~\ref{
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log} 
     \caption{Top CR}
-    \label{fig:postCR}
+    \label{fig:postCRTop}
 \end{figure}
 
+The RNN score distributions in each SRs after fitting are shown in figure~\ref{fig:postSR}.
+Basically the MCs match to the data well again.
+
+%signal region
 \begin{figure}[H]
     \centering
     %0lep
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1log}
-    \\
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1}
     %1lep
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
+    \\
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1}
     \\
     %2lep
-    \caption{V+jets CR}
-    \label{fig:postCR}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
+    \\
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1}
+    \caption{SR}
+    \label{fig:postSR}
 \end{figure}
+
+\section{Event yields after fitting}
+\label{sec:eventyields}
+
+The observed event yields after fitting is shown in table~\ref{}.
+All the observed events yields in each region are compatible with the SM expectations.
+%event yields
+The summary of the normalization factor for each background component is shown in table~\ref{}. 
+%norm factors
+
+\section{Impact of nuisance parameters on signal strength}
+
+\section{The observed signal strength}
 
 \textcolor{blue}{revised up to this line}
-\section{Event yields}
-\label{sec:eventyields}
-The numbers of estimate and observed yields are shown in the table.
-\subsection{Prefit event yields}
-\subsection{Postfit event yields}
-he most significant backgrounds are W/Z + jets and W+jets in all of three analysis region.
-\section{Fitted distributions}
-Figure~\ref{fig:fit_2lep_prefit} shows the pre-fit plots of the analysis regions entering in the 2-lep only fit model. There are 3 SRs and Z+jets CRs;
-in particular, \mjjtag distributions in \Zjets CRs are shown and the RNN scores distributions are shown in the SRs, only the left side bins are plotted using real data as well. The MC normalization shows a discrepancy compared to data, while the slope observed in Chapter is corrected with the reweighting, which is to be fitted in the final fitting.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefit.pdf}
-    \\
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefit.pdf}
-    \caption{Prefit plots for the 2 lepton channel. Data is blinded in the right bins that contain 75\% signal.}
-       \label{fig:fit_2lep_prefit}
-\end{figure}
-
-\section{Postfit plots}
-Figure~\ref{fig:fit_2lep_postfit} shows the post-fit plots of the analysis regions entering in the 2-lep fit only model. 
-The fit is performed with only the left-bins, which are the bins that contain only 75\% signal.
-In general, good agreement of the background prediction with the data within the uncertainty is observed after the fit even with only left-side bins. The discrepancy in the Z+jet background normalization  which is observed in the prefit plots seem to be fitted successfully.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1.pdf}
-    \\
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/2lep/FitResults/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1.pdf}
-    \caption{Postfit plots for the 2 lepton channel. Data is blinded in the right bins that contain 75\% signal.}
-       \label{fig:fit_2lep_postfit}
-\end{figure}
-
-\section{Nuisance Parameter Pull}
 The set of nuisance parameter pulls with Asimov dataset at full range is shown in picture~\ref{fig:fit_2lep_pullcomp}.
 The pulls are compared to the fit of the left-side only bins, but also in Asimov dataset bins.
 The strategy using only left-side bins, which include the 75\% of the signals from the right-most bins is adopted according to the unblinding strategy.
@@ -168,10 +155,3 @@ The top-two parameters are NPs relates to the Z+jet modeling issue and seen to b
        \label{fig:fit_2lep_ranking_all}
 \end{figure}
 
-\section{Results}
-\subsection{Signal Strength}
-The observed signal strength for the electroweak VVjj events in the fit for 2-lepton channel only is
-\begin{equation}
-***
-%\hat{\mu}_{8 \mathrm{TeV}}=\sigma / \sigma_{\mathrm{SM}}=0.65_{-0.40}^{+0.43}
-\end{equation}
