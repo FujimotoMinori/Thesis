@@ -2,10 +2,18 @@
 \label{chap:results}
 
 This chapter shows the results of the likelihood fit introduced in section~\ref{sec:likelihood}.
+Finally the signal strength $\mu$ is extracted and the observed significance is estimated.
+
+
+
+
 \section{Post fit plots}
+
+%\noindent\textbf{\sf{$m^{tag}_{jj}$ distributions at CRs after fitting}}\\
+\subsection{$m^{tag}_{jj}$ distributions at CRs after fitting}
 The distributions used in the final fitting are shown to check if it performed well.
 The $m^{tag}_{jj}$ distributions in each CRs after fitting are shown in figure~\ref{fig:postCR} and \ref{fig:postCRTop}.
-The MCs match to the data well in all CRs used in the fitting.
+The MC predictions match to the data well in all CRs after fitting. \\ \\
 %Control region
 \begin{figure}[H]
     \centering
@@ -20,7 +28,7 @@ The MCs match to the data well in all CRs used in the fitting.
     %2lep
      \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
       \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1log}
-    \caption{V+jets CR}
+    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in V+jets CRs in 0-lepton channel (1st line), 1-lepton channel (2nd line), and 2-lepton channel (3rd line). The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel show the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postCR}
 \end{figure}
 
@@ -30,33 +38,42 @@ The MCs match to the data well in all CRs used in the fitting.
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log} 
-    \caption{Top CR}
+    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in Top CRs in 1-lepton channel.}
     \label{fig:postCRTop}
 \end{figure}
 
-The RNN score distributions in each SRs after fitting are shown in figure~\ref{fig:postSR}.
+%\noindent\textbf{\sf{RNN score distributions at SRs after fitting}}\\
+\subsection{RNN score distributions at SRs after fitting}
+The RNN score distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lep}, \ref{fig:postSR1lep}, \ref{fig:postSR2lep}.
 Basically the MCs match to the data well again.
 
 %signal region
 \begin{figure}[H]
     \centering
     %0lep
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1log}
+      \caption{SR}
+      \label{fig:postSR0lep}
+\end{figure}
+\begin{figure}[H]
+    \centering
     %1lep
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
-    \\
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1}
-    \\
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log}
+      \caption{SR}
+      \label{fig:postSR1lep}
+\end{figure}
+\begin{figure}[H]
+    \centering
     %2lep
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
-    \\
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1log}
     \caption{SR}
-    \label{fig:postSR}
+    \label{fig:postSR2lep}
 \end{figure}
 
 \section{Event yields after fitting}
@@ -154,4 +171,10 @@ The top-two parameters are NPs relates to the Z+jet modeling issue and seen to b
         \caption{Ranking plot for unconditional fit ($\mu=1$) to asimov data in the full range, for the 2 lepton channel only.}
        \label{fig:fit_2lep_ranking_all}
 \end{figure}
+
+\section{Signal strength}
+The estimated signal strength in the fit is:
+
+The corresponding observed significance is $\sigma$, which shows the observation of the EW VV+jj signal in the semileptonic final state.
+The post-fit Asimov dataset is estimated at $\sigma$. 
 
