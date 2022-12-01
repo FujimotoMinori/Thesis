@@ -75,12 +75,68 @@ Basically the MCs match to the data well.
 \section{Event yields after fitting}
 \label{sec:eventyields}
 
-The observed event yields after fitting is shown in table~\ref{}.
-All the observed events yields in each region are compatible with the SM expectations.
+The observed event yields after fitting is shown in table~\ref{tab:postyields}.
+%All the observed events yields in each region are compatible with the SM expectations.
 %event yields
-The summary of the normalization factor for each background component is shown in table~\ref{}. 
-The summary of each normalization factor extracted from the fitting is shown in table~\ref{}.
+\begin{table}[htbp]
+%\footnotesize
+\begin{center}
+\begin{tabular}{| l | l | c | c | c |} \hline
+Channel          　& Sample        & \multicolumn{3}{|l|}{Number of events} \\ \hline \hline
+\multirow{7}{*}{0-lepton} &               & Merged HP  & Merged LP  & Resolved  \\ \cline{2-5}
+                   & Z + jets     & 628.72 $\pm$ 90.2           & 2022.32 $\pm$ 257.70           & 10176.18 $\pm$ 835.19\\ 
+                   & W + jets     & 584.81 $\pm$ 79.09           & 1718.54 $\pm$ 212.92           & 8705.02 $\pm$ 762.56\\  
+                   & $t\bar{t}$   & 1547.98 $\pm$ 126.18           &  2078.74 $\pm$ 172.03          & 1763.96 $\pm$ 225.49\\ 
+                   & stop         & 158.31 $\pm$ 43.90           &   204.51 $\pm$ 58.47         & 272.51 $\pm$ 76.20  \\ 
+                   & Diboson      &  344.32 $\pm$ 97.72           &  494.00 $\pm$ 140.99          & 576.25 $\pm$ 173.62\\ \cline{2-5}
+                   & Total background    & 3264.13 $\pm$ 57.27           &  6518.10 $\pm$ 79.03          &21493.92 $\pm$ 149.35\\ \cline{2-5}
+                   & Signal       & 91.24 $\pm$ 16.56           &   79.95 $\pm$ 15.75         & 216.67 $\pm$ 39.51\\ \cline{2-5}
+                   & Data         & 3349           & 6585           &21789\\ \hline \hline
+\multirow{7}{*}{1-lepton} &               & Merged HP  & Merged LP  & Resolved  \\ \cline{2-5}
+                   & Z + jets     & 97.78 $\pm$ 44.98           & 299.70 $\pm$ 136.62           &1507.24 $\pm$ 629.85\\ 
+                   & W + jets     & 3038.75 $\pm$ 231.60           &  9385.32 $\pm$ 485.57          &58369.42 $\pm$ 933.30\\  
+                   & $t\bar{t}$   & 7101.69 $\pm$ 257.70           &  9913.70 $\pm$ 396.87          &7654.37 $\pm$ 362.61\\ 
+                   & stop         & 613.03 $\pm$ 172.73           &  861.01 $\pm$ 246.54          & 1427.80 $\pm$ 398.70\\ 
+                   & Diboson      &  1011.03 $\pm$ 271.99          &   1540.22 $\pm$ 419.99         & 1709.40 $\pm$ 481.91\\ \cline{2-5}
+                   & Total background    & 11862.28 $\pm$ 111.83            &   21999.95 $\pm$ 150.00         & 70668.23 $\pm$ 324.83\\ \cline{2-5}
+                   & Signal       & 222.57 $\pm$ 40.36           & 203.70 $\pm$ 42.62           &643.19 $\pm$ 117.27\\ \cline{2-5}
+                   & Data         & 12178           & 22158           &71272\\ \hline \hline
+\multirow{7}{*}{2-lepton} &     & Merged HP  & Merged LP               & Resolved  \\ \cline{2-5}
+        & Z + jets    &  696.15 $\pm$ 47.60  & 2152.78 $\pm$ 94.17     & 25819.34 $\pm$ 243.56\\ 
+        & W + jets    &  0.45 $\pm$ 0.04     & 1.38 $\pm$ 0.13         & 17.72 $\pm$ 2.23\\  
+        & $t\bar{t}$  &  27.15 $\pm$ 1.57    & 64.54 $\pm$ 4.06        & 873.67 $\pm$ 44.66\\ 
+        & stop        &  1.97 $\pm$ 0.58     & 3.19 $\pm$ 0.91         & 27.29 $\pm$ 7.73\\ 
+        & Diboson     &  188.50 $\pm$ 51.07  & 281.53 $\pm$ 77.62      & 572.85 $\pm$ 165.79\\ \cline{2-5}
+        & Total background   &  914.23 $\pm$ 26.09  & 2503.43 $\pm$ 43.03  & 27310.87 $\pm$ 172.00\\ \cline{2-5}
+        & Signal      &  36.11 $\pm$ 6.66    & 33.24 $\pm$ 6.99        & 172.82 $\pm$ 32.28\\ \cline{2-5}
+        & Data        &  960                 & 2516                    & 27463\\ \hline 
+\end{tabular}
+\caption{\label{tab:postyields} Number of observed and predicted events in each signal region, obtained from the log-likelihood fitting. The uncertainties combine statistical and systematic contributions. }
+\end{center}
+\end{table}
+
+The summary of the normalization factor for each background component extracted from the fitting is shown in table~\ref{tab:postnorm}. 
 %norm factors
+\begin{table}[htbp]
+ %\footnotesize
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+normalization & postfit value (in $\sigma$ unit) \\\hline
+W+jets Merged & $0.80^{+0.044}_{-0.044}$ \\
+W+jets Resolved & $1.04^{+0.045}_{-0.045}$ \\
+Z+jets Merged & $0.708^{+0.036}_{-0.036}$ \\
+Z+jets Resolved & $0.85^{+0.047}_{-0.047}$ \\
+$t\bar{t}$ Merged & $0.89^{+0.058}_{-0.058}$ \\
+$t\bar{t}$ Resolved & $1.07^{+0.048}_{-0.048}$ \\
+Diboson Merged & $1.41^{+0.69}_{-0.69}$ \\
+Diboson Resolved & $-0.071^{+0.92}_{-0.92}$ \\
+single top & $-0.46^{+0.83}_{-0.83}$ \\
+\hline
+\end{tabular}
+\caption{\label{tab:postnorm} The postfit values of background normalization. }
+\end{center}
+\end{table}
 
 \section{Impact of nuisance parameters on signal strength}
 
@@ -135,7 +191,7 @@ The summary of each normalization factor extracted from the fitting is shown in 
 %\section{Rankings}
 Ranking plots for all nuisance parameters without the bin-wise statistical uncertainties are shown in Figure~\ref{fig:fit_2lep_ranking_all}. The ranking plot shows the nuisance parameters which have large impact on the sensitivity. The ranking is derived by doing the scans of the likelihood function. First the nominal fit is performed to find the global maximum in the likelihood, and the corresponding $\hat{\mu}$. Then one nuisance parameter is fixed and scanned while all other parameters are fitted again. The scan as a function of one parameter stops once the logarithm of the likelihood decreases by 1/2 compared to the global maximum. This point corresponds to the 1~$\sigma$ uncertainty. The change of the signal strength, which is plotted as $\Delta\mu$ is evaluated here.
 This scan is done with both direction of the NP and repeated for all NPs.
-The top-two parameters are NPs relates to the Z+jet modeling issue and seen to be pulled in the pull plots. Varying these parameter by $1\sigma$ changes the signal strength by $\Delta \hat{\mu} \simeq 0.2$. The parameters which have strong impacts and highly-ranked are consistent with the parameters having strong correlations with the POI in the correlation plot, Figure~\ref{fig:fit_2lep_corr_all}.
+The top-two parameters are NPs relates to the Z+jet modeling issue and seen to be pulled in the pull plots. Varying these parameters by $1\sigma$ changes the signal strength by $\Delta \hat{\mu} \simeq 0.2$. The parameters which have strong impacts and highly-ranked are consistent with the parameters having strong correlations with the POI in the correlation plot, Figure~\ref{fig:fit_2lep_corr_all}.
 \begin{figure}[ht]
       \centering
         \includegraphics[width=0.8\textwidth]{figures/2lep/FitResults/pulls_mu_SemileptonicVBS_5_AsimovAllbins.pdf}
@@ -147,7 +203,7 @@ The top-two parameters are NPs relates to the Z+jet modeling issue and seen to b
 The estimated signal strength in the fit is:
 \begin{equation}
     %\mu = 0.982 \pm 0.217
-    \mu = 0.98^{\plus 0.22}_{\minus 0.20} = 0.98^{\plus 0.09}_{\minus 0.09}(Stat)^{\plus 0.21}_{\minus 0.18}(Syst) 
+    \mu = 0.98^{+ 0.22}_{- 0.20} = 0.98^{+ 0.09}_{- 0.09}(\mathrm{Stat})^{+ 0.21}_{- 0.18}(\mathrm{Syst}) 
 \end{equation}
-The corresponding observed (expected) significance is 5.90 (6.47)~$\sigma$, which shows the observation of the EW VV+jj signal in the semileptonic final state.
+The corresponding observed (expected) significance is 5.90 (6.47)~$\sigma$, which claims the observation of the EW VV+jj signal in the semileptonic final state.
 
