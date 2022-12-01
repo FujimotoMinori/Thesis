@@ -1,58 +1,146 @@
 %%% aQGC %%%
-\chapter{Interpretation with Effective Field Theory}
-\label{chap:aQGC}
 
-The previously obtained results are interpreted to the limits on the EFT operators. The setups for the EFT interpretation and the systematics treatments are described in this chapter.
-\section{aQGC signals for EFT interpretation}
-In the EFT interpretation approach, the dimension-8 operators are added to the standard model Lagrangian as described in Chapter~\ref{}. 
-The EFT can be parameterized by the effective Lagrangian:
+\subsection{Introduction}
+
+The boson field self-interactions respect the $SU(2)\times U(1)_Y$ gauge invariance in the electroweak sector of the
+SM and serve as a very sensitive tool to search for the manifestations of physics beyond the SM.
+The VBS is one of the processes directly sensitive to the quartic-gauge coupling vertices of the SM.
+Variations of these vertices from the SM are known as anomalous quartic-gauge couplings (aQGC), and can arise from alterations of the electroweak or Higgs sector of the SM.
+
+The effect of such new physics introduced by aQGC can be realized using the effective field theory~\cite{degrande2013effective} and linearly parameterized by the effective Lagrangian as:
+\begin{equation*}
+  \mathcal{L}=\mathcal{L}_{sm}+\sum_{i}\frac{c_i}{\Lambda^{2}}\mathcal{L}_i+\sum_{n}\frac{f_n}{\Lambda^{4}}\mathcal{L}_n,
+\end{equation*}
+where $\mathcal{L}$ represents possible dim-6 and dim-8 operators and $c_i$ and $f_n$ are correspond their wilson coefficients. The $\Lambda$ represents the energy scale over which the new degrees of freedom are integrated out. 
+In this note, the name of Lagrangian term that contains the given operator is denoted by its wilson coefficient i.e. $L_{n} = \frac{f_{n}}{\Lambda^4} O_{n}$ is called as $f_{n}$.
+The odd-dimension operators violate lepton and baryon number conservation and are ignored.
+Both of dim-6 and dim-8 operators can contribute to the VBS processes through aTGC and aQGC, respectively,
+but due to the tight constraints of dim-6 operators from inclusive diboson measurements, only dim-8 operators are discussed in this note.
+
+The Eboli model~\cite{eboli2006p} is employed to describe the signals, which introduces twentyone new dim-8 operators satisfying the SM $SU(2)\times U(1)_Y$ symmetry. 
+These operators can be categorized by the types of the coupling; scalar types that contain just covariant derivatives of the Higgs field: $f_{S0}$, $f_{S1}$, $f_{S2}$, tensor types  that contain just field strengths: $f_{T0}$, ..., $f_{T9}$, and mixed operators that exhibit two covariant derivatives of the Higgs field and two field strengths: $f_{M0}$, ..., $f_{M7}$. 
+Table~\ref{tab:operators} shows the vertices that can be modified by the given operator. 
+The operators $f_{S0}$ and $f_{S2}$ are Hermitian conjugates, so they are treated as one single operator by setting both coefficients to be the same value.
+The semileptonic VBS is a golden channel that can test nineteen oeperators simultaneously, which has  $WW$, $WZ$, and $ZZ$ pairs in the final state.
+It is found via simulations that the tensor operators produce purely transversely polarized $W/Z$ bosons, while the scalar operators longitudinal bosons.
+In particular in the merged analysis, higher selection efficiency for the scalar operators is expected since the boosted boson tagger is optimized for the logitudinally-polarized bosons.
+
+\begin{table}[ht!]
+\begin{center}
+\resizebox{0.70\textwidth}{!}{
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline & WWWW & WWZZ & ZZZZ & WWAZ & WWAA & ZZZA & ZZAA & ZAAA & AAAA \\
+\hline $\mathcal{L}_{S02}, \mathcal{L}_{S1}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{O}$ & $\mathrm{O}$ & $\mathrm{O}$ & $\mathrm{O}$ & $\mathrm{O}$ & $\mathrm{O}$ \\
+\hline $\mathcal{L}_{M0}, \mathcal{L}_{M1}, \mathcal{L}_{M6}, \mathcal{L}_{M7}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{O}$ & $\mathrm{O}$ \\
+\hline $\mathcal{L}_{M2}, \mathcal{L}_{M3}, \mathcal{L}_{M4}, \mathcal{L}_{M5}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{O}$ & $\mathrm{O}$ \\
+\hline $\mathcal{L}_{T0}, \mathcal{L}_{T1}, \mathcal{L}_{T2}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ \\
+\hline $\mathcal{L}_{T5}, \mathcal{L}_{T6}, \mathcal{L}_{T7}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ \\
+\hline $\mathcal{L}_{T8}, \mathcal{L}_{T9}$ & $\mathrm{O}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{O}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ & $\mathrm{X}$ \\
+\hline
+\end{tabular}
+
+}
+\caption{Correspondences between wilson coefficients and vertices. $\mathrm{X}$ shows the existence of the vertex with the interaction by the operator.}
+\label{tab:operators}
+\end{center}
+\end{table}
+
+As mentioned in Section~\ref{subsec:agc_sample}, the SM+EFT matrix element can be written as
 \begin{equation}
-  \mathcal{L}=\mathcal{L}_{sm}+\sum_{i}\frac{f_i}{\Lambda^{2}}\mathcal{L}_i+\sum_{n}\frac{f_n}{\Lambda^{4}}\mathcal{L}_n
+   |A_{SM}+\frac{f_i}{\Lambda^4}A_i|=|A_{SM}^2|+\sum\limits_i \frac{f_i^2}{\Lambda^8}|A_{i}^2|+ \sum\limits_i 2 \frac{f_i}{\Lambda^4} \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} \frac{f_i}{\Lambda^4} \frac{f_j}{\Lambda^4} \mathrm{Re}(A_i^\star A_j)
 \end{equation}
-where $\mathcal{L}$ represent possible dim-6 of dim-8 operators.
-The $f_i$ corresponds to the Wilson coefficient. The new scale $\Rambda$ represents the cutoff scale, which is the energy scale where the added operators are effective up to this scale. 
-The odd dimension operators violate lepton and baryon number conservation and are ignored here.
-Dimension-6 operators can introduce charged aTGCs, while dimension-8 operators are the lowest order which can induce the aQGC, both of which can contribute to the VBS process.
-Due to the existing tight constraints of dimension-6 operators from inclusive diboson measurements, only dimension-8 operators will be discussed.
-The matrix element from the whole Lagrangian including the additional operators can be linearly parametrized as:
-\begin{equation}
-\left|A_{\mathrm{SM}}+\sum_{i} \frac{f_{i}}{\Lambda^{4}} A_{i}\right|^{2}=\left|A_{\mathrm{SM}}\right|^{2}+\sum_{i} 2 \frac{f_{i}}{\Lambda^{4}} \operatorname{Re}\left(A_{i}^{*} A_{\mathrm{SM}}\right)+\sum_{i} \frac{f_{i}^{2}}{\Lambda^{8}}\left|A_{i}\right|^{2}+\sum_{i \neq j} 2 \frac{f_{i} f_{j}}{\Lambda^{8}} \operatorname{Re}\left(A_{i}^{*} A_{j}\right)
-\label{eqn:eftamplitude}
-\end{equation}
-The first term of the equation~\ref{eqn:eftamplitude} represents the standard model (SM) contribution. The second and the third term represents the contributions from the interference term between the EFT and the SM operator and the purely EFT operator, respectively. Each terms are referred to as quadratic (QUAD) term and the interference (INT) term. The last term is the cross term between the EFT operators, which is ignored in this analysis for the simplicity and the consistency with the other aQGC search analyses. The Wilson coefficient $f_i$ and the cut-off scale $\Rambda$ cannot be separated, therefore the constraints are always given on their ratio, $f_i/\Rambda^4$.
-
-The QUAD term and the INT terms are produced as the separated signal samples. These two terms can be combined into single POI by adding the postprocessing procedure in the fitting framework to parameterize as $\mu_{QUAD} = \mu_{INT}^2$.
-
-For the dimension-8 operators, Eboli model is used as described in Chapter~\ref{}.
-The cross sections for these aQGC signal samples are produced with MadGraph5\_aMC@NLO v2.3.3, plus \PYTHIA8~\cite{Sjostrand:2007gs} for fragmentation, and the \textsc{NNPDF30LO} PDF set~\cite{Ball:2012cx} similar as the EW signals. (\textcolor{blue}{really?})
+where $|A_SM|^2$ is the SM matrix element, $|A_{i}^2|$ represents the pure-EFT matrix elements for the $f_{i}$ operator, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is its corresponding interference term with the SM, and $\mathrm{Re}(A_i^\star A_j)$ is possible interference term between EFT operators $f_{i}$ and $f_{j}$. 
+Theoretically it cannot separate the effects of wilson coefficients $f_i$ and the scale $\Lambda^4$, so the parameter of interest in this analysis is the ratio $\frac{f_i}{\Lambda^4}$. %Sometimes it is just called as $f_i$.
+One notes that the pure-EFT term is scaled by the quadrature of $\frac{f_i}{\Lambda^4}$ and the interference term by $\frac{f_{i}}{\Lambda^4}$.
+Sometimes they are called as the quadratic term and the linear term, respectively.
 
 
-\section{Binned significance study}
+\subsection{Clipping method}
+\label{subsec:clipping}
+As the EFT violates unitarity at large energy scale, the clipping method is used to preserve the unitarity at high center of mass energies. 
+The EFT signal is set to zero at truth $m_{VV} > E_{clip}$, where the $E_{clip}$ is [1.5, 2, 3, 5, $\infty$]~TeV. 
+5 points are chosen as recommended from the aGC coupling taskforce.~\cite{ATL-COM-PHYS-2017-433} 
+The expected limits are obtained with all 3 channels at each of the clipping points.
+%are shown in figure~\ref{fig:ClippedLimits}. 
 
-The 2-dimensional binned significance using $m_{VV}$ and RNNScore as discriminant is studied in \tlep channel.
+%Minori : need to replace the histograms
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ FT0 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT0.pdf}}
+%    	\subfigure[ FT1 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT1.pdf}}
+%    	\subfigure[ FT2 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT2.pdf}}
+%        \caption{Expected limits for 5 clipping points are shown for each coefficient FT0, FS02, and FM0.}
+%        \label{fig:ClippedLimits}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ FT5 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT5.pdf}}
+%    	\subfigure[ FT6 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT6.pdf}}
+%    	\subfigure[ FT7 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT7.pdf}}
+%        \caption{Expected limits for 5 clipping points are shown for each coefficient FT5, FT6, and FT7.}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ FT8 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT8.pdf}}
+%    	\subfigure[ FT9 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFT9.pdf}}
+%    	\subfigure[ FM0 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFM0.pdf}}
+%        \caption{Expected limits for 5 clipping points are shown for each coefficient FT8, FT9, and FM0.}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ FM1 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFM1.pdf}}
+%    	\subfigure[ FM2 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFM2.pdf}}
+%    	\subfigure[ FM3 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFM3.pdf}}
+%        \caption{Expected limits for 5 clipping points are shown for each coefficient FM1, FM2, and FM3.}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ FM4 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFM4.pdf}}
+%    	\subfigure[ FM5 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFM5.pdf}}
+%    	\subfigure[ FM7 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFM7.pdf}}
+%        \caption{Expected limits for 5 clipping points are shown for each coefficient FT4, FT5, and FM7.}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ FS02 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFS02.pdf}}
+%    	\subfigure[ FS1 ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/ClippedFS1.pdf}}
+%        \caption{Expected limits for 5 clipping points are shown for each coefficient FS02, FS1.}
+%\end{figure}
 
-Figures~\ref{fig:2lepaQGCshapeMVV} and \ref{fig:2lepaQGCshapeRNN} show the $m_{VV}$ and RNNScore distributions for some aQGC samples, compared with the SM electroweak signal and the other background processes.
-$m_{VV}$ distributions for aQGC signals are significantly higher than the SM electroweak signal and the other background.
-The RNNScore distributions for aQGC samples are found to be similar to the one for the SM electroweak signals.
-The RNN trained for the SM electroweak signal is also useful to separate aQGC signals from the other background processes.
+\subsection{Initial study of the aQGC search strategy}
+\label{subsec:binnedsig}
+
+The aQGC terms can modify the amplitude of the VBS process at the higher effective center-of-mass energy, 
+$m_{VV}$, as shown in Figure~\ref{fig:2lepaQGCshapeMVV}, hence merged channels are more important to enhance the signals.
+Some studies below are based on MergedHP SR only.
+It is found that the reconstructed $m_{VV}$ (or \mt\ in \zlep\ channel) is the best variable to separate the aQGC signals from the background,
+while the RNN score distributions for the aQGC samples are similar to the one for the SM electroweak signal and still useful 
+to suppress the non-VBS background as shown in Fig.~\ref{fig:2lepaQGCshapeRNN}.
+Two-dimensional binning of $m_{VV}$ and the RNN score is used as the final discriminant for the aQGC search.
+In this section, the optimal binning strategy is studied in \tlep\ channel.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_HP_aQGC.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_LP_aQGC.pdf}
-    \caption{$m_{VV}$ shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
+    \subfigure[$m_{VV}$ distribution in Merged HP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_HP_aQGC.pdf}}
+    \subfigure[$m_{VV}$ distribution in Merged LP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_LP_aQGC.pdf}}
+    \caption{$m_{VV}$ shape distribution of each wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeMVV}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_HP_aQGC.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_LP_aQGC.pdf}
-    \caption{RNN score shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
+    \subfigure[RNN score distribution in Merged HP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_HP_aQGC.pdf}}
+    \subfigure[RNN score distribution in Merged LP Signal region]{\includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_LP_aQGC.pdf}}
+    \caption{RNN score shape distribution of each wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeRNN}
 \end{figure}
 
-The significance considering both $m_{VV}$ and RNNSCore distributions is tested here.
 The binned significance defined as:
 %
 \begin{eqnarray*}
@@ -60,43 +148,42 @@ The binned significance defined as:
 \end{eqnarray*}
 %
 is used in this study.
-The $s$ here refers to the number of the aQGC signal for the given Wilson coefficient.
-The $b$ includes the SM electroweak signals and the other backgrounds (like Z+jets, ttbar, Diboson).
+The $s$ is the number of the aQGC signal for the given wilson coefficient.
+Signal samples are normalized to $\frac{f_{i}}{\Lambda^4}=1.0$ and no clipping energy requirement described in Section~\ref{subsec:clipping} is applied. Only the quadratic term is used in this study since the interference term is negligibly small with this parameter choice.
+The $b$ includes the SM electroweak signals and the other backgrounds (like $Z$+jets, \ttbar, QCD diboson).
 The fractional systematic uncertainty $\sigma_{b} = 0.2$ is assumed.
 
-Two approaches are tested.
-One is to use the $m_{VV}$ distribution for the binned significance definition, after the cut on the RNNScore.
-The other is to use the RNNScore distribution for the binned significance calculation, after the cut on the $m_{VV}$.
+For simplicity, and the background estimation stability by keeping the number of bins as small as possible, two different approaches are tested.
+One is to use the $m_{VV}$ distribution for the binned significance definition, after the certain cut on the RNN score to suppress the SM background.
+The other is to use the RNN score distribution for the binned significance calculation, after the cut on the $m_{VV}$ to enhance the aQGC signals.
+We also varied the threshold for $\mathrm{M}_{tagjj}$ at the same time.
 
-Figure~\ref{fig:2lepaQGCBinnedSigMVV} shows the binned significance using $m_{VV}$ distribution,
-as functions of the cut thresholds of RNNSCore and $\mathrm{M}_{tagjj}$.
-No cuts on RNNScore and $\mathrm{M}_{tagjj}$ are preferred, in particular for the FT0 term.
-
-Figure~\ref{fig:2lepaQGCBinnedSigRNN} shows the binned significance using RNNScore distribution
-as functions of the cut thresholds for $m_{VV}$ and $\mathrm{M}_{tagjj}$.
-It is preferred to apply the cut on $m_{VV}$ if we want to use RNNScore as the discriminant.
-
-The significance value for each Wilson coefficient term is summarized in tables~\ref{tab:2lep_HPSR_MVV} and \ref{tab:2lep_HPSR_RNN}.
+Figure~\ref{fig:2lepaQGCBinnedSigMVV} shows the binned significance calculated by using $m_{VV}$ distribution after the cuts on RNN score and $\mathrm{M}_{tagjj}$, as functions of the varied thresholds of them.
+It is found a cut on RNN score does not help to improve the sensitivity so much,
+and a cut on $\mathrm{M}_{tagjj}$ deteriorates it.
+On the other hand, Figure~\ref{fig:2lepaQGCBinnedSigRNN} shows the binned significance by using RNN score distribution
+after the cuts on $m_{VV}$ and $\mathrm{M}_{tagjj}$, as functions of the thresholds for them.
+The result depends on the threshold for $m_{VV}$, depending on the signal strength (under the $f_i/\Lambda^4 = 1.0$ constraint, $f_{S}$ signals have smaller signal yields than $f_{T}$ and $f_{M}$ and tighter cut on $m_{VV}$ is preferred, but it is just a result of the arbitral choice).
+The significance value for each wilson coefficient term is summarized in tables~\ref{tab:2lep_HPSR_MVV} to \ref{tab:2lep_LPSR_RNN}.
+Generally, about 5--10\% better sensitivity can be obtained by using RNN score distribution after the cut on $m_{VV}$ at the certain threshold.
 
 \begin{figure}[ht]
     \centering
-    	\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFT0MVV.pdf}
-    	\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFS02MVV.pdf}
-    	\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFM0MVV.pdf}
+    	\subfigure[ FT0 term ]{\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFT0MVV.pdf}}
+    	\subfigure[ FS02 term]{\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFS02MVV.pdf}}
+    	\subfigure[ FM0 term ]{\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFM0MVV.pdf}}
         \caption{The 2D scan of the binned significance of operator FT0 (left), FS02 (middle), FM0 (right) with $m_{VV}$ score as discriminant in Merged HP signal region. Only quadratic terms are scanned.}
         \label{fig:2lepaQGCBinnedSigMVV}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    	\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFT0RNN.pdf}
-    	\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFS02RNN.pdf}
-    	\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFM0RNN.pdf}
+    	\subfigure[ FT0 term ]{\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFT0RNN.pdf}}
+    	\subfigure[ FS02 term]{\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFS02RNN.pdf}}
+    	\subfigure[ FM0 term ]{\includegraphics[width=0.30\textwidth]{figures/aQGC/HPSRFM0RNN.pdf}}
         \caption{The 2D scan of the binned significance of operator FT0 (left), FS02 (middle), FM0 (right) with RNN score as discriminant in Merged HP signal region. Only quadratic terms are scanned.}
         \label{fig:2lepaQGCBinnedSigRNN}
 \end{figure}
-
-\clearpage
 
 \begin{table}[ht!]
 \small
@@ -202,19 +289,16 @@ FM7 & 500          & 3000  & 0.01     & 0.09                            \tabular
 \end{center}
 \end{table}
 
-Comparing the significance between table~\ref{tab:2lep_HPSR_MVV} and table~\ref{tab:2lep_HPSR_RNN}, 
-RNN score as discriminant with $m_{VV}$ cut around 2.5~TeV shows slightly better but not so different ability with the $m_{VV}$ without any cut.
-It seems to be the simple and better way to use $m_{VV}$ as the discriminant without cut. 
+Following the study of this section, a more reliable study based on the profile likelihood fit is performed
+in Section~\ref{subsec:2binapproach}, using the RNN score as a discriminant after the cut on $m_{VV}$.
 
-Following the study of this section, the profile likelihood fit with $m_{VV}$ score is performed and the expected limit is shown in section~\ref{subsec:aqgc_limit}. The fit study with RNN score as discriminant is also shown in section~\ref{subsec:2binapproach}.
-
-%\section{Expected limit}
+%\subsection{Expected limit}
 %\label{subsec:aqgc_limit}
 
-%The expected upper limit on each Wilson coefficient by a combined fit of all 3 channels is shown in table~\ref{tab:aQGC_limit}, which is calculated by $\sqrt{\mu_{95\%}} = f_{i} / \Lambda^4$, where $\mu_{95\%}$ is the 95\% upper limit on the signal strength.
+%The expected upper limit on each wilson coefficient by a combined fit of all 3 channels is shown in table~\ref{tab:aQGC_limit}, which is calculated by $\sqrt{\mu_{95\%}} = f_{i} / \Lambda^4$, where $\mu_{95\%}$ is the 95\% upper limit on the signal strength.
 %The $m_{VV}$ distributions without any additional cuts are used in the fit.
 %The systematic uncertainties are yet to be included.
-%Figures~\ref{fig:0lepFT0} and ~\ref{fig:1lepFT0}, ~\ref{fig:2lepFT0} show the prefit plots of %$m_{VV}$ distribution. FT0 signal is overlaid.
+%Figures~\ref{fig:0lepFT0} and ~\ref{fig:1lepFT0}, ~\ref{fig:2lepFT0} show the prefit plots of $m_{VV}$ distribution. FT0 signal is overlaid.
 
 %\begin{table}[ht!]
 %\small
@@ -235,166 +319,243 @@ Following the study of this section, the profile likelihood fit with $m_{VV}$ sc
 %FM7 & 5.37e+2                     \tabularnewline \hline
 %\end{tabular}
 %}
-%\caption{Expected upper limits of each Wilson coefficient. All 3 channels are combined.}
+%\caption{Expected upper limits of each wilson coefficient. All 3 channels are combined.}
 %\label{tab:aQGC_limit}
 %\end{center}
 %\end{table}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMTagJets_DCRVjetMer_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMtvvJ_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-        \caption{Prefit plots for operator FT0 in \zlep channel are shown. The standard model EW signal is floated as the background.}
-        \label{fig:0lepFT0}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_disttagMjj_DCRTopHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMVV_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMVV_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMVV_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}
-        \caption{Prefit plots for operator FT0 in \olep channel are shown. The standard model EW signal is floated as the background.}
-        \label{fig:1lepFT0}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMllJ_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMTagJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMtvvjj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_Prefitlog.pdf}
-        \caption{Prefit plots for operator FT0 in \tlep channel are shown. The standard model EW signal is floated as the background.}
-        \label{fig:2lepFT0}
-\end{figure}
-
-
-\section{Clipping method}
-\label{subsec:clipping}
-As the EFT violates unitarity at large energy scale, the clipping method is used to preserve the unitarity at high center-of-mass energies. In order to guarantee that the extracted limit does not exceed valid energy scales, the EFT signal is set to zero at truth$m_{VV} > E_{clip}$, where the $E_{clip}$ is [2,3,4,5,$\infty$]~TeV. 5 points are chosen as recommended from the aGC coupling taskforce.\cite{ATL-COM-PHYS-2017-433} 
-The expected limit with all 3 channels with each of the clipping points are shown in figure~\ref{fig:ClippedLimits}. 
-The all systematics uncertainties identical to the standard model fitting is included, thought they don't effect to the fitting results since at the tail of the diboson mass ($m_{VV}$) distribution where affects the sensitivity, the statistical uncertainties are dominant source of the uncertainty and the effect of the systematics uncertainty is not so large.
-
-The unitarity bound can be calculated theoretically for each Wilson coefficient.
-If the limits obtained by the experiment is lower than the limit calculated theoretically, it means the theoretical constraints are more strict than experiment can give. The calculated unitarity bound is overlaid in the Figure~\ref{}.
-
-\section{Systematic interpretation}
-The likelihood function is defined in the same way as the standard model fitting described in Chapter{}. According to the Wilk's theorem~\ref{}, the likelihood distribution asymptotically converges to a $\chi^2$ distribution. 
-Therefore the $\chi^2$ distribution can be used to approximately estimate limits for $f/\Lambda^4$. For a 95\% level of confidence, the limits are derived as the boundaries of the corresponding interval of the $\chi^2$ distribution.
-The limit on $f/\Rambda^4$ is directly obtained from the interval of the likelihood function. The interference term is accounted for the aQGC signal with the quadratic term by interpreting as $\mu_{QUAD} = \mu_{INT}^2$. 
-The all limits in each clipping value are shown here. \\
-%what's with the error of the obtained limit value??
-\textcolor{red}{The following plots are to be replaced with CI ones}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT0.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT1.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT2.pdf}
-        \caption{Expected limits for 5 clipping points are shown for each coefficient FT0, FS02, and FM0.}
-        \label{fig:ClippedLimits}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT5.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT6.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT7.pdf}
-        \caption{Expected limits for 5 clipping points are shown for each coefficient FT5, FT6, and FT7.}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT8.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFT9.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFM0.pdf}
-        \caption{Expected limits for 5 clipping points are shown for each coefficient FT8, FT9, and FM0.}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFM1.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFM2.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFM3.pdf}
-        \caption{Expected limits for 5 clipping points are shown for each coefficient FM1, FM2, and FM3.}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFM4.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFM5.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFM7.pdf}
-        \caption{Expected limits for 5 clipping points are shown for each coefficient FT4, FT5, and FM7.}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFS02.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/ClippedFS1.pdf}
-        \caption{Expected limits for 5 clipping points are shown for each cefficient FS02, FS1.}
-\end{figure}
-
-The expected limits for each Wilson coefficient is shown in the Table~\ref{}, in two cases. One is when the clipping value is 2~TeV and the other is when clipping value is $\infinity$, which means no clipping value is set.
-
-
-\section{2-bin $m_{VV}$ approach}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ 0lep merged CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMTagJets_DCRVjetMer_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 0lep HP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 0lep LP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMtvvJ_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 0lep resolved CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefitlog.pdf}}
+%    	\subfigure[ 0lep resolved SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%        \caption{Prefit plots for operator FT0 in \zlep channel are shown. The standard model EW signal is floated as the background.}
+%        \label{fig:0lepFT0}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ 1lep merged Vjet CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 1lep HP Top CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_disttagMjj_DCRTopHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 1lep LP Top CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 1lep HP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMVV_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 1lep LP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMVV_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 1lep resolved Vjet CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}}
+%    	\subfigure[ 1lep resolved Top CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}}
+%    	\subfigure[ 1lep resolved SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMVV_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}}
+%        \caption{Prefit plots for operator FT0 in \olep channel are shown. The standard model EW signal is floated as the background.}
+%        \label{fig:1lepFT0}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    	\subfigure[ 2lep merged CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 2lep HP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 2lep LP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMllJ_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+%    	\subfigure[ 2lep resolved CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMTagJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_Prefitlog.pdf}}
+%    	\subfigure[ 2lep resolved SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMtvvjj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_Prefitlog.pdf}}
+%        \caption{Prefit plots for operator FT0 in \tlep channel are shown. The standard model EW signal is floated as the background.}
+%        \label{fig:2lepFT0}
+%\end{figure}
+%
+\subsection{Further study to finalize aQGC search strategy}
 \label{subsec:2binapproach}
 
-There is a problem when we use the $m_{VV}$ distribution in the fit.
-The normalization of the SM electroweak signal cannot be determined, since its shape is similar to the other background processes, as shown in Figure~\ref{fig:2lepaQGCshapeMVV}.
-%RNN score shows the separation between standard model and the background, so the 2D fit of $m_{VV}$ and RNN score can be useful since we can use both separation powers. Spliting $m_{VV}$ in 2-bin is studied as the minimum case of 2D fit.
-
-Unconditional asimov fit for FT0 signal in only \tlep channel is performed and compared in two options :
+To confirm the result in Section~\ref{subsec:binnedsig} with more realistic setting,
+we compared the results with the following conditions.
 \begin{itemize}
-  \item Fit $m_{VV}$ distribution as discriminant, as shown in section~\ref{subsec:aqgc_limit}
-  \item Split the $m_{VV}$ into 2 bins ;  \\
-        LowMVV : $m_{VV}$ $< 2000$~GeV \\
-        HighMVV : $m_{VV}$ $\geq 2000$~GeV \\
-        then fit simultaneously with RNN score as discriminant
+  \item A fit to $m_{VV}$ distribution as discriminant, without any cuts on the RNN score;
+  \item A fit to the RNN score distributions after
+        SRs are further separated into two subcategories: \\
+        Low $m_{VV}$ : $m_{VV}$ $< 2000$~GeV and \\
+        High $m_{VV}$ : $m_{VV}$ $\geq 2000$~GeV. \\
 \end{itemize}
-Prefit plots are shown in figure~\ref{fig:2lepTwoBin} in the second option.
+With the second option, the number of SRs are twiced as shown in Figure~\ref{fig:2lepTwoBin}.
+%(binning??)
+Unconditional asimov fit by using FT0 signal in only \tlep channel is performed.
+Still only quadratic term is used in this study.
+The systematics is not included in the fitting here, just the floated normalization factor is considered.
+The asimov data used here is constructed from the background plus SM electroweak $VVjj$ samples.
 The expected limits and uncertainty of the expected signal strength of FT0 signal are shown in table~\ref{tab:2binlimit}.
+%Significantly better upper limit on the signal strength is obtained by the second option (a fit to RNN score with the categorization by $m_{VV}$)
+%than the first option (a fit to $m_{VV}$ distribution).
+The signal strength obtained by the second option (a fit to RNN score with the categorization by $m_{VV}$) and the first option (a fit to $m_{VV}$ distribution) is same. 
+We found the first option cannot give any constraints on the SM electroweak $VVjj$ signal.
+It can be a motivation to use the RNN score also in the aQGC search study.
 
 \begin{figure}[ht]
     \centering
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    	\includegraphics[width=0.35\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+    	\subfigure[ 2lep merged CR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+    	\subfigure[ 2lep HP LowMVV SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
+    	\subfigure[ 2lep HP HighMVV SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
+    	\subfigure[ 2lep LP LowMVV SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
+    	\subfigure[ 2lep LP HighMVV SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
         \caption{Prefit plots for 2-bin strategy is shown. The RNN score is used as discriminant for signal regions. operator FT0 in \tlep channel are shown. The standard model EW signal is floated as the background.}
         \label{fig:2lepTwoBin}
 \end{figure}
+
+%\begin{table}[ht!]
+%\small
+%\begin{center}
+%\resizebox{0.9\textwidth}{!}{
+%\begin{tabular}{ | l || l | l | l |}
+%\hline
+%                                    & Fit to $m_{VV}$ w/o further categorization & Fit to RNN score w/o further categorization  & Fit to RNN scores in separated bins of low- and high-$m_{VV}$  \tabularnewline \hline
+%Unconditional fitted $\mu$          & -2.7e-06 $\pm$ 0.067   & 3.38e-05 $\pm0.038$      & 3.35e-05 $\pm0.029$  \tabularnewline \hline
+%Norm sigVBS                         & 1 $\pm$ 2.1            & 1 $\pm$ 0.94             & 1 $\pm$ 0.48         \tabularnewline \hline
+%Norm Z                              & 1 $\pm$ 0.036          & 1 $\pm$ 0.029            & 1 $\pm$ 0.027        \tabularnewline \hline
+%Norm VV                             & 1 $\pm$ 1.13           & 1 $\pm$ 0.71             & 0.99 $\pm$ 0.64      \tabularnewline \hline
+%Expected limit of $\mu$             & 0.19                   & 0.72                     & 0.10                 \tabularnewline \hline
+%Expected limit of wilson coefficient & 0.44                   & 0.85                     & 0.32                 \tabularnewline \hline
+%\end{tabular}
+%}
+%\caption{Expected signal strength and limits in each two options. only \tlep channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normarizations fitted for standard model signal, and Z and diboson backgrounds are shown as Norm in the table.}
+%\label{tab:2binlimit}
+%\end{center}
+%\end{table}
 
 \begin{table}[ht!]
 \small
 \begin{center}
 \resizebox{0.9\textwidth}{!}{
 \begin{tabular}{ | l || l | l | l |}
-                                    & single bin fit with $m_{VV}$& single bin fit with RNN  & 2-bin fit with RNN   \tabularnewline \hline
-Unconditional fitted $\mu$          & -2.7e-06 $\pm$ 0.067   & 3.38e-05 $\pm0.038$      & 3.35e-05 $\pm0.029$  \tabularnewline \hline
-Norm sigVBS                         & 1 $\pm$ 2.1            & 1 $\pm$ 0.94             & 1 $\pm$ 0.48         \tabularnewline \hline
-Norm Z                              & 1 $\pm$ 0.036          & 1 $\pm$ 0.029            & 1 $\pm$ 0.027        \tabularnewline \hline
-Norm VV                             & 1 $\pm$ 1.13           & 1 $\pm$ 0.71             & 0.99 $\pm$ 0.64      \tabularnewline \hline
-Expected limit of $\mu$             & 0.19                   & 0.72                     & 0.10                 \tabularnewline \hline
-Expected limit of Wilson coefficient & 0.44                   & 0.85                     & 0.35                 \tabularnewline \hline
+\hline
+                                    & Fit to $m_{VV}$ w/o further categorization & Fit to RNN score w/o further categorization  & Fit to RNN scores in separated bins of low- and high-$m_{VV}$  \tabularnewline \hline
+Unconditional fitted $\mu$          & 8.83e-06 $\pm0.032$    & 1.02e-04 $\pm0.34$       & 1.09e-05 $\pm0.028$  \tabularnewline \hline
+Norm sigVBS                         & 1 $\pm$ 1.08           & 1 $\pm$ 0.79             & 1 $\pm$ 0.41         \tabularnewline \hline
+Norm Z                              & 1 $\pm$ 0.012          & 1 $\pm$ 0.010            & 1 $\pm$ 0.01         \tabularnewline \hline
+Expected limit of $\mu$             & 0.11                   & 0.70                     & 0.11                 \tabularnewline \hline
+Expected limit of wilson coefficient & 0.33                  & 0.84                     & 0.33                 \tabularnewline \hline
 \end{tabular}
 }
-\caption{Expected signal strength and limits in each two options. only \tlep channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normarizations fitted for standard model signal, and Z and diboson backgrounds are shown as Norm in the table.}
+\caption{Expected signal strength and limits in each two options. only \tlep channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normarizations fitted for standard model signal, and Z backgrounds are shown as Norm in the table.}
 \label{tab:2binlimit}
 \end{center}
 \end{table}
 
-2-bin fit can constrain the standard model signal, as shown in the uncertainty of Norm sigVBS of table~\ref{tab:2binlimit}. 
-When comparing single bin fit with $m_{VV}$ and 2-bin fit with RNN, 2-bin fit with RNN appears to be able to provide a better limit.
+%\subsection{Optimization of the threshold of 2-bin approach}
+%\label{subsec:aQGCbinninb}
+Of course, the optimal threshold of $m_{VV}$ can be different depending on the clipping energy.
+In addition, a fine tuning of the $m_{VV}$ threshold might be needed by considering the stability of the background stimation.
+The expected limit is shown in each threshold for $m_{VV}$ of 1000~GeV, 1500~GeV, 2000~GeV for variety of the clipping points in Figure~\ref{fig:ThresholdScan}.
+As expected, higher $m_{VV}$ threshold is preferred at the higher clipping point, while lower $m_{VV}$ threshold is favored at the lower clipping point.
+1500~GeV is chosen as the best compromize to separate SRs into low- and high-$m_{VV}$ bins.
+
+Since the meaning of the actual $m_{VV}$ distributions used in each letpon channel are different
+(fully reconstructed system in \tlep and in \olep (solving neutrino ambiguity) and transverse mass in \zlep)
+the optimal thresholds to separate SRs into low- and high-$m_{VV}$ bins in \olep\ and \zlep\ channels 
+are determined as follows.
+In \olep\ channel, the same threshold as \tlep\ channel, 1500~GeV, is just chosen since the reconstructed $m_{VV}$ distribution is similar. 
+%(?)
+In \zlep channel the threshold needs to be optimized, since it uses \mt\ instead of $m_{VV}$.
+As shown in Figure~\ref{fig:mVVdist} the \mt\ shape in \zlep\ channel is different from $m_{VV}$ in \tlep channel.
+Here, the background yield in each bin of the high-$\mt$ regions is adjusted to be more than 5 so that
+the asymptotic calculation of the sensitivity is ensured with the certain number of background events.
+The threshold finalized is shown in Table, for each lepton channels and for each regions.
+
+Only in \tlep\ channel,
+less than 5 background events are expected in the second bin of the HP signal region.
+We are going to test if the asymptotic fomulae works fine, by running toy experiments [TO DO].
+%
+\begin{figure}[h]
+        \centering
+    	\includegraphics[width=0.50\textwidth]{figures/aQGC/ClippedFT02bin.pdf}
+        \caption{Expected limits for 5 clipping points with each threshold for dividing $m_{VV}$ into 2 bins.}
+        \label{fig:ThresholdScan}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    	\subfigure[ 2lep HP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+    	\subfigure[ 2lep LP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMllJ_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+    	\subfigure[ 2lep Fid SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMlljj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefitlog.pdf}}
+    	%\subfigure[ 1lep HP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/}}
+    	%\subfigure[ 1lep LP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/}}
+    	%\subfigure[ 1lep Fid SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/}}
+    	\subfigure[ 0lep HP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+    	\subfigure[ 0lep LP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvJ_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}}
+    	\subfigure[ 0lep Fid SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvjj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_Prefitlog.pdf}}
+        \caption{fig:$m_{VV}$ distribution for \tlep (left) and Mtv distribution for \zlep (right)}
+        \label{fig:mVVdist}
+\end{figure}
+
+\begin{table}[ht!]
+\small
+\begin{center}
+%\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{ | l || l | l | l |}
+\hline
+Threshold values (GeV)          & SRVBS\_HP  & SRVBS\_LP & SRVBS\_Fid  \tabularnewline \hline
+0-lepton & 1050      & 1200     & 1200       \tabularnewline \hline
+1-lepton & 1500      & 1500     & 1500       \tabularnewline \hline
+2-lepton & 1500      & 1500     & 1500       \tabularnewline \hline
+\end{tabular}
+\caption{Threshold values}
+\label{tab:2binthreshold}
+\end{center}
+\end{table}
 
 
+
+\subsection{Expected limits}
+%\textcolor{red}{caution: the 2-bin separation threshold for 0-lep used in these plots are still 1500~\GeV. The plots is going to be replaced with new threshold in table~\ref{tab:2binthreshold} once the new samples are ready.}
+
+Finally, by using both quadratic and interference terms as a combined signal template,
+the expected 95\% CL upper and lower limits are obtained by the fit to the asimov dataset constructed
+from the background plus SM $VVjj$ samples.
+The POI is set to include both QUAD terms and INT terms simalteniously, thereby two signal strength is parametrized as $\mu_{QUAD} = \mu_{INT}^2$.
+All SRs in \zlep, \olep\ and \tlep channels are separated into low- and high-$m_{VV}$ bins as discussed in Section~\ref{subsec:2binapproach}
+and combined statistically.
+All systematics uncertainties discussed for Standard Model measurement is included in the fitting.
+Due to the small statistics in high-$m_{VV}$ regions compared with the low-$m_{VV}$ regions,
+the overall behaviors of the post-fit nuisance parameters are almost the same as the SM measurement.
+The result is shown in Figure~\ref{fig:aQGClimits}.
+The limits are shown at 5 clipping energy points of [1.5, 2.0, 3.0, 5.0, $\infty$]~TeV.
+The unitarity bound from the theoretical calclation \cite{PhysRevD.101.113003} is overlaid.
+The upper and lower limits correspond to the signal hypotheses showing $\Delta NLL \sim \frac{1}{2}\chi^2 = 1.0$.
+Table~\ref{tab:aQGClimits} shows the uniterized and ununiterized expected limits from figure~\ref{fig:aQGClimits}.
+
+\begin{figure}[ht]
+    \centering
+    	\subfigure[ FT0 ]{\includegraphics[width=0.40\textwidth]{figures/aQGC/ClippedFT0CI.pdf}}
+    	\subfigure[ FM0 ]{\includegraphics[width=0.40\textwidth]{figures/aQGC/ClippedFM0CI.pdf}}
+    	\subfigure[ FS02 ]{\includegraphics[width=0.40\textwidth]{figures/aQGC/ClippedFS02CI.pdf}}
+        \caption{Expected limits for 5 clipping points are shown for each wilson coefficient FT0 (left), FM0 (right), FS02 (middle).}
+        \label{fig:aQGClimits}
+\end{figure}
+
+%\begin{table}[ht!]
+%\small
+%\begin{center}
+%%\resizebox{0.9\textwidth}{!}{
+%\begin{tabular}{ | l || l | l | l | l | l |}
+%\hline
+%                   & 1.5 [ TeV ] & 2.0 [ TeV ] & 3.0 [ TeV ] & 5.0 [ TeV ] & $\infty$                  \tabularnewline \hline
+%FT0                & [ -1.02, 0.88 ]  & [ -0.47, 0.41 ]  & [ -0.25, 0.21 ]  & [ -0.16, 0.15 ]  & [ -0.16, 0.16 ]              \tabularnewline \hline
+%FM0                & [ -5.63, 5.62 ]  & [ -2.47, 2.47 ]  & [ -1.37, 1.37 ]  & [ -1.08, 1.09 ]  & [ -1.06, 1.07 ]              \tabularnewline \hline
+%FS02               & [ -11.06, 11.07 ]  & [ -5.60, 5.64 ]  & [ -3.63, 3.68 ]  & [ -3.27, 3.32 ]  & [ -3.27, 3.32 ]              \tabularnewline \hline
+%\end{tabular}
+%\caption{Expected limits for each clipping point. Ununiterized limit is shown as the limit with no clipping energy, labeled as $\infty$ in figure~\ref{fig:aQGClimits}.}
+%\label{tab:aQGClimits}
+%\end{center}
+%\end{table}
+
+%uniterized limit
+\begin{table}[ht!]
+\small
+\begin{center}
+%\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{ | l || l | l |}
+\hline
+Wilson coefficient & uniterized expected limit  & ununiterized expected limit \tabularnewline \hline
+FT0                &  [ -0.48, 0.39 ]            & [ -0.16, 0.16 ]              \tabularnewline \hline
+FM0                &  [ -2.99, 2.97 ]            & [ -1.06, 1.07 ]              \tabularnewline \hline
+FS02               &  [ -5.46, 5.61 ]            & [ -3.27, 3.32 ]              \tabularnewline \hline
+\end{tabular}
+\caption{Uniterized and ununiterized expected limits. Uniterized limit is the intersection point of the thoretical unitality bound and experimental limit line. Ununiterized limit is the limit with no clipping energy, labeled as $\infty$ in figure~\ref{fig:aQGClimits}.}
+\label{tab:aQGClimits}
+\end{center}
+\end{table}
 
