@@ -1,5 +1,4 @@
 %%% aQGC %%%
-%%% aQGC %%%
 \chapter{Interpretation with Effective Field Theory}
 \label{chap:aQGC}
 
@@ -48,23 +47,26 @@
 %\end{center}
 %\end{table}
 
-As mentioned in Section~\ref{subsec:EFT}, the SM+EFT matrix element can be written as
+As mentioned in Section~\ref{subsec:EFT}, aQGC interpretation is done via EFT lagrangian. 
+The SM+EFT matrix element can be written as
 \begin{equation}
    |A_{SM}+\frac{f_i}{\Lambda^4}A_i|=|A_{SM}^2|+\sum\limits_i \frac{f_i^2}{\Lambda^8}|A_{i}^2|+ \sum\limits_i 2 \frac{f_i}{\Lambda^4} \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} \frac{f_i}{\Lambda^4} \frac{f_j}{\Lambda^4} \mathrm{Re}(A_i^\star A_j)
 \end{equation}
 where $|A_SM|^2$ is the SM matrix element, $|A_{i}^2|$ represents the pure-EFT matrix elements for the $f_{i}$ operator, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is its corresponding interference term with the SM, and $\mathrm{Re}(A_i^\star A_j)$ is possible interference term between EFT operators $f_{i}$ and $f_{j}$. 
 Theoretically, it cannot separate the effects of Wilson coefficients $f_i$ and the scale $\Lambda^4$, so the parameter of interest in this analysis is the ratio $\frac{f_i}{\Lambda^4}$. %Sometimes it is just called as $f_i$.
-One notes that the pure-EFT term is scaled by the quadrature of $\frac{f_i}{\Lambda^4}$ and the interference term by $\frac{f_{i}}{\Lambda^4}$.
+The pure-EFT term is scaled by the quadrature of $\frac{f_i}{\Lambda^4}$ and the interference term by $\frac{f_{i}}{\Lambda^4}$.
 Sometimes they are called as the quadratic term and the linear term, respectively.
 
 
 \subsection{Clipping method}
 \label{subsec:clipping}
-As the EFT violates unitarity at large energy scale, the clipping method is used to preserve the unitarity at high center of mass energies. 
+As the EFT violates unitarity at large energy scale, the clipping method, mentioned in section~\ref{subsec:EFT}, is used to preserve the unitarity at high center of mass energies. 
 The EFT signal is set to zero at truth $m_{VV} > E_{clip}$, where the $E_{clip}$ is [1.5, 2, 3, 5, $\infty$]~TeV. 
-5 points are chosen as recommended from the aGC coupling taskforce.~\cite{ATL-COM-PHYS-2017-433} 
-The expected limits are obtained with all 3 channels at each of the clipping points.
-%are shown in figure~\ref{fig:ClippedLimits}. 
+%Figure~\ref{fig:clipped} shows how the $m_{VV}$ is shown at the low clipping energy.
+The background samples, which is the all standard model predictions, are not clipped.
+%5 points are chosen as recommended from the anomolous gauge couplings (aGC) taskforce.~\cite{ATL-COM-PHYS-2017-433} 
+5 points are chosen so that we can compare the results with other channels or experiments.
+The expected and observed limits are obtained with all 3 channels at each of the clipping points, and compared with the theoretical unitarity bound.
 
 %Minori : need to replace the histograms
 %\begin{figure}[ht]
@@ -119,11 +121,10 @@ The expected limits are obtained with all 3 channels at each of the clipping poi
 \label{subsec:binnedsig}
 
 The aQGC terms can modify the amplitude of the VBS process at the higher effective center-of-mass energy, 
-$m_{VV}$, as shown in Figure~\ref{fig:2lepaQGCshapeMVV}, hence merged channels are more important to enhance the signals.
-Some studies below are based on MergedHP SR only.
+$m_{VV}$, as shown in Figure~\ref{fig:2lepaQGCshapeMVV}, hence merged regions are more important to enhance the signals.
+Some studies below are based on Merged HP SR only.
 It is found that the reconstructed $m_{VV}$ (or \mt\ in \zlep\ channel) is the best variable to separate the aQGC signals from the background,
-while the RNN score distributions for the aQGC samples are similar to the one for the SM electroweak signal and still useful 
-to suppress the non-VBS background as shown in Fig.~\ref{fig:2lepaQGCshapeRNN}.
+while the RNN score distributions for the aQGC samples are similar to the one for the SM electroweak signal and still useful to suppress the non-VBS background as shown in Fig.~\ref{fig:2lepaQGCshapeRNN}.
 Two-dimensional binning of $m_{VV}$ and the RNN score is used as the final discriminant for the aQGC search.
 In this section, the optimal binning strategy is studied in \tlep\ channel.
 
