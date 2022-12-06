@@ -1,9 +1,7 @@
 \chapter{The LHC-ATLAS Experiment}
 \label{chap:LHCATLAS}
 \section{Large Hadron Collider}
-
-The 
-Hadron Collider (LHC) is the circular collider which is located at CERN, Geneva. It was built inside the existing 27~km tunnel, previously housing the Large Electron-Positron Collider (LEP). The LHC project was planned in the 1990s and its construction started in 2000. \\
+The Large Hadron Collider (LHC) is the circular collider which is located at CERN, Geneva. It was built inside the existing 27~km tunnel, previously housing the Large Electron-Positron Collider (LEP). The LHC project was planned in the 1990s and its construction started in 2000. \\
 The LHC accelerates mainly protons and also heavy ions such as lead (Pb) in two beams running in opposite directions and collides them. 
 The machine has been operated since 2008 and the first physics run, referred to as Run~1, was completed in 2012 with the center-of-mass energy of $\sqrt{s}$ = 7 and 8~TeV. The Higgs boson was discovered by the ATLAS and CMS experiments in 2012 \cite{HIGG-2012-27}, \cite{CMS-HIG-12-028}, which is one of the most important accomplishments of this period. The energy was increased to $\sqrt{s}$ = 13~TeV in 2015 to 2018 for the second phase of the LHC referred to as Run~2. 
 %The primary designed energy of the accelerator is $\sqrt{s}$ = 14~TeV.
@@ -174,15 +172,15 @@ The Monitored Drift Tubes (MDTs) perform the precision position measurement of m
 in $|\eta|$ < 2.7. It consists of the 30~mm diameter drift tubes filled with gas of Ar and CO$_2$ and wires operated at high voltage to collect the electrons.
 The tubes are organized in layers and forming chambers.
 
-The Cathode Strip Chambers (CSCs) perform the same task as the MDTs in the forward region (2 < $|\eta|$ < 2.7), where the counting rate is rather high. 
+The Cathode Strip Chambers (CSCs) are multi-wire proportional chambers also filled with gas. They perform the same task as the MDTs in the forward region (2 < $|\eta|$ < 2.7), where the counting rate is rather high. 
 
 \subsubsection{Resistive Plate Chambers and Thin Gap Chambers}
-The Resistive Plate Chambers (RPCs) are installed in the barrel and provids the muon triggers for the Data Acquisition (DAQ) system.
+The Resistive Plate Chambers (RPCs) are installed in the barrel in  $|\eta|$ < 1.05. Single RPC consists of two resistive plates separated by a thin gas gap. They are mainly used to  provid the muon triggers for the Data Acquisition (DAQ) system.
 
-The Thin Gap Chambers(TGCs) serve the same purpose as the RPCs, but in the forward region. Due to the high event rates, TGCs are designed in a way similar to the CSC.
+The Thin Gap Chambers(TGCs) are also multi-wire proportional chambers similar to the CSCs. They serve the same purpose as the RPCs, but in the forward region. 
 
 \subsection{Triggers}
-The event rate provided by the LHC is around 40~MHz, which is every 25~ns. It is impossible to store all the information from the detectors, the selection of the event of interest is done with trigger system. The layout of the ATLAS trigger system is shown in Figure~ref{fig:Trigger}.
+The event rate provided by the LHC is around 40~MHz. It is impossible to record all the information from the detectors in such a high rate, hence the selection of the event of interest to have high-$p_T$ $e$, $\mu$, $\tau$, and jets is performed with trigger system. The layout of the ATLAS trigger system is shown in Figure~\ref{fig:Trigger}.
 
 \begin{figure}[tbp]
 \begin{center}
@@ -195,15 +193,10 @@ The layout of the ATLAS trigger system in Run~2
 \label{fig:Trigger}
 \end{center}
 \end{figure}
-
-It consists of types of triggers, one is the hardware based Level-1 (L1) trigger, and the other is the software based High Level Trigger (HLT). 
-
-The L1 trigger is implemented with custom electronics and determine the Regions-of-Interest (RoIs), taking as input coarse granularity calorimeter and the muon spectrometer information. These data are treated by sub-systems, the L1Calo and L1Muon, respectively. The reconstructed L1 opjects by the L1Calo and the L1Muon are sent to the L1Topo, and  the selections based on kinematical information is performed. Then all informations from L1Calo, L1Muon, and the L1Topo are sent to the Central Trigger Processor (CTP) and the RoIs are defined. The L1 trigger reduces the event rate from approximately 30~MHz to 100~kHz, and the decision time of the L1 is  2.5~$\mu$s.
-
+The ATLAS trigger system~\cite{TRIG-2019-04} consists of hardware based Level-1 (L1) trigger, and software based High Level Trigger (HLT). 
+The L1 trigger is implemented with custom electronics and roughly reconstructs high-$p_T$, $e/\gamma$, $\mu$, $j$, and so on to determine the Regions-of-Interest (RoIs) in the HLT algorithms, from coarse granularity calorimeter and the muon spectrometer information. These data are treated by sub-systems, the L1Calo and L1Muon, respectively. The reconstructed L1 objects by the L1Calo and the L1Muon are sent to the L1Topo, and  the selections based on kinematical information can be performed. Then all informations from L1Calo, L1Muon, and the L1Topo are sent to the Central Trigger Processor (CTP). The L1 trigger reduces the event rate from approximately 40~MHz to 100~kHz, and the decision time of the L1 is  2.5~$\mu$s.
 The RoIs decided at L1 are then sent to the HLT, which is a farm of large CPU cores.
-The HLT reconstructs objets with offine with the full detector information around the RoIs. 
-It reduces the rate from the L1 output rate of 100~kHz to approximately 1~kHz on average, within a processing time of about 200~ms.
+The HLT reconstructs objets with the full detector information around the RoIs. 
+It reduces the rate the L1 output of 100~kHz to approximately 1~kHz on average, within a processing time of about 200~ms.
+Events that pass the trigger selections are recorded on disk, where data can be used for further analysis off-line.
 
-Events taht pass the trigger selections are recorded on disk, where data can be used for further analysis on off-line.
-
-%upgrades of the detectors?

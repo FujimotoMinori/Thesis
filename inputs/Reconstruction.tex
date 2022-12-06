@@ -1,20 +1,15 @@
 \chapter{Reconstruction}
 \label{chap:reconstruction}
+The physics objects are detected as signals in each detector described in Section~\ref{sec:detector}.
+Figure~\ref{fig:ParticlePath} shows the schematic diagram of the particles reconstructions with the ATLAS detector. 
+To reconstruct the VBS process in this analysis, electrons, muons, jets, and missing transverse energy (MET) are used.
 
-The physics objects are detected as digital signals in each detector described in Section~\ref{sec:detector}.
-Figure~\ref{fig:ParticlePath} shows the diagram of the particles' path in the ATLAS detector. 
-The particles need to be reconstructed from the digitized signals recorded by various detectors.
-In the VBS process in this analysis, bosons are measured from their decay products, leptons and jets.
-The basic physics objects reconstructed and used in this analysis are electrons, muons, jets, and missing transverse energy (MET).
+Electrons leave trajectories in the inner detector and develop an electromagnetic shower in the EM calorimeter. Most of the energy is absorbed in the EM calorimeter and very little energy deposit is expected in the hadron calorimeter.
+Muons also leave trajectories in the inner detector. As muons interact weakly with material, they are not absorbed in the calorimeters and leave tracks in the muon spectrometers.
+Jets are spray of bundles of particles produced by the hadronization of the final-state partons, collimated towards a certain direction, which are detected as hadron shower at the EM and hadron calorimeters. While most of the particles in a jet are hadrons, it may contains leptons and photon coming from the decay products of some hadrons. Charged particles in a jet leave tracks in the inner detector and ID tracks are used to correct the observations at the calorimeter. Neutral particles. like newutirinos, are not detected at any subdetectors. but therefore they can be reconstrcted as a MET in the event.a All of these physics objets need to be effects. 
 
-Electrons interact and leave trajectories in the inner detector and develops an electromagnetic shower in the EM calorimeter. Most of the energy is absorbed in the EM calorimeter and very little energy deposit is observed in the hadron calorimeter.
-Muons also leave trajectories in the inner detector. As it interacts weakly with material, it is not absorbed in the calorimeters and leave also tracks in the muon spectrometers.
-Jets consists of bundles of particles collimated towards a certain direction. While most of the particles in a jet are hadrons, it may contains leptons and photon coming from the decay products of some hadrons. Charged particles in a jet leave tracks in the inner detector and both charged and neutral hadrons develop a shower and produces energy deposits in EM and hadron calorimeters.
-
-These objects need to be reconstructed and identified starting from the signals in each detector.
-Furthermore, all of these physics objects need to be calibrated, in order to correct the translation from signals to original partons for detector effects.
-These reconstruction, identification and the calibration process done in the ATLAS experiment is described in this chapter.
-
+All of these physics objects need to be calibrated, in order to correct the translation from signals to original partons totake account for detector effects.
+These reconstruction, identification and the calibration processes performed in the ATLAS experiment are described in this chapter.
 \begin{figure}[tbp]
 \begin{center}
  \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/Reconstruction/ParticlePath}
