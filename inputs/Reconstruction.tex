@@ -188,6 +188,7 @@ anti-$k_T$ algorithm \cite{Cacciari_2008}
 \end{figure}
 
 \subsection{Small-R Jets}
+\label{subsec:sRjets}
 The small-R jets are reconstructed using anti-$k_T$ algorithm with a radius of $R = 0.4$. The particle flow (PFlow) algorithm~\cite{PERF-2015-09} is used in order to prepare the inputs for the jet reconstruction.
 The PFlow algorithm uses an ensemble of signals from the calorimeter and the ID to remove overlaps between the energy and the momentum measurements made in the calorimeter and the ID.
 %PFlow algorithm
@@ -307,26 +308,24 @@ where PV$_i$ is the reconstructed vertex $i$ of the event. $i$ = 0 represents th
     \label{fig:JVT}
     \end{center}
 \end{figure}
-\subsubsection{fJVT}
-
+\subsubsection{forward Jet Vertex Tagger}
+The forward jet vertex tagger (fJVT)~\cite{PERF-2016-06} is constructed 
 \subsubsection{B-tagging}
-The small-R jets containing a b-hadron are identified by DL1r algorithm~\cite{ATL-PHYS-PUB-2020-009}, using a deep-learning neural network.
+The small-R jets containing a b-hadron are identified by performing b-tagging.
+The algorithm makes use of the characteristics of the b-hadron that its lifetime is long enough to travel several mm from the primary interaction before decaying, and create secondary vertices. These can be reconstrcuted using the tracks from the inner detector.
+Additional kinematic properties of b-jets, jets originating from the hadroni- sation of b-quarks, such as the mass and the momentum are also used in order to enhance separation with c-jets or light-jets originating from u-, d-, s- quarks or gluons.
+The DL1r algorithm~\cite{ATL-PHYS-PUB-2020-009}, using a deep-learning neural network, is adopted in this analysis.
 %The DL1r b-tagging is based on the features of b-hadrons in terms of the impact parameter of tracks and the displaced vertices reconstructed in the inner detector.
 The Dl1r combines four low-level tagger, IP3D~\cite{ATL-PHYS-PUB-2017-013}, SV1~\cite{ATL-PHYS-PUB-2017-011}, JetFitter~\cite{ATL-PHYS-PUB-2018-025}, and RNNIP~\cite{ATL-PHYS-PUB-2017-003}.
-The so-called b-tagging algorithm is used to distinct b jets from c jets or light jets, which initiated by c-quarks or gluons,u,d,s quarks respectively.
-The lifetime of the b hadrons are long enough to travel several mm from the primary interaction before decaying, and create secondary vertices. These can be reconstrcuted using the tracks from the inner detector.
 The IP3D uses signed impact parameter significance. The impact parameter, $d_0$ denotes the distance between tracks and the primary vertex as shown in Figure~\ref{fig:bdecay}.
 The SV1 reconstructs the secondary vertex in a jets. The JetFitter reconstructs the topology of b/c-hadron decay chains using Kalman filter~\cite{FRUHWIRTH1987444}.
 Additionally, the RNNIP uses the track features including the track quality informations.
 At last the DL1r combines the outcomes all of these four low-level tagger by deep-learning neural network algorithm.
-%The DL1r output and the efficiency of the b-tagging using DL1r are shown in Figure~\ref{}.
 In this analysis the b-tagging working point is fixed at 70\% efficiency.
-
-\subsection{large-R Jets}
-large-R jets are reconstructed with topo-cluster using anti-$k_T$ algorithm similar to the small-R jets but with R = 1.0. The calibration applied for the large-R jets are mainly same as the procedure with the small-R jets, described in subsection~\ref{}, though there are some specific calibrations for large-R jets.
-
+\subsection{Large-R Jets}
+large-R jets are reconstructed with topo-cluster using anti-$k_T$ algorithm similar to the small-R jets but with R = 1.0. 
+The calibration applied for the large-R jets are mainly same as the procedure with the small-R jets, described in subsection~\ref{subsec:sRjets}, though there are some specific calibrations for large-R jets.
 What is specific to the large-R jet is that the reconstructed topo-clusters are highly contaminated by the calorimeter noises, particles from pile-up, soft radiations. Therefore it is firstly applied grooming and then applied MC and in-situ calibrations. The definition of the jet mass used in the anlysis is combined mass:
-
 \begin{itemize}
     \item \textbf{\sf{Grooming}} \\
     Grooming techniques reduce contributions from pile-up and soft and wide angle emmissions. Trimming algorithm \cite{Krohn2010} is used for this analysis. The original R = 1.0 jet is reclustered into the subjet with R = 0.2, then only subjets with $p_T$ > 5\% of the original jet $p_T$ are remained.
