@@ -5,8 +5,44 @@ First the object definition is shown in section~\ref{sec:object}, then the detai
 \section{Object definition}
 \label{sec:object}
 In this section object definition employed in the analysis is shown.
-%\subsection{Triggrs}
-%Trigger selection is applied in order to select events that are interesting. Single 
+\subsection{Triggers}
+Trigger selection is firstly applied in order to select events in interest.
+The triggers applied depend on the channel and on the data taking period. 
+The trigger selection is done using single-electron or single-muon triggers.
+The list of the trigger names applied in this analysis is summarized in table~\ref{tab:Triggers}.
+\begin{table}[H]
+\begin{center}
+\resizebox{1.0\textwidth}{!}{
+\begin{tabular}{|l|c|c|c|}
+\hline
+\multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ ($\pt(\mu\nu)<150\,\GeV$) & $\mu\nu qq$ ($\pt(\mu\nu) > 150\,\GeV$)  \\
+&& and $\mu\mu qq$ channels& and $\nu\nu qq$ channels\\
+\hline
+\hline
+\multirow{3}{*}{\centering {2015}} & HLT\_e24\_lhmedium\_L1EM20 OR & HLT\_mu20\_iloose\_L1MU15 OR & \multirow{3}{*}{ HLT\_xe70 } \\
+ & HLT\_e60\_lhmedium OR & HLT\_mu50 & \\
+ & HLT\_e120\_lhloose & & \\
+\hline
+\multirow{2}{*}{\centering {2016a (run $< 302919$)}} & HLT\_e26\_lhtight\_nod0\_ivarloose OR & HLT\_mu26\_ivarmedium OR  & \multirow{3}{*}{ HLT\_xe90\_mht\_L1XE50 } \\
+ & HLT\_e60\_lhmedium\_nod0 OR & HLT\_mu50 &  \\
+\multirow{2}{*}{($L<1.0\times10^{34}\,{\textrm cm}^{-2}\,{\textrm s}^{-1}$)} & HLT\_e140\_lhloose\_nod0 & & \\
+ & HLT\_e300\_etcut & & \\
+\hline
+{\centering {2016b (run $\geq 302919$)}} & \multirow{2}{*}{same as above} & \multirow{2}{*}{same as above}  &  \multirow{2}{*}{HLT\_xe110\_mht\_L1XE50} \\
+($L<1.7\times10^{34}\,{\textrm cm}^{-2}\,{\textrm s}^{-1}$) & & &\\
+\hline
+{\centering {2017}} & same as above & same as above  &  HLT\_xe110\_pufit\_L1XE55 \\
+\hline
+{\centering {2018}} & same as above & same as above  &  HLT\_xe110\_pufit\_xe70\_L1XE50  \\
+\hline
+\end{tabular}
+}
+\caption{The list of triggers used in the analysis.} 
+\label{tab:Triggers}
+\end{center}
+\end{table}
+
+
 \subsection{Leptons}
 Electrons are required to have: $p_T$ > 30~GeV in 1-lepton channel and $p_T$ > 7~GeV in 2-lepton channel, and pseudorapidity $|\eta|$ < 2.47 while muons should satisfy: $p_T$ > 30~GeV in 1-lepton channel and $p_T$ > 7~GeV in 2-lepton channel, and $|\eta|$ < 2.5. 
 "Tight" identified electron in "tight" isolation criteria, described in chapter~\ref{chap:reconstruction}, is used for 1-lepton channel, while "Loose" electron candidate in "loose" isolation criteria only in $p_T < 100~$GeV region is used in 2-lepton channel. 
@@ -331,7 +367,7 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{2}{c|}{ $>220$~GeV} \\
 %%% 1-lepton channel
 \begin{table}[t]
 \begin{center}
-\resizebox{0.9\textwidth}{!}{
+\resizebox{0.95\textwidth}{!}{
 \begin{tabular}{|l|l|c|c|c|c|c|}
 \hline
 \multicolumn{2}{|l|}{\multirow{2}{*}{Selection}} & \multicolumn{2}{c|}{SR}  &  $W$ CR (WR)  & \multicolumn{2}{c|}{$t\bar{t}$ CR (TR)} \\
@@ -369,7 +405,7 @@ Top veto & Num of $b$-tagged jets outside of large-R jet & \multicolumn{3}{c|}{0
 \end{table}
 \begin{table}[t]
 \begin{center}
-\resizebox{0.8\textwidth}{!}{
+\resizebox{0.95\textwidth}{!}{
 \begin{tabular}{|l|l|c|c|c|}
 \hline
 \multicolumn{2}{|l|}{cuts} & SR & $W$ CR (WR) & \ttbar CR (TR) \\
@@ -403,7 +439,7 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{3}{c|}{ $>220$~GeV} \\
 \end{tabular}
 }
 \end{center}
- \caption{A summary of regions event selection for \olep channel in the resolved regime.}
+ \caption{A summary of regions event selection for \olep~channel in the resolved regime.}
  \label{tab:1lep_resolved}
 \end{table}
 

@@ -12,12 +12,12 @@ RNN~\cite{Sherstinsky_2020} is a class of the neural network architecture, recen
 One of the general feature of the RNN is using the output recurrently enables to use the variable length sequences of inputs, which is suitable to jet tracks for example.
 The idea is to use all the jets reconstructed in the event in order to let the network learn all the hidden correlation and get the signal topology.
 Since the jet multiplicity is a variable feature event by event and cannot be fixed as inputs value, the RNN can handle this kind of input sequence naturally.
-The RNN is built with the Keras~\cite{chollet2015keras}, and the Tensorflow package~\cite{tensorflow2015-whitepaper} is used as backend for the mathematical computation. The RNN has 2 hidden layer with 25 recurrent cells to exploit the hidden correlation of the input sequence. \textcolor{blue}{(?)}
+The RNN is built with the Keras~\cite{chollet2015keras}, and the Tensorflow package~\cite{tensorflow2015-whitepaper} is used as backend for the mathematical computation. The RNN has 2 hidden layer with 25 recurrent cells to exploit the hidden correlation of the input sequence. %\textcolor{blue}{(?)}
 
 \section{Input variables}
 The $p_T, \eta, \phi, E$, of the jets as well as the track multiplicity ($n_{Tracks}$) are used as inputs in a recurrent way. As an actual input informations, they have 5 sequences ($p_T, \eta, \phi, E$, and the $n_{Tracks}$) and a variable length given by the jets multiplicity, which maximum length is fixed to be 5 in this analysis. The values are filled with a masking value if the jet is not reconstructed in the event, then the tool knows to consider only the actual jets during the training phase according to the Keras RNN implementation. 
 %The maximum length (i.e. jet multiplicty) is defined to get the significance to some extent and rather small modeling uncertainty.
-The input variables are the distributions of 4-momentum and $n_{Tracks}$ passed all event selections, which is shown in Figure... \textcolor{blue}{put input plots here}
+%The input variables are the distributions of 4-momentum and $n_{Tracks}$ passed all event selections, which is shown in Figure... \textcolor{blue}{put input plots here}
 
 \section{Setup and training}
 The RNN model is trained to separate the signal from the background. The output scores are then not used as a categorization variable by applying cut on it, but used as a final discriminant for the final fitting. The simple visualization of the training is shown in Figure~\ref{fig:simplenode}.
@@ -33,9 +33,8 @@ The training is performed in each lepton channel due to the different background
 
 \section{Training for merged regime}
 In addition to the small-R jets information, large-R jet candidate information ($p_T, \eta, \phi, E$) is used to further enhance the separation in the merged region. It is added and used in the combined RNN-DNN network, which is able to exploit the correlation across the tagging jets and the signal jets topology.
-The extra large-R information used as inputs are shown in Figure... \textcolor{blue}{put input plots here}
-
-The output RNN score in 2-lepton channel in each SRs are shown in Figure... \textcolor{blue}{put output plots here}
+%The extra large-R information used as inputs are shown in Figure... \textcolor{blue}{put input plots here}
+T%he output RNN score in 2-lepton channel in each SRs are shown in Figure... \textcolor{blue}{put output plots here}
 
 \section{Optimization of the binning}
 The optimization of the binning is needed to get the optimal performance of the RNN, in order to get better significance. The transformation (~\cite{ATL-PHYS-PUB-2019-009}) of the RNN output to optimise the effect of the final sensitivity and reduction in the number of bins is implemented.

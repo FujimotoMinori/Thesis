@@ -29,7 +29,19 @@ When the protons are reached to the desired energy, they are collided in the exp
 The experiments are ATLAS~\cite{PERF-2007-01}, CMS~\cite{CMS-TDR-08-001}, ALICE and LHCb. 
 ATLAS and CMS are the general purpose experiments, for both the precise measurement of the SM processes and the discovery of the physics beyond the SM, ALICE is a detector dedicated to the heavy-ion collisions, which studies quark-gluon plasma, and LHCb is a forward experiment which is optimized for the heavy-flavour physics. \\
 This thesis is based on the data taken by the ATLAS experiment in the Run~2 data-taking period at $\sqrt{s}$=13~TeV corresponding integrated luminosity of 139~fb$^{-1}$.
-
+%\section{Luminosity}
+%\label{sec:luminosity}
+%The luminosity (L), the ratio of the number of events detected in a certain period of time to the cross-section is defined as:
+%\begin{equation}
+%L=\frac{1}{\sigma} \frac{d N}{d t}
+%\end{equation}
+%where $\sigma$ is the cross-section for a given proton-proton inelastic interaction process and $dN$/$dt$ is the proton-proton interaction rate.
+%The luminosity is also defined with the beam parameters as:
+%\begin{equation}
+%L=\frac{N_1 N_2 f N_b}{4 \pi \sigma_x \sigma_y} S
+%\end{equation}
+%where $N_1$ and $N_2$ are the number of protons per bunch, $N_b$ is the number of bunches per fill, f is the revolution frequency of the bunches and $\sigma_x$ and $\sigma_y$ correspond to the transverse width of the beam at the collision point, the factor $S$ the geometric luminosity reduction factor to account for the crossing angle between the two beams.
+%The peak instantaneous luminosity delivered to ATLAS during the year 2018 is shown in figure~\ref{fig:luminosity}. The LHC has achieved the luminosity 
 \section{ATLAS Detector}
 \label{sec:detector}
 The ATLAS detector is a multi purpose detector, and designed to measure all standard model particles produced at the LHC.
@@ -185,7 +197,7 @@ The event rate provided by the LHC is around 40~MHz. It is impossible to record 
 \begin{figure}[tbp]
 \begin{center}
 %\subfigure[]{
- \includegraphics[width=1.0\textwidth,keepaspectratio]{figures/detector/Trigger}
+ \includegraphics[width=0.8\textwidth,keepaspectratio]{figures/detector/Trigger}
 %}
 \caption{
 The layout of the ATLAS trigger system in Run~2
@@ -194,9 +206,40 @@ The layout of the ATLAS trigger system in Run~2
 \end{center}
 \end{figure}
 The ATLAS trigger system~\cite{TRIG-2019-04} consists of hardware based Level-1 (L1) trigger, and software based High Level Trigger (HLT). 
-The L1 trigger is implemented with custom electronics and roughly reconstructs high-$p_T$, $e/\gamma$, $\mu$, $j$, and so on to determine the Regions-of-Interest (RoIs) in the HLT algorithms, from coarse granularity calorimeter and the muon spectrometer information. These data are treated by sub-systems, the L1Calo and L1Muon, respectively. The reconstructed L1 objects by the L1Calo and the L1Muon are sent to the L1Topo, and  the selections based on kinematical information can be performed. Then all informations from L1Calo, L1Muon, and the L1Topo are sent to the Central Trigger Processor (CTP). The L1 trigger reduces the event rate from approximately 40~MHz to 100~kHz, and the decision time of the L1 is  2.5~$\mu$s.
+The L1 trigger is implemented with custom electronics and roughly reconstructs high-$p_T$, $e/\gamma$, $\mu$, $j$, and so on to determine the Regions-of-Interest (RoIs) in the HLT algorithms, from coarse granularity calorimeter and the muon spectrometer information. 
+These data are treated by sub-systems, the L1Calo and L1Muon, respectively. 
+L1 electron is reconstructed by L1Calo, 2$\times$2 core towers and 12 surrounded towers of ECAL are used for capturing the electron energy and calculating isolation requirement, respectively. The sketch of these calorimeter towers are shown in figure~\ref{fig:TriggerTower}.
+The L1 Muon makes use of RPC and TGC hits and fires if there is a coincidence between different chambers based on the predefined look-up-tables.
+The schematic of the muon barrel trigger is shown in figure~\ref{fig:muontrigger}.
+The reconstructed L1 objects by the L1Calo and the L1Muon are sent to the L1Topo, and the selections based on kinematical information can be performed. 
+Then all informations from L1Calo, L1Muon, and the L1Topo are sent to the Central Trigger Processor (CTP). 
+The L1 trigger reduces the event rate from approximately 40~MHz to 100~kHz, and the decision time of the L1 is 2.5~$\mu$s.
 The RoIs decided at L1 are then sent to the HLT, which is a farm of large CPU cores.
 The HLT reconstructs objets with the full detector information around the RoIs. 
 It reduces the rate the L1 output of 100~kHz to approximately 1~kHz on average, within a processing time of about 200~ms.
 Events that pass the trigger selections are recorded on disk, where data can be used for further analysis off-line.
+\begin{figure}[tbp]
+\begin{center}
+%\subfigure[]{
+ \includegraphics[width=0.6\textwidth,keepaspectratio]{figures/detector/TriggerTower}
+%}
+\caption{
+The sketch of the barrel module of the ECAL~\cite{PERF-2007-01}.
+}
+\label{fig:TriggerTower}
+\end{center}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\begin{center}
+%\subfigure[]{
+ \includegraphics[width=0.5\textwidth,keepaspectratio]{figures/detector/muontrigger}
+%}
+\caption{
+The schematic of the muon barrel trigger.~\cite{PERF-2007-01}. RPC hits are used for triggers.
+}
+\label{fig:muontrigger}
+\end{center}
+\end{figure}
 

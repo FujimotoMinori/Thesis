@@ -75,6 +75,7 @@ The selections applied in this analysis are shown in the table~\ref{tab:electron
 Furthermore, track-to-vertex association requirements are applied. 
 $d_0$ is a minimum distance between the primary vertex (PV) and the track, and $\sigma_{d_0}$ is its uncertainty. $z_0$ is the transverse impact parameter relative to the beamline.
 \begin{table}[htbp]
+\centering
 \resizebox{0.8\textwidth}{!}{
 \begin{tabular}[h]{|l|c|c|} \hline
                         & \emph{Loose}             & \emph{Tight}\\ \hline
@@ -120,6 +121,7 @@ Both efficiencies are checked to be well reproduced in MC simulation.
 %The further instructions are shown in \cite{MUON-2018-03}.
 %identification
 \begin{table}[ht]
+\centering
 \resizebox{0.8\textwidth}{!}{
 \begin{tabular}[ht]{|l|c|c|c|}
   \hline
@@ -162,7 +164,6 @@ Kinematics of jets ideally reflects the parton kinematics.
 Jets are basically reconstructed by grouping topo-clusters by the anti-kt algorithm~\cite{Cacciari_2008}, with a radius of $R = 0.4$ (small-$R$ jets) or $R = 1.0$ (large-R jets). 
 The small-R jet contains most of the radiation from the quark or gluon jets. 
 The large-R jets represents the hadronic decays of the heavy, boosted objects where two jets from the quarks overlap.
-The hadronic decaying objects from high-$p_T$ W/Z boson cannot be separated as two small-R jets since the boson is boosted and the angle between quarks is small, hence they are reconstructed as one large-R jet.
 
 The anti-$k_t$ algorithm defines a measure of distance $d_{ij}$ between the clusters in the calorimeter,
 \begin{equation}
@@ -296,7 +297,8 @@ and
 \begin{equation}
 R_{p_{\mathrm{T}}}^0=\sum_{\text {trk }} \frac{p_{\mathrm{T}}^{\mathrm{trk}}\left(\mathrm{PV}_0\right)}{p_{\mathrm{T}}^{\text {jet }}}
 \end{equation}
-where PV$_i$ is the reconstructed vertex $i$ of the event. $i$ = 0 represents the primary vertex. The $\sum p_{\mathrm{T}}^{\text {track }}\left(\mathrm{PV}_0\right)$ is the scalar sum of the $p_T$ of the tracks that are associated to the jet and originate from the primaty vertex (PV$_0$), and $\sum_{i \geq 1} \sum p_{\mathrm{T}}^{\text {track }}\left(\mathrm{PV}_i\right)$ represents the scalar $p_T$ sum of the tracks that are associated to the jet and originate from pile-up vertices. $k$ is a constant ($k$ = 0.01), in order to suppress the pileup dependence, and $n_{\text {track }}^{\mathrm{PU}}$ denotes the total number of pileup tracks in an event. The distributions of there two variables are shown in figure~\ref{fig:JVT}. In the fianl JVT discriminant, jets with JVT values close to one are accepted as most likely being from primary vertex, while smaller JVT value are tagged as pile-up jets.
+where PV$_i$ is the reconstructed vertex $i$ of the event. $i$ = 0 represents the primary vertex. The $\sum p_{\mathrm{T}}^{\text {track }}\left(\mathrm{PV}_0\right)$ is the scalar sum of the $p_T$ of the tracks that are associated to the jet and originate from the primary vertex (PV$_0$), and $\sum_{i \geq 1} \sum p_{\mathrm{T}}^{\text {track }}\left(\mathrm{PV}_i\right)$ represents the scalar $p_T$ sum of the tracks that are associated to the jet and originate from pile-up vertices. $k$ is a constant ($k$ = 0.01), in order to suppress the pileup dependence, and $n_{\text {track }}^{\mathrm{PU}}$ denotes the total number of pileup tracks in an event. The distributions of two variables are shown in figure~\ref{fig:JVT}. 
+%In the final JVT discriminant, jets with JVT values close to one are accepted as most likely being from primary vertex, while smaller JVT value are tagged as pile-up jets.
 \begin{figure}[tbp]
     \begin{center}
     %\subfigure[]{
@@ -309,31 +311,74 @@ where PV$_i$ is the reconstructed vertex $i$ of the event. $i$ = 0 represents th
     \end{center}
 \end{figure}
 \subsubsection{forward Jet Vertex Tagger}
-The forward jet vertex tagger (fJVT)~\cite{PERF-2016-06} is constructed 
+The forward jet vertex tagger (fJVT)~\cite{PERF-2016-06} employs momentum conservation in order to tag a forward PFlow jet.
+First central jets (jets with $|\eta|$ < 2.5.) are reconstructed per every vertex, and the relevant calibration is applied. 
+The QCD pile-up jets are identified by using JVT and the $R^i_{p_T}$ discriminant:
+\begin{equation}
+R_{p_{\mathrm{T}}}^i=\sum_{\mathrm{trk}} \frac{p_{\mathrm{T}}^{\mathrm{trk}}\left(\mathrm{PV}_i\right)}{p_{\mathrm{T}}^{\mathrm{jet}}}
+\end{equation}
+defined as the scalar $p_T$ sum of the tracks that are associated with the jet and originate from the pile-up vertex $i$ divided by the fully calibrated jet $p_T$. 
+The missing transverse momentum per vertex $i$ ($p^{miss}_{\mathrm{T},i}$) is then calculated as
+\begin{equation}
+\mathbf{p}_{\mathrm{T}, i}^{\text {miss }}=-\left(\sum_{\text{jets,}{~p_{\mathrm{T}}^{\text{jet}}>20\mathrm{GeV}}} \mathbf{p}_{\mathrm{T}}^{\text {jet }}+\sum_{\text {tracks},~p_{\mathrm{T}}^{\text {jet }}<20 \mathrm{GeV}} \mathbf{p}_{\mathrm{T}}^{\text {track }}+\sum_{\text {tracks, jets fail } R_{p_{\mathrm{T}}}^i \text { cut }} \mathbf{p}_{\mathrm{T}}^{\text {track }}\right)
+\end{equation}
+For every forward jet fj, (jet in 2.5 < $|\eta|$ < 4.5.), the normalized projection of $p^{miss}_{\mathrm{T},i}$ on the direction of the forward jet,
+\begin{equation}
+\mathrm{fJVT}_i=\frac{\mathbf{p}_{\mathrm{T}, i}^{\text {miss }} \cdot \mathbf{p}_{\mathrm{T}}^{\mathrm{fj}}}{\left|\mathbf{p}_{\mathrm{T}}^{\mathrm{fj}}\right|^2}
+\end{equation}
+is computed. The final forward JVT (fJVT) discriminant is defined as
+\begin{equation}
+\mathrm{fJVT}=\max \left(\mathrm{fJVT}_i\right)
+\end{equation}
+The distributions of fJVT variable is shown in figure~\ref{fig:fJVT}. 
+\begin{figure}[tbp]
+    \begin{center}
+    %\subfigure[]{
+    \includegraphics[width=0.34\textwidth,keepaspectratio]{figures/Reconstruction/fJVT}
+    \caption{
+    Distributions of fJVF for PileUp jets and Hard Scattering forward jets in 30<$p_T$<40~GeV. \cite{PERF-2016-06}
+    }
+    \label{fig:fJVT}
+    \end{center}
+\end{figure}
 \subsubsection{B-tagging}
 The small-R jets containing a b-hadron are identified by performing b-tagging.
-The algorithm makes use of the characteristics of the b-hadron that its lifetime is long enough to travel several mm from the primary interaction before decaying, and create secondary vertices. These can be reconstrcuted using the tracks from the inner detector.
+The algorithm makes use of the characteristics of the b-hadron that its lifetime is long enough to travel several mm from the primary interaction before decaying, and create secondary vertices. These can be reconstructed using the tracks from the inner detector.
 Additional kinematic properties of b-jets, jets originating from the hadronisation of b-quarks, such as the mass and the momentum are also used in order to enhance separation with c-jets or light-jets originating from u-, d-, s- quarks or gluons.
 The DL1r algorithm~\cite{ATL-PHYS-PUB-2020-009}, using a deep-learning neural network, is adopted in this analysis.
 %The DL1r b-tagging is based on the features of b-hadrons in terms of the impact parameter of tracks and the displaced vertices reconstructed in the inner detector.
-The Dl1r combines four low-level tagger, IP3D~\cite{ATL-PHYS-PUB-2017-013}, SV1~\cite{ATL-PHYS-PUB-2017-011}, JetFitter~\cite{ATL-PHYS-PUB-2018-025}, and RNNIP~\cite{ATL-PHYS-PUB-2017-003}.
+The DL1r combines four low-level tagger, IP3D~\cite{ATL-PHYS-PUB-2017-013}, SV1~\cite{ATL-PHYS-PUB-2017-011}, JetFitter~\cite{ATL-PHYS-PUB-2018-025}, and RNNIP~\cite{ATL-PHYS-PUB-2017-003}.
 The IP3D uses signed impact parameter significance. The impact parameter, $d_0$ denotes the distance between tracks and the primary vertex.
 %as shown in Figure~\ref{fig:bdecay}.
 The SV1 reconstructs the secondary vertex in a jets. The JetFitter reconstructs the topology of b/c-hadron decay chains using Kalman filter~\cite{FRUHWIRTH1987444}.
-Additionally, the RNNIP uses the track features including the track quality informations.
+Additionally, the RNNIP uses the track features including the track quality information.
 At last the DL1r combines the outcomes all of these four low-level tagger by deep-learning neural network algorithm.
+Figure~\ref{fig:btageff} shows the efficiency of b-tagging with respect to jet $p_T$.
 In this analysis the b-tagging working point is fixed at 70\% efficiency.
+\begin{figure}[tbp]
+    \begin{center}
+    %\subfigure[]{
+    \includegraphics[width=0.50\textwidth,keepaspectratio]{figures/Reconstruction/btageff}
+    \caption{
+    Distributions of fJVF (left) for PileUp jets and Hard Scattering forward jets in 30<$p_T$<40~GeV. \cite{ATL-PHYS-PUB-2020-009}
+    }
+    \label{fig:btageff}
+    \end{center}
+\end{figure}
 \subsection{Large-R Jets}
-large-R jets are reconstructed with topo-cluster using anti-$k_T$ algorithm with R = 1.0. 
+The hadronic decaying objects from high-$p_T$ W/Z boson cannot be separated as two small-R jets with large Lorentz boosts~\cite{JETM-2018-06} and the angle between quarks is small, hence they are reconstructed as one large-R jet.
+Large-R jets are reconstructed with topo-cluster using anti-$k_T$ algorithm with R = 1.0. 
 The calibration applied for the large-R jets are mainly same as the procedure with the small-R jets, described in subsection~\ref{subsec:sRjets}, though there are some specific calibrations for large-R jets.
-What is specific to the large-R jet is that the reconstructed topo-clusters are highly contaminated by the calorimeter noises, particles from pile-up, soft radiations. Therefore it is firstly applied grooming and then applied MC and in-situ calibrations. The definition of the jet mass used in the anlysis is combined mass:
+What is specific to the large-R jet is that the reconstructed topo-clusters are highly contaminated by the calorimeter noises, particles from pile-up, soft radiations. Therefore it is firstly applied grooming and then applied MC and in-situ calibrations. 
 \begin{itemize}
     \item \textbf{\sf{Grooming}} \\
-    Grooming techniques reduce contributions from pile-up and soft and wide angle emmissions. Trimming algorithm \cite{Krohn2010} is used for this analysis. The original R = 1.0 jet is reclustered into the subjet with R = 0.2, then only subjets with $p_T$ > 5\% of the original jet $p_T$ are remained.
+    Grooming techniques reduce contributions from pile-up and soft and wide angle emissions. 
+    Trimming algorithm \cite{Krohn2010} is used for this analysis. 
+     The original R = 1.0 jet is reclustered into the subjet with R = 0.2 using $k_T$ algorithm, then only subjets with $p_T$ > 5\% of the original jet $p_T$ are remained.
     The detailed calibration is provided for these trimmed jets.
     \item \textbf{\sf{MC-based JES, $\eta$, mass calibration}}\\
     The JES is evaluated as a ratio of their energy to the truth jets as the function of jet energy and $\eta$. The jet mass scale (JMS)  calibration using the jet mass response of reconstrcted jets to the truth is also applied.
-    Figure~\ref{fig:largeRresponse} shows the jet energy and mass reponse. 
+    Figure~\ref{fig:largeRresponse} shows the jet energy and mass response. 
     \begin{figure}[tbp]
     \begin{center}
     \includegraphics[width=0.45\textwidth,keepaspectratio]{figures/Reconstruction/responsept}
@@ -344,11 +389,14 @@ What is specific to the large-R jet is that the reconstructed topo-clusters are 
     \label{fig:largeRresponse}
     \end{center}
     \end{figure} 
-    \item  \textbf{\sf{In-situ JES and JMS calibration}} \\
-    In-situ calibration is applied for the remaining difference of the jet energy between the data and MC. It is performed with similar procedure with small-R jets. The JES is calibrated in events where the jet recoils against a reference object, which are calibrated photon, reconstructed Z boson, or a system of well-measured small-R jets. \cite{JETM-2018-02}. 
+    \item  \textbf{\sf{In-situ jet energy scale (JES) and jet mass scale (JMS) calibration}} \\
+    In-situ calibration is applied for the remaining difference of the jet energy between the data and MC. 
+    It is performed with similar procedure with small-R jets. 
+    The JES is calibrated in events where the jet recoils against a reference object, which are calibrated photon, reconstructed Z boson, or a system of well-measured small-R jets. The in-situ JMS calibration is performed after the application of the in-situ JES corrections. The jet mass response is measured from fits to the jet mass peaks formed from by high $p_T$ W bosons and top quark decaying hadronically. 
+    It is done by the $R_{trk}$ method using the independent measurements by the calorimeter and the inner tracker~\cite{JETM-2018-02}. 
 \end{itemize}
 
-\subsection{jet substructure}
+\subsection{Jet substructure}
 The large-R jet from boson has 2-prong structure, since it was originally collimated two quarks. This substructure can be the key to distinguish the boson jets to quark or gluon jets, which have 1-prong structure.
 Figure~\ref{fig:jetsub} shows the schematic view of the substructure.
  \begin{figure}[tbp]
@@ -373,10 +421,10 @@ e_{3}^{(\beta)} &=\frac{1}{p_{T J}^{3}} \sum_{1 \leq i<j<k \leq n_{J}} p_{T i} p
 \end{equation}
 where $p_{T J}$ is the transverse momentum of the jet with respect to the beam, $p_{T i}$ is the transverse momentum of particle $i$, and $n_{J}$ is the number of particles in the jet. 
 The boost-invariant angle $R_{ij}^{2}=\left(\phi_{i}-\phi_{j}\right)^{2}+\left(y_{i}-y_{j}\right)^{2}$ is the distance in the azimuthrapidity plane and for infrared and collinear (IRC) safety, the angular exponent $\beta>0$. 
-These energy correlation depends on how the soft and the collinear jet contributions are. The 1-prong and the 2-prong jets can be distinguished by the relation of two function, $e_{3}^{\beta=1} \sim\left(e_{2}^{\beta=1}\right)^{3}$ as shown in Figure~\ref{fig:phasespace23} \cite{Larkoski_2014}. 
+These energy correlation depends on how the soft and the collinear jet contributions are. The 1-prong and the 2-prong jets can be distinguished at the boundary of $e_{3}^{\beta=1} \sim\left(e_{2}^{\beta=1}\right)^{3}$ as shown in Figure~\ref{fig:phasespace23} \cite{Larkoski_2014}. 
 \begin{figure}[tbp]
     \begin{center}
-    \includegraphics[width=0.50\textwidth,keepaspectratio]{figures/Reconstruction/phasespace23}
+    \includegraphics[width=0.45\textwidth,keepaspectratio]{figures/Reconstruction/phasespace23}
     \caption{
     boundaries of energy correlation function \cite{Larkoski_2014}
     }
@@ -385,13 +433,30 @@ These energy correlation depends on how the soft and the collinear jet contribut
 \end{figure}
 The $D_2$ variable tends to get the lower value for 2-prong jet, boson jet while it tends to get the higher value for 1-prong jet, which is q/g jet.
 \subsection{Boosted Boson Tagger}
-The 3-variable cut-based tagger, that relies on $D_2$, jet mass, and the number of the tracks~\cite{ATL-PHYS-PUB-2020-017} is used for identifying the large-R jet from W/Z boson and to reject the other SM background processes. It provides two fixed working points defined at 50\% and 80 \% signal efficiency. 
-large-R jets are required to be $p_T$ > 200~GeV and $|\eta| <2.0$, and jet mass > 50~GeV.
+The 3-variable cut-based tagger, that relies on $D_2$, jet mass, and the number of the tracks is used for identifying the large-R jet from W/Z boson and to reject the other SM background processes~\cite{ATL-PHYS-PUB-2020-017} . 
+The combined mass, reconstructed as the weighted sum of massed from calorimeter information and from mixed calorimeter and tracking information, is exploit since the W/Z decaying jet mass peaks around 80/91~GeV. 
+The 2-prong energy structure inside jet which is characterized by $D_2$ is used.
+The number of track has been found to improve background rejection for a fixed signal efficiency~\cite{EXOT-2013-08} due to the rejection of jets seeded by gluons.  
+Unlike jets from massive boson decays in which the hadron multiplicity is essentially independent of the jet $p_T$, energetic gluon jets are typically composed of more hadrons, so the number of charged-particle tracks associated with the original, ungroomed jet is required to be small. 
+The tagger provides two fixed working points defined at 50\% and 80 \% signal efficiency. 
+Figure~\ref{fig:bosonTagger} shows the measured signal efficiency plot of the boson tagger and the measured background rejection plot for 50~\% efficiency working point.
+\begin{figure}[tbp]
+    \begin{center}
+    \includegraphics[width=0.47\textwidth,keepaspectratio]{figures/Reconstruction/bosontaggersignaleff}
+    \includegraphics[width=0.42\textwidth,keepaspectratio]{figures/Reconstruction/bosontaggerrejection}
+    \caption{
+     Measured signal efficiency (left) and background rejection (right) for 50~\% W tagger \cite{ATL-PHYS-PUB-2020-017}
+    }
+    \label{fig:bosonTagger}
+    \end{center}
+\end{figure}
+
+%large-R jets are required to be $p_T$ > 200~GeV and $|\eta| <2.0$, and jet mass > 50~GeV.
 \section{Missing Transverse Momentum}
 The particle such as neutrinos traverses the whole detector and cannot be detected in the detector, as the Figure~\ref{fig:ParticlePath} shows. 
 Those invisible particles are reconstructed by using the imbalance of the transverse momenta. 
-It is calculated by taking the negative sum of the momenta of detected objects, electrons, muons, and jets and additionally, so called soft terms, which are charged-particle tracks not matched to the reconstructed objects\cite{PERF-2016-07}.
-It is given by the following formula:
-%
-
-
+It is calculated by the following formula:
+\begin{equation}
+\mathbf{E}_{\mathbf{T}}^{\text {miss }}=-\sum_{i \in\{\text { hard objects }\}} \mathbf{p}_{\mathbf{T}, \mathbf{i}}-\sum_{j \in\{\text { soft objects }\}} \mathbf{p_{T,\mathbf{j}}}
+\end{equation}
+by taking the negative sum of the momenta of detected objects, electrons, muons, and jets and additionally, so called soft terms, which are charged-particle tracks not matched to the reconstructed objects~\cite{PERF-2016-07}.
