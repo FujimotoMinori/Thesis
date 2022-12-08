@@ -313,17 +313,18 @@ The forward jet vertex tagger (fJVT)~\cite{PERF-2016-06} is constructed
 \subsubsection{B-tagging}
 The small-R jets containing a b-hadron are identified by performing b-tagging.
 The algorithm makes use of the characteristics of the b-hadron that its lifetime is long enough to travel several mm from the primary interaction before decaying, and create secondary vertices. These can be reconstrcuted using the tracks from the inner detector.
-Additional kinematic properties of b-jets, jets originating from the hadroni- sation of b-quarks, such as the mass and the momentum are also used in order to enhance separation with c-jets or light-jets originating from u-, d-, s- quarks or gluons.
+Additional kinematic properties of b-jets, jets originating from the hadronisation of b-quarks, such as the mass and the momentum are also used in order to enhance separation with c-jets or light-jets originating from u-, d-, s- quarks or gluons.
 The DL1r algorithm~\cite{ATL-PHYS-PUB-2020-009}, using a deep-learning neural network, is adopted in this analysis.
 %The DL1r b-tagging is based on the features of b-hadrons in terms of the impact parameter of tracks and the displaced vertices reconstructed in the inner detector.
 The Dl1r combines four low-level tagger, IP3D~\cite{ATL-PHYS-PUB-2017-013}, SV1~\cite{ATL-PHYS-PUB-2017-011}, JetFitter~\cite{ATL-PHYS-PUB-2018-025}, and RNNIP~\cite{ATL-PHYS-PUB-2017-003}.
-The IP3D uses signed impact parameter significance. The impact parameter, $d_0$ denotes the distance between tracks and the primary vertex as shown in Figure~\ref{fig:bdecay}.
+The IP3D uses signed impact parameter significance. The impact parameter, $d_0$ denotes the distance between tracks and the primary vertex.
+%as shown in Figure~\ref{fig:bdecay}.
 The SV1 reconstructs the secondary vertex in a jets. The JetFitter reconstructs the topology of b/c-hadron decay chains using Kalman filter~\cite{FRUHWIRTH1987444}.
 Additionally, the RNNIP uses the track features including the track quality informations.
 At last the DL1r combines the outcomes all of these four low-level tagger by deep-learning neural network algorithm.
 In this analysis the b-tagging working point is fixed at 70\% efficiency.
 \subsection{Large-R Jets}
-large-R jets are reconstructed with topo-cluster using anti-$k_T$ algorithm similar to the small-R jets but with R = 1.0. 
+large-R jets are reconstructed with topo-cluster using anti-$k_T$ algorithm with R = 1.0. 
 The calibration applied for the large-R jets are mainly same as the procedure with the small-R jets, described in subsection~\ref{subsec:sRjets}, though there are some specific calibrations for large-R jets.
 What is specific to the large-R jet is that the reconstructed topo-clusters are highly contaminated by the calorimeter noises, particles from pile-up, soft radiations. Therefore it is firstly applied grooming and then applied MC and in-situ calibrations. The definition of the jet mass used in the anlysis is combined mass:
 \begin{itemize}
@@ -387,11 +388,10 @@ The $D_2$ variable tends to get the lower value for 2-prong jet, boson jet while
 The 3-variable cut-based tagger, that relies on $D_2$, jet mass, and the number of the tracks~\cite{ATL-PHYS-PUB-2020-017} is used for identifying the large-R jet from W/Z boson and to reject the other SM background processes. It provides two fixed working points defined at 50\% and 80 \% signal efficiency. 
 large-R jets are required to be $p_T$ > 200~GeV and $|\eta| <2.0$, and jet mass > 50~GeV.
 \section{Missing Transverse Momentum}
-The particle such as neutrinos traverses the whole detector and cannot be detected in the detector, as the Figure~\ref{fig:ParticlePath} shows. Those invisible particles are reconstructed by using the imbalance of the transverse momenta. It is calculated by taking the negative sum of the momenta of detected objects, electrons, muons, and jets and additionally, so called soft terms, which are charged-particle tracks not matched to the reconstructed objects\cite{PERF-2016-07}.
-\section{Overlap Removal}
-\textcolor{blue}{Write about overlap removal here}
-
-\section{Triggers}
-\textcolor{blue}{Write about the data takings and the triggers here}
+The particle such as neutrinos traverses the whole detector and cannot be detected in the detector, as the Figure~\ref{fig:ParticlePath} shows. 
+Those invisible particles are reconstructed by using the imbalance of the transverse momenta. 
+It is calculated by taking the negative sum of the momenta of detected objects, electrons, muons, and jets and additionally, so called soft terms, which are charged-particle tracks not matched to the reconstructed objects\cite{PERF-2016-07}.
+It is given by the following formula:
+%
 
 
