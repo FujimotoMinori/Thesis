@@ -170,6 +170,7 @@ Expected limit of wilson coefficient & 0.33                  & 0.84             
 Of course, the optimal threshold of $m_{VV}$ can be different depending on the clipping energy.
 In addition, a fine tuning of the $m_{VV}$ threshold might be needed by considering the stability of the background stimation.
 The expected limit is shown in each threshold for $m_{VV}$ of 1000~GeV, 1500~GeV, 2000~GeV for variety of the clipping points in Figure~\ref{fig:ThresholdScan}.
+
 As expected, higher $m_{VV}$ threshold is preferred at the higher clipping point, while lower $m_{VV}$ threshold is favored at the lower clipping point.
 1500~GeV is chosen as the best compromize to separate SRs into low- and high-$m_{VV}$ bins.
 
@@ -237,10 +238,19 @@ Due to the small statistics in high-$m_{VV}$ regions compared with the low-$m_{V
 the overall behaviors of the post-fit nuisance parameters are almost the same as the SM measurement.
 The result is shown in Figure~\ref{fig:aQGClimits}.
 The expected on observed limits are shown at 5 clipping energy points of [1.5, 2.0, 3.0, 5.0, $\infty$]~TeV.
+
 The unitarity bound from the theoretical calculation \cite{PhysRevD.101.113003} is overlaid.
 The upper and lower limits correspond to the signal hypotheses showing $\Delta NLL \sim \frac{1}{2}\chi^2 = 1.0$.
 
-The log-likelihood (-2 ln $\lambda$) distributions with respect to the signal strength of aQGC signal, $\mu_{aQGC}$, is shown in figure~\ref{} for FT0 operator, for each clipping energy of 1500~GeV, 2000~GeV, 3000~GeV, $\infty$.
+The log-likelihood (-2 ln $\lambda$) distributions with respect to the signal strength of aQGC signal, $\mu_{aQGC}$, is shown in figure~\ref{fig:ProfileLL} for FT0 operator, for each clipping energy of 1500~GeV, 2000~GeV, 3000~GeV, $\infty$.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.38\textwidth]{figures/aQGC/profileFT01500}
+    	\includegraphics[width=0.38\textwidth]{figures/aQGC/profileFT02000}
+    	\includegraphics[width=0.38\textwidth]{figures/aQGC/profileFT03000}
+        \caption{Log-likelihood curve.}
+        \label{fig:ProfileLL}
+\end{figure}
 Figure~\ref{fig:QUADINT} shows the distributions of the quardratic term and the interference term for each FT0, FS02, FM0 operator.
 The quardratic term has large contribution compared to the interference term.
 Due to the large contribution of the QUAD term in the parametrization of the $\mu_{aQGC}$, the log-likelihood curve has two local minimums.
