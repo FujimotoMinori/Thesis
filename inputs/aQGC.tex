@@ -10,8 +10,8 @@
 %\begin{equation*}
 %  \mathcal{L}=\mathcal{L}_{sm}+\sum_{i}\frac{c_i}{\Lambda^{2}}\mathcal{L}_i+\sum_{n}\frac{f_n}{\Lambda^{4}}\mathcal{L}_n,
 %\end{equation*}
-%where $\mathcal{L}$ represents possible dim-6 and dim-8 operators and $c_i$ and $f_n$ are correspond their wilson coefficients. The $\Lambda$ represents the energy scale over which the new degrees of freedom are integrated out. 
-%In this note, the name of Lagrangian term that contains the given operator is denoted by its wilson coefficient i.e. $L_{n} = \frac{f_{n}}{\Lambda^4} O_{n}$ is called as $f_{n}$.
+%where $\mathcal{L}$ represents possible dim-6 and dim-8 operators and $c_i$ and $f_n$ are correspond their Wilson coefficients. The $\Lambda$ represents the energy scale over which the new degrees of freedom are integrated out. 
+%In this note, the name of Lagrangian term that contains the given operator is denoted by its Wilson coefficient i.e. $L_{n} = \frac{f_{n}}{\Lambda^4} O_{n}$ is called as $f_{n}$.
 %The odd-dimension operators violate lepton and baryon number conservation and are ignored.
 %Both of dim-6 and dim-8 operators can contribute to the VBS processes through aTGC and aQGC, respectively,
 %but due to the tight constraints of dim-6 operators from inclusive diboson measurements, only dim-8 operators are discussed in this note.
@@ -37,7 +37,7 @@
 %\hline
 %\end{tabular}
 %}
-%\caption{Correspondences between wilson coefficients and vertices. $\mathrm{X}$ shows the existence of the vertex with the interaction by the operator.}
+%\caption{Correspondences between Wilson coefficients and vertices. $\mathrm{X}$ shows the existence of the vertex with the interaction by the operator.}
 %\label{tab:operators}
 %\end{center}
 %\end{table}
@@ -45,12 +45,18 @@
 As mentioned in Section~\ref{subsec:EFT}, aQGC interpretation is done via EFT lagrangian. 
 The SM+EFT matrix element can be written as
 \begin{equation}
-   |A_{SM}+\frac{f_i}{\Lambda^4}A_i|=|A_{SM}^2|+\sum\limits_i \frac{f_i^2}{\Lambda^8}|A_{i}^2|+ \sum\limits_i 2 \frac{f_i}{\Lambda^4} \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} \frac{f_i}{\Lambda^4} \frac{f_j}{\Lambda^4} \mathrm{Re}(A_i^\star A_j)
+   |A_{SM}+\frac{f_i}{\Lambda^4}A_i|^2=|A_{SM}|^2+\sum\limits_i \frac{f_i^2}{\Lambda^8}|A_{i}|^2+ \sum\limits_i 2 \frac{f_i}{\Lambda^4} \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} \frac{f_i}{\Lambda^4} \frac{f_j}{\Lambda^4} \mathrm{Re}(A_i^\star A_j)
 \end{equation}
-where $|A_SM|^2$ is the SM matrix element, $|A_{i}^2|$ represents the pure-EFT matrix elements for the $f_{i}$ operator, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is its corresponding interference term with the SM, and $\mathrm{Re}(A_i^\star A_j)$ is possible interference term between EFT operators $f_{i}$ and $f_{j}$. 
+where $|A_SM|^2$ is the SM matrix element, $|A_{i}|^2$ represents the pure-EFT matrix elements for the $f_{i}$ operator, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is its corresponding interference term with the SM, and $\mathrm{Re}(A_i^\star A_j)$ is possible interference term between EFT operators $f_{i}$ and $f_{j}$. 
 Theoretically, it cannot separate the effects of Wilson coefficients $f_i$ and the scale $\Lambda^4$, so the parameter of interest in this analysis is the ratio $\frac{f_i}{\Lambda^4}$. %Sometimes it is just called as $f_i$.
 The pure-EFT term is scaled by the quadrature of $\frac{f_i}{\Lambda^4}$ and the interference term by $\frac{f_{i}}{\Lambda^4}$.
 Sometimes they are called as the quadratic term and the linear term, respectively.
+
+\subsection{Statistical interpretation}
+The aQGC signal is extacted with a profile-likelihood fit same as what described in section~\ref{sec:likelihood}, where the signal referring the aQGC signal sample, and the standard model EW VV+jj signal sample is included as background with other standard model background samples like V+jets and $t\bar{t}$.
+The signal strength, $\mu$ is interpreted in terms of Wilson coefficient, $\mu$ = $\frac{f_i}{\Lambda^4}$. 
+For purpose of excluding a signal hypothesis, confidence intervals are derived to set limits. 
+Confidence intervals are calculated with asympotoic fomulae using Wilks' theorem~\ref{}, assuming that the profile likelihood test statistic is $\chi^2$ distributed~\cite{}.
 
 \subsection{Clipping method}
 \label{subsec:clipping}
@@ -61,7 +67,6 @@ The background samples, which is the all standard model predictions, are not cli
 %5 points are chosen as recommended from the anomolous gauge couplings (aGC) taskforce.~\cite{ATL-COM-PHYS-2017-433} 
 5 points are chosen so that we can compare the results with other channels or experiments.
 The expected and observed limits are obtained with all 3 channels at each of the clipping points, and compared with the theoretical unitarity bound.
-
 
 \subsection{Study of final disciminant in aQGC search}
 \label{subsec:2binapproach}
@@ -74,7 +79,7 @@ while the RNN score distributions for the aQGC samples are similar to the one fo
     \centering
    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_HP_aQGC.pdf}
    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_LP_aQGC.pdf}
-    \caption{$m_{VV}$ shape distribution of each wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
+    \caption{$m_{VV}$ shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeMVV}
 \end{figure}
 
@@ -82,7 +87,7 @@ while the RNN score distributions for the aQGC samples are similar to the one fo
     \centering
    \includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_HP_aQGC.pdf}
    \includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_LP_aQGC.pdf}
-    \caption{RNN score shape distribution of each wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
+    \caption{RNN score shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeRNN}
 \end{figure}
 %Two-dimensional binning of $m_{VV}$ and the RNN score is used as the final discriminant for the aQGC search.
@@ -138,7 +143,7 @@ It can be a motivation to use the RNN score also in the aQGC search study.
 %Norm Z                              & 1 $\pm$ 0.036          & 1 $\pm$ 0.029            & 1 $\pm$ 0.027        \tabularnewline \hline
 %Norm VV                             & 1 $\pm$ 1.13           & 1 $\pm$ 0.71             & 0.99 $\pm$ 0.64      \tabularnewline \hline
 %Expected limit of $\mu$             & 0.19                   & 0.72                     & 0.10                 \tabularnewline \hline
-%Expected limit of wilson coefficient & 0.44                   & 0.85                     & 0.32                 \tabularnewline \hline
+%Expected limit of Wilson coefficient & 0.44                   & 0.85                     & 0.32                 \tabularnewline \hline
 %\end{tabular}
 %}
 %\caption{Expected signal strength and limits in each two options. only \tlep channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normarizations fitted for standard model signal, and Z and diboson backgrounds are shown as Norm in the table.}
@@ -157,7 +162,7 @@ Unconditional fitted $\mu$          & 8.83e-06 $\pm0.032$    & 1.02e-04 $\pm0.34
 Norm sigVBS                         & 1 $\pm$ 1.08           & 1 $\pm$ 0.79             & 1 $\pm$ 0.41         \tabularnewline \hline
 Norm Z                              & 1 $\pm$ 0.012          & 1 $\pm$ 0.010            & 1 $\pm$ 0.01         \tabularnewline \hline
 Expected limit of $\mu$             & 0.11                   & 0.70                     & 0.11                 \tabularnewline \hline
-Expected limit of wilson coefficient & 0.33                  & 0.84                     & 0.33                 \tabularnewline \hline
+Expected limit of Wilson coefficient & 0.33                  & 0.84                     & 0.33                 \tabularnewline \hline
 \end{tabular}
 }
 \caption{Expected signal strength and limits in each two options. only \tlep~channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normalization fitted for standard model signal, and Z backgrounds are shown as Norm in the table.}
@@ -229,35 +234,33 @@ Threshold values (GeV)          & SRVBS\_HP  & SRVBS\_LP & SRVBS\_Fid  \tabularn
 \end{table}
 
 \subsection{Expected limits}
-Finally, by using both quadratic and interference terms as a combined signal template, the expected 95\% CL upper and lower limits are obtained by the fit to the asimov dataset constructed from the background plus SM $VVjj$ samples.
+Finally, by using both quadratic and interference terms as a combined signal template, the expected 95\% CL upper and lower limits are obtained by the fit to the asimov dataset constructed from the background plus SM EW VV+jj samples, as well as observed limits with data.
 The POI is set to include both QUAD terms and INT terms simultaneously, thereby two signal strength is parameterized as $\mu_{QUAD} = \mu_{INT}^2$.
 All SRs in \zlep, \olep\ and \tlep channels are separated into low- and high-$m_{VV}$ bins as discussed in Section~\ref{subsec:2binapproach} and combined statistically.
 All systematic uncertainties discussed for Standard Model measurement is included in the fitting.
-The SM $VVjj$ signal samples are added to the background as free floated normalization factor, and all the analysis regions are correlated.
-Due to the small statistics in high-$m_{VV}$ regions compared with the low-$m_{VV}$ regions,
-the overall behaviors of the post-fit nuisance parameters are almost the same as the SM measurement.
-The result is shown in Figure~\ref{fig:aQGClimits}.
-The expected on observed limits are shown at 5 clipping energy points of [1.5, 2.0, 3.0, 5.0, $\infty$]~TeV.
-
+The SM EW VV+jj signal samples are added to the background as free floated normalization factor, and all the analysis regions are correlated.
+Due to the small statistics in high-$m_{VV}$ regions compared with the low-$m_{VV}$ regions, the overall behaviors of the post-fit nuisance parameters are almost the same as the SM measurement.
+The expected on observed limits are shown at 5 clipping energy points of [1.5, 2.0, 3.0, 5.0, $\infty$]~TeV in Figure~\ref{fig:aQGClimits}.
 The unitarity bound from the theoretical calculation \cite{PhysRevD.101.113003} is overlaid.
-The upper and lower limits correspond to the signal hypotheses showing $\Delta NLL \sim \frac{1}{2}\chi^2 = 1.0$.
+%The upper and lower limits correspond to the signal hypotheses showing $\Delta NLL \sim \frac{1}{2}\chi^2 = 1.0$.
 
-The log-likelihood (-2 ln $\lambda$) distributions with respect to the signal strength of aQGC signal, $\mu_{aQGC}$, is shown in figure~\ref{fig:ProfileLL} for FT0 operator, for each clipping energy of 1500~GeV, 2000~GeV, 3000~GeV, $\infty$.
+The log-likelihood (-2 ln $\lambda$, $\lambda$ is a likelihood ratio) distributions with respect to the signal strength of aQGC signal, $\mu_{\mathrm{aQGC}}$, is shown in figure~\ref{fig:ProfileLL} for FT0 operator, for each clipping energy of 1500~GeV, 2000~GeV, 3000~GeV, $\infty$.
+%Figure~\ref{}, \ref{}, \ref{} show the log-likelihood curve obtained by the fitting with observed data for each clipping energy, for FT0, FS02, FM0 operator, respectively.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.38\textwidth]{figures/aQGC/profileFT01500}
     	\includegraphics[width=0.38\textwidth]{figures/aQGC/profileFT02000}
     	\includegraphics[width=0.38\textwidth]{figures/aQGC/profileFT03000}
-        \caption{Log-likelihood curve.}
+        \caption{The observed log-likelihood curves of FT0 Wilson coeffient where the clipping energy is 1.5~TeV (top left), 2.0~TeV (top right), 3.0~TeV (bottom left), $\infty$ (bottom right).}
         \label{fig:ProfileLL}
 \end{figure}
-Figure~\ref{fig:QUADINT} shows the distributions of the quardratic term and the interference term for each FT0, FS02, FM0 operator.
-The quardratic term has large contribution compared to the interference term.
+%Figure~\ref{fig:QUADINT} shows the distributions of the quardratic term and the interference term for each FT0, FS02, FM0 operator.
+%The quardratic term has large contribution compared to the interference term.
 Due to the large contribution of the QUAD term in the parametrization of the $\mu_{aQGC}$, the log-likelihood curve has two local minimums.
-Figure~\ref{}, \ref{}, \ref{} show the log-likelihood curve obtained by the fitting with observed data for each clipping energy, for FT0, FS02, FM0 operator, respectively.
-A $\mu_{aQGC}$ value at crossing the 95\% confidence interval line and the likelihood curve are used to calculate upper and lower limits on the coefficients. The 95\% confidence interval corresponds to 1.9.
-
-Table~\ref{tab:aQGClimits} shows the uniterized and ununiterized expected limits from figure~\ref{fig:aQGClimits}.
+A $\mu_{aQGC}$ value at crossing the 95\% confidence interval line and the likelihood curve are used to calculate upper and lower limits on the coefficients. 
+%The 95\% confidence interval corresponds to 1.9.
+For high clipping values, the results exclude the signal strength which are already exluded by the theoretical unitarity bound.
+Table~\ref{tab:aQGClimits} shows the uniterized and ununiterized expected and observed limits from figure~\ref{fig:aQGClimits}, where uniterized limit is the intersection point of the thoretical unitality bound and experimental limit line, whilde ununiterized limit is the limit with no clipping energy.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.40\textwidth]{figures/aQGC/ClippedFT0CI.pdf}
@@ -281,7 +284,6 @@ Table~\ref{tab:aQGClimits} shows the uniterized and ununiterized expected limits
 %\label{tab:aQGClimits}
 %\end{center}
 %\end{table}
-The theoretical unitary bound means above the band the constraints from theoretical calculation,
 
 %uniterized limit
 \begin{table}[ht!]
@@ -300,7 +302,7 @@ FS02               &  [ -5.46, 5.61 ]            & [ -3.27, 3.32 ]              
 \end{center}
 \end{table}
 
-The same procedure is performed with all 17 wilson coefficient.
-The uniterized expected limit and the ununiterized expected limit is plotted in figure~\ref{}.
+%The same procedure is performed with all 17 Wilson coefficient.
+%The uniterized expected limit and the ununiterized expected limit is plotted in figure~\ref{}.
 
 
