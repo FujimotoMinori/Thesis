@@ -50,11 +50,24 @@ The SM+EFT matrix element can be written as
 where $|A_SM|^2$ is the SM matrix element, $|A_{i}|^2$ represents the pure-EFT matrix elements for the $f_{i}$ operator, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is its corresponding interference term with the SM, and $\mathrm{Re}(A_i^\star A_j)$ is possible interference term between EFT operators $f_{i}$ and $f_{j}$. 
 Theoretically, it cannot separate the effects of Wilson coefficients $f_i$ and the scale $\Lambda^4$, so the parameter of interest in this analysis is the ratio $\frac{f_i}{\Lambda^4}$. %Sometimes it is just called as $f_i$.
 The pure-EFT term is scaled by the quadrature of $\frac{f_i}{\Lambda^4}$ and the interference term by $\frac{f_{i}}{\Lambda^4}$.
-Sometimes they are called as the quadratic term and the linear term, respectively.
+Sometimes they are called as the quadratic term and the interference (linear) term, respectively.
 
 \section{Statistical interpretation}
 The aQGC signal is extracted with a profile-likelihood fit same as what is described in section~\ref{sec:likelihood}, where the signal referring to the aQGC signal sample, and the standard model EW VV+jj signal sample is included as background with other standard model background samples like V+jets and $t\bar{t}$.
 The signal strength, $\mu$ is interpreted in terms of Wilson coefficient, $\mu$ = $\frac{f_i}{\Lambda^4}$. 
+The POI is set to include both quadratic terms and interference terms simultaneously, thereby two signal strength is parameterized as $\mu_{QUAD} = \mu_{INT}^2$.
+Figure~\ref{fig:quadint} shows the quadratic and interference signal distributions of di-boson invariant mass ($m_{VV}$) in HP SR, which has the most signal constraining power in 2-lepton channel.
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.45\textwidth]{figures/aQGC/FT0_0ptag1pfat0pjet_0ptv_SRVBS_HP_MllJ.pdf}
+    	\includegraphics[width=0.45\textwidth]{figures/aQGC/FS02_0ptag1pfat0pjet_0ptv_SRVBS_HP_MllJ.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/aQGC/FM0_0ptag1pfat0pjet_0ptv_SRVBS_HP_MllJ.pdf}
+        \caption{The comparison of the quadratic term and the interference term with FT0 (top left), FS02 (top right), and FM0 (bottom middle) in 2-lepton channel HP SR. The contribution of the interference term can be negative, and it is larger in FS terms. }
+        \label{fig:quadint}
+\end{figure}
+
+
+
 For purpose of excluding a signal hypothesis, confidence intervals are derived to set limits. 
 Confidence intervals are calculated with asymptotic formulae using Wilks' theorem~\cite{10.1214/aoms/1177732360}, assuming that the profile likelihood test statistic is $\chi^2$ distributed~\cite{Cowan:2010js}.
 
@@ -110,7 +123,7 @@ The threshold 2000~GeV is derived from figure~\ref{fig:2lepaQGCshapeMVVh}.
 With the second option, the number of SRs is twice as shown in Figure~\ref{fig:2lepTwoBin}.
 %(binning??)
 Unconditional asimov fit (The log-likelihood fit using asimov dataset without fixing the $\mu$ value) by using FT0 signal in only \tlep\ channel is performed.
-Still, only quadratic term is used in this study.
+Only quadratic term is used in this study.
 The systematic uncertainties are not included in the fitting here, just the floated normalization factor is considered.
 The asimov data used here is constructed from the background plus SM electroweak VV+jj signal samples.
 The expected limits and uncertainty of the expected signal strength of FT0 signal are shown in table~\ref{tab:2binlimit}.
@@ -235,7 +248,6 @@ Threshold values (GeV)          & SRVBS\_HP  & SRVBS\_LP & SRVBS\_Fid  \tabularn
 
 \section{Limits setting}
 Finally, by using both quadratic and interference terms as a combined signal template, the expected 95\% CL upper and lower limits are obtained by the fit to the asimov dataset constructed from the background plus SM EW VV+jj samples, as well as observed limits with data.
-The POI is set to include both QUAD terms and INT terms simultaneously, thereby two signal strength is parameterized as $\mu_{QUAD} = \mu_{INT}^2$.
 All SRs in \zlep, \olep\, and \tlep\ channels are separated into low- and high-$m_{VV}$ bins as discussed in Section~\ref{subsec:2binapproach} and combined statistically.
 All systematic uncertainties discussed for Standard Model measurement are included in the fitting.
 The SM EW VV+jj signal samples are added to the background as a free floated normalization factor, and all the analysis regions are correlated with EW VV+jj signal samplee.
