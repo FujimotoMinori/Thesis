@@ -63,8 +63,8 @@ Large-R jets & \multicolumn{3}{c|}{$\pt > 200$~GeV, $|\eta| < 2.0$ } \\
 \end{center}
 \end{table}
 
-The expected cross-section from the standard model prediction, $\sigma_{EW VVjj \mathrm{, \ SM}}$ can be exploited by using the the truth event yields, yields after applying the fiducial selections, and the luminosity.
-Fiducial cross-section is evaluated by scailing the measured signal strength $\mu$, defined as;
+The expected cross-section from the standard model prediction, $\sigma_{EW VVjj \mathrm{, \ SM}}$ can be exploited by using the truth event yields, yields after applying the fiducial selections, and the luminosity.
+Fiducial cross-section is evaluated by scaling the measured signal strength $\mu$, defined as;
 \begin{equation}
 \mu = \frac{\sigma_{EW VVjj \mathrm{, \ obs}}}{\sigma_{EW VVjj \mathrm{, \ SM}}}
 \end{equation}
@@ -89,14 +89,14 @@ where the P is the Poisson probability terms:
 %\begin{equation}
 %\mathcal{L}_{\text {Meas }}(\mu, \theta)=\prod_{i \in \text { bins }} \operatorname{Pois}\left(N_{i} \mid \mu s_{i}+b_{i}\right)=\prod_{i \in \text { bins }} \frac{\left(\mu s_{i}+b_{i}\right)^{N_{i}}}{N_{i} !} e^{-\left(\mu s_{i}+b_{i}\right)}
 %\end{equation}
-$s_i$ and $b_i$ is the expected number of the signal and the background events yield in bin $i$, and $N_i$ is the numbers of the observed events from data in the bin. 
+$s_i$ and $b_i$ are the expected number of the signal and the background events yield in bin $i$, and $N_i$ is the number of the observed events from data in the bin. 
 The $\mu$ is also called as the parameter of interest (POI). $\theta$ is a set of nuisance parameters (NPs) associated with each systematic uncertainty. $\theta$ affects the signal and background yields so it can be written like $s_{i}=s_{i}(\theta)$ and $b_{i}=b_{i}(\theta)$. 
-The second term in equation~\ref{eq:poisson}, $G(\theta)$ is often called penalty term, to represent the supplementary information of the systematic uncertainty effect, and to constraint each uncertainty. It is a product from all single uncertainty $\theta_j$; $G(\theta) = \prod_{j}G_{j}(\theta_{j}$). 
+The second term in equation~\ref{eq:poisson}, $G(\theta)$ is often called penalty term, to represent the supplementary information of the systematic uncertainty effect, and to constrain each uncertainty. It is a product from all single uncertainty $\theta_j$; $G(\theta) = \prod_{j}G_{j}(\theta_{j}$). 
 In this analysis, this term is given by the Gaussian distribution with a standard deviation of $\sigma = 1$. It is designed so that $\theta_j = 0$ corresponds to the nominal value, and $\theta_j = \pm 1$ corresponds to the $\pm 1 \sigma$ variations of the systematic source. 
-Some parameters for example Z+jets background normalization factors do not have this penalty terms and are determined completely from the data, called floating parameters.
-The statistical uncertainties of the total background is also included to the likelihood function as $\gamma$ parameter. 
-The additinal nuisance parameter called gamma parameter is also added to the initial $\mathcal{L}$ as $\gamma_i$ for each bin, where $\gamma_i$ is the total statistical uncertainty of a specific histogram bin i. 
-The poisson distribution is expected for the gamma parameters, conventionally they are paremetrized so that the nominal expectation is 1 and its variation corresponds to $\pm 1 \sigma$, where the $\sigma$ is the MC statistical uncertainty of the bin i.
+Some parameters for example Z+jets background normalization factors do not have these penalty terms and are determined completely from the data, called floating parameters.
+The statistical uncertainties of the total background are also included in the likelihood function as $\gamma$ parameter. 
+The additional nuisance parameter called gamma parameter is also added to the initial $\mathcal{L}$ as $\gamma_i$ for each bin, where $\gamma_i$ is the total statistical uncertainty of a specific histogram bin i. 
+The poisson distribution is expected for the gamma parameters, conventionally they are parametrized so that the nominal expectation is 1 and its variation corresponds to $\pm 1 \sigma$, where the $\sigma$ is the MC statistical uncertainty of the bin i.
 %\begin{equation}
 %{Pois}\left(N_{i} \mid \mu s_{i}+\gamma_{i}b_{i}\right)
 %\end{equation}
@@ -171,11 +171,11 @@ Top Resolved CR       &                 & $m^{tag}_{jj}$ &               \\ \hli
 \caption{\label{tab:discriminant} Final discriminant in each region used in the fitting. }
 \end{center}
 \end{table}
-In the signal regions the RNN score is used, while in the CRs the $m^{tag}_{jj}$ is employed in order to give a better constrains to the $m^{tag}_{jj}$ reweighting uncertainty. 
+In the signal regions the RNN score is used, while in the CRs the $m^{tag}_{jj}$ is employed in order to give better constrains to the $m^{tag}_{jj}$ reweighting uncertainty. 
 In the Top merged CRs single bin setting is adapted since these CR is for constraining $t\bar{t}$ background normalization and there is no need to use the shape. 
 The background is estimated using the MC for the RNN shape in SRs, while the normalization is estimated using the data in CRs.
 The normalization in the SR is designed to be extrapolated from the CR with the ratio of SR/CR obtained by the nominal MC modeling.
-As the NPs which change the ratio of the normalization of SR/CR, theoretical variation and the boson tagging scale factor uncertainty is taken into account.
+As the NPs which change the ratio of the normalization of SR/CR, theoretical variation and the boson tagging scale factor uncertainty are taken into account.
 All systematic uncertainties are included in the fit as NPs with penalty terms or floating parameters as described in section~\ref{sec:likelihood}. Since the definition of the CR is basically same as SR but inverted the mass window or the boson tagging, it is designed that most of the NPs are expected to be canceled each other out.
 
 The normalization of the dominant background is assigned as the floating parameter, while background with small contribution which has small impact on the signal extraction is assigned as the NP with penalty term of a certain amount of the error.
@@ -205,8 +205,8 @@ diboson norm 1lep to 2lep       &             & 0.152     & 0.098\\ \hline
 \end{table}
 
 \section{Smoothing and pruning}
-The smoothing algorithm is applied to the the variation of the systematic uncertainties enter into the likelihood fit to alleviate statistical fluctuations, that might create suspicious effects in the fit.
-During this procedure bins are migrated from left to right until the statistical uncertainty per bin to be less than 5$\%$. The nominal and smoothed variation histograms are then compared to derive the up and down uncertainties. The resulting uncertainties are associated to the initial finer binned distribution. 
+The smoothing algorithm is applied to the variation of the systematic uncertainties enter into the likelihood fit to alleviate statistical fluctuations, that might create suspicious effects in the fit.
+During this procedure, bins are migrated from left to right until the statistical uncertainty per bin is less than 5$\%$. The nominal and smoothed variation histograms are then compared to derive the up and down uncertainties. The resulting uncertainties are associated to the initial finer binned distribution. 
 
 Systematic variations that have a very small effect and are negligible for the measurement are neglected for speeding up the fitting, this procedure is called pruning. 
 The uncertainties removed are:
