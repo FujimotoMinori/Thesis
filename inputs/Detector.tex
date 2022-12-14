@@ -3,13 +3,13 @@
 \section{Large Hadron Collider}
 The Large Hadron Collider (LHC) is a circular collider which is located at CERN, Geneva. It was built inside the existing 27~km tunnel, previously housing the Large Electron-Positron Collider (LEP). The LHC project was planned in the 1990s and its construction started in 2000. \\
 The LHC accelerates mainly protons and also heavy ions such as lead (Pb) in two beams running in opposite directions and collides them. 
-The machine has been operated since 2008 and the first physics run, referred to as Run~1, was completed in 2012 with the center-of-mass energy of $\sqrt{s}$ = 7 and 8~TeV. The Higgs boson was discovered by the ATLAS and CMS experiments in 2012 \cite{HIGG-2012-27}, \cite{CMS-HIG-12-028}, which is one of the most important accomplishments of this period. The energy was increased to $\sqrt{s}$ = 13~TeV in 2015 to 2018 for the second phase of the LHC referred to as Run~2. 
+The machine has been operated since 2008 and the first physics run, referred to as Run~1, was completed in 2012 with the center-of-mass energy of $\sqrt{s}$ = 7 and 8~TeV. The Higgs boson was discovered by the ATLAS and CMS experiments in 2012 \cite{HIGG-2012-27} \cite{CMS-HIG-12-028}, which was one of the most important accomplishments of this period. The energy was increased to $\sqrt{s}$ = 13~TeV for the second phase of the LHC between 2015 and 2018 referred to as Run~2. 
 %The primary designed energy of the accelerator is $\sqrt{s}$ = 14~TeV.
-The large amount of data taken at the LHC and its increasing in energy allowed to push the limit of our understanding of the particle physics. 
+The large amount of data provided by the LHC and its increasing in energy allowed to push the limit of our understanding of the particle physics. 
 
 \subsection{Accelerator complex}
 %pre accelerator
-The particles are gradually accelerated by a chain of linear and circular accelerator complex, shown in Figure~\ref{fig:accelerator}. At first protons are in the form of hydrogen atoms. After being ionized, they are fed in the the linear accelerator (LINAC~2), where they reach to energy of 50 MeV and formed into bunches. Then they are guided to the Proton Synchrotoron Booster (PSB). The PSB consists of four synchrotorons of 25~m which bring protons' energy to 1.4~GeV. The protons enter the Proton Synchrotron (PS) after that. This PS is a 638~m synchrotoron and it increases the energy of the protons to 25~GeV. The final injector for the LHC is Super Proton Synchrotoron (SPS), increasing the protons' energy up to 450~GeV with 7~km radius synchrotoron. The SPS also provides particles for some CERN based experiments such as AWAKE, as well as the CERN testbeam areas. \\
+The particles are gradually accelerated by a chain of linear and circular accelerator complex, shown in Figure~\ref{fig:accelerator}. At first protons are in the form of hydrogen atoms. After being ionized, they are fed in the linear accelerator (LINAC~2), where they reach to energy of 50 MeV and formed into bunches. Then they are guided to the Proton Synchrotoron Booster (PSB). The PSB consists of four synchrotorons of 25~m which bring protons' energy to 1.4~GeV. The protons enter the Proton Synchrotron (PS) after that. This PS is a 638~m synchrotoron and it increases the energy of the protons to 25~GeV. The final injector for the LHC is Super Proton Synchrotoron (SPS), increasing the protons' energy up to 450~GeV with 7~km radius synchrotoron. The SPS also provides particles for some CERN based experiments such as AWAKE, as well as the CERN testbeam areas. \\
 \begin{figure}[tbp]
 \begin{center}
 %\subfigure[]{
@@ -23,12 +23,14 @@ The ATLAS detector as well as the CMS, ALICE, and LHCb detectors are placed on t
 \end{center}
 \end{figure}
 %electric and magnetic field
-The SPS injects protons to the LHC with the energy of 450~GeV in the form of bunches, separated by 25~ns, each of which contains 1.15 $\times$ 10$^{11}$ protons. They are circulated in the two separated beam pipes. They are accelerated by and electric field while being kept curved by a magnetic field. The acceleration is performed by the 8 superconducting radio frequency cavities. They provide a frequency of 400~MHz and generate the electric fields. They are operated at a temperature of 4.5~K. The beams are bent by the 1232 super-conducting dipole magnets to be kept in the circle trajectory. The magnetic field strength is 8.3~T, and they are operated at a temperature of 1.9~K. In addition 392 quadruple magnets are used to focus the beams. \\
+The SPS injects protons to the LHC with the energy of 450~GeV in the form of bunches, separated by 25~ns, each of which contains 1.15 $\times$ 10$^{11}$ protons. They are circulated in the two separated beam pipes. They are accelerated by and electric field while being kept curved by a magnetic field. The acceleration is performed by the eight superconducting radio frequency cavities. 
+They switch the direction of the electric field at 400~MHz frequency.
+They are operated at a temperature of 4.5~K. The beams are bent by the 1232 super-conducting dipole magnets to be kept in the circle trajectory. The magnetic field strength is 8.3~T, and they are operated at a temperature of 1.9~K. In addition 392 quadruple magnets are used to focus the beams. \\
 %The 4 experiments
-When the protons are reached to the desired energy, they are collided in the experiments, at the four interaction points (IP). 
+When the protons reach the desired energy, they are collided in the experiments, at the four interaction points (IP). 
 The experiments are ATLAS~\cite{PERF-2007-01}, CMS~\cite{CMS-TDR-08-001}, ALICE and LHCb. 
 ATLAS and CMS are the general purpose experiments, for both the precise measurement of the SM processes and the discovery of the physics beyond the SM, ALICE is a detector dedicated to the heavy-ion collisions, which studies quark-gluon plasma, and LHCb is a forward experiment that is optimized for the heavy-flavour physics. \\
-This thesis is based on the data taken by the ATLAS experiment in the Run~2 data-taking period at $\sqrt{s}$=13~TeV corresponding integrated luminosity of 139~fb$^{-1}$.
+This thesis is based on the data taken by the ATLAS experiment in the Run~2 data-taking period at $\sqrt{s}$=13~TeV corresponding to an integrated luminosity of 139~fb$^{-1}$.
 %\section{Luminosity}
 %\label{sec:luminosity}
 %The luminosity (L), the ratio of the number of events detected in a certain period of time to the cross-section is defined as:
@@ -64,15 +66,18 @@ ATLAS adopts a right-handed coordinate system with its origin at the interaction
 \begin{eqnarray*}
 \eta &=& -\ln\tan(\theta/2)
 \end{eqnarray*}
-The low $\eta$ corresponds to the center part of the detector, while high $\eta$ region points the beam axis. At the massless limit, the difference in $\eta$ between two particles, $\Delta\eta$ is invariant under the Lorentz transformation along z-axis.
+The low $\eta$ corresponds to the central part of the detector, while high $\eta$ region points the beam axis. At the massless limit, the difference in $\eta$ between two particles, $\Delta\eta$ is invariant under the Lorentz transformation along z-axis.
 The other variable used often is the distance in the cylindrical coordinate system;
 $
 \Delta R = \sqrt{\Delta \eta^2 + \Delta \phi^2}
 $
+Both of $\Delta \eta$ and $\Delta \phi$ are lorentz invariant, hence $\Delta R$ is also a lorentz invariant variable along z-axis.
 
 \subsection{Magnet}
 The ATLAS magnet system consists of four large superconducting magnets with a dimension of 22~m in diameter and 26~m in length with a stored energy of 1.6~GJ. A solenoid aligned on the beam axis generates 2~T axial magnetic field for the inner detector, which is placed inside the calorimeter system. 
-Toroidal magnets and end-cap regions are installed and provide 0.5 and 1~T magnetic fields for muon detectors, respectively.
+Toroidal magnets are installed in the barrel and end-cap regions and provide 0.5 and 1~T magnetic fields for muon detectors, respectively.
+
+
 
 There are different subsystems of the detector, the Inner Detector with the coverage of $| \eta | < 2.5$, the calorimeters with $| \eta | < 4.9$, and  the muon spectrometer with $| \eta | < 2.7$ from the inside to outside as shown in Figure~\ref{fig:ATLAS}. 
 More details are described below.
@@ -117,18 +122,18 @@ The layer next to the IBL is located at R = 50.5~mm. In total there are roughly 
 \subsubsection{SCT}
 The Semiconductor Tracker(SCT) surrounds the Pixel Detector and is located at about 30 to 50~cm from the beamline. 
 It consists of silicon microstrip modules in 4 barrel layers and 9 end-cap disks.
-The modules in the barrel have two layers of modules that are slightly rotated each other, which allows the 2-dimensional measurement, which is the determination of the position along the strips. There are 2112 modules on the barrel and 1976 modules in the end-cap regions and the tracking resolution is about 17~$\mu$m $\times$ 580~$\mu$m.
+The modules in the barrel have two layers that are slightly rotated each other. This layout allows the 2-dimensional measurement, which is the determination of the position along the strips. There are 2112 modules on the barrel and 1976 modules in the end-cap regions and the tracking resolution is about 17~$\mu$m $\times$ 580~$\mu$m.
 
 \subsubsection{TRT}
 Outside of the SCT, there is the Transition Radiation Tracker (TRT), which is located 50 to 100~cm from the beamline, covering |$\eta$| < 2.0.
 It consists of drift tubes filled with gas. The tubes have a diameter of 4~mm and length of 144~m along the beam. Gas is the  mixture of Xenon (70\%), CO2 (27\%), and Oxygen (3\%). 
 In addition to the measurement of the track momentum, it is used for particle identifications. 
-The amount of transition radiation, which is emitted by particles crossing the interface of two materials, heavily depends on the mass of the crossing particles. Since electrons are the lightest stable charged particles and emit the most transition radiation, the TRT can be used for the separation of electrons and pions.
+The amount of transition radiation, which is emitted by particles crossing the interface of two materials, heavily depends on the mass of the crossing particles. Since electrons are the lightest stable charged particles and emit the most transition radiation, the TRT can be used for the separation between electrons and pions.
 
 \subsection{Calorimeters}
 The calorimeters measure the deposited energy of particles. 
 The coverage of the calorimeter extends up to $|\eta|$ = 4.9. A schematic view of the system with the various components can be seen in Figure~\ref{fig:calo}.
-It consists of an electromagnetic calorimeter (ECAL) ($|\eta|$ < 3.2) and a hadronic calorimeter (HCAL)  ($|\eta|$ < 4.9), covering full $\phi$-range. he ECAL is specifically designed for the measurement of photons and electrons, the HCal for the decays of hadronic particles. The details of each subcomponent are shown below.
+It consists of an electromagnetic calorimeter (ECAL) ($|\eta|$ < 3.2) and a hadronic calorimeter (HCAL)  ($|\eta|$ < 4.9), covering full $\phi$-range. ECAL is specifically designed for the measurement of photons and electrons, and the HCal for the decays of hadronic particles. The details of each subcomponent are shown below.
 
 \begin{figure}[tbp]
 \begin{center}
@@ -208,7 +213,7 @@ The layout of the ATLAS trigger system in Run~2
 The ATLAS trigger system~\cite{TRIG-2019-04} consists of hardware based Level-1 (L1) trigger, and software based High Level Trigger (HLT). 
 The L1 trigger is implemented with custom electronics and roughly reconstructs high-$p_T$, $e/\gamma$, $\mu$, $j$, and so on to determine the Regions-of-Interest (RoIs) in the HLT algorithms, from coarse granularity calorimeter and the muon spectrometer information. 
 These data are treated by sub-systems, the L1Calo and L1Muon, respectively. 
-L1 electron is reconstructed by L1Calo, 2$\times$2 core towers and 12 surrounded towers of ECAL are used for capturing the electron energy and calculating isolation requirement, respectively. The sketch of these calorimeter towers is shown in figure~\ref{fig:TriggerTower}.
+L1 electron is reconstructed by L1Calo. 2$\times$2 core towers and 12 surrounded towers of ECAL are used for capturing the electron energy and calculating isolation requirement, respectively. The sketch of these calorimeter towers is shown in figure~\ref{fig:TriggerTower}.
 The L1 Muon makes use of RPC and TGC hits and fires if there is a coincidence between different chambers based on the predefined look-up-tables.
 The schematic of the muon barrel trigger is shown in figure~\ref{fig:muontrigger}.
 The reconstructed L1 objects by the L1Calo and the L1Muon are sent to the L1Topo, and the selections based on kinematical information can be performed. 
