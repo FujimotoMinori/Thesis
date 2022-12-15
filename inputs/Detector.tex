@@ -133,7 +133,7 @@ The amount of transition radiation, which is emitted by particles crossing the i
 \subsection{Calorimeters}
 The calorimeters measure the deposited energy of particles. 
 The coverage of the calorimeter extends up to $|\eta|$ = 4.9. A schematic view of the system with the various components can be seen in Figure~\ref{fig:calo}.
-It consists of an electromagnetic calorimeter (ECAL) ($|\eta|$ < 3.2) and a hadronic calorimeter (HCAL)  ($|\eta|$ < 4.9), covering full $\phi$-range. ECAL is specifically designed for the measurement of photons and electrons, and the HCal for the decays of hadronic particles. The details of each subcomponent are shown below.
+It consists of an electromagnetic calorimeter (ECal) ($|\eta|$ < 3.2) and a hadronic calorimeter (HCal)  ($|\eta|$ < 4.9), covering full $\phi$-range. ECal is specifically designed for the measurement of photons and electrons, and the HCal for the decays of hadronic particles. The details of each subcomponent are shown below.
 
 \begin{figure}[tbp]
 \begin{center}
@@ -149,14 +149,14 @@ The whole picture of the Calorimeter with electromagnetic and hadronic subcompon
 
 
 \subsubsection{ElectroMagnetic Calorimeter}
-The ElectroMagnetic Calorimeter (ECAL) measures the electromagnetic showers, initiated by electrons or photons. It is a sampling calorimeter using liquid Argon (LAr) with the lead (Pb) absorbers. They are arranged in an accordion geometry, which enables to cover full $\phi$-range without azimuthal gaps. It is divided into barrel region ($|\eta|$ < 1.4) and end-caps (1.4 < $|\eta|$ < 3.2). The end-caps are divided into a central region (1.375 < $|\eta|$ < 2.5) with finer granularity and a forward region (2.5 < $|\eta|$ < 3.2) with coarser granularity. The designed energy resolution is $\delta$E/E = 10\% $\sqrt{E/GeV} \oplus$ 0.7\%.
+ECal measures the electromagnetic showers, initiated by electrons or photons. It is a sampling calorimeter using liquid Argon (LAr) with the lead (Pb) absorbers. They are arranged in an accordion geometry, which enables to cover full $\phi$-range without azimuthal gaps. It is divided into barrel region ($|\eta|$ < 1.4) and end-caps (1.4 < $|\eta|$ < 3.2). The end-caps are divided into a central region (1.375 < $|\eta|$ < 2.5) with finer granularity and a forward region (2.5 < $|\eta|$ < 3.2) with coarser granularity. The designed energy resolution is $\delta$E/E = 10\% $\sqrt{E/GeV} \oplus$ 0.7\%.
 
 \subsubsection{Hadron Calorimeter}
-The Hadronic Calorimeter (HCAL) is placed outside of the ECAL to detect the hadronic shower made by hadrons.
+The HCal is placed outside of the ECal to detect the hadronic shower made by hadrons.
 It is divided into the barrel($|\eta|$ < 1.7), and end-caps (1.5 < $|\eta|$ < 3.2) regions. 
 The barrel region is called tile calorimeter and uses scintillating tiles with the steel absorber. 
 The end-caps use LAr as detector material with copper absorber. 
-The designed resolution of the hadronic in the coverage of HCAL is $\delta$E/E = 50\% $\sqrt{\mathrm{E/GeV}} \oplus$ 3\%.
+The designed resolution of the hadronic in the coverage of HCal is $\delta$E/E = 50\% $\sqrt{\mathrm{E/GeV}} \oplus$ 3\%.
 
 \subsubsection{Forward Calorimeter}
 The Forward Calorimeter (FCAL) measure the energy of both electromagnetic and hadronic particles in the forward region (3.1< $|\eta|$ < 4.9)
@@ -197,7 +197,7 @@ The Resistive Plate Chambers (RPCs) are installed in the barrel in  $|\eta|$ < 1
 The Thin Gap Chambers(TGCs) are also multi-wire proportional chambers similar to the CSCs. They serve the same purpose as the RPCs, but in the forward region. 
 
 \subsection{Triggers}
-The event rate provided by the LHC is around 40~MHz. It is impossible to record all the information from the detectors at such a high rate, hence the selection of the event of interest to have high-$p_T$ $e$, $\mu$, $\tau$, and jets is performed with trigger system. The layout of the ATLAS trigger system is shown in Figure~\ref{fig:Trigger}.
+The event rate provided by the LHC is around 40~MHz. It is impossible to record all the information from the detectors at such a high rate, hence the selection of the event of interest to have high-$p_\mathrm{T}$ $e$, $\mu$, $\tau$, and jets is performed with trigger system. The layout of the ATLAS trigger system is shown in Figure~\ref{fig:Trigger}.
 
 \begin{figure}[tbp]
 \begin{center}
@@ -211,9 +211,9 @@ The layout of the ATLAS trigger system in Run~2
 \end{center}
 \end{figure}
 The ATLAS trigger system~\cite{TRIG-2019-04} consists of hardware based Level-1 (L1) trigger, and software based High Level Trigger (HLT). 
-The L1 trigger is implemented with custom electronics and roughly reconstructs high-$p_T$, $e/\gamma$, $\mu$, $j$, and so on to determine the Regions-of-Interest (RoIs) in the HLT algorithms, from coarse granularity calorimeter and the muon spectrometer information. 
+The L1 trigger is implemented with custom electronics and roughly reconstructs high-$p_\mathrm{T}$, $e/\gamma$, $\mu$, $j$, and so on to determine the Regions-of-Interest (RoIs) in the HLT algorithms, from coarse granularity calorimeter and the muon spectrometer information. 
 These data are treated by sub-systems, the L1Calo and L1Muon, respectively. 
-L1 electron is reconstructed by L1Calo. 2$\times$2 core towers and 12 surrounded towers of ECAL are used for capturing the electron energy and calculating isolation requirement, respectively. The sketch of these calorimeter towers is shown in figure~\ref{fig:TriggerTower}.
+L1 electron is reconstructed by L1Calo. 2$\times$2 core towers and 12 surrounded towers of ECal are used for capturing the electron energy and calculating isolation requirement, respectively. The sketch of these calorimeter towers is shown in figure~\ref{fig:TriggerTower}.
 The L1 Muon makes use of RPC and TGC hits and fires if there is a coincidence between different chambers based on the predefined look-up-tables.
 The schematic of the muon barrel trigger is shown in figure~\ref{fig:muontrigger}.
 The reconstructed L1 objects by the L1Calo and the L1Muon are sent to the L1Topo, and the selections based on kinematical information can be performed. 
@@ -229,7 +229,7 @@ Events that pass the trigger selections are recorded on disk, where data can be 
  \includegraphics[width=0.6\textwidth,keepaspectratio]{figures/detector/TriggerTower}
 %}
 \caption{
-The sketch of the barrel module of the ECAL~\cite{PERF-2007-01}.
+The sketch of the barrel module of the ECal~\cite{PERF-2007-01}.
 }
 \label{fig:TriggerTower}
 \end{center}
