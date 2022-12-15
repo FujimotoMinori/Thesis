@@ -1,24 +1,21 @@
-\chapter{Theoretical Overview}
+\chapter{Theoretical overview}
 \label{chap:theory}
-This chapter describes the physics backgrounds of this thesis.
-%Section~\ref{sec:SM} introduces the Standard Model of the particle physics.
-
 \section{The Standard Model}
 \label{sec:SM}
-
 The Standard Model (SM) represents a description of the elementary particles and their interactions.
-It is a successful theory model to explain the experimental results until today, and it has predicted a lot of parameters e.g. top-quark and higgs-boson masses.
-All particles predicted by SM has been confirmed, most recently the Higgs boson was discovered by ATLAS and CMS in 2012.
-The SM predicts the existence of elementary particles which form the matter, fermions, consisting of leptons and quarks.
-The interactions of them are described by gauge fields mediated by the exchange of corresponding gauge bosons.
+It is a successful theory model to explain the experimental results observed until today, and it has predicted a lot of parameters.
+All particles predicted by the SM have been confirmed. Most recently, the Higgs boson was discovered by ATLAS and CMS experiments in 2012.
+The SM predicts the existence of elementary particles which form the matter; leptons and quarks.
+The interactions among them are described by gauge fields mediated by the exchange of the corresponding gauge bosons.
 There are four types of known interactions in nature, namely electromagnetic, weak and strong force, and gravitational interactions.
 The first three of them are described by the SM.
 
 The theoretical description is given with the Quantum Field Theory (QFT) framework. 
 The invariance under the local gauge transformation is the key of the framework. 
-The underlying symmetry described by Lie groups is written by SU(3)$_C \times$ SR(2)$_L \times$ U(1)$_Y$ gauge group, and some more details are discussed in the following subsections. 
+The underlying symmetry is described by the Lie groups. 
+It is written by SU(3)$_C \times$ SR(2)$_L \times$ U(1)$_Y$ gauge group and some more details are discussed in the following subsections. 
 
-\subsection{Particle Content}
+\subsection{Particle content}
 Figure~\ref{fig:SM} shows 17 fundamental particles, consisting of the SM.
 \begin{figure}[tbp]
 \begin{center}
@@ -34,15 +31,19 @@ All particles exist in the SM %\ref{}
 
 They are classified into two types following Fermi-Dirac or Bose-Einstein statistics.
 \begin{itemize}
-    \item Fermion \\
-    Fermions are the elementary particles with spin 1/2. There have three generations also known as flavors.  The particle mass is increased from first to the third generations. The other parameters are exactly the same for those in the same category. They are two types of fermions, quarks and leptons, each has 6 particles. Quark has up-type and down-type quark and lepton has charged and neutral lepton, classified by its charge. Leptons do not act through the strong force, unlike the quarks.
-    \item Boson \\
+    \item Fermions \\
+    Fermions are elementary particles with a spin of 1/2. There are three generations also known as flavors.  
+    The particle mass increases from the first to third generations. 
+    The other parameters are exactly the same for those in the same category. They are two types of fermions; quarks and leptons, each has 6 particles. 
+    Quark has up-type and down-type quark, and lepton has charged and neutral lepton, classified by its charge. Leptons do not interact through the strong force, unlike the quarks.
+    \item Bosons \\
     Bosons are integer-spin particles and mediate the interaction of the fermions.
     The photon ($\gamma$) is the mediator of the electromagnetic force. The photon is massless and stable, hence the electromagnetic force can reach infinite ranges. 
-    The photons interact with every particles with electric charges.
-    The gluon (g) is the intermediate particle of the strong force. The gluon is also massless, and interact with particles with the color charge, i.e. quarks.
+    The photons interact with every particle with electric charges.
+    The gluon (g) is the intermediate particle of the strong force. The gluon is also massless, and interacts with particles with the color charge, i.e. quarks.
     In addition, due to the non-Abelian nature of the SU(3) gauge group, gluons have a self coupling and they can interact with each other.
-    The W$^\pm$ and the Z bosons carry the weak force. They are massive particles and interact with all particles carrying the weak hyper charges. The W$^\pm$ can change the flavor of the quarks. 
+    The W$^\pm$ and the Z bosons carry the weak force. They are massive particles and interact with all particles carrying the weak hypercharges. 
+    The W$^\pm$ can change the flavor of the quarks. 
 \end{itemize}
 
 \subsection{SM Lagrangian}
@@ -59,11 +60,12 @@ The free fermion with the spin 1/2 is described by the Lagrangian\\
 \mathcal{L}=i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi-m \bar{\psi} \psi
 \end{equation}
 The $\psi$ here is the spinor of the fermion field, $\gamma^{\mu}$  ($\mu$ = 0,1,2,3) is the Dirac gamma 4$\times$4 matrix. $\partial_{\mu}$ = $\frac{\delta}{\delta x_{\mu}}$ are the partial derivatives, and the $\bar{\psi}=\psi^{\dagger} \gamma^{0}$.
-Solving the lagrangian equation fo this yields, the Dirac equation of motion for $\psi$:
+%The Euler–Lagrange equation, the Dirac equation of motion for $\psi$:
+Solving the lagrangian equation for this yields, the Dirac equation of motion for $\psi$:
 \begin{equation}
 \left(i \gamma^{\mu} \partial_{\mu}-m\right) \psi=0
 \end{equation}
-The Lagrangian needs to be invariant under the "local" gauge transformation, i.e. the guage transformation parameter depends on x:
+The Lagrangian is required to be invariant under the "local" gauge transformation, i.e. the gauge transformation parameter depends on $x$:
 \begin{equation}
 \psi(x) \rightarrow \psi^{\prime}(x)=e^{i \alpha(x)} \psi(x)
 \end{equation}
@@ -78,7 +80,7 @@ The requirement of the invariance leads to introduce an additional field A$_\mu$
 A_{\mu} \rightarrow A_{\mu}^{\prime}=A_{\mu}+\frac{1}{e} \partial_{\mu} \alpha(x)
 \end{equation}
 where e is a coupling constant, which is the elementary electric charge 
-and $\partial_{\mu}$ is replaced with the covariant derivative D$_\mu$:
+and $\partial_{\mu}$ is replaced with the covariant derivative $D_\mu$:
 \begin{equation}
 D_{\mu}=\partial_{\mu}-i e A_{\mu}
 \end{equation}
@@ -98,12 +100,13 @@ The Lagrangian now restores the invariance with the gauge field A$_\mu$. By usin
 \label{eqn:QEDLagrangian}
 \mathcal{L}_{\mathrm{QED}}=i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi-m \bar{\psi} \psi+e \bar{\psi} \gamma^{\mu} \psi A_{\mu}-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
 \end{equation}
-The Lagrangian is invariant under the U(1)$_{EM}$ local gauge transformations of fields. The field A$_\mu$ is identified as photon, and the invariance forbids the introduction of a mass term of the A$_\mu$, of the form of $\frac{1}{2}m^2 A_\mu A^\mu$. The photon is requested to be massless, which agrees with all experiment results.
+The Lagrangian is invariant under the U(1)$_{\mathrm{EM}}$ local gauge transformations of fields. 
+The field $A_\mu$ is identified as photon, and the invariance forbids the introduction of a mass term of the $A_\mu$, of the form of $\frac{1}{2}m^2 A_\mu A^\mu$. The photon is required to be massless, which agrees with all experiment results.
 \\
 
 \noindent\textbf{\sf{Quantum Chromo Dynamis (QCD)}} \\ 
-The QCD describes the strong force interactions between quarks and gluons. The concept of the required invariance is similar to the QED, while an additional degree of freedom is introduced: the charge denoted as color, red (r), green(g), and blue(b). 
-The Dirac spinor is replaced with vector of three spinors for quarks:
+The QCD describes the strong force interactions between quarks and gluons. The concept of the required invariance is similar to the QED, while an additional degree of freedom is introduced: the charge is denoted as color, red (r), green(g), and blue(b). 
+The Dirac spinor is replaced with a vector of three spinors for quarks:
 \begin{equation}
 \psi=\left(\begin{array}{c}
 \psi_{r} \\
@@ -116,7 +119,8 @@ The Lagrangian of QCD is described as:
 \mathcal{L}_{\mathrm{QCD}}=i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi-m \bar{\psi} \psi-g_{s}\left(\bar{\psi} \gamma^{\mu} \frac{\lambda_{a}}{2} \psi\right) G_{\mu}^{a}-\frac{1}{4} G_{\mu \nu}^{a} G_{a}^{\mu \nu}
 \end{equation}
 with the gauge fields $G_{\mu}^{a}$ (a = 1,2,...,8) represents the gluons.
-While QED is an Abelian gauge theory, for QCD, the underlying group is the non-Abelian group SU(3)$_C$, whose generators are T$_a$ = $\lambda_{a}/2$. $\lambda_{a}$ are callsed Gell-Mann matrices. They satisfy the commutator relation:
+While QED is an Abelian gauge theory, for QCD, the underlying group is the non-Abelian group SU(3)$_C$, whose generators $T_a$ = $\lambda_{a}/2$. 
+$\lambda_{a}$ are called Gell-Mann matrices. They satisfy the commutation relation:
 \begin{equation}
 \left[\frac{\lambda_{a}}{2}, \frac{\lambda_{b}}{2}\right]=i f_{a b c} \frac{\lambda_{c}}{2}
 \end{equation}
@@ -124,16 +128,15 @@ g$_s$ denotes the strong coupling constatnt, and $G_{a}^{\mu \nu}$ is the field 
 \begin{equation}
 G_{\mu \nu}^{a}=\partial_{\mu} G_{\nu}^{a}-\partial_{\nu} G_{\mu}^{a}-g_{s} f_{a b c} G_{\mu}^{b} G_{\nu}^{c}
 \end{equation}
-The non-Abelian group structure produces the last term of the field strength, which enables the gluons to interact with themselves differently from QED. Gluons are also requested to be massless from the gauge transformation of the fields.
+The non-Abelian group structure produces the last term of the field strength, which enables the gluons to interact among themselves in contrast to the QED. 
+Gluons are also required to be massless from the gauge invariance of the fields.
 %quark 
 %asymptotic freedom 
-
 \\ \\
-
 \noindent\textbf{\sf{ElectroWeak Model}} \\
 It is shown by experiments that the weak interaction only acts on left-handed fermions. In the electroweak model, the SU(2)$_L \times$ U(1)$_Y$ symmetry is conserved. Here the left-handed fermions are assigned to SU(2)$_L$ doublets with weak isospin I = 1/2, and gauge field W$^a_\mu$. The right-handed fermions are assigned to  U(1)$_Y$ singlets with weak isospin I = 0, and gauge field B$_\mu$.
 %table of the quantum numbers
-The left-handed doublets and right-handed singlets are denoted as $\chi_{L}$ and $\psi_{R}$ ,respectively. Specifically $\chi_{L}$ is written as 
+The left-handed doublets and right-handed singlets are denoted as $\chi_{L}$ and $\psi_{R}$, respectively. Specifically $\chi_{L}$ is written as 
 $
 \left(\begin{array}{c}
 \nu_{L} \\
@@ -177,7 +180,7 @@ B_{\mu \nu} &=\partial_{\mu} B_{\nu}-\partial_{\nu} B_{\mu}
 \end{aligned}
 \end{equation}
 where $\epsilon_{a b c}$ is an antisymmetric tensor, which is the structure constant of SU(2)$_L$. This term enables the $W_{a}^{\mu \nu}$ field to interact with themselves, while $B_{\mu}$ cannot self-interact.
-The physical fields represents the W$^{\pm}$, Z bosons and photons are formed by linear combination of $W_{\mu \nu}^{a}$ and $B_{\mu \nu}$.
+The physical fields represent the W$^{\pm}$, Z bosons and photons are formed by a linear combination of $W_{\mu \nu}^{a}$ and $B_{\mu \nu}$.
 \begin{equation}
 \begin{aligned}
 W_{\mu}^{\pm} &=\frac{1}{\sqrt{2}}\left(W_{\mu}^{1} \mp i W_{\mu}^{2}\right) \\
@@ -185,15 +188,15 @@ Z_{\mu} &=\cos \theta_{W} W_{\mu}^{3}-\sin \theta_{W} B_{\mu} \\
 A_{\mu} &=\sin \theta_{W} W_{\mu}^{3}+\cos \theta_{W} B_{\mu}
 \end{aligned}
 \end{equation}
-where the $\theta_{W}$ = arctan ( g$^{\prime}$/g) represents the weak mixing angle, so called Weinberg angle. By rewriting the Lagrangian with physical fields and comparing the comparing the $A_{\mu}$ components with the QED Lagrangian (\ref{eqn:QEDLagrangian}), the relations between e and g, g$^{\prime}$ is obtained:
+where the $\theta_{W}$ = arctan ( g$^{\prime}$/g) represents the weak mixing angle, so called Weinberg angle. By rewriting the Lagrangian with physical fields and comparing the $A_{\mu}$ components with the QED Lagrangian (\ref{eqn:QEDLagrangian}), the relations between e and g, g$^{\prime}$ is obtained:
 \begin{equation}
 \begin{aligned}
 e&=g \sin \theta_{W}=g^{\prime} \cos \theta_{W} \\
-and \ \ Q&=I_{3}+\frac{Y}{2}
+\ \ Q&=I_{3}+\frac{Y}{2}
 \end{aligned}
 \end{equation}
 The local gauge invariance forbids the introduction of the mass term of the bosons like $m^2_W W_\mu W^\mu$, since it is not invariant under $SU(2)_L \times U(1)_Y$ local transformations.
-This statement that the local phase invariance in the electroweak model requests the fermions and bosons to be massless particles, is conflicted against the experimental results, where W$^{\pm}$ , Z bosons and fermions are found to be massive.
+This statement that the local phase invariance in the electroweak model requests the fermions and bosons to be massless particles, is conflicted against the experimental results, where W$^{\pm}$, Z bosons and fermions are found to be massive.
 \\ \\
 \noindent\textbf{\sf{Spontaneously Symmetry breaking}} \\ 
 The disagreement of the electroweak model forbidding the masses of the fermions and bosons with the experimental results can be solved by introducing a spontaneously symmetry breaking.
@@ -230,7 +233,7 @@ v
 \end{array}\right)
 \end{equation}
 where $v = \sqrt {-\mu^{2}/\lambda}$, while in case $-\mu^{2}<0, \phi_{0}=0$ gives the minimum of $V(\phi)$. 
-The $v$ is called vacuum expectation value. In the former case, by assigning the ground state of the equation~\ref{eqn:vacuum} the local $SU(2)_L \times U(1)_Y$ symmetry of the vacuum is broken spontaneously. 
+The $v$ is called the vacuum expectation value. In the former case, by assigning the ground state of the equation~\ref{eqn:vacuum} the local $SU(2)_L \times U(1)_Y$ symmetry of the vacuum is broken spontaneously. 
 Three of the four degrees of freedom of the gauge field (\ref{eqn:higgsphi}) are absorbed by the $W^\pm$ and Z bosons, and the fourth generates the Higgs boson.
 
 %The $\Phi(x)$ can be expanded near its minimum;
@@ -256,14 +259,14 @@ The field is parameterized as:
 v+h(x)
 \end{array}\right)
 \end{equation}
-where $\theta_{a}(x)$ (a = 1,2,3) and $h(x)$ are the real field, and  $h(x)$ represents the Higgs boson which associated to the Higgs fields. The exponential term including $\theta_{a}(x)$ is defined to be specifical since local gauge transformation needs to be invariant;
+where $\theta_{a}(x)$ (a = 1,2,3) and $h(x)$ are the real field, and  $h(x)$ represents the Higgs boson which is associated with the Higgs fields. The exponential term including $\theta_{a}(x)$ is defined to be specifical since local gauge transformation needs to be invariant;
 \begin{equation}
 \phi=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
 0 \\
 v+h(x)
 \end{array}\right)
 \end{equation}
-The specific gauge has been chosen by defining the vacuum expectation value. That is why we call spontaneously symmetry breaking. 
+The specific gauge has been chosen by defining the vacuum expectation value. That is why we call spontaneous symmetry breaking. 
 
 The Lagrangian of Higgs (\ref{eqn:Higgs}) can be substituted and 
 %%*****************************************
@@ -274,7 +277,7 @@ The Lagrangian of Higgs (\ref{eqn:Higgs}) can be substituted and
 %\end{array}\right) \right| -\mu^{2} \Phi^{\dagger} \Phi-\lambda\left(\Phi^{\dagger} %\Phi\right)^{2}
 %\end{equation}
 %%*****************************************
-the terms represent the mass terms and its relations are written as:
+the terms represent the mass terms and their relations are written as:
 \begin{equation}
 \begin{aligned}
 \left|\left(i g \frac{\tau_{a}}{2} W_{\mu}^{a}+i g^{\prime} \frac{Y}{2} B_{\mu}\right) \phi_{0}\right|=&\left(\frac{1}{2} v g\right)^{2} W_{\mu}^{+} W^{\mu-} \\
@@ -291,7 +294,7 @@ the terms represent the mass terms and its relations are written as:
 %m_{\gamma}&=0
 %\end{aligned}
 %\end{equation}
-The mass terms for the $W_\pm$ and Z bosons naturally obtained through the symmetry breaking of SU(2)$_L$. :
+The mass terms for the $W_\pm$ and Z bosons are naturally obtained through the symmetry breaking of SU(2)$_L$. :
 \begin{equation}
 \begin{aligned}
 m_{\gamma} &=m_{A}=0 \\
@@ -306,8 +309,8 @@ m_{W} &=\frac{v}{2} g
 %m_{H}=\sqrt{-2 \mu^{2}}=\sqrt{2 \lambda} v
 %\end{equation}
 %The parameter $\lambda$ is a free parameter in the theory, so it cannot be predicted by the SM.
-%The vacuum expectation value is is determined by the measurements of the Fermi constant $G_F$, %which is to be:
-%%put reference here (measurement of the Fermi coupling) 
+%The vacuum expectation value is determined by the measurements of the Fermi constant $G_F$, %which is to be:
+%%put the reference here (measurement of the Fermi coupling) 
 %\begin{equation}
 %v=\frac{2 m_{W}}{g}=\frac{1}{\sqrt{2} G_{F}} \simeq 246.22 \mathrm{GeV}
 %\end{equation}
@@ -340,7 +343,7 @@ Then the additional Lagrangian substituted into:
 \begin{equation}
 \mathcal{L}_{q}=-\frac{1}{\sqrt{2}} g_{d} v \bar{d}_{L} d_{R}\left(1+\frac{h}{v}\right)-\frac{1}{\sqrt{2}} g_{u} v \bar{u}_{L} u_{R}\left(1+\frac{h}{v}\right)
 \end{equation}
-In case of leptons the additional Lagrangian is:
+In the case of leptons, the additional Lagrangian is:
 \begin{equation}
 \mathcal{L}_{e}=\left[-g_{e}\left(\bar{\psi}_{L}^{e} \phi \psi_{R}^{e}\right)+\text { h.c. }\right]
 \end{equation}
@@ -366,8 +369,8 @@ Finally, the total Standard Model Lagrangian is described as
 \end{equation}
 This Lagrangian is invariant under local transformations of SU(3) $\times$ SU(2)$_L$ $\times$ U(1)$_Y$, while the vacuum is breaking the symmetry and not invariant. \\
 
-The coupling constants appeared in the Lagrangian are determined by the experimental measurement. 
-The measured values are summarized in the Table~\ref{tab:constants}.  \\
+The coupling constants appearing in the Lagrangian are determined by the experimental measurement. 
+The measured values are summarized in Table~\ref{tab:constants}.  \\
 
 \begin{center}
 \begin{table}
@@ -392,21 +395,19 @@ Higgs Self Coupling Constant & $\lambda=0.1$ \\
 \end{table}
 \end{center}
 
-\section{Phenomenology of proton-proton collision}
-The standard model physics can be tested with the scattering experiments like pp collisions at LHC.
-The physics related to the proton-proton interaction is described in this section. 
-%Using the protons instead of the electrons is its higher mass, which enables to reach the higher center-of-mass energy in spite of the energy loss due to the syncrotoron radiation, which is propotional to $m^{-4}$.
-Since there is a substructure inside the proton, the proton-proton collision cross section needs to be modeled through the formalism of QCD.
+\section{Phenomenology of proton--proton collision}
+The standard model physics can be tested with the scattering experiments like $pp$ collisions at LHC.
+The physics related to the proton--proton interaction is described in this section. 
+%Using the protons instead of the electrons is its higher mass, which enables to reach the higher center-of-mass energy in spite of the energy loss due to the synchrotron radiation, which is proportional to $m^{-4}$.
+Since there is a substructure inside the proton, the proton--proton collision cross section needs to be modeled through the introduction of the parton distribution function (PDF).
 
 \subsection{Factorization}
 \label{subsec:factorization}
-
-The scattering cross section can be calculated with perturbative QCD. 
-However, the size of the coupling constant, $\alpha_s$ even at the rather large momentum, $q^2$, the perturbative expansion converges really slow.
+The scattering cross section among quarks and gluons can be calculated with perturbative QCD. 
+However, the size of the coupling constant, $\alpha_s$ even at the rather large momentum, $q^2$, the perturbative expansion converges really slowly.
 The factorization theorem \cite{} allows us to calculate the total cross section approximately with two parts; 
-(1) obtaining initial parton that contribute to the hard scattering from the original proton, 
+(1) the probability of obtaining the initial partons that contribute to the hard scattering from the original protons, 
 (2) the partonic cross section calculation as illustrated in Figure~\ref{fig:factorization}
-
 \begin{figure}[tbp]
 \begin{center}
 %\subfigure[]{
@@ -418,41 +419,40 @@ The factorization theorem \cite{} allows us to calculate the total cross section
 \label{fig:factorization}
 \end{center}
 \end{figure}
-
-In the scattering process ab$\rightarrow$n at a hadron collider can be written as:
+In the scattering process $ab \rightarrow n$ at a hadron collider can be written as:
 \begin{equation}
 \label{eqn:qcdxsec}
 \sigma_{a b \rightarrow n}=\sum_{a, b} \int_{0}^{1} \mathrm{~d} x_{a} \mathrm{~d} x_{b} \int \mathrm{d} \Phi_{n} f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right) f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right) \times \frac{1}{2 \hat{s}}\left|\mathcal{M}_{a b \rightarrow n}\right|^{2}\left(\Phi_{n} ; \mu_{F}, \mu_{R}\right)
 \end{equation}
-where a and b is summed over all partonic constituents of the colliding hadrons, $h_1$ and $h_2$, respectively.
-$f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right)$ and $f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right)$ are the parton distribution function (pdf), obtaining the partons from the original colliding hadrons, at a given momentum fraction x. The factorization depends on the arbitrary cutoff scale, referred as factorization scale, $\mu_F$.
+where a and b are summed over all partonic constituents of the colliding hadrons, $h_1$ and $h_2$, respectively.
+$f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right)$ and $f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right)$ are the PDF, obtaining the partons from the original colliding hadrons, at a given momentum fraction x. The factorization depends on the arbitrary cutoff scale, referred to as the factorization scale, $\mu_F$.
 Then the partonic cross section of the hard scattering, $\hat{\sigma}_{a b \rightarrow n}\left(\mu_{F}, \mu_{R}\right)$ can be calculated perturbatively with Feynman-diagrams technique by considering the process $ab\rightarrow n $ with free partons in the initial state. This calculation is done with the Matrix element $\left|\mathcal{M}_{a b \rightarrow n}\right|$ for the phase-space $\Phi_n$.
-When calculating the matrix element of the hard-scattering process, the divergence terms are absorbed into the redefinition of fields or parameters via subtractions. This procedure is usually referred as renormalization, and the subtractions scale is called renormalization scale, $\mu_R$. 
-The PDF is estimated by the collision data from previous and current experiments, and extrapolated to the appropriate energy using the DGLAP evolution equations.\cite{}.
+When calculating the matrix element of the hard-scattering process, the divergent terms are absorbed into the redefinition of fields or parameters via subtractions. This procedure is usually referred to as renormalization, and the subtraction scale is called the renormalization scale, $\mu_R$. 
+The PDF is estimated by the collision data from previous and current experiments and extrapolated to the appropriate energy using the DGLAP evolution equations.\cite{}.
 %this reference can be found in "VBS2014"
-
-Since the matrix-element is calculated at a fixed order, final states of parton-level events calculated so far is neglecting higher-order corrections, which have sizable effect on the particle kinematics. In order to account for effects of higher order QCD correction and hadronization, parton showering and hadronization algorithm are performed.
+Since the matrix element is calculated at a fixed order, the final states of parton-level events calculated so far is neglecting higher-order corrections, which have a sizable effect on the particle kinematics. In order to account for the effects of higher order QCD correction and hadronization, parton showering and hadronization algorithm are performed.
 
 \subsection{Parton shower}
 \label{subsec:partonshower}
-
-The parton shower do the splittings of the outgoing colored partons.  The MC simulations is base on the Markov-chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two other partons, in the limit of the infrared cutoff scale, t$_{cutoff}$, typically $t_{0} \approx 1 \mathrm{GeV}$. The typical generators: Pythia~\cite{SJOSTRAND2008852} and Herwig~\cite{Gieseke2012} use different choices of t$_{cutoff}$.
-The parton shower doesn't affect to the total cross section, since the final state particles emitted to every directions.
+The parton shower does the splittings of the outgoing colored partons.  The MC simulations are based on the Markov chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two partons, in the limit of the infrared cutoff scale, t$_{cutoff}$, typically $t_{0} \approx 1 \mathrm{GeV}$. 
+Typical generators: Pythia~\cite{SJOSTRAND2008852} and Herwig~\cite{Gieseke2012} use different choices of t$_{cutoff}$.
+The parton shower doesn't affect to the total cross section, since the final state particles are emitted in every direction.
 \subsection{Hadoronization}
-The partons resulted afterparton shower are combined to form hadrons. Hadronization is performed in completely non-pertabative way, based on several models. Phytia and Herwig adopt different phenomenological models: String Model, based on linear confinement of partons and Cluster Model, based on the preconfinement of parton showers.
+The partons generated after parton shower are combined to form hadrons. 
+Hadronization is performed in a completely non-perturbative way, based on several models. 
+Pythia and Herwig adopt different phenomenological models: String Model, based on the linear confinement of partons, and the Cluster Model, based on the preconfinement of parton showers~\cite{}.
 %\subsection{MC generators}
 %description of MC generators, up to where and what they do
 
-
 \section{Vector Boson Scattering}
 \label{sec:VBS}
-
 The scattering of two electroweak vector gauge bosons can probe the structure of the electroweak symmetry breaking (EWSM) mechanism directly. 
-The Vector Boson Scattering (VBS) is therefore one of the key process as to be investigated in the LHC experiment.
-The Vector Boson indicates W,Z,$\gamma$ here, which are fundamental electroweak bosons. Though the massive vector bosons, which are W and Z are only sensitive to the mechanism of the  EWSM, $\gamma$ is also included since it is impossible to fully separate the $\gamma$ and Z contributions experimentally. 
+The Vector Boson Scattering (VBS) is therefore one of the key processes to be investigated in the LHC experiment.
+The Vector Boson indicates W, Z,$\gamma$ here, which are fundamental electroweak bosons. 
+Though the massive vector bosons, W and Z are only sensitive to the mechanism of the EWSM, $\gamma$ is also included since it is impossible to fully separate the $\gamma$ and Z contributions experimentally. 
 %<- need this??
 %\subsection{Electroweak gauge boson scattering and the Higgs boson}
-As described in section~\ref{subsec:Lagrangian}, the spontaneously symmetry breaking of the local gauge invariance with the Higgs field
+As described in section~\ref{subsec:Lagrangian}, the spontaneous symmetry breaking of the local gauge invariance with the Higgs field
 introduces the masses of the longitudinal, massive weak gauge bosons. 
 Measuring the VBS processes provides the information related to that mechanism.
 The typical Feynman diagram of VBS is shown in Figure~\ref{fig:VBS}.
@@ -503,25 +503,26 @@ The VV to VV interaction Feynman diagram at tree-level. Contributions from EW ga
  \includegraphics[width=0.18\textwidth,keepaspectratio]{figures/wHiggs3}
 }
 \caption{
-The VV to VV interaction Feynman diagram at tree-level. Contributions includes Higgs boson interactions.
+The VV to VV interaction Feynman diagram at tree-level. Contributions include Higgs boson interactions.
 }
 \label{fig:VBSHiggs}
 \end{center}
 \end{figure}
 
 
-Here, the amplitude of the longitudinal WW scattering is dscussed further to see the effect of existence of the Higgs boson for example. The combination of other weak massive bosons like WZ, as well as ZZ can be denoted similarly. 
+Here, the amplitude of the longitudinal WW scattering is discussed further to see the effect of the existence of the Higgs boson for example. The combination of other weak massive bosons like WZ, as well as ZZ can be considered similarly. 
 
 Since the polarization vector of the longitudinal weak vector boson can be written in the form, \cite{Rindani_2009}: 
 \begin{equation}
 \epsilon_{L}^{\mu}=\frac{1}{m_{V}}\left(|\vec{p}|, \frac{\vec{p}}{|\vec{p}|} E\right)=\frac{p^{\mu}}{m_{V}}+\mathcal{O}\left(\frac{m_{V}}{E}\right)
 \end{equation}
-as the $p_{T}$ glows, the yields with massive vector particles in the initial and finals states will be longitudinal-dominant.
-At high-energy limit, the amplitude for $W_L^+W_L^-$ without existing of the Higgs boson (Figure\ref{fig:VBSEW}) can be describes in the form of:
+as the $p_{T}$ grows, the yields with massive vector particles in the initial and final states will be longitudinal-dominant.
+At high-energy limit, the amplitude for $W_L^+W_L^-$ without the existence of the Higgs boson (Figure\ref{fig:VBSEW}) can be describes in the form of:
 \begin{equation}
 \mathcal{M}^{\text {gauge}}=-\frac{g_{w}^{2}}{4 m_{W}^{2}} u+\mathcal{O}\left(\left[\frac{E}{m_{W}}\right]^{0}\right)
 \end{equation}
-The remaining amplitude from the second term will rise with energy then it violates the unitarity at the unitarity bound. The amplitude including the Higgs contributions (Figure\ref{fig:VBSHiggs}) is:
+The remaining amplitude from the second term will rise with energy ane eventually violates the unitarity at the unitarity bound. 
+The amplitude including the Higgs contributions (Figure\ref{fig:VBSHiggs}) is:
 \begin{equation}
 \begin{aligned}
 \mathcal{M}^{\text {Higgs}} &=-\frac{g^{2}}{4 m_{W}^{2}}\left[\frac{\left(s-m_{W}^{2}\right)^{2}}{s-m_{H}^{2}}+\frac{\left(t-m_{W}^{2}\right)^{2}}{t-m_{H}^{2}}\right] \\
@@ -532,8 +533,8 @@ in the high-energy limit s >> $m_{H}^{2}$, $m_{W}^{2}$.
 Therefore the terms affected by the rising energy cancel and leave the constant term, which is not violating the unitarity.
 %The energy scale where the unitarity is violated
 
-This effect also described with the Figure~\ref{fig:violation}.
-The figure shows that if diagrams with Higgs contribution is missing, the electroweak couplings becomes strong around $\sqrt{s}$ is arond 1~TeV, and the unitarity of the $W_LW_L \rightarrow W_LW_L$ process is violated, which means the SM without the Higgs boson is no longer valid above TeV-scale. 
+This effect is described in the Figure~\ref{fig:violation}.
+The figure shows that if diagrams with Higgs contribution are missing, the electroweak couplings become strong around $\sqrt{s}$ is around 1~TeV, and the unitarity of the $W_LW_L \rightarrow W_LW_L$ process is violated, which means the SM without the Higgs boson is no longer valid above TeV-scale. 
 
 \begin{figure}[tbp]
 \begin{center}
@@ -572,30 +573,30 @@ Cross section at tree-level %\ref{}
 \section{Anomalous Quartic Gauge Coupling and Effective Field Theory}
 %\textcolor{blue}{Discuss about dependent models for example compositeness. Then introduce EFT to see them model-independently.} \\
 %\subsection{aQGC}
-The unitarity recovered by the existence of Higgs boson can be broken again by the additional gauge coupling by new physics. 
+The unitarity recovered by the existence of the Higgs boson can be broken again by the additional gauge coupling by new physics. 
 The existence of an additional source of EWSB would contribute in the form of its corresponding mediator that affects the amplitudes of the VBS process.
 This is referred to as anomalous gauge couplings (aGC). 
-Considerable models of "new physics" can be the extension of the Higgs sector like several Composite Higgs model~\cite{} or the existence of the heavy Higgs boson like Two Higgs Doublet model~\cite{}.
-Supersymmetric model or extra-dimensional models like Randall-Sundrum gravity~\cit{} can also be the example 
+Considerable models of new physics can be the extension of the Higgs sector like several Composite Higgs model~\cite{} or the existence of the heavy Higgs boson like Two Higgs Doublet model~\cite{}.
+%Supersymmetric model or extra-dimensional models like Randall-Sundrum gravity~\cit{} can also be the example 
 %Any model that affect to the Higgs sector may be observed as the deviation of the VBS scattering amplitude with the existence of anomalous gauge couplings (aGC).  
-Since the aGC can claim many different models, the Effective Field Theory (EFT) is considered as a model-independent way of the interpretation. 
+Since the aGC can claim many different models, the Effective Field Theory (EFT) is considered as a model-independent way of interpretation. 
 The concept of the EFT is explained in the following sections.
 \subsection{EFT}
 \label{subsec:EFT}
-New physics contribution is generally described by the effective field theory (EFT) as a model-independent way of the interpretation.
+New physics contribution is generally described by the effective field theory (EFT) as a model-independent way of interpretation.
 The EFT models the effects of new physics at energy scale much higher than the currently accessible range by the experiments. 
-%The SM is regarded as an effective theory at low-energy in this framework.
-%The EFT contains additional operators with higher energy dimension suppressed by the cutoff scale of the new physics, $\Lambda$.
+%The SM is regarded as an effective theory at low energy in this framework.
+%The EFT contains additional operators with higher energy dimensions suppressed by the cutoff scale of the new physics, $\Lambda$.
 They are based on the following expansion of the EFT Lagrangian;
 \begin{equation}
 \label{eq:EFTLagrangian}
 \mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}}+\sum_{d>4} \sum_{i} \frac{f_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
 \end{equation}
 where $\Lambda$ is the typical scale of new physics, called cutoff scale. $f_{i}^{(d)}$ are the Wilson coefficients, the dimensionless coupling-strength coefficients of the new operators, $\mathcal{O}_{i}^{(d)}$.
-Any new physics can be modeled in this framework by certain additional operators, where their coefficient is also fixed as long as the new physics scale is above $\Lambda$. 
+Any new physics can be modeled in this framework by certain additional operators, where their coefficients are also fixed as long as the new physics scale is above $\Lambda$. 
 The SM is a low-energy theory in this framework, i.e. if $\Lambda \rightarrow \infty$, the SM is reproduced.
 \\
-The operators are constructed out of the following fields;
+The operators are constructed from the following fields;
 \begin{itemize}
     \item Higgs double field $\Phi$,
     \item covariant derivative $D^{\mu}$,
@@ -608,15 +609,15 @@ Equation~\ref{eq:EFTLagrangian} is then written like;
 \label{eq:EFTLagrangian2}
 \mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}} + \sum_{i} \frac{f_{i}^{(d)}}{\Lambda^{2}} \mathcal{O}_{i}^{(d)} +  \sum_{j} \frac{f_{j}^{(d)}}{\Lambda^{4}} \mathcal{O}_{j}^{(d)} + \cdots
 \end{equation}
-where the second term represents the dimension-6 operators which affect triple and quartic couplings, and the third term represents the dimension-8 operators, which affect only quartic couplings.
+where the second term represents the dimension-6 operators which affect triple gauge couplings (TGC) and quartic couplings (QGC), and the third term represents the dimension-8 operators, which affect only quartic couplings.
 %Numbers of the collider experiments probe triple gauge couplings (TGC) in the pair production of electroweak gauge bosons, while the study of quartic gauge couplings (QGC) requires the production of three electroweak vector bosons, or the VBS of electroweak vector boson pairs. 
 %Therefore, the Wilson coeffients of effective operators that contain both TGC and QGC are more strongly constrained through the study of their TGC component, hence most of the present LHC serches for effects of QGC focus on the operators that generate QGC but do not have any TGC associated with them. 
-To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p}, introduces new dimension-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry are used. TGC is already strongly constrained through the study using dimension-6 operators via the pair production of electroweak gauge bosons. To focus more on the effect of QGC, only dimension-8 operators are considered here, as the operators that generate QGC but do no have any TGC associated with them.
+To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p}, introduces new dimension-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry is used. TGC is already strongly constrained through the study using dimension-6 operators via the pair production of electroweak gauge bosons. To focus more on the effect of QGC, only dimension-8 operators are considered here, as the operators that generate QGC but do not have any TGC associated with them.
 %The lowest dimension operator that leads to quartic interactions and does not exhibit two or three weak gauge boson vertices is dimension 8. 
 %This is when we get a operator with 
 These operators are with weak boson field either from the covariant derivative of Higgs doublet $\Phi$ or from the field strength tensor. 
 %In either case the vector field is accompanied by a vacuum expected value or a derivative, therefore the genuine quartic vertices are of dimension 8 or higher.
-All the corresponding operators are shown hereafter. The analysis usually focus on these operators on a one-by-one basis.
+All the corresponding operators are shown hereafter. The analysis usually focuses on these operators on a one-by-one basis.
 \begin{itemize}
 \item Operators containing just $D_\mu \Phi$ : (Scalor type)
 \begin{equation}
@@ -721,19 +722,19 @@ When probing anomalous QGC, we must verify whether unitarity is satisfied to gua
 This unitarity bound can be calculated from the partial wave function of the process of two-to-two scattering of electroweak gauge bosons~\cite{PhysRevD.101.113003}.
 These are used as the theoretical unitarity bound in this analysis.
 
-In experiment side, how to treat and deal with the unitarity problem depends on each analysis. 
+In the experiment side, how to treat and deal with the unitarity problem depends on each analysis. 
 There are basically two mainstreams currently;
 \begin{itemize}
     \item Disregard unitarity limits \\
-    This is what is done in most of the CMS analysis. It is technically simplest way to implement, and it's fair to quantify the relative precision of different measurements and its agreement/disagreement with the SM. The unitarity violation usually occurs well within the measured range.
+    This is what is done in most of the CMS analyses. It is technically the simplest way to implement, and it's fair to quantify the relative precision of different measurements and their agreement/disagreement with the SM. However, the unitarity violation usually occurs well within the measured range.
     \item Clipping method \\
-    Define some cut-off scale $\Lambda$ as "Clipping energy", and take only SM contribution above that clipping energy. This method can offer the most conservative signal estimate that gives limits guaranteed to be true, when compared to the theoretical unitarity bound. The limits on $f$ can only be determined for an assumed value of $\Lambda$, thus the limits are in 2 dimensions.
+    Define some cut-off scale $\Lambda$ as "Clipping energy", and only take SM contribution above that clipping energy. This method can offer the most conservative signal estimate that gives limits guaranteed to be true, when compared to the theoretical unitarity bound. The limits on $f$ can only be determined for an assumed value of $\Lambda$, thus the limits are in 2 dimensions.
 \end{itemize}
 In this analysis clipping method is used as well as the unitarity-disregarding limits. 
 More detailed description will be shown in chapter~\ref{chap:aQGC}.
 
 \subsection{Latest limit for the dimension-8 operators}
-The latest limits on the Wilson coefficients of the 8-dimension operators obtained by the CMS and ATLAS is shown in figure~\ref{fig:limitFT},\ref{fig:limitFM},\ref{fig:limitFS}. All of these limits are disregarding the unitarity.
+The latest limits on the Wilson coefficients of the 8-dimension operators obtained by the CMS and ATLAS are shown in figure~\ref{fig:limitFT},\ref{fig:limitFM},\ref{fig:limitFS}. All of these limits are disregarding the unitarity.
 \begin{figure}[tbp]
 \begin{center}
  \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/aQGC/aQGC_ft.png}
