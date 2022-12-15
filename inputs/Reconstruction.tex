@@ -35,7 +35,7 @@ The cluster is reconstructed following cell signal-significance patterns generat
 The clustering algorithm implicitly performs topological noise suppression by removing cells with insignificant signals which are not in close proximity to cells with significant signals. 
 \section{Electrons}
 %reconstruction
-Electron candidates are reconstructed from topo-clusters in the ECAL matched to a track identified by the ID~\cite{ATL-PHYS-PUB-2017-022}.
+Electron candidates are reconstructed from topo-clusters in the ECal matched to a track identified by the ID~\cite{ATL-PHYS-PUB-2017-022}.
 \begin{figure}[tbp]
 \begin{center}
  \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/Reconstruction/electronPath}
@@ -48,8 +48,8 @@ Schematics of the electron going through the detectors
 %identification
 The reconstructed electron candidates are required to have $|\eta|<2.47$, excluding the transition region between barrel and endcap (1.37 < $|\eta|$ < 1.52).
 A likelihood-based identification is required to reduce the backgrounds from photon conversion or hadrons, e.g. charged pion and $\pi^0 \rightarrow \gamma \gamma$. 
-This identification algorithm combines various identification variables, like shower shape of the ECAL, the track conditions, and the matching of the tracks and the clusters. 
-The ratio of the energy deposit in the HCAL to that of the whole ECAL cluster can be used to separate the electrons from the hadrons. 
+This identification algorithm combines various identification variables, like shower shape of the ECal, the track conditions, and the matching of the tracks and the clusters. 
+The ratio of the energy deposit in the HCal to that of the whole ECal cluster can be used to separate the electrons from the hadrons. 
 The track requirement is useful to distinguish electrons from photons.
 Electron candidates are categorized into three categories: LooseLH, MediumLH, and TightLH corresponding to 96\%, 94\%, 88\% of identification efficiencies to signal electrons at $E_\mathrm{T}$ = 100~GeV respectively, for the rejections of the backgrounds from misidentified hadrons, electrons from photon conversions, and non-isolated electrons originating from heavy-flavour decays. 
 In this analysis, TightLH and LooseLH working points are employed.
@@ -70,7 +70,7 @@ electron reconstructing and identification efficiency with respect to the $E_\ma
 \end{center}
 \end{figure}
 Additional requirements are applied for isolation, to reduce the contamination of jets. 
-The two isolation working points used in this analysis, which are determined by the track and ECAL information. 
+The two isolation working points used in this analysis, which are determined by the track and ECal information. 
 The selections applied in this analysis are shown in the table~\ref{tab:electron_selection}.
 Furthermore, track-to-vertex association requirements are applied. 
 $d_0$ is the minimum distance between the primary vertex (PV) and the track, and $\sigma_{d_0}$ is its uncertainty. $z_0$ is the transverse impact parameter relative to the beamline.
