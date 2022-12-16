@@ -2,12 +2,13 @@
 \chapter{Signal and Background processes}
 \label{chap:sigbkg}
 In the following chapters, the measurement of an electroweak (EW) diboson (VV) production in association with a high-mass dijet system (jj) in the semileptonic final states is studied.
-This process is sensitive to the VBS process described in section~\ref{sec:VBS}.
+This EW VV+jj process includes the VBS process described in section~\ref{sec:VBS}.
+In this anlysis the fiducial volume is defined as a volume which is sensitive to the VBS process by applying the event selection .
 \section{Feature of the process}
-EW VV+jj process is experimentary identified associated with the existence of two bosons ( VV = WW, ZZ, or WZ ) with two jets in opposite hemisphere with a large dijet invariant mass.
-The typical EW VV+jj processes are shown in diagrams of figure~\ref{fig:feynmanEWVVjj}.
-The VBS diagrams, which is physically the most interesting one is included as shown in the left of the figure~\ref{fig:feynmanEWVVjj}. The figure in the middle and the right represent non-VBS EW and QCD VV+jj production. EW non-VBS diagrams are also included in the signal process since they cannot be distinguished from VBS process for the gauge invariant conservation, while QCD non-VBS processes separated from the signal and considered as background.
-
+EW VV+jj process is experimentary identified with the existence of two bosons ( VV = WW, ZZ, or WZ ) associated with two jets in opposite hemisphere with a large dijet invariant mass.
+The typical EW VV+jj processes are shown in figure~\ref{fig:feynmanEWVVjj}.
+The VBS diagram, which is physically the most interesting one is shown in the left of the figure~\ref{fig:feynmanEWVVjj}. The figure in the middle and the right represent non-VBS EW and QCD VV+jj production. EW non-VBS diagrams are also included in the signal process since they cannot be distinguished from VBS process for the gauge invariant conservation. 
+%The QCD non-VBS processes is considered as the systematics uncertainty.
 \begin{figure}[H]
 \begin{center}
  \includegraphics[width=0.3\textwidth,keepaspectratio]{figures/EWVVjj_a.png}
@@ -42,16 +43,16 @@ The schematic representation of a EW VV+jj event. The hadronic day of the V is r
 \end{figure}
 
 The analysis is split into three channels, classified by the numbers of charged leptons decaying from one of the bosons: 0-lepton, 1-lepton, 2-lepton. 
-In the 0-lepton channel, Z $\rightarrow \nu \nu$ is considered, experimentally reconstructed as missing transverse energy (MET). In 1-lepton channel one of the bosons decays as W $\rightarrow \nu l$ where we can find $l = e, \mu, \tau$ with MET. In 2-lepton channel Z $\rightarrow l l$ is required with $l = e, \mu$. 
+In the 0-lepton channel, Z $\rightarrow \nu \nu$ is considered, experimentally reconstructed as the missing transverse energy (MET). In 1-lepton channel one of the bosons decays as W $\rightarrow \nu l$ where we can find exactly the lepton, $l = e, \mu$ with MET. In 2-lepton channel Z $\rightarrow l l$ is required with $l = e, \mu$. 
 In all three channels, the process requires a hadronically decaying boson candidate, and two additional jets. 
-These additional 2 jets are initially from the quarks from VBS production, referred to as tagging jets. The hadronic decaying objects are reconstructed as a pair of small-R jets or as a single large-R jet. The former case is called as the resolved selection, and the latter the merged selection. More details about the objects in each category is shown in section~\ref{sec:object}.
+These additional two jets are initially from the quarks from VBS production, referred to as tagging jets. The hadronic decaying objects are reconstructed as a pair of small-R jets or as a single large-R jet. The former case is called as the resolved selection, and the latter the merged selection. More details about the objects in each category is shown in section~\ref{sec:object}.
 
-The relevant background processes include W/Z + jets, single top (t) and tt-bar (t$\bar{\mathrm{t}}$) process, QCD diboson process, and QCD multijet process.
+The relevant background processes include W/Z + jets, single top (t) and top quark pair production (t$\bar{\mathrm{t}}$) process, QCD diboson process, and QCD multijet process.
 In 0-lepton channel, all of the background processes contribute significantly. In 1-lepton channel W + jets and the t$\bar{\mathrm{t}}$ process dominate, and in 2-lepton channel Z + jets process is the dominant process.
 
 \section{Data and Monte Carlo Simulation}
 \subsection{Data}
-The data used in the analysis is collected by the ATLAS detector with pp collisions at a center of mass energy of 13 TeV during the full Run~2 data taking period during the years 2015 to 2018. The total integrated luminosity in this period is 139~fb$^{-1}$ with uncertainty of 1.7~\% \cite{DAPR-2010-01}. Figure~\ref{fig:luminosity} shows the cumulative luminosity versus time during the Run~2 period.
+The data used in the analysis is collected by the ATLAS detector with pp collisions at a center of mass energy of 13 TeV during the full Run~2 data taking period during the years 2015 to 2018. The total integrated luminosity in this period is 139~fb$^{-1}$ with the uncertainty of 1.7~\% \cite{DAPR-2010-01}. Figure~\ref{fig:luminosity} shows the cumulative luminosity versus time during the Run~2 period.
 \begin{figure}[H]
 \begin{center}
  \includegraphics[width=0.45\textwidth,keepaspectratio]{figures/intlumivstimeRun2DQall.pdf}
@@ -65,13 +66,13 @@ Cumulative luminosity delivered to ATLAS (green), recorded by ATLAS (yellow), an
 \subsection{Signal and Background Monte Carlo simulation}
 \label{subsec:sigbgMC}
 The details of the signal and the background production in the Monte-Carlo simulation are discussed in this subsection.
-The Monte Carlo (MC) samples are used for the production of the background process, optimization of the event selection and the multivariate techniques for enhancing the signal sensitivities, and the estimation of systematic uncertainties.
+The Monte Carlo (MC) samples are used for the production of the background process, optimization of the event selection and the multivariate techniques to enhance the signal sensitivities, and the estimation of the systematic uncertainties.
 \\ \\
 \noindent\textbf{\sf{Signal EW VV+jj process}} \\ 
 The EWK VV+jj production signal is modeled using MadGraph5\_aMC@NLO v2.3.3~\cite{Alwall:2014hca} event generator, with PYTHIA8~\cite{Sjostrand:2007gs} for the parton shower modeling and hadronization. The \textsc{NNPDF30LO} PDF set~\cite{Ball:2012cx} is used. 
-The EWK VV+jj\ samples are generated at LO with two on-shell $V$ bosons, with one $V$ boson decaying leptonically
+The EWK VV+jj\ samples are generated at LO with two on-shell $V$ bosons, with one of which decays leptonically
 ($Z\to \ell\ell$ with $\ell = e, \mu$, $Z\to \nu\nu$, $W\to \ell \nu$ with $\ell= e, \mu, \tau$),
-and the other $V$ boson decaying hadronically. For the $W$ boson, both $W^{+}$ and $W^{-}$ are considered.
+and the other decays hadronically. For the $W$ boson, both $W^{+}$ and $W^{-}$ are considered.
 For each sample, all purely-electroweak tree-level diagrams (i.e. $\mathcal{O}(\alpha_{EW}^6)$ diagrams) that contribute to the final state are considered.
 
 %The signal samples are generated with two on-shell V bosons (V is Z or W), one of which decays leptonically, and the other hadronically (semi-leptonic final states).
@@ -159,25 +160,28 @@ $Z(ll)Z(qq\prime)jj$              &  0.0096 \\
 \noindent\textbf{\sf{Background processes}} \\ 
 %The Background processes in this analysis includes  $W$/$Z$ $\plus$ jets, $t\bar{t}$, single top, diboson (WW,WZ,ZZ) and multi-jets production. 
 %The main background for this analysis is the V($W$/$Z$)$\plus$ jets, which is the single W or Z boson in associated with jets. The final state is different with the EWVVjj signal though this is the dominant background process especially for 0-lepton and 2-lepton channel.
-The $W$/$Z$ + jets background is modeled using Sherpa~2.2.1~\cite{Gleisberg:2008ta} generator. 
+The $W$/$Z$ + jets background is modeled by using Sherpa~2.2.1~\cite{Gleisberg:2008ta} generator. 
+The $W$/$Z$ + jets process includes only $V \rightarrow l l$ process, and $V \rightarrow q q$ process is not considered, since it is estimated directly from data in the 1-lepton channel, and almost negligible in the 2-lepton channel.
 Matrix element is calculated for up to 2 partons at next-to-leading order (NLO), and 4 partons at leading order (LO) with Comix~\cite{Gleisberg:2008fv} and OpenLoops\cite{Cascioli:2011va} matrix element generators, with the Sherpa parton shower~\cite{Schumann:2007mg} using the ME+PS@NLO prescription~\cite{Hoeche:2012yf}.
-The NNPDF3.0NNLO PDF set is used in association to authors' tuning. The resulting events are normalized to the NNLO cross sections.
+The NNPDF3.0NNLO PDF set is used in association with authors' tuning. The resulting events are normalized to the NNLO cross sections.
 
 The QCD diboson background is also generated with Sherpa~2.2.1 generator. 
+The diboson process includes only semi-leptonic process. The full-leptonic process has fairly small contribution.
 
 %The $t\bar{t}$ proceess has the same final state as EWVVjj signal process, which has two jets include b-hadron, and two W bosons decay to the leptons and hadrons. This can be the large background in 1-lepton channel, and can be reduced by requiring not to have b-tagged jets. There are minor contributions from single-top process, which is also suppressed by b-vetoing.
 Single-top and $t\bar{t}$ backgrounds are generated with the Powheg-Box~\cite{Alioli:2010xd} generator with the NNPDF3.0NLO PDF\cite{Ball:2014uwa} sets in the matrix element calculation. The top mass is set to $172.5~\mathrm{GeV}$. The parton shower and the hadronization is simulated using \textsc{Pythia}~8.230. \\
+Considered $t\bar{t}$ process is not all-hadronic process, since other processes are negligible.
 %The top quark spin correlations are preserved (for t-channel, top quarks are decayed using MadSpin~\cite{Artoisenet:2012st}). For all processes the parton shower, fragmentation, and the underlying event are simulated using \textsc{Pythia}8.230 with the A14 tune set\cite{ATL-PHYS-PUB-2014-021}. The top mass is set to $172.5\gev$. The cross sections of $t\bar{t}$ and single-top are known to NNLO in QCD including re-summation of next-to-next-to-leading logarithmic (NNLL) soft gluon terms\cite{Czakon:2011xx,Kidonakis:2011wy,Kidonakis:2010tc,Kidonakis:2010ux}.
 %The parameter \textsc{Hdamp} to regulate the high-\pt\ radiation in the \textsc{Powheg} is set to $1.5m_{t}$ for a good data/MC agreement at high \pt\ region\cite{ATL-PHYS-PUB-2016-020}.
 %The diboson processes ($WW$, $WZ$ and $ZZ$) also have the same final states with the EWVVjj signals. They are generated with Sherpa 2.2.1~\cite{Gleisberg:2008ta} generator.
 
-All simulated events are processed with the same trigger and reconstruction algorithm as the data.
+All simulated events are processed with the same trigger and reconstruction algorithms as the data.
 Additional $pp$ collisions generated with \textsc{Pythia}~8.186\cite{Sjostrand:2008vc} are overlaid to model the effect of the pileup, the particles coming from secondary collisions in the same data-taking timing, for all MC events.
 In order to take into account the detector geometry and the reconstruction efficiency, samples are processed through the full ATLAS detector simulation\cite{SOFT-2010-01} based on \textsc{GEANT4}\cite{Agostinelli:2002hh}.
 
 \subsection{aQGC signal process Monte Carlo simulation}
 To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces 21 new dim-8 operators is used as described in section~\ref{subsec:EFT}.
-Of these operators, 19 can effect the semileptonic VBS final state.
+Of these operators, 19 can affect the semileptonic VBS final state.
 %As typical for EFT expansions, the modified lagrangian with these new operators $\mathcal{L}_n$ and corresponding Wilson coeffiencts $c_n$ and UV scale $\Lambda$ is:
 %\begin{equation*}
 %  \mathcal{L}=\mathcal{L}_{sm}+\sum_{n}\frac{c_n}{\Lambda^{4}}\mathcal{L}_n
@@ -185,7 +189,7 @@ Of these operators, 19 can effect the semileptonic VBS final state.
 
 In generality, the matrix-element of a SM process with the addition of new EFT contributions can be written as:
 \begin{equation}
-  |A_{SM}+c_iA_i|=|A_{SM}|^2+\sum\limits_i c_i^2|A_{i}|^2+ \sum\limits_i 2 c_i \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} c_i c_j \mathrm{Re}(A_i^\star A_j)
+  |A_{SM}+c_iA_i|^2 = |A_{SM}|^2+\sum\limits_i c_i^2|A_{i}|^2+ \sum\limits_i 2 c_i \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} c_i c_j \mathrm{Re}(A_i^\star A_j)
 \end{equation}
 where $|A_{SM}|^2$ is the SM matrix element, $|A_{i}|^2$ represents the pure-EFT matrix element, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is their corresponding interference term, and $\mathrm{Re}(A_i^\star A_j)$ is the possible interference between EFT amplitudes.
 This structure can be exploited in recent MadGraph5\_aMC@NLO versions which allows the specific generation of each of these terms individually, known as the matrix-element decomposition method.
