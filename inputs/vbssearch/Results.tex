@@ -173,7 +173,8 @@ The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\
     \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postSR2lepmtagjj}
 \end{figure}
-The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}, \ref{fig:postSR2lepmvv}. 
+The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}.
+%, \ref{fig:postSR2lepmvv}. 
 %signal region
 \begin{figure}[]
     \centering
@@ -193,15 +194,15 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
       \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR1lepmvv}
 \end{figure}
-\begin{figure}[]
-    \centering
-    %2lep
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
-    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
-    \label{fig:postSR2lepmvv}
-\end{figure}
+%\begin{figure}[]
+%    \centering
+%    %2lep
+%    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
+%    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
+%    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
+%    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+%    \label{fig:postSR2lepmvv}
+%\end{figure}
 
 \section{Impact of nuisance parameters on signal strength}
 \label{sec:ranking}
@@ -210,10 +211,10 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
 %        This is the QCD scale uncertainty for the Z+jets background sample. This comes from the %large shape variation in the resolved SR. The input variations are shown in Figure and Figure %in the merged and resolved SRs. \\
 %       \item \texttt{MJJREWEIGHT\_100per\_L2\_Fat1} 
 %       \item \texttt{MJJREWEIGHT\_100per\_L2\_J2} \\
-%       These are the $m^{tag}_{jj}$ reweighting uncertainties for merged and resolved regions. %We expect the large constraints for these uncertainties since these are taken as 100\% %uncertainties.Therefore CRs have large variations and constraints this systematics %uncertainties. \\
+%       These are the $m^{tag}_{jj}$ reweighting uncertainties for merged and resolved regions. %We expect large constraints for these uncertainties since these are taken as 100\% %uncertainties. Therefore CRs have large variations and constraints in this systematics %uncertainties. \\
 %       \item \texttt{SysMODEL\_Z\_MGPy8} \\
 %       This is the shape difference between Sherpa Z+jets samples (after the \mjjtag reweighting %applied)and the MadGraph Z+jets samples (no \mjjtag reweighting applied). \\
-%       These are expected since there is a well-known large modelling difference between two %generators. \\
+%       These are expected since there is a well-known large modeling difference between two %generators. \\
 %       \item \texttt{SysJET\_Pileup\_OffsetMu} \\
 %       This is pile-up related uncertainty.
 %       This systematic uncertainty is expected to have a large shape effect on the forward jets.
@@ -226,20 +227,20 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
 %Some strong pulls (1~$\sigma$ to 1.25~$\sigma$) are observed in the data fit in:
 %\begin{itemize}
 %    \item \texttt{TheoryQCD\_Z}\\
-%    This pull mainly comes from the resolved SRs. Since the impact of this pull is relaxed when %%the left-side bin is merged, this pull seems to comes from the descripance between data to MC i%%%n the RNN left-side bins.
+%    This pull mainly comes from the resolved SRs. Since the impact of this pull is relaxed when %%the left-side bin is merged, this pull seems to comes from the discrepancy between data to MC i%%%n the RNN left-side bins.
    % \item \texttt{MODEL\_Z\_MGPy8}\\
-   % This is coming from the difference in the generators. Since the modeling is better in the %alternative generator, MadGraph, this parameter is pulled a lot to fit to the data.
+   % This is coming from the difference in the generators. Since the modeling is better in the %alternative generator, MadGraph, this parameter is pulled a lot to fit the data.
 %\end{itemize}
 %The other constraints or pulled (up to 1~$\sigma$) parameters are listed below:
 %\begin{itemize}
 %    \item \texttt{SysJET\_Pileup\_OffsetMu}\\
-%    This is pileup-related uncertainty. This is expected to have a large shape effect on the %forward jet as well as for jet track multiplicity.
+%    This is pileup-related uncertainty. This is expected to have a large shape effect on the %forward jet as well as on jet track multiplicity.
 %    \item \texttt{SysFATJET\_FatJetTagSF\_Gammajet\_Modeling} \\
-%    This is the uncertainty related to the boosted tagger SF efficiency. This pull can be seen %since this  uncertainty has a large effect in Merged CR.
+%    This is the uncertainty related to the boosted tagger SF efficiency. This pull can be seen %since this  uncertainty has a large effect on Merged CR.
 %\end{itemize}
 
-%\subsection{Nuisance Paremeter Correlations}
-%The correlation matrix for the Asimov full-range fit for the parameters which has more than 1\% %correlations with any other operators are shown, without statistical uncertainties in each bin %is shown in Figure~\ref{fit_2lep_corr_all}. The strongest correlation of $\minus 78\%$ shows up %%%%between \texttt{MODEL\_Z\_MGPy8} and \texttt{MJJREWEIGHT\_100per\_L2\_J2}. These two par%ameters are both related to the mis-modelling of the Z+jets samples therefore should have cor%relations.
+%\subsection{Nuisance Parameter Correlations}
+%The correlation matrix for the Asimov full-range fit for the parameters which have more than 1\% %correlations with any other operators are shown, without statistical uncertainties in each bin %is shown in Figure~\ref{fit_2lep_corr_all}. The strongest correlation of $\minus 78\%$ shows up %%%%between \texttt{MODEL\_Z\_MGPy8} and \texttt{MJJREWEIGHT\_100per\_L2\_J2}. These two par%ameters are both related to the mis-modeling of the Z+jets samples therefore should have cor%relations.
 %The parameters which have significant (more than $\pm 30\%$) correlations with the POI %\texttt{$\mu\_$SemileptonicVBS} are:
 %\begin{itemize}
 %    \item \texttt{TheoryQCD\_Z} 
@@ -249,7 +250,7 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
 %\begin{figure}[ht]
 %      \centering
 %        \includegraphics[width=\linewidth]%{figures/2lep/FitResults/corr_HighCorrNoMCStat_AsimovAllbins.pdf}%
-      %  \caption{Correlations for unconditional fit ($\mu=1$) to asimov data in the full range, for the 2 lepton channel only.}
+      %  \caption{Correlations for unconditional fit ($\mu=1$) to Asimov data in the full range, for the 2 lepton channel only.}
       % \label{fig:fit_2lep_corr_all}
 %\end{figure}
 
@@ -258,13 +259,13 @@ In order to find out which nuisance parameter impacts the signal strength, the r
 The ranking is derived by doing the scans of the likelihood function, by first doing the nominal fit to find the $\hat{\mu}$, then fixing and scanning one NP while all other parameters are fitted again.
 %The scan as a function of one parameter stops once the logarithm of the likelihood decreases by 1/2 compared to the global maximum, corresponding to the 1~$\sigma$ uncertainty. 
 The change of the signal strength, which is plotted as $\Delta\mu$ is evaluated here.
-%The scan is repeated for all NPs, in both direction.
+%The scan is repeated for all NPs, in both directions.
 
 The NP which has the largest impact is the QCD scale systematic uncertainty on EW VV+jj signal sample. 
 Varying this QCD scale parameter by $1\sigma$ changes the signal strength by $\Delta \hat{\mu} \simeq \textcolor{blue}{?}$.
 The second and third-ranked parameters are for the 2-lepton channel, and both are related to the modeling of the Z+jets background sample discussed in chapter~\ref{chap:modeling}.
-%The top-two parameters are NPs relates to the Z+jet modeling issue and seen to be pulled in the pull plots. 
-%The parameters which have strong impacts and highly-ranked are consistent with the parameters having strong correlations with the POI in the correlation plot, Figure~\ref{fig:fit_2lep_corr_all}.
+%The top-two parameters are NPs relates to the Z+jet modeling issue and are seen to be pulled in the pull plots. 
+%The parameters which have strong impacts and are highly ranked are consistent with the parameters having strong correlations with the POI in the correlation plot, Figure~\ref{fig:fit_2lep_corr_all}.
 \begin{figure}[ht]
       \centering
         \includegraphics[width=0.60\textwidth]{figures/2lep/FitResults/pulls_mu_SemileptonicVBS_5.pdf}
@@ -277,13 +278,13 @@ The pulls and constraints for these high-impact parameters are also shown in fig
 The definition of the pull is $(\hat{\theta}-\theta) / \Delta \theta$, where $\Delta \theta$ represents the magnitude of uncertainty, and $\theta$ and $\hat{\theta}$ denote pre- and post-fit nuisance parameters.
 The pull, which can be seen as the deviation of the certain NP from zero, represents how the expectation of that NP does not describe the observed data.
 The constraints, which can be seen as the size of the error bar of each uncertainty, represent its reduction from its initial uncertainty value and show how much that uncertainty is constrained by the observed data after fitting.
-Ideally, the pull and the constraints of certain NP are zero and $1~\sigma$ when the uncertainty is perfectly applied.
+Ideally, the pull and the constraints of specific NP are zero and $1~\sigma$ when the uncertainty is perfectly applied.
 
 The Reweighting systematic uncertainty is highly constrained in figure~\ref{fig:fit_2lep_ranking_all} as designed, the same as Modeling Z uncertainty. The Modeling Z uncertainty is pulled about 1~$\sigma$, which seems to be adjusting the Z+jets background to the observed data in the fitting.
 
 All of these highly-ranked NPs are not unexpectedly pulled or constrained, which indicates the likelihood fit performed in this analysis is valid enough.
 
-%The pull plot for all NPs are discussed in Appendix.
+%The pull plot for all NPs is discussed in Appendix.
 %\begin{figure}[ht]
 %      \centering
 %        \includegraphics[1.0\textwidth, angle = 270]{figures/2lep/FitResults/NP_allExceptGammas}
@@ -298,15 +299,16 @@ The estimated signal strength in the fit is:
     %\mu = 0.982 \pm 0.217
     \mu = 0.98^{+ 0.22}_{- 0.20} = 0.98^{+ 0.09}_{- 0.09}(\mathrm{Stat})^{+ 0.21}_{- 0.18}(\mathrm{Syst}) 
 \end{equation}
-The corresponding observed (expected) significance is 5.90 (6.04)~$\sigma$, which claims the observation of the EW VV+jj signal in the semileptonic final state. 
+The corresponding observed (expected) significance is 5.90 (6.47)~$\sigma$, which claims the observation of the EW VV+jj signal in the semileptonic final state. 
 The expected significance is estimated by replacing the nuisance parameter values of the Asimov dataset (an artificial dataset with MC simulations) with those derived from a conditional $\mu = 1$ fit, a fit with $\mu$ fixed at 1, to the data. 
 The 1~sigma of the total uncertainty covers $\mu = 1$, this measurement is consistent with the SM prediction.
 
 The signal strength from the combined fit and from each channel fit is shown in figure~\ref{fig:muhat}.
-The signal-strength from the 0-lepton channel is greater than 2, while in the 1-lepton channel it is around 0.5, hence after combining three channels the signal strength is 0.98.
+The signal strength from the 0-lepton channel is greater than 2, while in the 1-lepton channel it is around 0.5, hence after combining three channels the signal strength is 0.98.
+The 1-lepton channel contributes to the combined signal strength most because of its dominance in the signal yields.
 \begin{figure}[]
       \centering
         \includegraphics[width=0.65\textwidth]{figures/Muhat_channels}
-        \caption{Fitted signal-strength $\mu_{obs}$ from each 2-lepton, 1-lepton, 0-lepton channel and their combination.}
+        \caption{Fitted signal strength $\mu_{obs}$ from each 2-lepton, 1-lepton, 0-lepton channel and their combination. The signal strength of each channel is obtained from the individual fit using only each channel.}
        \label{fig:muhat}
 \end{figure}
