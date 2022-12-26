@@ -56,7 +56,8 @@ Sometimes they are called as the quadratic term and the interference (linear) te
 The aQGC signal is extracted with a profile-likelihood fit same as what is described in section~\ref{sec:likelihood}, where the signal referring to the aQGC signal sample, and the standard model EW VV+jj signal sample is included as background with other standard model background samples like V+jets and $t\bar{t}$.
 The signal strength, $\mu$ is interpreted in terms of Wilson coefficient, $\mu$ = $\frac{f_i}{\Lambda^4}$. 
 The POI is set to include both quadratic terms and interference terms simultaneously, thereby two signal strength is parameterized as $\mu_{QUAD} = \mu_{INT}^2$.
-Figure~\ref{fig:quadint} shows the quadratic and interference signal distributions of di-boson invariant mass ($m_{VV}$) in HP SR, which has the most signal constraining power in 2-lepton channel.
+Figure~\ref{fig:quadint} shows the quadratic and interference signal distributions of di-boson invariant mass ($m_{VV}$) in HP SR, the region which has the most signal constraining power in 2-lepton channel.
+All $m_{VV}$ distributions for other Wilson coffieicnts are shown in appendix~\ref{app:aQGCresults}.  
 \begin{figure}[ht]
     \centering
         \includegraphics[width=0.45\textwidth]{figures/aQGC/FT0_0ptag1pfat0pjet_0ptv_SRVBS_HP_MllJ.pdf}
@@ -65,9 +66,6 @@ Figure~\ref{fig:quadint} shows the quadratic and interference signal distributio
         \caption{The comparison of the quadratic term and the interference term with FT0 (top left), FS02 (top right), and FM0 (bottom middle) in 2-lepton channel HP SR. The contribution of the interference term can be negative, and it is larger in FS terms. }
         \label{fig:quadint}
 \end{figure}
-
-
-
 For purpose of excluding a signal hypothesis, confidence intervals are derived to set limits. 
 Confidence intervals are calculated with asymptotic formulae using Wilks' theorem~\cite{10.1214/aoms/1177732360}, assuming that the profile likelihood test statistic is $\chi^2$ distributed~\cite{Cowan:2010js}.
 
@@ -75,16 +73,14 @@ Confidence intervals are calculated with asymptotic formulae using Wilks' theore
 \label{subsec:clipping}
 As the EFT may violate unitarity at large energy scale, the clipping method, mentioned in section~\ref{subsec:EFT}, is used to preserve the unitarity at high center of mass energies. 
 The EFT signal is set to zero at truth $m_{VV} > E_{clip}$, where the $E_{clip}$ is [1.5, 2, 3, 5, $\infty$]~TeV. 
+These five clipping points are chosen so that we can compare the results with other channel or experiment, as recommended from the anomalous gauge couplings (aGC) taskforce.~\cite{ATL-COM-PHYS-2017-433} 
 %Figure~\ref{fig:clipped} shows how the $m_{VV}$ is shown at the low clipping energy.
-The background samples, which is the all standard model predictions, are not clipped.
-%5 points are chosen as recommended from the anomalous gauge couplings (aGC) taskforce.~\cite{ATL-COM-PHYS-2017-433} 
-5 points are chosen so that we can compare the results with other channels or experiments.
-The expected and observed limits are obtained with all 3 channels at each of the clipping points and compared with the theoretical unitarity bound.
+The background samples, which are the all standard model predictions, are not clipped.
+The expected and observed limits are obtained with all 3 channels at each of the clipping point and compared with the theoretical unitarity bound.
 
 \section{Study of final discriminant in aQGC search}
 \label{subsec:2binapproach}
-The aQGC terms can modify the amplitude of the VBS process at the higher effective center-of-mass energy, 
-$m_{VV}$, as shown in Figure~\ref{fig:2lepaQGCshapeMVVh}.
+The aQGC terms can modify the amplitude of the VBS process at the higher effective center-of-mass energy, $m_{VV}$, as shown in Figure~\ref{fig:2lepaQGCshapeMVVh}.
 It is found that the reconstructed $m_{VV}$ (or \mt\ in \zlep\ channel) is the best variable to separate the aQGC signals from the background,
 while the RNN score distributions for the aQGC samples are similar to the one for the SM electroweak signal and still useful to suppress the non-VBS background as shown in Fig.~\ref{fig:2lepaQGCshapeRNNh}.
 
@@ -106,7 +102,6 @@ while the RNN score distributions for the aQGC samples are similar to the one fo
 %Two-dimensional binning of $m_{VV}$ and the RNN score is used as the final discriminant for the aQGC search.
 %In this section, the optimal binning strategy is studied in \tlep\ channel.
 %To confirm the result in Section~\ref{subsec:binnedsig} with more realistic setting,
-
 Finally, we would like to separate aQGC signals from both SM electroweak signal and the SM non-VBS background.
 So that the final discriminant can make use of the both separation power of $m_{VV}$ and the RNN score, the following study has been performed.
 
