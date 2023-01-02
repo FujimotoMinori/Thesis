@@ -1,9 +1,17 @@
 \chapter{Results of the SM EWVV+jj measurement}
 \label{chap:results}
 This chapter shows the results of the likelihood fit introduced in section~\ref{sec:likelihood}.
+The study to confirm whether we have designed the setup of the fitting properly to estimate the background correctly is checked in section\ref{sec:confirm}.
 The expected event yields are compared with the observed yields in section~\ref{sec:eventyields}.
 In section~\ref{sec:postfitplots} distributions after the fit are shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
 Finally the signal strength $\mu$ is extracted and the observed significance is estimated in section~\ref{sec:mu}.
+
+\section{Several check of the design of the fitting and the background modeling}
+\label{sec:confirm}
+
+
+
+
 
 \section{Event yields after fitting}
 \label{sec:eventyields}
@@ -316,6 +324,7 @@ The 1-lepton channel contributes to the combined signal strength most because of
 \section{Fiducial cross section}
 The fiducial cross section defined in section~\ref{sec:crosssection},$\sigma_{EWVVjj,\mathrm{obs}}$, is derived using the observed $\mu$ value.
 The expected cross section,$\sigma_{EWVVjj,\mathrm{SM}}$, obtained by truth event selection using the stable final state particle is shown in %table~\ref{tab:expxsec}.
+The expected cross section is a sum of the each cross section of each lepton channel. 
 The merged HP SR and LP SR are combined into a single merged signal region.
 
 %predicted cross section
@@ -324,12 +333,29 @@ The merged HP SR and LP SR are combined into a single merged signal region.
 \begin{center}
 \begin{tabular}{|l|c|c|c|}
 \hline$\sigma_{EWVVjj,\mathrm{SM}}$ & 0-lepton & 1-lepton & 2-lepton \\ \hline 
-Merged    & $4.1  \pm 0.13$   & $6.08 \pm 0.48$   & $1.2 \pm 0.06$ \\  \hline 
-Resolved  & $9.22 \pm 0.18$  & $16.37 \pm 0.35$  & $6.01 \pm 0.03$ \\ \hline
-\multirow{2}{*}{ Combined } & $13.32 \pm 0.22$ & $22.45 \pm 0.41$ & $7.21 \pm 0.03$ \\ \hline
-%&\multicolumn{3}{*}{ $42.98 \pm 0.46$ } \\ \hline
+Merged                              & $1.4 $   & $2.8 $   & $0.7 $   \\  \hline 
+Resolved                            & $1.7 $   & $4.3 $   & $1.5 $   \\ \hline
+Combined                            & $3.1 $   & $7.1 $   & $2.1 $   \\ \hline
+                                    & \multicolumn{3}{*}{ $12.4 $ }  \\ \hline
 \end{tabular}
 \caption{\label{tab:expxsec} A summary of predicted fiducial cross section }
 \end{center}
 \end{table}
+
+The observed fiducial cross section obtained is listed in table~\ref{tab:obsxsec}.
+%observed cross section
+\begin{table}[htbp]
+ %\footnotesize
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline$\sigma_{EWVVjj,\mathrm{SM}}$ & 0-lepton & 1-lepton & 2-lepton \\ \hline 
+Merged                              & $1.4 $   & $2.8 $   & $0.7 $   \\  \hline 
+Resolved                            & $1.7 $   & $4.3 $   & $1.5 $   \\ \hline
+Combined                            & $3.1 $   & $7.1 $   & $2.1 $   \\ \hline
+                                    & \multicolumn{3}{*}{ $12.4 $ }  \\ \hline
+\end{tabular}
+\caption{\label{tab:obsxsec} A summary of predicted fiducial cross section }
+\end{center}
+\end{table}
+
 
