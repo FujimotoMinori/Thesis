@@ -1,12 +1,12 @@
 \chapter{Statistical treatment}
 \label{chap:statistics}
 
-\section{Fiducial cross section extraction}
+\section{Fiducial cross-section extraction}
 \label{sec:crosssection}
-In addition to the observation of the EW VV+jj production, the fiducial cross section measurement is performed at the same time.
-The fiducial cross section, which is the cross section that takes the detector acceptance into account is exploited and it allows easier comparisons with other theoretical predictions.
+In addition to the observation of the EW VV+jj production, the fiducial cross-section measurement is performed at the same time.
+The fiducial cross-section, which is the cross-section that takes the detector acceptance into account is exploited and it allows easier comparisons with other theoretical predictions.
 The fiducial selection is done at MC samples using the stable final state particle, and these cuts are chosen to be as similar as possible to those at reconstruction level selection, described in Chapter~\ref{chap:eventselection}.
-These selections are summarized in the Table~\ref{tbl:vbs_fid_sel}. 
+These selections are summarized in the table~\ref{tbl:vbs_fid_sel}. 
 
 \begin{table}[h]
 \begin{center}
@@ -69,7 +69,7 @@ Fiducial cross-section is evaluated by scaling the measured signal strength $\mu
 \begin{equation}
 \mu = \frac{\sigma_{EW VVjj \mathrm{, \ obs}}}{\sigma_{EW VVjj \mathrm{, \ SM}}}
 \end{equation}
-where $\sigma_{EW VVjj \mathrm{, \ obs}}$ is the cross-section of the EW VV+jj process observed with data, the exact fiducial cross section we finally want to measure.
+where $\sigma_{EW VVjj \mathrm{, \ obs}}$ is the cross-section of the EW VV+jj process observed with data, the exact fiducial cross-section we finally want to measure.
 How to obtain $\mu$ is described in section~\ref{sec:likelihood}.
 %The $\mu$ will be obtained in section~\ref{sec:likelihood}.
 
@@ -97,7 +97,7 @@ In this analysis, this term is given by the Gaussian distribution with a standar
 Some parameters for example Z+jets background normalization factors do not have these penalty terms and are determined completely from the data, called floating parameters.
 The statistical uncertainties of the total background are also included in the likelihood function as $\gamma$ parameter. 
 The additional nuisance parameter called gamma parameter is also added to the initial $\mathcal{L}$ as $\gamma_i$ for each bin, where $\gamma_i$ is the total statistical uncertainty of a specific histogram bin i. 
-The poisson distribution is expected for the gamma parameters, conventionally they are parametrized so that the nominal expectation is 1 and its variation corresponds to $\pm 1 \sigma$, where the $\sigma$ is the MC statistical uncertainty of the bin i.
+The Poisson distribution is expected for the gamma parameters, conventionally they are parametrized so that the nominal expectation is 1 and its variation corresponds to $\pm 1 \sigma$, where the $\sigma$ is the MC statistical uncertainty of the bin i.
 %\begin{equation}
 %{Pois}\left(N_{i} \mid \mu s_{i}+\gamma_{i}b_{i}\right)
 %\end{equation}
@@ -137,8 +137,8 @@ Z=\Phi^{-1}(1-p)
 where $\Phi^{-1}$ is the inverse of the cumulative standard Gaussian.
 A given hypothesis is excluded if the p-value is sufficiently small, that is, Z is sufficiently large.
 
-To reject the background-only hypothesis and claim the discovery a new phenomenon, the significance is estimated for the background-only hypothesis, corresponds to $\mu = 0$.
-This background-only hypothesis in case of $p_0$ is regarded as null hypothesis. 
+To reject the background-only hypothesis and claim the discovery of a new phenomenon, the significance is estimated for the background-only hypothesis, corresponding to $\mu = 0$.
+This background-only hypothesis in the case of $p_0$ is regarded as a null hypothesis. 
 This is to be tested against the alternative hypothesis, which includes both background and the EW VV+jj signal.
 Typically significance of Z = 5~$\sigma$ is used as an appropriate level to constitute a discovery ($p_0 = 2.87 \times 10^{-7}$). 
 
@@ -172,7 +172,7 @@ Top Resolved CR       &                 & $m^{tag}_{jj}$ &               \\ \hli
 \caption{\label{tab:discriminant} Final discriminant in each region used in the fitting. }
 \end{center}
 \end{table}
-In the signal regions the RNN score is used, while in the CRs the $m^{tag}_{jj}$ is employed in order to give better constrains to the $m^{tag}_{jj}$ reweighting uncertainty. 
+In the signal regions the RNN score is used, while in the CRs the $m^{tag}_{jj}$ is employed in order to give better constraints to the $m^{tag}_{jj}$ reweighting uncertainty. 
 In the Top merged CRs single bin setting is adapted since these CR is for constraining $t\bar{t}$ background normalization and there is no need to use the shape. 
 The background is estimated using the MC for the RNN shape in SRs, while the normalization is estimated using the data in CRs.
 The normalization in the SR is designed to be extrapolated from the CR with the ratio of SR/CR obtained by the nominal MC modeling.
