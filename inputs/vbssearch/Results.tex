@@ -1,14 +1,16 @@
 \chapter{Results of the SM EWVV+jj measurement}
 \label{chap:results}
 This chapter shows the results of the likelihood fit introduced in section~\ref{sec:likelihood}.
-The study to confirm whether we have designed the setup of the fitting properly to estimate the background correctly is checked in section\ref{sec:confirm}.
+The study to confirm whether we have designed the setup of the fitting properly to estimate the background correctly is checked in section~\ref{sec:confirm}.
 The expected event yields are compared with the observed yields in section~\ref{sec:eventyields}.
 In section~\ref{sec:postfitplots} distributions after the fit are shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
 Finally the signal strength $\mu$ is extracted and the observed significance is estimated in section~\ref{sec:mu}.
 
-\section{Several check of the design of the fitting and the background modeling}
+\section{Check of the fitting setup for the background modeling}
 \label{sec:confirm}
-
+The validity of the fitting setup is confirmed by checking the background modeling after fitting in CRs.
+This validation procedure is performed by not looking at the observed data in the signal-sensitive regions.
+The fitting for this check use all CRs and the 
 
 
 
@@ -29,7 +31,7 @@ Channel          　& Sample        & \multicolumn{3}{|l|}{Number of events} \\ 
                    & Z + jets     & 628.72 $\pm$ 90.2           & 2022.32 $\pm$ 257.70           & 10176.18 $\pm$ 835.19\\ 
                    & W + jets     & 584.81 $\pm$ 79.09           & 1718.54 $\pm$ 212.92           & 8705.02 $\pm$ 762.56\\  
                    & $t\bar{t}$   & 1547.98 $\pm$ 126.18           &  2078.74 $\pm$ 172.03          & 1763.96 $\pm$ 225.49\\ 
-                   & Single top         & 158.31 $\pm$ 43.90           &   204.51 $\pm$ 58.47         & 272.51 $\pm$ 76.20  \\ 
+                   & Single $t$         & 158.31 $\pm$ 43.90           &   204.51 $\pm$ 58.47         & 272.51 $\pm$ 76.20  \\ 
                    & Diboson      &  344.32 $\pm$ 97.72           &  494.00 $\pm$ 140.99          & 576.25 $\pm$ 173.62\\ \cline{2-5}
                    & Total background    & 3264.13 $\pm$ 57.27           &  6518.10 $\pm$ 79.03          &21493.92 $\pm$ 149.35\\ \cline{2-5}
                    & Signal       & 91.24 $\pm$ 16.56           &   79.95 $\pm$ 15.75         & 216.67 $\pm$ 39.51\\ \cline{2-5}
@@ -38,7 +40,7 @@ Channel          　& Sample        & \multicolumn{3}{|l|}{Number of events} \\ 
                    & Z + jets     & 97.78 $\pm$ 44.98           & 299.70 $\pm$ 136.62           &1507.24 $\pm$ 629.85\\ 
                    & W + jets     & 3038.75 $\pm$ 231.60           &  9385.32 $\pm$ 485.57          &58369.42 $\pm$ 933.30\\  
                    & $t\bar{t}$   & 7101.69 $\pm$ 257.70           &  9913.70 $\pm$ 396.87          &7654.37 $\pm$ 362.61\\ 
-                   & Single top         & 613.03 $\pm$ 172.73           &  861.01 $\pm$ 246.54          & 1427.80 $\pm$ 398.70\\ 
+                   & Single $t$         & 613.03 $\pm$ 172.73           &  861.01 $\pm$ 246.54          & 1427.80 $\pm$ 398.70\\ 
                    & Diboson      &  1011.03 $\pm$ 271.99          &   1540.22 $\pm$ 419.99         & 1709.40 $\pm$ 481.91\\ \cline{2-5}
                    & Total background    & 11862.28 $\pm$ 111.83            &   21999.95 $\pm$ 150.00         & 70668.23 $\pm$ 324.83\\ \cline{2-5}
                    & Signal       & 222.57 $\pm$ 40.36           & 203.70 $\pm$ 42.62           &643.19 $\pm$ 117.27\\ \cline{2-5}
@@ -47,7 +49,7 @@ Channel          　& Sample        & \multicolumn{3}{|l|}{Number of events} \\ 
         & Z + jets    &  696.15 $\pm$ 47.60  & 2152.78 $\pm$ 94.17     & 25819.34 $\pm$ 243.56\\ 
         & W + jets    &  0.45 $\pm$ 0.04     & 1.38 $\pm$ 0.13         & 17.72 $\pm$ 2.23\\  
         & $t\bar{t}$  &  27.15 $\pm$ 1.57    & 64.54 $\pm$ 4.06        & 873.67 $\pm$ 44.66\\ 
-        & Single top        &  1.97 $\pm$ 0.58     & 3.19 $\pm$ 0.91         & 27.29 $\pm$ 7.73\\ 
+        & Single $t$        &  1.97 $\pm$ 0.58     & 3.19 $\pm$ 0.91         & 27.29 $\pm$ 7.73\\ 
         & Diboson     &  188.50 $\pm$ 51.07  & 281.53 $\pm$ 77.62      & 572.85 $\pm$ 165.79\\ \cline{2-5}
         & Total background   &  914.23 $\pm$ 26.09  & 2503.43 $\pm$ 43.03  & 27310.87 $\pm$ 172.00\\ \cline{2-5}
         & Signal      &  36.11 $\pm$ 6.66    & 33.24 $\pm$ 6.99        & 172.82 $\pm$ 32.28\\ \cline{2-5}
@@ -72,9 +74,9 @@ Z+jets Merged & $0.708^{+0.036}_{-0.036}$ \\
 Z+jets Resolved & $0.85^{+0.047}_{-0.047}$ \\
 $t\bar{t}$ Merged & $0.89^{+0.058}_{-0.058}$ \\
 $t\bar{t}$ Resolved & $1.07^{+0.048}_{-0.048}$ \\
-Diboson Merged & $1.41^{+0.69}_{-0.69}$ \\
-Diboson Resolved & $-0.071^{+0.92}_{-0.92}$ \\
-single top & $-0.46^{+0.83}_{-0.83}$ \\
+%Diboson Merged & $1.41^{+0.69}_{-0.69}$ \\
+%Diboson Resolved & $-0.071^{+0.92}_{-0.92}$ \\
+%single top & $-0.46^{+0.83}_{-0.83}$ \\
 \hline
 \end{tabular}
 \caption{\label{tab:postnorm} A summary of normalization factors obtained from the fit to the observed data. The normalization factor is decorrelated except for single top. }
@@ -168,7 +170,7 @@ The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\
     %1lep
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
       \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR1lepmtagjj}
 \end{figure}
@@ -181,8 +183,7 @@ The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\
     \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postSR2lepmtagjj}
 \end{figure}
-The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}.
-%, \ref{fig:postSR2lepmvv}. 
+The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}, \ref{fig:postSR2lepmvv}. 
 %signal region
 \begin{figure}[]
     \centering
@@ -190,7 +191,7 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMtvvJ_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMtvvjj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-      \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR0lepmvv}
 \end{figure}
 \begin{figure}[]
@@ -199,18 +200,18 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMVV_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMVV_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMVV_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-      \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR1lepmvv}
 \end{figure}
-%\begin{figure}[]
-%    \centering
-%    %2lep
-%    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
-%    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
-%    \includegraphics[width=0.45\textwidth]{figures/PostFit/}
-%    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
-%    \label{fig:postSR2lepmvv}
-%\end{figure}
+\begin{figure}[]
+    \centering
+    %2lep
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMllJ_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMlljj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
+    \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+    \label{fig:postSR2lepmvv}
+\end{figure}
 
 \section{Impact of nuisance parameters on signal strength}
 \label{sec:ranking}
@@ -270,7 +271,7 @@ The change of the signal strength, which is plotted as $\Delta\mu$ is evaluated 
 %The scan is repeated for all NPs, in both directions.
 
 The NP which has the largest impact is the QCD scale systematic uncertainty on EW VV+jj signal sample. 
-Varying this QCD scale parameter by $1\sigma$ changes the signal strength by $\Delta \hat{\mu} \simeq \textcolor{blue}{?}$.
+Varying this QCD scale parameter by $1\sigma$ changes the signal strength by $\Delta \hat{\mu} \simeq 0.11$.
 The second and third-ranked parameters are for the 2-lepton channel, and both are related to the modeling of the Z+jets background sample discussed in chapter~\ref{chap:modeling}.
 %The top-two parameters are NPs relates to the Z+jet modeling issue and are seen to be pulled in the pull plots. 
 %The parameters which have strong impacts and are highly ranked are consistent with the parameters having strong correlations with the POI in the correlation plot, Figure~\ref{fig:fit_2lep_corr_all}.
@@ -323,12 +324,11 @@ The 1-lepton channel contributes to the combined signal strength most because of
 
 \section{Fiducial cross section}
 The fiducial cross section, $\sigma_{EWVVjj,~\mathrm{obs}}$, defined in section~\ref{sec:crosssection}, is derived using the observed $\mu$ value.
-The expected cross-section, $\sigma_{EWVVjj,~\mathrm{SM}}$, obtained by truth event selection using the stable final state particle is shown in %table~\ref{tab:expxsec}.
+The expected cross-section, $\sigma_{EWVVjj,~\mathrm{SM}}$, obtained by truth event selection using the stable final state particle is shown in table~\ref{tab:expxsec}.
 The expected cross-section is the sum of each cross-section of each lepton channel. 
 The merged HP SR and LP SR are combined into a single merged signal region.
-
 %predicted cross section
-\begin{table}[htbp]
+\begin{table}[H]
  %\footnotesize
 \begin{center}
 \begin{tabular}{|l|c|c|c||c|}
@@ -342,8 +342,9 @@ Combined                                   & $3.74 $   & $7.55 $   & $2.29 $   &
 \end{table}
 
 The observed fiducial cross section obtained is listed in table~\ref{tab:obsxsec}.
+The fiducial cross-section is observed to be $13.3^{+2.99}_{-2.72}$~fb.
 %observed cross section
-\begin{table}[htbp]
+\begin{table}[H]
 %\footnotesize
 \begin{center}
 \begin{tabular}{|l|c|c|c||c|}

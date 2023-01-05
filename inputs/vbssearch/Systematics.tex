@@ -54,16 +54,44 @@ For the main sources of the background samples, only shapes of these theoretical
 The normalization is not included in the fitting, since it is determined by the free normalization factor in the fit from the data in CRs.
 
 \subsection{Reweighting uncertainties}
-As described in chapter~\ref{chap:modeling}, the $m^{tag}_{jj}$ reweighting is applied to the V+jet background and the distribution is corrected. 
+As described in chapter~\ref{chap:modeling}, the $m^{tag}_{jj}$ reweighting is applied to the V+jet background, and the distribution is corrected. 
 The dedicated uncertainty is assigned conservatively, considering a 100~\% uncertainty on the linear fit parameter; the distribution without the correction is used as a pre-fit -1~$\sigma$ variation; and the uncertainty is symmetrized to define +1~$\sigma$ variation. 
-%The pre-fit variation in 2-lepton channel is shown in figure~\ref{}.
+The pre-fit variation of the Z+jets sample in the 2-lepton channel is shown in figure~\ref{fig:mjjreweighting}.
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_SysMJJREWEIGHT_100per.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_SysMJJREWEIGHT_100per.pdf}
+ \\
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag1pfat0pjet_0ptv_SRVBS_HP_RNNScoreMerged_SysMJJREWEIGHT_100per.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag1pfat0pjet_0ptv_SRVBS_LP_RNNScoreMerged_SysMJJREWEIGHT_100per.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag2pjet_0ptv_SRVBS_Fid_RNNScoreResolved_SysMJJREWEIGHT_100per.pdf}
+ \caption[f]{
+Pre-fit variation of the reweighting uncertainty of Z+jets sample in the 2-lepton channel.
+}
+\label{fig:mjjreweighting}
+\end{center}
+\end{figure}
 
 \subsection{Generator difference uncertainites}
-The difference of the after reweighting distribution and the distribution using the alternative sample (MadGraph + Phythia~8) is assigned as a modeling uncertainty for V+jets background. There is a large difference in the modeling of the different generator, Sherpa and MadGraph, and we cannot know exactly which models the data correctly or not, hence the difference by using different generator is taken into account as an uncertainty. The MadGraph distribution used to evaluate this uncertainty is not reweighted since it is well match to the data in the control region as figure~\ref{fig:SherpaMadGraph} shows.
-For the $t\bar{t}$ and the QCD diboson sample, the difference of the nominal sample and the alternative sample, is also assigned as uncertainty.
+The difference of the distribution after the reweighting and the distribution using the alternative sample (MadGraph + Phythia~8) is assigned as a modeling uncertainty for V+jets background. There is a large difference in the modeling of the different generators, Sherpa and MadGraph, and we cannot know exactly which models the data correctly or not, hence the difference by using different generators is taken into account as an uncertainty. The MadGraph distribution used to evaluate this uncertainty is not reweighted since it is well match to the data in the control region as figure~\ref{fig:SherpaMadGraph} shows.
+For the $t\bar{t}$ and the QCD diboson sample, the difference of the nominal sample and the alternative sample is also assigned as the uncertainty.
 The nominal and the alternative sample used for $t\bar{t}$ is Powheg + Phythia and Powheg + Herwig respectively.
 For diboson sample, nominal sample is Sherpa~2.2.1 and the alternative is Powheg + Pythia.
-%The pre-fit variation in 2-lepton channel is shown in figure~\ref{}.
+The pre-fit variation of Z+jets samples in the 2-lepton channel is shown in figure~\ref{fig:modelingZ}.
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_SysMODEL_Z_MGPy8_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_SysMODEL_Z_MGPy8_Norm.pdf}
+ \\
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag1pfat0pjet_0ptv_SRVBS_HP_RNNScoreMerged_SysMODEL_Z_MGPy8_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag1pfat0pjet_0ptv_SRVBS_LP_RNNScoreMerged_SysMODEL_Z_MGPy8_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag2pjet_0ptv_SRVBS_Fid_RNNScoreResolved_SysMODEL_Z_MGPy8_Norm.pdf}
+ \caption[f]{
+Pre-fit variation of the modeling uncertainty of Z+jets sample in the 2-lepton channel.  Variation distributions are normalized to the nominal one to see the shapes.
+}
+\label{fig:modelingZ}
+\end{center}
+\end{figure}
 
 \subsection{QCD scale and PDF uncertainties}
 \noindent\textbf{\sf{QCD scale uncertainties}}\\
