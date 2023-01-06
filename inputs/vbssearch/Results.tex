@@ -6,34 +6,48 @@ The expected event yields are compared with the observed yields in section~\ref{
 In section~\ref{sec:postfitplots} distributions after the fit are shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
 Finally the signal strength $\mu$ is extracted and the observed significance is estimated in section~\ref{sec:mu}.
 
-\section{Check of the fitting setup for the background modeling}
+\section{Check of the fitting setup}
 \label{sec:confirm}
-The validity of the fitting setup is confirmed by checking the background modeling after fitting in the CRs.
-This validation procedure is performed by not looking at the observed data in the signal-sensitive regions.
-In the following ’left-side’bins of the SR discriminant distribution is refered to as the bins in the SR that contains 25~\% of the signal sample.
-The result of the fitting using $m^{tag}_{jj}$ in CRs and the left-side bins of the RNN score in SRs are applied to the $m^{tag}_{jj}$ and the RNN score distributions. 
-Obtained distributions in the CRs are shown in figure~\ref{fig:postCheck}.
+The validity of the fitting setup is confirmed by checking the information after fitting in the CRs.
+This validation procedure in this section is performed by not looking at the observed data in the signal-sensitive regions.
+The following ``left-side" bins of the SR discriminant distribution is referred to as the bins in the SR that contains 25~\% of the signal sample.
+
+%RNN modeling check
+To make sure that the machine learning discriminant models the data well, post-fit RNN distributions in the CRs are checked.
+The fitting result using $m^{tag}_{jj}$ in CRs and the left-side bins of the RNN score in SRs are applied to the RNN score distributions in CRs. 
+Obtained distributions in the CRs are shown in figure~\ref{fig:postCheck}. 
+Overall the post-fit RNN distributions in the CRs shows good background modeling except for the right-most bin of the one-lepton channel, which indicates that the RNN score discriminant has good modeling.
+%also in the SRs after the fitting, expecting they have similar modeling in the CRs and the SRs.
 %Control region validation plots
-\begin{figure}[]
+\begin{figure}[ht]
     \centering
     %0lep
-    \includegraphics[width=0.45\textwidth]{figures/validation/}
-    \includegraphics[width=0.45\textwidth]{figures/validation/}
+    \includegraphics[width=0.37\textwidth]{figures/validation/Region_distRNN_DCRVjetMer_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.pdf}
+    \includegraphics[width=0.37\textwidth]{figures/validation/Region_distRNN_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.pdf}
     %1lep
-    \includegraphics[width=0.45\textwidth]{figures/validation/}
-    \includegraphics[width=0.45\textwidth]{figures/validation/}
+    \includegraphics[width=0.37\textwidth]{figures/validation/Region_distRNN_DCRVjetMerged_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1.pdf}
+    \includegraphics[width=0.37\textwidth]{figures/validation/Region_distRNN_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1.pdf}
     %2lep
-    \includegraphics[width=0.45\textwidth]{figures/validation/}
-    \includegraphics[width=0.45\textwidth]{figures/validation/}
-    \caption{}
+    \includegraphics[width=0.37\textwidth]{figures/validation/Region_distRNNScoreMerged_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1.pdf}
+    \includegraphics[width=0.37\textwidth]{figures/validation/Region_distRNNScoreResolved_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1.pdf}
+    \caption{Post-fit RNN score distributions in merged CR (left) and in resolved CR (right) in the 0-lepton channel (top), the 1-lepton channel (middle), and the 2-lepton channel (bottom). The comparison of the data and the post-fit expected MC is shown in the middle panel, and the ratio of the pre-fit and the post-fit MC is shown in the bottom panel.}
     \label{fig:postCheck}
 \end{figure}
+%what changes the shape of the RNN score
+As seen in the pre/post-fit plots of the 2-lepton merged CR in figure~\ref{fig:postCheck}, some shape of the RNN score seems to be corrected by the fitting.
+A similar correction is also expected with the RNN distributions in the SRs.
+%The NP works to increase the MCs in the high-RNN bins which leads to a good agreement of the shape with the data.
+The NPs assigned to modify the shape of the RNN score are the $m^{tag}_{jj}$ reweighting uncertainty and the modeling uncertainties.
+As shown in figure~\ref{fig:fig:modelingZ} in chapter~\ref{chap:systematics}, these variations are rather large in the rightmost bins in SRs and CRs, which correct the shape of high-RNN bins in the fitting.
 
 \section{Event yields after fitting}
 \label{sec:eventyields}
 The observed and the estimated event yields after fitting is shown in table~\ref{tab:postyields}.
-The dominant background component is V+jets among all three channels. The second dominant background is $t\bar{t}$ process, especially in the 1-lepton channel. The observed event yields are compatible with the SM expectations in each region.
-
+The dominant background component is V+jets among all three channels. 
+The second dominant background is $t\bar{t}$ process. 
+The fit constrains the background towards the observed data and reduces the total background uncertainty by correlating them from the individual backgrounds.
+%The correlations between the normalizations and the NPs are shown in figure~\ref{fig:correlation}.
+The observed event yields are compatible with the SM expectations in each region.
 %event yields
 \begin{table}[htbp]
 %\footnotesize
@@ -42,12 +56,12 @@ The dominant background component is V+jets among all three channels. The second
 Channel          　& Sample        & \multicolumn{3}{|l|}{Number of events} \\ \hline \hline
 \multirow{7}{*}{0-lepton} &               & Merged HP  & Merged LP  & Resolved  \\ \cline{2-5}
                    & Z + jets     & 628.72 $\pm$ 90.2           & 2022.32 $\pm$ 257.70           & 10176.18 $\pm$ 835.19\\ 
-                   & W + jets     & 584.81 $\pm$ 79.09           & 1718.54 $\pm$ 212.92           & 8705.02 $\pm$ 762.56\\  
-                   & $t\bar{t}$   & 1547.98 $\pm$ 126.18           &  2078.74 $\pm$ 172.03          & 1763.96 $\pm$ 225.49\\ 
-                   & Single $t$         & 158.31 $\pm$ 43.90           &   204.51 $\pm$ 58.47         & 272.51 $\pm$ 76.20  \\ 
-                   & Diboson      &  344.32 $\pm$ 97.72           &  494.00 $\pm$ 140.99          & 576.25 $\pm$ 173.62\\ \cline{2-5}
-                   & Total background    & 3264.13 $\pm$ 57.27           &  6518.10 $\pm$ 79.03          &21493.92 $\pm$ 149.35\\ \cline{2-5}
-                   & Signal       & 91.24 $\pm$ 16.56           &   79.95 $\pm$ 15.75         & 216.67 $\pm$ 39.51\\ \cline{2-5}
+                   & W + jets     & 584.81 $\pm$ 79.09          & 1718.54 $\pm$ 212.92           & 8705.02 $\pm$ 762.56\\  
+                   & $t\bar{t}$   & 1547.98 $\pm$ 126.18        &  2078.74 $\pm$ 172.03       　　& 1763.96 $\pm$ 225.49\\ 
+                   & Single $t$   & 158.31 $\pm$ 43.90          &  204.51 $\pm$ 58.47         　  & 272.51 $\pm$ 76.20  \\ 
+                   & Diboson      &  344.32 $\pm$ 97.72         &  494.00 $\pm$ 140.99            & 576.25 $\pm$ 173.62\\ \cline{2-5}
+                   & Total background    & 3264.13 $\pm$ 57.27  &  6518.10 $\pm$ 79.03            &21493.92 $\pm$ 149.35\\ \cline{2-5}
+                   & Signal       & 91.24 $\pm$ 16.56           &   79.95 $\pm$ 15.75             & 216.67 $\pm$ 39.51\\ \cline{2-5}
                    & Data         & 3349           & 6585           &21789\\ \hline \hline
 \multirow{7}{*}{1-lepton} &               & Merged HP  & Merged LP  & Resolved  \\ \cline{2-5}
                    & Z + jets     & 97.78 $\pm$ 44.98           & 299.70 $\pm$ 136.62           &1507.24 $\pm$ 629.85\\ 
@@ -302,10 +316,9 @@ The pull, which can be seen as the deviation of the certain NP from zero, repres
 The constraints, which can be seen as the size of the error bar of each uncertainty, represent its reduction from its initial uncertainty value and show how much that uncertainty is constrained by the observed data after fitting.
 Ideally, the pull and the constraints of specific NP are zero and $1~\sigma$ when the uncertainty is perfectly applied.
 
-The Reweighting systematic uncertainty is highly constrained in figure~\ref{fig:fit_2lep_ranking_all} as designed, the same as Modeling Z uncertainty. The Modeling Z uncertainty is pulled about 1~$\sigma$, which seems to be adjusting the Z+jets background to the observed data in the fitting.
-
+The Reweighting systematic uncertainty is highly constrained in figure~\ref{fig:fit_2lep_ranking_all} as designed, the same as Modeling Z uncertainty. 
+The Modeling Z uncertainty is pulled about 1~$\sigma$, which seems to be adjusting the Z+jets background to the observed data in the fitting.
 All of these highly-ranked NPs are not unexpectedly pulled or constrained, which indicates the likelihood fit performed in this analysis is valid enough.
-
 %The pull plot for all NPs is discussed in Appendix.
 %\begin{figure}[ht]
 %      \centering
