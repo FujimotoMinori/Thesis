@@ -154,7 +154,7 @@ Typically significance of Z = 5~$\sigma$ is used as an appropriate level to cons
 
 \section{Fitting setups}
 A simultaneous likelihood fit to all 18 merged and resolved signal and control regions is performed.
-The final discriminant in each region is summarized in table.
+The final discriminant in each region is summarized in table~\ref{tab:discriminant}.
 \begin{table}[htbp]
  \footnotesize
 \begin{center}
@@ -172,15 +172,21 @@ Top Resolved CR       &                 & $m^{tag}_{jj}$ &               \\ \hli
 \caption{\label{tab:discriminant} Final discriminant in each region used in the fitting. }
 \end{center}
 \end{table}
-In the signal regions the RNN score is used, while in the CRs the $m^{tag}_{jj}$ is employed in order to give better constraints to the $m^{tag}_{jj}$ reweighting uncertainty. 
-In the Top merged CRs single bin setting is adapted since these CR is for constraining $t\bar{t}$ background normalization and there is no need to use the shape. 
+In the signal regions, the RNN score is used to get maximized sensitivity, while in the CRs the $m^{tag}_{jj}$ is employed in order to give better constraints to the $m^{tag}_{jj}$ reweighting uncertainty. 
+In the Top merged CRs single bin setting is adapted since these CRs are for constraining $t\bar{t}$ background normalization and there is no need to use the shape. 
+%The pre-fit plots of all regions are shown in figure~\ref{fig:preCR} as the inputs of the final fitting.
+
 The background is estimated using the MC for the RNN shape in SRs, while the normalization is estimated using the data in CRs.
 The normalization in the SR is designed to be extrapolated from the CR with the ratio of SR/CR obtained by the nominal MC modeling.
 As the NPs which change the ratio of the normalization of SR/CR, theoretical variation and the boson tagging scale factor uncertainty are taken into account.
 All systematic uncertainties are included in the fit as NPs with penalty terms or floating parameters as described in section~\ref{sec:likelihood}. Since the definition of the CR is basically same as SR but inverted the mass window or the boson tagging, it is designed that most of the NPs are expected to be canceled each other out.
 
-The normalization of the dominant background is assigned as the floating parameter, while background with small contribution which has small impact on the signal extraction is assigned as the NP with penalty term of a certain amount of the error.
-The treatment of each background normalization is shown in table~\ref{tab:bkgnorm}.
+The normalization of the dominant background (Z+jets, W+jets, $t\bar{t}$) is assigned as the floating parameter, while the background with a small contribution which has a small impact on the signal extraction is assigned as the NP with a penalty term of a certain amount of the error.
+The normalization of the floated backgrounds is designed to be obtained separately in the merged region and the resolved region, in order to absorb the effect of the possible mismodeling in the high center-of-mass energy region and/or in merged regions.
+%why QCD diboson normalization had the priors
+The diboson contribution has anti-correlation with the EW signal. 
+Normally it should be constrained with data, but it is assigned with a penalty term currently, due to the lack of a dedicated control region.
+The treatment of each background normalization is summarized in table~\ref{tab:bkgnorm}.
 The amount of the error of the penalty term is estimated by comparing the nominal MC yields to that of the alternative sample in each analysis region.
 An extrapolation uncertainty in the combined fit is also added to take into account differences in the background composition coming from the different lepton channels. The error is obtained from the double ratio between the channel with the largest yield and another channel.
 \begin{table}[htbp]
@@ -192,14 +198,14 @@ Normalization name        & treatment   & \multicolumn{2}{|c|}{error of the pena
 Z norm.             & Float       &      &\\ \hline
 W norm.             & Float       &       &\\ \hline 
 $t\bar{t}$ norm.    & Float       &       &\\ \hline
-diboson norm.     &             & 0.5    &  0.3 \\ \hline
-single top norm           &             & \multicolumn{2}{|c|}{0.3}\\ \hline \hline
-Z norm 2lep to 0lep        &             & 0.234  &   0.293 \\ \hline
+Diboson norm.       &             & 0.5    &  0.3 \\ \hline
+Single top norm     &             & \multicolumn{2}{|c|}{0.3}\\ \hline \hline
+Z norm 2lep to 0lep       &             & 0.234  &   0.293 \\ \hline
 Z norm 2lep to 1lep       &             & 0.454  &  0.410  \\ \hline
 W norm 1lep to 0lep       &             & 0.127     & 0.094\\ \hline
 $t\bar{t}$ norm 1lep to 0lep     &             & 0.304     & 0.601\\ \hline
-diboson norm 1lep to 0lep    &             & 0.061     &0.078 \\ \hline
-diboson norm 1lep to 2lep       &             & 0.152     & 0.098\\ \hline
+Diboson norm 1lep to 0lep    &             & 0.061     &0.078 \\ \hline
+Diboson norm 1lep to 2lep       &             & 0.152     & 0.098\\ \hline
 \end{tabular}
 \caption{\label{tab:bkgnorm} The treatment of the background normalization. }
 \end{center}

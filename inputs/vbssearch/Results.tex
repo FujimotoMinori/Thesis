@@ -1,25 +1,28 @@
 \chapter{Results of the SM EWVV+jj measurement}
 \label{chap:results}
 This chapter shows the results of the likelihood fit introduced in section~\ref{sec:likelihood}.
-The study to confirm whether we have designed the setup of the fitting properly to estimate the background correctly is checked in section~\ref{sec:confirm}.
+First, whether the machine learning discriminant is modeled well is checked in section~\ref{sec:confirm}.
 The expected event yields are compared with the observed yields in section~\ref{sec:eventyields}.
-In section~\ref{sec:postfitplots} distributions after the fit are shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
+In section~\ref{sec:postfitplots} distributions after the fit is shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
 Finally the signal strength $\mu$ is extracted and the observed significance is estimated in section~\ref{sec:mu}.
 
-\section{Check of the fitting setup}
+\section{Validation of the background modeling of the RNN score}
 \label{sec:confirm}
 The validity of the fitting setup is confirmed by checking the information after fitting in the CRs.
-This validation procedure in this section is performed by not looking at the observed data in the signal-sensitive regions.
-The following ``left-side" bins of the SR discriminant distribution is referred to as the bins in the SR that contains 25~\% of the signal sample.
-
+In this section validation was performed by not looking at the observed data in the signal-sensitive regions, for the purpose of not being biased by looking at the signals and just checking the background modeling.
+The following ``left-side" bins of the SR discriminant distribution are referred to as the bins in the SR that contains 25~\% of the signal sample.
 %RNN modeling check
-To make sure that the machine learning discriminant models the data well, post-fit RNN distributions in the CRs are checked.
+The post-fit RNN distributions in the CRs are checked to make sure that the machine learning discriminant models the data well.
 The fitting result using $m^{tag}_{jj}$ in CRs and the left-side bins of the RNN score in SRs are applied to the RNN score distributions in CRs. 
 Obtained distributions in the CRs are shown in figure~\ref{fig:postCheck}. 
-Overall the post-fit RNN distributions in the CRs shows good background modeling except for the right-most bin of the one-lepton channel, which indicates that the RNN score discriminant has good modeling.
-%also in the SRs after the fitting, expecting they have similar modeling in the CRs and the SRs.
-%Control region validation plots
-\begin{figure}[ht]
+Overall the post-fit RNN distributions in the CRs show good background modeling except for the right-most bin of the one-lepton channel, which indicates that the RNN score discriminant has good modeling with all NPs. For the 2-lepton channel, the discrepancy seen in figure~\ref{fig:after_rw} as a slope is well corrected.
+
+%what changes the shape of the RNN score
+As seen in the pre/post-fit plots of the 2-lepton merged CR in figure~\ref{fig:postCheck}, the shape of the RNN score is corrected by the fitting.
+A similar correction is also expected with the RNN distributions in the SRs.
+The NPs assigned to modify the shape of the RNN score are the $m^{tag}_{jj}$ reweighting uncertainty and the modeling uncertainties.
+As shown in figure~\ref{fig:mjjreweighting} and \ref{fig:modelingZ} in chapter~\ref{chap:systematics}, these variations are rather large in the rightmost bins in SRs and CRs, which can correct the shape of high-RNN bins in the fitting.
+\begin{figure}[H]
     \centering
     %0lep
     \includegraphics[width=0.37\textwidth]{figures/validation/Region_distRNN_DCRVjetMer_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.pdf}
@@ -33,20 +36,15 @@ Overall the post-fit RNN distributions in the CRs shows good background modeling
     \caption{Post-fit RNN score distributions in merged CR (left) and in resolved CR (right) in the 0-lepton channel (top), the 1-lepton channel (middle), and the 2-lepton channel (bottom). The comparison of the data and the post-fit expected MC is shown in the middle panel, and the ratio of the pre-fit and the post-fit MC is shown in the bottom panel.}
     \label{fig:postCheck}
 \end{figure}
-%what changes the shape of the RNN score
-As seen in the pre/post-fit plots of the 2-lepton merged CR in figure~\ref{fig:postCheck}, some shape of the RNN score seems to be corrected by the fitting.
-A similar correction is also expected with the RNN distributions in the SRs.
-%The NP works to increase the MCs in the high-RNN bins which leads to a good agreement of the shape with the data.
-The NPs assigned to modify the shape of the RNN score are the $m^{tag}_{jj}$ reweighting uncertainty and the modeling uncertainties.
-As shown in figure~\ref{fig:fig:modelingZ} in chapter~\ref{chap:systematics}, these variations are rather large in the rightmost bins in SRs and CRs, which correct the shape of high-RNN bins in the fitting.
 
 \section{Event yields after fitting}
 \label{sec:eventyields}
+From this section all the bins from CRs and SRs are used in the fitting.
 The observed and the estimated event yields after fitting is shown in table~\ref{tab:postyields}.
 The dominant background component is V+jets among all three channels. 
 The second dominant background is $t\bar{t}$ process. 
 The fit constrains the background towards the observed data and reduces the total background uncertainty by correlating them from the individual backgrounds.
-%The correlations between the normalizations and the NPs are shown in figure~\ref{fig:correlation}.
+The correlations between the normalizations and the NPs are shown in figure~\ref{fig:correlation}.
 The observed event yields are compatible with the SM expectations in each region.
 %event yields
 \begin{table}[htbp]
@@ -85,9 +83,18 @@ Channel          　& Sample        & \multicolumn{3}{|l|}{Number of events} \\ 
 \caption{\label{tab:postyields} Number of observed and predicted events in each signal region, obtained from the log-likelihood fitting. The uncertainties combine statistical and systematic contributions. }
 \end{center}
 \end{table}
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fitresults/corr_HighCorrNoMCStat.pdf}
+    \caption{The correlation matrix of nuisance parameters from the fit is shown. Only the NPs which have correlations with other NPs of more than 50~\% are shown.}
+    \label{fig:correlation}
+\end{figure}
 
 The summary of the normalization factor for each background component extracted from the fitting is shown in table~\ref{tab:postnorm}. 
-The lower normalization factor is reported especially for V+jets merged regions. 
+The lower normalization value is reported especially for V+jets merged regions. 
+For V+jets samples, overestimating the cross-section in the high center-of-mass region is known as mentioned in section~\ref{sec:likelihood}. 
+This tendency is also reported in other analyses~\cite{EXOT-2016-28}. 
+Different normalization factor in merged and resolved regions shows different normalization value as designed, considered to be due to the mismodeling of the samples.
 %norm factors
 \begin{table}[htbp]
  %\footnotesize

@@ -55,8 +55,10 @@ The normalization is not included in the fitting, since it is determined by the 
 
 \subsection{Reweighting uncertainties}
 As described in chapter~\ref{chap:modeling}, the $m^{tag}_{jj}$ reweighting is applied to the V+jet background, and the distribution is corrected. 
-The dedicated uncertainty is assigned conservatively, considering a 100~\% uncertainty on the linear fit parameter; the distribution without the correction is used as a pre-fit -1~$\sigma$ variation; and the uncertainty is symmetrized to define +1~$\sigma$ variation. 
+The dedicated uncertainty is assigned conservatively, considering a 100~\% uncertainty on the linear fit parameter; the distribution without the correction is used as a pre-fit $-1~\sigma$ variation; and the uncertainty is symmetrized to define $+1~\sigma$ variation. 
 The pre-fit variation of the Z+jets sample in the 2-lepton channel is shown in figure~\ref{fig:mjjreweighting}.
+The reweighting uncertainty is estimated in the CRs and propagated to the SRs with an event-by-event weight. 
+To cover the possible remaining mis-modeling with the RNN score considering that the modeling is different between $m^{tag}_{jj}$ and the RNN score, this uncertainty is designed to be large and enough conservatively.
 \begin{figure}[H]
 \begin{center}
  \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/Z_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_SysMJJREWEIGHT_100per.pdf}
@@ -73,7 +75,7 @@ Pre-fit variation of the reweighting uncertainty of Z+jets sample in the 2-lepto
 \end{figure}
 
 \subsection{Generator difference uncertainites}
-The difference of the distribution after the reweighting and the distribution using the alternative sample (MadGraph + Phythia~8) is assigned as a modeling uncertainty for V+jets background. There is a large difference in the modeling of the different generators, Sherpa and MadGraph, and we cannot know exactly which models the data correctly or not, hence the difference by using different generators is taken into account as an uncertainty. The MadGraph distribution used to evaluate this uncertainty is not reweighted since it is well match to the data in the control region as figure~\ref{fig:SherpaMadGraph} shows.
+The difference of the distribution after the reweighting and the distribution using the alternative sample (MadGraph + Phythia~8) is assigned as a modeling uncertainty for V+jets background. There is a large difference in the modeling of the different generators, Sherpa and MadGraph, and we cannot know exactly which models the data correctly or not, hence the difference by using different generators is taken into account as an uncertainty. The MadGraph distribution used to evaluate this uncertainty is not reweighted since it is well matched to the data in the control region as figure~\ref{fig:SherpaMadGraph} shows.
 For the $t\bar{t}$ and the QCD diboson sample, the difference of the nominal sample and the alternative sample is also assigned as the uncertainty.
 The nominal and the alternative sample used for $t\bar{t}$ is Powheg + Phythia and Powheg + Herwig respectively.
 For diboson sample, nominal sample is Sherpa~2.2.1 and the alternative is Powheg + Pythia.
