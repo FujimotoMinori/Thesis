@@ -47,43 +47,56 @@ The SM+EFT matrix element can be written as
 \begin{equation}
    |A_{SM}+\frac{f_i}{\Lambda^4}A_i|^2=|A_{SM}|^2+\sum\limits_i \frac{f_i^2}{\Lambda^8}|A_{i}|^2+ \sum\limits_i 2 \frac{f_i}{\Lambda^4} \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} \frac{f_i}{\Lambda^4} \frac{f_j}{\Lambda^4} \mathrm{Re}(A_i^\star A_j)
 \end{equation}
-where $|A_SM|^2$ is the SM matrix element, $|A_{i}|^2$ represents the pure-EFT matrix elements for the $f_{i}$ operator, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is its corresponding interference term with the SM, and $\mathrm{Re}(A_i^\star A_j)$ is possible interference term between EFT operators $f_{i}$ and $f_{j}$. 
+where $|A_SM|^2$ is the SM matrix element, $|A_{i}|^2$ represents the pure-EFT matrix elements for the $O_{i}$ operator listed in eq~\ref{eq:OpratorFS}-\ref{eq:OpratorFT} , $2 \mathrm{Re}(A_{SM}^\star A_i)$ is its corresponding interference term with the SM, and $\mathrm{Re}(A_i^\star A_j)$ is possible interference term between EFT operators $O_{i}$ and $O_{j}$. 
 Theoretically, it cannot separate the effects of Wilson coefficients $f_i$ and the scale $\Lambda^4$, so the parameter of interest in this analysis is the ratio $\frac{f_i}{\Lambda^4}$. %Sometimes it is just called as $f_i$.
 The pure-EFT term is scaled by the quadrature of $\frac{f_i}{\Lambda^4}$ and the interference term by $\frac{f_{i}}{\Lambda^4}$.
-Sometimes they are called as the quadratic term and the interference (linear) term, respectively.
-
+They are also called as the quadratic term and the interference (linear) term, respectively.
+%interference term is neglected in this analysis
+In this analysis, the term with $\mathrm{Re}(A_i^\star A_j)$ is ignored for simplicity and for consistency to other previous results on aQGC search, and evaluate the contributions from each operator on a one-by-one basis.
 \section{Statistical interpretation}
-The aQGC signal is extracted with a profile-likelihood fit same as what is described in section~\ref{sec:likelihood}, where the signal referring to the aQGC signal sample, and the standard model EW VV+jj signal sample is included as background with other standard model background samples like V+jets and $t\bar{t}$.
-The signal strength, $\mu$ is interpreted in terms of Wilson coefficient, $\mu$ = $\frac{f_i}{\Lambda^4}$. 
-The POI is set to include both quadratic terms and interference terms simultaneously, thereby two signal strength is parameterized as $\mu_{QUAD} = \mu_{INT}^2$.
-Figure~\ref{fig:quadint} shows the quadratic and interference signal distributions of di-boson invariant mass ($m_{VV}$) in HP SR, the region which has the most signal constraining power in 2-lepton channel.
-All $m_{VV}$ distributions for other Wilson coffieicnts are shown in appendix~\ref{app:aQGCresults}.  
+The aQGC signal is extracted with a profile-likelihood fit as described in section~\ref{sec:likelihood}, but replacing the signal to the aQGC sample, and the standard model EW VV+jj signal is included as background with other standard model background samples like V+jets and $t\bar{t}$.
+The POI is set as $\mu_{\mathrm{aQGC}} = \frac{f_i}{\Lambda^4}$, where signal template is defined as $\mu_{\mathrm{aQGC}}^2*$~quadratic~signal $+$ $\mu_{\mathrm{aQGC}}*$~interference~signal.
+%The signal strength, $\mu$ is interpreted in terms of Wilson coefficient, $\mu$ = $\frac{f_i}{\Lambda^4}$. 
+%The POI is set to include both quadratic terms and interference terms simultaneously, thereby two signal strength is parameterized as $\mu_{QUAD} = \mu_{INT}^2$.
+Figure~\ref{fig:quadint} shows the quadratic and interference signal distributions of di-boson invariant mass ($m_{VV}$) in HP SR.
+All $m_{VV}$ distributions for other Wilson coefficients are shown in appendix~\ref{app:aQGCresults}.  
+The contribution of quadratic term and the linear term depends on the magnitude of $\mu_\mathrm{aQGC}$.
+As figure~\ref{fig:largemu} shows, the contribution of the quardratic term is dominant where the $\mu_\mathrm{aQGC}$ is large, and the number of signal becomes more symmetrical. Where the $\mu_\mathrm{aQGC}$ is small, the interference term contribution is dominant, and the number of signal becomes more asymmetrical and can take negative values.
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.50\textwidth]{figures/aQGC/largemu.pdf}
+        \caption{Number of the FS02 signals with respect to the $\mu_\mathrm{aQGC}$ value. The signal is produced at $\frac{f_i}{\Lambda^4} = 1~[\mathrm{TeV}^{-4}]$. }
+        \label{fig:largemu}
+\end{figure}
+%, the region which has the most signal constraining power in the 2-lepton channel.
 \begin{figure}[ht]
     \centering
         \includegraphics[width=0.45\textwidth]{figures/aQGC/FT0_0ptag1pfat0pjet_0ptv_SRVBS_HP_MllJ.pdf}
     	\includegraphics[width=0.45\textwidth]{figures/aQGC/FS02_0ptag1pfat0pjet_0ptv_SRVBS_HP_MllJ.pdf}
         \includegraphics[width=0.45\textwidth]{figures/aQGC/FM0_0ptag1pfat0pjet_0ptv_SRVBS_HP_MllJ.pdf}
-        \caption{The comparison of the quadratic term and the interference term with FT0 (top left), FS02 (top right), and FM0 (bottom middle) in 2-lepton channel HP SR. The contribution of the interference term can be negative, and it is larger in FS terms. }
+        \caption{The comparison of the quadratic term and the interference term with FT0 (top left), FS02 (top right), and FM0 (bottom middle) in 2-lepton channel HP SR. The contribution of the interference term can be negative, and it is larger in FS terms. The signal sample is produced at $\frac{f_i}{\Lambda^4} = 1~[\mathrm{TeV}^{-4}]$. }
         \label{fig:quadint}
 \end{figure}
-For purpose of excluding a signal hypothesis, confidence intervals are derived to set limits. 
-Confidence intervals are calculated with asymptotic formulae using Wilks' theorem~\cite{10.1214/aoms/1177732360}, assuming that the profile likelihood test statistic is $\chi^2$ distributed~\cite{Cowan:2010js}.
+For the purpose of excluding a signal hypothesis, confidence intervals are derived to set limits. 
+Confidence intervals are calculated with asymptotic formulae using Wilks' theorem~\cite{10.1214/aoms/1177732360}, assuming that the profile likelihood test statistic follows $\chi^2$ distribution~\cite{Cowan:2010js}.
+%Explaing the definition of test statistic
+%The test statistic is 
 
 \section{Clipping method}
 \label{subsec:clipping}
-As the EFT may violate unitarity at large energy scale, the clipping method, mentioned in section~\ref{subsec:EFT}, is used to preserve the unitarity at high center of mass energies. 
+As the EFT may violate unitarity at a large energy scale, the clipping method, mentioned in section~\ref{subsec:EFT}, is used to study the range of cut-off scale that the experimental result can give limits on perturbatively calculable models.
+%to preserve the unitarity at high center of mass energies. 
 The EFT signal is set to zero at truth $m_{VV} > E_{clip}$, where the $E_{clip}$ is [1.5, 2, 3, 5, $\infty$]~TeV. 
-These five clipping points are chosen so that we can compare the results with other channel or experiment, as recommended from the anomalous gauge couplings (aGC) taskforce.~\cite{ATL-COM-PHYS-2017-433} 
+%These five clipping points are chosen so that we can compare the results with other channels or experiments, as recommended from the anomalous gauge couplings (aGC) taskforce.~\cite{ATL-COM-PHYS-2017-433} 
 %Figure~\ref{fig:clipped} shows how the $m_{VV}$ is shown at the low clipping energy.
-The background samples, which are the all standard model predictions, are not clipped.
-The expected and observed limits are obtained with all 3 channels at each of the clipping point and compared with the theoretical unitarity bound.
+The background samples, which are all standard model predictions, are not clipped.
+The expected and observed limits are obtained with all 3 channels at each of the clipping points and compared with the theoretical unitarity bound.
 
 \section{Study of final discriminant in aQGC search}
 \label{subsec:2binapproach}
 The aQGC terms can modify the amplitude of the VBS process at the higher effective center-of-mass energy, $m_{VV}$, as shown in Figure~\ref{fig:2lepaQGCshapeMVVh}.
 It is found that the reconstructed $m_{VV}$ (or \mt\ in \zlep\ channel) is the best variable to separate the aQGC signals from the background,
 while the RNN score distributions for the aQGC samples are similar to the one for the SM electroweak signal and still useful to suppress the non-VBS background as shown in Fig.~\ref{fig:2lepaQGCshapeRNNh}.
-
 \begin{figure}[]
     \centering
    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_HP_aQGC.pdf}
@@ -103,7 +116,8 @@ while the RNN score distributions for the aQGC samples are similar to the one fo
 %In this section, the optimal binning strategy is studied in \tlep\ channel.
 %To confirm the result in Section~\ref{subsec:binnedsig} with more realistic setting,
 Finally, we would like to separate aQGC signals from both SM electroweak signal and the SM non-VBS background.
-So that the final discriminant can make use of the both separation power of $m_{VV}$ and the RNN score, the following study has been performed.
+So that the final discriminant can make use of the both separation power of $m_{VV}$ and the RNN score, 
+%the following study has been performed.
 
 %we compared the results with the following conditions.
 The fitting results with the following conditions are compared:
@@ -117,10 +131,10 @@ The fitting results with the following conditions are compared:
 The threshold 2000~GeV is derived from figure~\ref{fig:2lepaQGCshapeMVVh}.
 With the second option, the number of SRs is twice as shown in Figure~\ref{fig:2lepTwoBin}.
 %(binning??)
-Unconditional asimov fit (The log-likelihood fit using asimov dataset without fixing the $\mu$ value) by using FT0 signal in only \tlep\ channel is performed.
+Unconditional Asimov fit (The log-likelihood fit using Asimov dataset without fixing the $\mu$ value) by using FT0 signal in only \tlep\ channel is performed.
 Only quadratic term is used in this study.
 The systematic uncertainties are not included in the fitting here, just the floated normalization factor is considered.
-The asimov data used here is constructed from the background plus SM electroweak VV+jj signal samples.
+The Asimov data used here is constructed from the background plus SM electroweak VV+jj signal samples.
 The expected limits and uncertainty of the expected signal strength of FT0 signal are shown in table~\ref{tab:2binlimit}.
 %Significantly better upper limit on the signal strength is obtained by the second option (a fit to RNN score with the categorization by $m_{VV}$)
 %than the first option (a fit to $m_{VV}$ distribution).
@@ -128,16 +142,16 @@ The signal strength obtained by the second option (a fit to RNN score with the c
 We found the first option cannot give any constraints on the SM electroweak VV+jj signal.
 It can be a motivation to use the RNN score also in the aQGC search study.
 
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    \includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
- \includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-    \includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
-        \caption{Prefit plots for 2-bin strategy are shown. The RNN score is used as a discriminant for signal regions. operator FT0 in \tlep\ channel are shown. The standard model EW signal is floated as the background.}
-        \label{fig:2lepTwoBin}
-\end{figure}
+%\begin{figure}[ht]
+%    \centering
+%    	\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+%    \includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+% \includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSHPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+%\includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPLMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+%    \includegraphics[width=0.32\textwidth]{figures/aQGC/Region_distRNNScoreMerged_DSRVBSLPHMVV_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+%        \caption{Prefit plots for 2-bin strategy are shown. The RNN score is used as a discriminant for signal regions. operator FT0 in \tlep\ channel are shown. The standard model EW signal is floated as the background.}
+%        \label{fig:2lepTwoBin}
+%\end{figure}
 
 %\begin{table}[ht!]
 %\small
@@ -184,7 +198,7 @@ Of course, the optimal threshold of $m_{VV}$ can be different depending on the c
 In addition, a fine-tuning of the $m_{VV}$ threshold might be needed by considering the stability of the background estimation.
 The expected limit is shown in each threshold for $m_{VV}$ of 1000~GeV, 1500~GeV, 2000~GeV for variety of the clipping points in Figure~\ref{fig:ThresholdScan}.
 
-As expected, higher $m_{VV}$ threshold is preferred at the higher clipping point, while lower $m_{VV}$ threshold is favored at the lower clipping point.
+As expected, a higher $m_{VV}$ threshold is preferred at the higher clipping point, while a lower $m_{VV}$ threshold is favored at the lower clipping point.
 1500~GeV is chosen as the best compromise to separate SRs into low- and high-$m_{VV}$ bins.
 
 Since the meaning of the actual $m_{VV}$ distributions used in each lepton channel are different
@@ -245,7 +259,6 @@ Threshold values (GeV)          & SRVBS\_HP  & SRVBS\_LP & SRVBS\_Fid  \tabularn
 Finally, by using both quadratic and interference terms as a combined signal template, the expected 95\% CL upper and lower limits are obtained by the fit to the Asimov dataset constructed from the background plus SM EW VV+jj samples, as well as observed limits with data.
 The postfit plots for FT0 parameter in signal regions are shown in figure~\ref{fig:postSR0lepaQGC}, \ref{fig:postSR1lepaQGC},\ref{fig:postSR2lepaQGC}. 
 Overall the expected background reproduces the data well within the uncertainty despite the right-most bin of the high-$m_{VV}$ region, where the statistics are very low.
-
 \begin{figure}[]
     \centering
     %0lep
@@ -284,7 +297,7 @@ All SRs in \zlep, \olep\, and \tlep\ channels are separated into low- and high-$
 All systematic uncertainties discussed for Standard Model measurement are included in the fitting.
 The SM EW VV+jj signal samples are added to the background as a free floated normalization factor, and all the analysis regions are correlated with EW VV+jj signal samplee.
 Due to the small statistics in high-$m_{VV}$ regions compared with the low-$m_{VV}$ regions, the overall behaviors of the post-fit nuisance parameters are almost the same as the SM measurement.
-The expected on observed limits are shown at 5 clipping energy points of [1.5, 2.0, 3.0, 5.0, $\infty$]~TeV in Figure~\ref{fig:aQGClimits}.
+The expected and observed limits are shown at 5 clipping energy points of [1.5, 2.0, 3.0, 5.0, $\infty$]~TeV in Figure~\ref{fig:aQGClimits}.
 The unitarity bound from the theoretical calculation \cite{PhysRevD.101.113003} is overlaid.
 %The upper and lower limits correspond to the signal hypotheses showing $\Delta NLL \sim \frac{1}{2}\chi^2 = 1.0$.
 
@@ -388,10 +401,10 @@ $f_{M 7} / \Lambda^4$                &[ -8.74, 8.41  ] at [ 2.48, 2.50  ]~TeV  &
 The ununiterized limits can be compared with the results of other analyses.
 Compared to the figure~\ref{fig:limitFT},\ref{fig:limitFM}, \ref{fig:limitFS}, these results give similar or a little weaker limits compared to the CMS results,
 which seems due to the difference of the fiducial volume definition.
-In ATLAS experiment limits for the same operators are recently derived in $Z(\nu\bar{\nu})\gamma jj$ channel~\cite{https://doi.org/10.48550/arxiv.2208.12741} with the luminosity of 139~$fb^{-1}$.
+In the ATLAS experiment limits for the same operators are recently derived in $Z(\nu\bar{\nu})\gamma jj$ channel~\cite{https://doi.org/10.48550/arxiv.2208.12741} with the luminosity of 139~$fb^{-1}$.
 The comparison with their results in observed limits is shown in table~\ref{tab:comZnunu}. 
 For the tensor type operators $Z(\nu\bar{\nu})\gamma jj$ channel can get more stringent limits because of its fewer backgrounds. 
-For the mixed type operators our channel can get similar or better limits due to its larger production cross section despite the larger backgrounds.
+For the mixed type operators, our channel can get similar or better limits due to its larger production cross section despite the larger backgrounds.
 It is desirable to combine the results of several channels in the future since operators which are sensitive are different between each channel.
 
 \begin{table}[ht!]
