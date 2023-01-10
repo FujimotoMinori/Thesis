@@ -91,12 +91,11 @@ The EFT signal is set to zero at truth $m_{VV} > E_{clip}$, where the $E_{clip}$
 %Figure~\ref{fig:clipped} shows how the $m_{VV}$ is shown at the low clipping energy.
 The background samples, which are all standard model predictions, are not clipped.
 The expected and observed limits are obtained with all 3 channels at each of the clipping points and compared with the theoretical unitarity bound.
-
 \section{Study of final discriminant in aQGC search}
 \label{subsec:2binapproach}
 The aQGC terms can modify the amplitude of the VBS process at the higher effective center-of-mass energy, $m_{VV}$, as shown in Figure~\ref{fig:2lepaQGCshapeMVVh}.
-It is found that the reconstructed $m_{VV}$ (or \mt\ in \zlep\ channel) is the best variable to separate the aQGC signals from the background,
-while the RNN score distributions for the aQGC samples are similar to the one for the SM electroweak signal and still useful to suppress the non-VBS background as shown in Fig.~\ref{fig:2lepaQGCshapeRNNh}.
+It is found that the reconstructed $m_{VV}$ (or \mt\ in \zlep\ channel) is the best variable to separate the aQGC signals from the all SM processes, while it cannot separate the SM EW VV+jj process from the SM background as shown in figure~\ref{fig:2lepaQGCshapeMVVh}.
+The RNN score distributions for the aQGC samples are similar to the one for the SM electroweak signal and still useful to suppress the non-VBS background as shown in Fig.~\ref{fig:2lepaQGCshapeRNNh}.
 \begin{figure}[]
     \centering
    \includegraphics[width=0.45\textwidth]{figures/aQGC/MllJ_SR_HP_aQGC.pdf}
@@ -112,35 +111,35 @@ while the RNN score distributions for the aQGC samples are similar to the one fo
     \caption{RNN score shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeRNNh}
 \end{figure}
-%Two-dimensional binning of $m_{VV}$ and the RNN score is used as the final discriminant for the aQGC search.
-%In this section, the optimal binning strategy is studied in \tlep\ channel.
-%To confirm the result in Section~\ref{subsec:binnedsig} with more realistic setting,
 Finally, we would like to separate aQGC signals from both SM electroweak signal and the SM non-VBS background.
-So that the final discriminant can make use of the both separation power of $m_{VV}$ and the RNN score, 
-%the following study has been performed.
-
+So that the final discriminant can make use of the both separation power of $m_{VV}$ and the RNN score, ideally 2-dimensional likelihood fit using $m_{VV}$ and RNN score is the best option, but considering that number of bins deteriorates the stability of the fit, we briefly optimized the binning strategy.
+%%%%%%
+We found a fit to RNN score distributions after SRs are further separated into 2 bin $m_{VV}$ categories is OK enough.
+The sensitivity is comparable with a fit to $m_{VV}$ distribution.
+The optimal threshold to separate the SRs may depends on the clipping energy.
+The threshold value at each clipping value is scanned and checked the sensitivity in figure~\ref{fig:}.
 %we compared the results with the following conditions.
-The fitting results with the following conditions are compared:
-\begin{itemize}
-  \item A fit to $m_{VV}$ distribution as discriminant, without any cuts on the RNN score;
-  \item A fit to the RNN score distributions after
-        SRs are further separated into two subcategories: \\
-        Low $m_{VV}$ : $m_{VV}$ $< 2000$~GeV and \\
-        High $m_{VV}$ : $m_{VV}$ $\geq 2000$~GeV. \\
-\end{itemize}
-The threshold 2000~GeV is derived from figure~\ref{fig:2lepaQGCshapeMVVh}.
-With the second option, the number of SRs is twice as shown in Figure~\ref{fig:2lepTwoBin}.
+%The fitting results with the following conditions are compared:
+%\begin{itemize}
+%  \item A fit to $m_{VV}$ distribution as discriminant, without any cuts on the RNN score;
+%  \item A fit to the RNN score distributions after
+%        SRs are further separated into two subcategories: \\
+%        Low $m_{VV}$ : $m_{VV}$ $< 2000$~GeV and \\
+%        High $m_{VV}$ : $m_{VV}$ $\geq 2000$~GeV. \\
+%\end{itemize}
+%The threshold 2000~GeV is derived from figure~\ref{fig:2lepaQGCshapeMVVh}.
+%With the second option, the number of SRs is twice as shown in Figure~\ref{fig:2lepTwoBin}.
 %(binning??)
-Unconditional Asimov fit (The log-likelihood fit using Asimov dataset without fixing the $\mu$ value) by using FT0 signal in only \tlep\ channel is performed.
-Only quadratic term is used in this study.
-The systematic uncertainties are not included in the fitting here, just the floated normalization factor is considered.
-The Asimov data used here is constructed from the background plus SM electroweak VV+jj signal samples.
-The expected limits and uncertainty of the expected signal strength of FT0 signal are shown in table~\ref{tab:2binlimit}.
+%Unconditional Asimov fit (The log-likelihood fit using Asimov dataset without fixing the $\mu$ value) by using FT0 signal in only \tlep\ channel is performed.
+%Only quadratic term is used in this study.
+%The systematic uncertainties are not included in the fitting here, just the floated normalization factor is considered.
+%The Asimov data used here is constructed from the background plus SM electroweak VV+jj signal samples.
+%The expected limits and uncertainty of the expected signal strength of FT0 signal are shown in table~\ref{tab:2binlimit}.
 %Significantly better upper limit on the signal strength is obtained by the second option (a fit to RNN score with the categorization by $m_{VV}$)
 %than the first option (a fit to $m_{VV}$ distribution).
-The signal strength obtained by the second option (a fit to RNN score with the categorization by $m_{VV}$) and the first option (a fit to $m_{VV}$ distribution) is the same. 
-We found the first option cannot give any constraints on the SM electroweak VV+jj signal.
-It can be a motivation to use the RNN score also in the aQGC search study.
+%The signal strength obtained by the second option (a fit to RNN score with the categorization by $m_{VV}$) and the first option (a fit to $m_{VV}$ distribution) is the same. 
+%We found the first option cannot give any constraints on the SM electroweak VV+jj signal.
+%It can be a motivation to use the RNN score also in the aQGC search study.
 
 %\begin{figure}[ht]
 %    \centering
@@ -194,29 +193,24 @@ Expected limit of Wilson coefficient & 0.33                  & 0.84             
 
 %\section{Optimization of the threshold of 2-bin approach}
 %\label{subsec:aQGCbinninb}
-Of course, the optimal threshold of $m_{VV}$ can be different depending on the clipping energy.
-In addition, a fine-tuning of the $m_{VV}$ threshold might be needed by considering the stability of the background estimation.
+%Of course, the optimal threshold of $m_{VV}$ can be different depending on the clipping energy.
+%In addition, a fine-tuning of the $m_{VV}$ threshold might be needed by considering the stability of the background estimation.
 The expected limit is shown in each threshold for $m_{VV}$ of 1000~GeV, 1500~GeV, 2000~GeV for variety of the clipping points in Figure~\ref{fig:ThresholdScan}.
-
 As expected, a higher $m_{VV}$ threshold is preferred at the higher clipping point, while a lower $m_{VV}$ threshold is favored at the lower clipping point.
 1500~GeV is chosen as the best compromise to separate SRs into low- and high-$m_{VV}$ bins.
 
 Since the meaning of the actual $m_{VV}$ distributions used in each lepton channel are different
-(fully reconstructed system in \tlep\ and in \olep\ (solving neutrino ambiguity) and transverse mass in \zlep\)
-the optimal thresholds to separate SRs into low- and high-$m_{VV}$ bins in \olep\ and \zlep\ channels 
-are determined as follows.
-In \olep\ channel, the same threshold as \tlep\ channel, 1500~GeV, is just chosen since the reconstructed $m_{VV}$ distribution is similar. 
-%(?)
-In \zlep\ channel, the threshold needs to be optimized, since it uses \mt\ instead of $m_{VV}$.
-As shown in Figure~\ref{fig:mVVdist} the \mt\ shape in \zlep\ channel is different from $m_{VV}$ in \tlep\ channel.
-Here, the background yield in each bin of the high-$\mt$ regions is adjusted to be more than 5 so that
-the asymptotic calculation of the sensitivity is ensured with a certain number of background events.
-The threshold finalized is shown in Table, for each lepton channel, and for each region.
-
-Only in \tlep\ channel,
-less than 5 background events are expected in the second bin of the HP signal region.
+(fully reconstructed system in the \tlep\ and in the \olep\ (solving neutrino ambiguity) and transverse mass in the \zlep\)
+the optimal thresholds to separate SRs into low- and high-$m_{VV}$ bins in \olep\ and \zlep\ channels are determined in table~\ref{tab:2binthreshold}.
+%In \olep\ channel, the same threshold as \tlep\ channel, 1500~GeV, is just chosen since the reconstructed $m_{VV}$ distribution is similar. 
+%In \zlep\ channel, the threshold needs to be optimized, since it uses \mt\ instead of $m_{VV}$.
+%As shown in Figure~\ref{fig:mVVdist} the \mt\ shape in \zlep\ channel is different from $m_{VV}$ in \tlep\ channel.
+%Here, the background yield in each bin of the high-$\mt$ regions is adjusted to be more than 5 so that
+%the asymptotic calculation of the sensitivity is ensured with a certain number of background events.
+%The threshold finalized is shown in Table, for each lepton channel, and for each region.
+%Only in \tlep\ channel, less than 5 background events are expected in the second bin of the HP signal region.
 %We are going to test if the asymptotic formulae works fine, by running toy experiments [TO DO].
-%
+
 \begin{figure}[h]
         \centering
     	\includegraphics[width=0.50\textwidth]{figures/aQGC/ClippedFT02bin.pdf}
@@ -224,20 +218,17 @@ less than 5 background events are expected in the second bin of the HP signal re
         \label{fig:ThresholdScan}
 \end{figure}
 
-\begin{figure}[ht]
-    \centering
-    	\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMllJ_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-  \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMlljj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefitlog.pdf}
-    	%\subfigure[ 1lep HP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/}}
-    	%\subfigure[ 1lep LP SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/}}
-    	%\subfigure[ 1lep Fid SR ]{\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/}}
-    	\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
-    \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvJ_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
- \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvjj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_Prefitlog.pdf}
-        \caption{fig: $m_{VV}$ distribution for \tlep\ (left) and Mtv distribution for \zlep\ (right)}
-        \label{fig:mVVdist}
-\end{figure}
+%\begin{figure}[ht]
+%    \centering
+%    	\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+%    \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMllJ_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+%  \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMlljj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_Prefitlog.pdf}
+%    	\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+%    \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvJ_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+% \includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMtvvjj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_Prefitlog.pdf}
+%        \caption{fig: $m_{VV}$ distribution for \tlep\ (left) and $m_{tv}$ distribution for \zlep\ (right)}
+%        \label{fig:mVVdist}
+%\end{figure}
 
 \begin{table}[ht!]
 \small
@@ -250,7 +241,7 @@ Threshold values (GeV)          & SRVBS\_HP  & SRVBS\_LP & SRVBS\_Fid  \tabularn
 1-lepton & 1500      & 1500     & 1500       \tabularnewline \hline
 2-lepton & 1500      & 1500     & 1500       \tabularnewline \hline
 \end{tabular}
-\caption{Threshold values}
+\caption{Threshold value to separate the $m_{VV}$ distribution for the 1-lepton and the 2-lepton and $m_{tv}$ distribution for the 0-lepton channel. }
 \label{tab:2binthreshold}
 \end{center}
 \end{table}
