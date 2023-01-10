@@ -1,22 +1,21 @@
-\chapter{Results of the SM EWVV+jj measurement}
+\chapter{Results of the SM EW VV+jj measurement}
 \label{chap:results}
 This chapter shows the results of the likelihood fit introduced in section~\ref{sec:likelihood}.
 First, whether the machine learning discriminant is modeled well is checked in section~\ref{sec:confirm}.
-The expected event yields are compared with the observed yields in section~\ref{sec:eventyields}.
+The expected event yields are compared with the observed data yields in section~\ref{sec:eventyields}.
 In section~\ref{sec:postfitplots} distributions after the fit is shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
 Finally the signal strength $\mu$ is extracted and the observed significance is estimated in section~\ref{sec:mu}.
 
 \section{Validation of the background modeling of the RNN score}
 \label{sec:confirm}
-The validity of the fitting setup is confirmed by checking the information after fitting in the CRs.
+The validity of the fitting setup is confirmed by checking the information after fitting using the CRs.
 In this section validation was performed by not looking at the observed data in the signal-sensitive regions, for the purpose of not being biased by looking at the signals and just checking the background modeling.
-The following ``left-side" bins of the SR discriminant distribution are referred to as the bins in the SR that contains 25~\% of the signal sample.
+The following ``left-side" bins of the SR discriminant distribution are referred to as the bins in the SR without the right-side bins that contains 75~\% of the signal sample. It is the background-dominant region in the SR.
 %RNN modeling check
 The post-fit RNN distributions in the CRs are checked to make sure that the machine learning discriminant models the data well.
-The fitting result using $m^{tag}_{jj}$ in CRs and the left-side bins of the RNN score in SRs are applied to the RNN score distributions in CRs. 
-Obtained distributions in the CRs are shown in figure~\ref{fig:postCheck}. 
-Overall the post-fit RNN distributions in the CRs show good background modeling except for the right-most bin of the one-lepton channel, which indicates that the RNN score discriminant has good modeling with all NPs. For the 2-lepton channel, the discrepancy seen in figure~\ref{fig:after_rw} as a slope is well corrected.
-
+The fitting result using $m^{tag}_{jj}$ in CRs and the left-side bins of the RNN score in SRs as summerized in table ~\ref{tab:discriminant} are applied to the RNN score distributions in CRs. 
+Obtained distributions are shown in figure~\ref{fig:postCheck}. 
+Overall the post-fit RNN distributions in the CRs show good background modeling except for the right-most bin of the 1-lepton channel, which indicates that the RNN score discriminant has good modeling with all NPs. For the 2-lepton channel, it is shown that the discrepancy seen in figure~\ref{fig:after_rw} as a slope is well corrected.
 %what changes the shape of the RNN score
 As seen in the pre/post-fit plots of the 2-lepton merged CR in figure~\ref{fig:postCheck}, the shape of the RNN score is corrected by the fitting.
 A similar correction is also expected with the RNN distributions in the SRs.
@@ -113,18 +112,18 @@ $t\bar{t}$ Resolved & $1.07^{+0.048}_{-0.048}$ \\
 %single top & $-0.46^{+0.83}_{-0.83}$ \\
 \hline
 \end{tabular}
-\caption{\label{tab:postnorm} A summary of normalization factors obtained from the fit to the observed data. The normalization factor is decorrelated except for single top. }
+\caption{\label{tab:postnorm} A summary of floated normalization factors obtained from the fit to the observed data.}
 \end{center}
 \end{table}
 
 \section{Post fit plots}
 \label{sec:postfitplots}
-The distributions used in the final fitting are shown to check if it performed well.
+The distributions obtained after the final fitting are shown to check if it performed well, and to ensure the validity of the finally obtained $\mu$ value.
 %\noindent\textbf{\sf{$m^{tag}_{jj}$ distributions at CRs after fitting}}\\
 \subsection{ $m^{tag}_{jj}$ distributions at CRs after fitting }
 The $m^{tag}_{jj}$ distributions in each CRs after fitting are shown in figure~\ref{fig:postCR} and \ref{fig:postCRTop}.
-All the distributions of the V+jets CRs after fitting show nice agreement with the observed data, which implies the V+jets background is well corrected and controlled by the fit.
-
+All the distributions of the V+jets CRs after fitting show nice agreement with the observed data, which implies the V+jets background is well corrected and controlled by the fit. Assigned uncertainties seem to work well to fix the discrepancy. %seen in the pre-fit plots (figure~ref{fig:}).
+The uncertainty are much reduced by the fit, as it is designed to be constrained a lot in these CRs.
 %Control region
 \begin{figure}[]
     \centering
@@ -139,7 +138,7 @@ All the distributions of the V+jets CRs after fitting show nice agreement with t
     %2lep
      \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagMerJets_DCRVjet_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
       \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagResJets_DCRVjetFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1log}
-    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in V+jets CRs in 0-lepton channel (1st line), 1-lepton channel (2nd line), and 2-lepton channel (3rd line). The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel show the ratio of the observed data to the post fit signal and background predictions.}
+    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in V+jets CRs in the 0-lepton channel (1st line), the 1-lepton channel (2nd line), and the 2-lepton channel (3rd line). The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel show the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postCR}
 \end{figure}
 
@@ -149,15 +148,16 @@ All the distributions of the V+jets CRs after fitting show nice agreement with t
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log} 
-    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in Top CRs in 1-lepton channel.  The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in Top CRs in the 1-lepton channel.  The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postCRTop}
 \end{figure}
-
 %\noindent\textbf{\sf{RNN score distributions at SRs after fitting}}\\
 \subsection{RNN score distributions at SRs after fitting}
-The RNN score distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lep}, \ref{fig:postSR1lep}, \ref{fig:postSR2lep}.
-In the low-RNN score bins, where the events are dominated by the background samples, the predicted MCs nicely reproduce the observed data in each region and channel. In the right-most bins which include signal contribution, a little overshoot can be seen, especially for 0-lepton Merged HP region and Resolved region. In most regions, the background yields are decreased in low-RNN bins after fitting, while increased in high-RNN bins, which can be the effect of the NPs that change RNN score shapes, mainly the modeling uncertainty of the V+jets sample.
-
+The RNN score distributions in each SR after fitting are shown in figure~\ref{fig:postSR0lep}, \ref{fig:postSR1lep}, \ref{fig:postSR2lep}.
+Confirming the modeling of of these distributions are important to justify the obtained value of $\mu$, since they are most sensitive distributions to the signal strength.
+In the low-RNN score bins, where the events are dominated by the background samples, the predicted MCs nicely reproduce the observed data in each region and channel. 
+In the right-most bins which include signal contribution, a little overshoot can be seen, especially for the 0-lepton Merged HP region and Resolved region, although overall the MC fits the data within the uncertainty of $1~\sigma$.
+In most regions, the background yields are decreased in low-RNN bins after fitting, while increased in high-RNN bins, which can be the effect of the NPs that change RNN score shapes, mainly the modeling uncertainty of the V+jets sample. 
 %signal region
 \begin{figure}[]
     \centering
@@ -165,7 +165,7 @@ In the low-RNN score bins, where the events are dominated by the background samp
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1log}
-      \caption{Comparisons of the observed data and expected background distributions of RNN score in 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of RNN score in the 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR0lep}
 \end{figure}
 \begin{figure}[]
@@ -174,7 +174,7 @@ In the low-RNN score bins, where the events are dominated by the background samp
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log}
-      \caption{Comparisons of the observed data and expected background distributions of RNN score in 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of RNN score in the 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR1lep}
 \end{figure}
 \begin{figure}[]
@@ -183,12 +183,17 @@ In the low-RNN score bins, where the events are dominated by the background samp
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreMerged_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distRNNScoreResolved_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1log}
-    \caption{Comparisons of the observed data and expected background distributions of RNN score in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+    \caption{Comparisons of the observed data and expected background distributions of RNN score in the 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postSR2lep}
 \end{figure}
 
 \subsection{Several distributions at SRs after fitting}
-The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmtagjj}, \ref{fig:postSR1lepmtagjj}, \ref{fig:postSR2lepmtagjj}. 
+Several distributions other than those used in the fitting is checked to see how the fitting setup works within our SRs and CRs.
+
+The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmtagjj}, \ref{fig:postSR1lepmtagjj}, \ref{fig:postSR2lepmtagjj}.
+In the 0-lepton channel they show that the expected MC is fairly compatible with the data, while in the 1-lepton channel there is a slope in the ratio of the data and MC. In the 2-lepton channel there is a discrepancy in the highest bin in merged regions.
+It seems the difference of the modeling of the $m^{tag}_{jj}$ after reweighting between the CR and SR appears here. 
+With the RNN score in the same region this tendency is not reflected a lot, and it seems the NPs like the modeling uncertainty works to correct the RNN shape.
 %signal region
 \begin{figure}[]
     \centering
@@ -196,7 +201,7 @@ The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagJets_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagJets_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagJets_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-      \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in the 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR0lepmtagjj}
 \end{figure}
 \begin{figure}[]
@@ -205,7 +210,7 @@ The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_disttagMjj_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-      \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in the 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR1lepmtagjj}
 \end{figure}
 \begin{figure}[]
@@ -214,10 +219,11 @@ The $m^{tag}_{jj}$ distributions in each SRs after fitting are shown in figure~\
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagMerJets_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagMerJets_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMTagResJets_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+    \caption{Comparisons of the observed data and expected background distributions of $m^{tag}_{jj}$ in the 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postSR2lepmtagjj}
 \end{figure}
-The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}, \ref{fig:postSR2lepmvv}. 
+
+The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}, \ref{fig:postSR2lepmvv}. The statistical fluctuation is large in the high-$m_{VV}$ bins, and overall it shows the agreement between data and MC within the statistical fluctuations. After the confirmation of the fine modeling of these distributions with our fitting setup, they can be used in the EFT/aQGC interpretation described in chapter~\ref{chap:aQGC}.
 %signal region
 \begin{figure}[]
     \centering
@@ -225,7 +231,7 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMtvvJ_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMtvvJ_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMtvvjj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-      \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in the 0-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR0lepmvv}
 \end{figure}
 \begin{figure}[]
@@ -234,7 +240,7 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMVV_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMVV_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMVV_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-      \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+      \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in the 1-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
       \label{fig:postSR1lepmvv}
 \end{figure}
 \begin{figure}[]
@@ -243,7 +249,7 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMllJ_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
     \includegraphics[width=0.45\textwidth]{figures/PostFit/Region_distMlljj_DSRVBSFid_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
-    \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
+    \caption{Comparisons of the observed data and expected background distributions of diboson invariant mass ($m_{VV}$) in the 2-lepton channel signal regions. The EW VV+jj signal is filled on top of the fitted backgrounds, normalized to the signal yield extracted from the observed data ($\mu = 0.98$). The bottom panel shows the ratio of the observed data to the post fit signal and background predictions.}
     \label{fig:postSR2lepmvv}
 \end{figure}
 
@@ -298,15 +304,19 @@ The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting ar
 %\end{figure}
 
 %\section{Rankings}
-In order to find out which nuisance parameter impacts the signal strength, the ranking plot for all nuisance parameters is shown in figure~\ref{fig:fit_2lep_ranking_all}. 
-The ranking is derived by doing the scans of the likelihood function, by first doing the nominal fit to find the $\hat{\mu}$, then fixing and scanning one NP while all other parameters are fitted again.
+To check the impact of the given NP, $\theta$, to the signal strength, the fit is redone by fixing $\theta$ to be $\hat{\theta} \pm 1~\sigma$ and treating all other parameter floated. The difference of the obtained $\mu$ and $\hat{\mu}$ in the nominal fit is quoted in the ranking plot shown in 
+%In order to find out which nuisance parameter impacts the signal strength, the ranking plot for all nuisance parameters is shown in 
+figure~\ref{fig:fit_2lep_ranking_all}. 
+%The ranking is derived by doing the scans of the likelihood function, by first doing the nominal fit to find the $\hat{\mu}$, then fixing and scanning one NP while all other parameters are fitted again.
 %The scan as a function of one parameter stops once the logarithm of the likelihood decreases by 1/2 compared to the global maximum, corresponding to the 1~$\sigma$ uncertainty. 
-The change of the signal strength, which is plotted as $\Delta\mu$ is evaluated here.
+%The change of the signal strength, which is plotted as $\Delta\mu$ is evaluated here.
 %The scan is repeated for all NPs, in both directions.
 
+%which NP is the top ranker
 The NP which has the largest impact is the QCD scale systematic uncertainty on EW VV+jj signal sample. 
-Varying this QCD scale parameter by $1\sigma$ changes the signal strength by $\Delta \hat{\mu} \simeq 0.11$.
-The second and third-ranked parameters are for the 2-lepton channel, and both are related to the modeling of the Z+jets background sample discussed in chapter~\ref{chap:modeling}.
+Varying this QCD scale parameter by $1\sigma$ changes the signal strength by $\Delta \mu \simeq 0.11$.
+The second and third-ranked parameters are from the 2-lepton channel, and both are related to the modeling of the Z+jets background sample discussed in chapter~\ref{chap:modeling}. These uncertainties are raked high because of its large variations.
+The diboson-related uncertainties are also ranked high because the lack of the dedicated CRs and they have correlations with the EW VV+jj signal since their shape is rather similar to the signal samples.
 %The top-two parameters are NPs relates to the Z+jet modeling issue and are seen to be pulled in the pull plots. 
 %The parameters which have strong impacts and are highly ranked are consistent with the parameters having strong correlations with the POI in the correlation plot, Figure~\ref{fig:fit_2lep_corr_all}.
 \begin{figure}[ht]
@@ -316,15 +326,14 @@ The second and third-ranked parameters are for the 2-lepton channel, and both ar
         }
        \label{fig:fit_2lep_ranking_all}
 \end{figure}
-
 The pulls and constraints for these high-impact parameters are also shown in figure~\ref{fig:fit_2lep_ranking_all} in black dots.
 The definition of the pull is $(\hat{\theta}-\theta) / \Delta \theta$, where $\Delta \theta$ represents the magnitude of uncertainty, and $\theta$ and $\hat{\theta}$ denote pre- and post-fit nuisance parameters.
 The pull, which can be seen as the deviation of the certain NP from zero, represents how the expectation of that NP does not describe the observed data.
-The constraints, which can be seen as the size of the error bar of each uncertainty, represent its reduction from its initial uncertainty value and show how much that uncertainty is constrained by the observed data after fitting.
+The size of the error bar of each uncertainty is the constraints, represent its reduction from its initial uncertainty value and show how much that uncertainty is constrained by the observed data after fitting.
 Ideally, the pull and the constraints of specific NP are zero and $1~\sigma$ when the uncertainty is perfectly applied.
 
-The Reweighting systematic uncertainty is highly constrained in figure~\ref{fig:fit_2lep_ranking_all} as designed, the same as Modeling Z uncertainty. 
-The Modeling Z uncertainty is pulled about 1~$\sigma$, which seems to be adjusting the Z+jets background to the observed data in the fitting.
+The Reweighting systematic uncertainty is highly constrained in figure~\ref{fig:fit_2lep_ranking_all} as designed, as well as modeling Z uncertainty. 
+The modeling Z uncertainty is pulled about 1~$\sigma$, which adjusts the Z+jets background to the observed data in the fitting. The modeling W uncertainty is also pulled and works similarly with modeling Z uncertainty. The diboson modeling uncertainty and the normalization of the Diboson is also pulled, which can be caused from the mis-modeling of the diboson samples.
 All of these highly-ranked NPs are not unexpectedly pulled or constrained, which indicates the likelihood fit performed in this analysis is valid enough.
 %The pull plot for all NPs is discussed in Appendix.
 %\begin{figure}[ht]
@@ -343,7 +352,7 @@ The estimated signal strength in the fit is:
 \end{equation}
 The corresponding observed (expected) significance is 5.90 (6.47)~$\sigma$, which claims the observation of the EW VV+jj signal in the semileptonic final state for the first time. 
 The expected significance is estimated by replacing the nuisance parameter values of the Asimov dataset (an artificial dataset with MC simulations) with those derived from a conditional $\mu = 1$ fit, a fit with $\mu$ fixed at 1, to the data. 
-The 1~sigma of the total uncertainty covers $\mu = 1$, this measurement is consistent with the SM prediction.
+The 1~sigma of the total uncertainty covers $\mu = 1$, this measurement is consistent with the SM prediction, and there is no significant excess against it.
 
 The signal strength from the combined fit and from each channel fit is shown in figure~\ref{fig:muhat}.
 The signal strength from the 0-lepton channel is greater than 2, while in the 1-lepton channel it is around 0.5, hence after combining three channels the signal strength is 0.98.

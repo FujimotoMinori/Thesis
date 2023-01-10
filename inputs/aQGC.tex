@@ -54,14 +54,14 @@ They are also called as the quadratic term and the interference (linear) term, r
 %interference term is neglected in this analysis
 In this analysis, the term with $\mathrm{Re}(A_i^\star A_j)$ is ignored for simplicity and for consistency to other previous results on aQGC search, and evaluate the contributions from each operator on a one-by-one basis.
 \section{Statistical interpretation}
-The aQGC signal is extracted with a profile-likelihood fit as described in section~\ref{sec:likelihood}, but replacing the signal to the aQGC sample, and the standard model EW VV+jj signal is included as background with other standard model background samples like V+jets and $t\bar{t}$.
+The aQGC signal is extracted with a profile-likelihood fit as described in section~\ref{sec:likelihood}, but replacing the signal to the aQGC sample, and the standard model EW VV+jj signal is included as background with other standard model background samples.
 The POI is set as $\mu_{\mathrm{aQGC}} = \frac{f_i}{\Lambda^4}$, where signal template is defined as $\mu_{\mathrm{aQGC}}^2*$~quadratic~signal $+$ $\mu_{\mathrm{aQGC}}*$~interference~signal.
 %The signal strength, $\mu$ is interpreted in terms of Wilson coefficient, $\mu$ = $\frac{f_i}{\Lambda^4}$. 
 %The POI is set to include both quadratic terms and interference terms simultaneously, thereby two signal strength is parameterized as $\mu_{QUAD} = \mu_{INT}^2$.
 Figure~\ref{fig:quadint} shows the quadratic and interference signal distributions of di-boson invariant mass ($m_{VV}$) in HP SR.
 All $m_{VV}$ distributions for other Wilson coefficients are shown in appendix~\ref{app:aQGCresults}.  
 The contribution of quadratic term and the linear term depends on the magnitude of $\mu_\mathrm{aQGC}$.
-As figure~\ref{fig:largemu} shows, the contribution of the quardratic term is dominant where the $\mu_\mathrm{aQGC}$ is large, and the number of signal becomes more symmetrical. Where the $\mu_\mathrm{aQGC}$ is small, the interference term contribution is dominant, and the number of signal becomes more asymmetrical and can take negative values.
+As figure~\ref{fig:largemu} shows, the contribution of the quardratic term is dominant where the $\mu_\mathrm{aQGC}$ is large, and the number of signal becomes more symmetrical. Where the $\mu_\mathrm{aQGC}$ is small, the interference term contribution is dominant, the number of signal becomes more asymmetrical and can take negative values.
 \begin{figure}[ht]
     \centering
         \includegraphics[width=0.50\textwidth]{figures/aQGC/largemu.pdf}
@@ -103,7 +103,6 @@ The RNN score distributions for the aQGC samples are similar to the one for the 
     \caption{$m_{VV}$ shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeMVVh}
 \end{figure}
-
 \begin{figure}[]
     \centering
    \includegraphics[width=0.45\textwidth]{figures/aQGC/RNNScoreMerged_SR_HP_aQGC.pdf}
@@ -111,13 +110,13 @@ The RNN score distributions for the aQGC samples are similar to the one for the 
     \caption{RNN score shape distribution of each Wilson coefficient in Merged Signal regions. Only quadratic terms are shown.}
     \label{fig:2lepaQGCshapeRNNh}
 \end{figure}
-Finally, we would like to separate aQGC signals from both SM electroweak signal and the SM non-VBS background.
+Finally we would like to separate aQGC signals from both SM electroweak signal and the SM non-VBS background.
 So that the final discriminant can make use of the both separation power of $m_{VV}$ and the RNN score, ideally 2-dimensional likelihood fit using $m_{VV}$ and RNN score is the best option, but considering that number of bins deteriorates the stability of the fit, we briefly optimized the binning strategy.
 %%%%%%
-We found a fit to RNN score distributions after SRs are further separated into 2 bin $m_{VV}$ categories is OK enough.
-The sensitivity is comparable with a fit to $m_{VV}$ distribution.
+We found a fit to RNN score distributions after SRs are further separated into 2 bin $m_{VV}$ categories is usable enough.
+Its sensitivity is comparable with a fit to $m_{VV}$ distribution.
 The optimal threshold to separate the SRs may depends on the clipping energy.
-The threshold value at each clipping value is scanned and checked the sensitivity in figure~\ref{fig:}.
+The threshold value at each clipping value is scanned and checked the sensitivity in figure~\ref{fig:ThresholdScan}.
 %we compared the results with the following conditions.
 %The fitting results with the following conditions are compared:
 %\begin{itemize}
@@ -172,36 +171,36 @@ The threshold value at each clipping value is scanned and checked the sensitivit
 %\end{center}
 %\end{table}
 
-\begin{table}[ht!]
-\small
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{ | l || l | l | l |}
-\hline
-                                    & Fit to $m_{VV}$ w/o further categorization & Fit to RNN score w/o further categorization  & Fit to RNN scores in separated bins of low- and high-$m_{VV}$  \tabularnewline \hline
-Unconditional fitted $\mu$          & 8.83e-06 $\pm0.032$    & 1.02e-04 $\pm0.34$       & 1.09e-05 $\pm0.028$  \tabularnewline \hline
-Norm sigVBS                         & 1 $\pm$ 1.08           & 1 $\pm$ 0.79             & 1 $\pm$ 0.41         \tabularnewline \hline
-Norm Z                              & 1 $\pm$ 0.012          & 1 $\pm$ 0.010            & 1 $\pm$ 0.01         \tabularnewline \hline
-Expected limit of $\mu$             & 0.11                   & 0.70                     & 0.11                 \tabularnewline \hline
-Expected limit of Wilson coefficient & 0.33                  & 0.84                     & 0.33                 \tabularnewline \hline
-\end{tabular}
-}
-\caption{Expected signal strength and limits in every two options. only \tlep~channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normalization fitted for the standard model signal, and Z backgrounds are shown as Norm in the table.}
-\label{tab:2binlimit}
-\end{center}
-\end{table}
+%\begin{table}[ht!]
+%\small
+%\begin{center}
+%\resizebox{\textwidth}{!}{
+%\begin{tabular}{ | l || l | l | l |}
+%\hline
+%                                    & Fit to $m_{VV}$ w/o further categorization & Fit to RNN score w/o further categorization  & Fit to RNN scores in separated bins of low- and high-%$m_{VV}$  \tabularnewline \hline
+%Unconditional fitted $\mu$          & 8.83e-06 $\pm0.032$    & 1.02e-04 $\pm0.34$       & 1.09e-05 $\pm0.028$  \tabularnewline \hline
+%Norm sigVBS                         & 1 $\pm$ 1.08           & 1 $\pm$ 0.79             & 1 $\pm$ 0.41         \tabularnewline \hline
+%Norm Z                              & 1 $\pm$ 0.012          & 1 $\pm$ 0.010            & 1 $\pm$ 0.01         \tabularnewline \hline
+%Expected limit of $\mu$             & 0.11                   & 0.70                     & 0.11                 \tabularnewline \hline
+%Expected limit of Wilson coefficient & 0.33                  & 0.84                     & 0.33                 \tabularnewline \hline
+%\end{tabular}
+%}
+%\caption{Expected signal strength and limits in every two options. only \tlep~channel is used for the fit. The result for single bin fit with RNN is also shown as a reference. The normalization fitted for the standard model signal, and Z backgrounds are shown as Norm in the table.}
+%\label{tab:2binlimit}
+%\end{center}
+%\end{table}
 
 %\section{Optimization of the threshold of 2-bin approach}
 %\label{subsec:aQGCbinninb}
 %Of course, the optimal threshold of $m_{VV}$ can be different depending on the clipping energy.
 %In addition, a fine-tuning of the $m_{VV}$ threshold might be needed by considering the stability of the background estimation.
-The expected limit is shown in each threshold for $m_{VV}$ of 1000~GeV, 1500~GeV, 2000~GeV for variety of the clipping points in Figure~\ref{fig:ThresholdScan}.
+%The expected limit is shown in each threshold for $m_{VV}$ of 1000~GeV, 1500~GeV, 2000~GeV for a variety of the clipping points in Figure~\ref{fig:ThresholdScan}.
 As expected, a higher $m_{VV}$ threshold is preferred at the higher clipping point, while a lower $m_{VV}$ threshold is favored at the lower clipping point.
-1500~GeV is chosen as the best compromise to separate SRs into low- and high-$m_{VV}$ bins.
+1500~GeV is chosen as the best compromise to separate SRs into low- and high-$m_{VV}$ bins for the 2-lepton channel.
 
-Since the meaning of the actual $m_{VV}$ distributions used in each lepton channel are different
-(fully reconstructed system in the \tlep\ and in the \olep\ (solving neutrino ambiguity) and transverse mass in the \zlep\)
-the optimal thresholds to separate SRs into low- and high-$m_{VV}$ bins in \olep\ and \zlep\ channels are determined in table~\ref{tab:2binthreshold}.
+Since the meaning of the actual $m_{VV}$ distributions used in each lepton channel are different,
+(fully reconstructed system in the \tlep\ and in the \olep\, and transverse mass in the \zlep\ solving neutrino ambiguity )
+the optimal thresholds to separate SRs into low- and high-$m_{VV}$ bins in \olep\ and \zlep\ channels are also studied and  determined in table~\ref{tab:2binthreshold}.
 %In \olep\ channel, the same threshold as \tlep\ channel, 1500~GeV, is just chosen since the reconstructed $m_{VV}$ distribution is similar. 
 %In \zlep\ channel, the threshold needs to be optimized, since it uses \mt\ instead of $m_{VV}$.
 %As shown in Figure~\ref{fig:mVVdist} the \mt\ shape in \zlep\ channel is different from $m_{VV}$ in \tlep\ channel.
@@ -210,14 +209,12 @@ the optimal thresholds to separate SRs into low- and high-$m_{VV}$ bins in \olep
 %The threshold finalized is shown in Table, for each lepton channel, and for each region.
 %Only in \tlep\ channel, less than 5 background events are expected in the second bin of the HP signal region.
 %We are going to test if the asymptotic formulae works fine, by running toy experiments [TO DO].
-
 \begin{figure}[h]
         \centering
     	\includegraphics[width=0.50\textwidth]{figures/aQGC/ClippedFT02bin.pdf}
         \caption{Expected limits for 5 clipping points with each threshold for dividing $m_{VV}$ into 2 bins.}
         \label{fig:ThresholdScan}
 \end{figure}
-
 %\begin{figure}[ht]
 %    \centering
 %    	\includegraphics[width=0.32\textwidth]{figures/aQGC/MVV/Region_distMllJ_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
@@ -229,7 +226,6 @@ the optimal thresholds to separate SRs into low- and high-$m_{VV}$ bins in \olep
 %        \caption{fig: $m_{VV}$ distribution for \tlep\ (left) and $m_{tv}$ distribution for \zlep\ (right)}
 %        \label{fig:mVVdist}
 %\end{figure}
-
 \begin{table}[ht!]
 \small
 \begin{center}
@@ -248,8 +244,13 @@ Threshold values (GeV)          & SRVBS\_HP  & SRVBS\_LP & SRVBS\_Fid  \tabularn
 
 \section{Limits setting}
 Finally, by using both quadratic and interference terms as a combined signal template, the expected 95\% CL upper and lower limits are obtained by the fit to the Asimov dataset constructed from the background plus SM EW VV+jj samples, as well as observed limits with data.
+All SRs in \zlep, \olep\, and \tlep\ channels are separated into low- and high-$m_{VV}$ bins as discussed in Section~\ref{subsec:2binapproach} and combined statistically.
+All systematic uncertainties discussed for Standard Model measurement are included in the fitting.
+The SM EW VV+jj signal samples are added to the background as a free floated normalization factor, and all the analysis regions are correlated with EW VV+jj signal samples.
+Due to the small statistics in high-$m_{VV}$ regions compared with the low-$m_{VV}$ regions, the overall behaviors of the post-fit nuisance parameters are almost the same as the SM measurement.
 The postfit plots for FT0 parameter in signal regions are shown in figure~\ref{fig:postSR0lepaQGC}, \ref{fig:postSR1lepaQGC},\ref{fig:postSR2lepaQGC}. 
-Overall the expected background reproduces the data well within the uncertainty despite the right-most bin of the high-$m_{VV}$ region, where the statistics are very low.
+Overall the expected background reproduces the data well within the uncertainty except for the several right-most bins of the high-$m_{VV}$ region.
+In the right-most bins of the high-$m_{VV}$ region, some data excess can be seen in the 0-lepton resolved signal region and in the 1-lepton merged LP signal region.
 \begin{figure}[]
     \centering
     %0lep
@@ -284,15 +285,10 @@ Overall the expected background reproduces the data well within the uncertainty 
     \label{fig:postSR2lepaQGC}
 \end{figure}
 
-All SRs in \zlep, \olep\, and \tlep\ channels are separated into low- and high-$m_{VV}$ bins as discussed in Section~\ref{subsec:2binapproach} and combined statistically.
-All systematic uncertainties discussed for Standard Model measurement are included in the fitting.
-The SM EW VV+jj signal samples are added to the background as a free floated normalization factor, and all the analysis regions are correlated with EW VV+jj signal samplee.
-Due to the small statistics in high-$m_{VV}$ regions compared with the low-$m_{VV}$ regions, the overall behaviors of the post-fit nuisance parameters are almost the same as the SM measurement.
 The expected and observed limits are shown at 5 clipping energy points of [1.5, 2.0, 3.0, 5.0, $\infty$]~TeV in Figure~\ref{fig:aQGClimits}.
 The unitarity bound from the theoretical calculation \cite{PhysRevD.101.113003} is overlaid.
 %The upper and lower limits correspond to the signal hypotheses showing $\Delta NLL \sim \frac{1}{2}\chi^2 = 1.0$.
-
-The log-likelihood (-2 ln $\lambda$; $\lambda$ is a likelihood ratio) distributions with respect to the signal strength of aQGC signal, $\mu$, is shown in figure~\ref{fig:ProfileLL},\ref{fig:ProfileLLFS}, \ref{fig:ProfileLLFM} for FT0, FS02, FM0 operator, for each clipping energy of 1500~GeV, 2000~GeV, $\infty$.
+The log-likelihood (-2 ln $\lambda$; $\lambda$ is a likelihood ratio) distributions with respect to the $\mu_\mathrm{aQGC}$, is shown in figure~\ref{fig:ProfileLL},\ref{fig:ProfileLLFS}, \ref{fig:ProfileLLFM} for FT0, FS02, FM0 operator, for each clipping energy of 1500~GeV, 2000~GeV, $\infty$.
 %Figure~\ref{}, \ref{}, \ref{} show the log-likelihood curve obtained by the fitting with observed data for each clipping energy, for FT0, FS02, FM0 operators, respectively.
 \begin{figure}[ht]
     \centering
@@ -323,11 +319,13 @@ The log-likelihood (-2 ln $\lambda$; $\lambda$ is a likelihood ratio) distributi
 \end{figure}
 %Figure~\ref{fig:QUADINT} shows the distributions of the quardratic term and the interference term for each FT0, FS02, FM0 operator.
 %The quardratic term has large contribution compared to the interference term.
-Due to the large contribution of the quadratic term in the parametrization of the $\mu$, the log-likelihood curve has two local minimums.
+Due to the large contribution of the quadratic term in the parametrization of the $\mu_\mathrm{aQGC}$, the log-likelihood curve has two local minimums where there is an excess in data.
+At the low clipping value at 1.5~TeV the feature of having the two local minimums gets mild since there is no signal contribution by clipping in the high-mass bins with data excess.
 Similar plots for other Wilson coefficients are shown in appendix~\ref{app:aQGCresults}. 
-A $\mu$ value at crossing the 95\% confidence interval line and the likelihood curve is used to calculate upper and lower limits on the coefficients. 
+A $\mu_\mathrm{aQGC}$ value at crossing the 95\% confidence interval line and the likelihood curve is used to calculate upper and lower limits on the coefficients. 
 %The 95\% confidence interval corresponds to 1.9.
-For high clipping values, the results exclude the signal strength already excluded by the theoretical unitarity bound.
+%For high clipping values, the results exclude the signal strength already excluded by the theoretical unitarity bound.
+For high clipping values, the observed limit is weaker than the theoretical prediction to conserve the unitarity of the model.
 Table~\ref{tab:aQGClimits} shows the uniterized and ununiterized expected and observed limits from figure~\ref{fig:aQGClimits}, where uniterized limit is the intersection point of the theoretical unitality bound and experimental limit line, while ununiterized limit is the limit with no clipping energy.
 Distributions of the obtained limit in each clipping value for other Wilson coefficients are shown in appendix~\ref{app:aQGCresults}.
 \begin{figure}[ht]
@@ -341,7 +339,6 @@ Distributions of the obtained limit in each clipping value for other Wilson coef
         \caption{Expected limits (green) and observed limits (blue) for 5 clipping points are shown for each Wilson coefficient FT0 (left), FM0 (right), FS02 (middle). The black line is the theoretical unitarity bound.}
         \label{fig:aQGClimits}
 \end{figure}
-
 %\begin{table}[ht!]
 %\small
 %\begin{center}
@@ -356,7 +353,6 @@ Distributions of the obtained limit in each clipping value for other Wilson coef
 %\label{tab:aQGClimits}
 %\end{center}
 %\end{table}
-
 %uniterized limit
 \begin{table}[ht!]
 \begin{center}
@@ -388,7 +384,6 @@ $f_{M 7} / \Lambda^4$                &[ -8.74, 8.41  ] at [ 2.48, 2.50  ]~TeV  &
 \label{tab:aQGClimits}
 \end{center}
 \end{table}
-
 The ununiterized limits can be compared with the results of other analyses.
 Compared to the figure~\ref{fig:limitFT},\ref{fig:limitFM}, \ref{fig:limitFS}, these results give similar or a little weaker limits compared to the CMS results,
 which seems due to the difference of the fiducial volume definition.
@@ -397,7 +392,6 @@ The comparison with their results in observed limits is shown in table~\ref{tab:
 For the tensor type operators $Z(\nu\bar{\nu})\gamma jj$ channel can get more stringent limits because of its fewer backgrounds. 
 For the mixed type operators, our channel can get similar or better limits due to its larger production cross section despite the larger backgrounds.
 It is desirable to combine the results of several channels in the future since operators which are sensitive are different between each channel.
-
 \begin{table}[ht!]
 \begin{center}
 \resizebox{0.9\textwidth}{!}{
