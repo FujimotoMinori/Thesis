@@ -404,7 +404,7 @@ Since there is a substructure inside the proton, the proton--proton collision cr
 \label{subsec:factorization}
 The scattering cross section among quarks and gluons can be calculated with perturbative QCD. 
 However, the size of the coupling constant, $\alpha_s$ even at the rather large momentum, $q^2$, the perturbative expansion converges really slowly.
-The factorization theorem \cite{} allows us to calculate the total cross section approximately with two parts; 
+The factorization theorem~\cite{https://doi.org/10.48550/arxiv.hep-ph/0409313} allows us to calculate the total cross section approximately with two parts; 
 (1) the probability of obtaining the initial partons that contribute to the hard scattering from the original protons, 
 (2) the partonic cross section calculation as illustrated in Figure~\ref{fig:factorization}
 \begin{figure}[tbp]
@@ -427,19 +427,20 @@ where a and b are summed over all partonic constituents of the colliding hadrons
 $f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right)$ and $f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right)$ are the PDF, obtaining the partons from the original colliding hadrons, at a given momentum fraction x. The factorization depends on the arbitrary cutoff scale, referred to as the factorization scale, $\mu_F$.
 Then the partonic cross section of the hard scattering, $\hat{\sigma}_{a b \rightarrow n}\left(\mu_{F}, \mu_{R}\right)$ can be calculated perturbatively with Feynman-diagrams technique by considering the process $ab\rightarrow n $ with free partons in the initial state. This calculation is done with the Matrix element $\left|\mathcal{M}_{a b \rightarrow n}\right|$ for the phase-space $\Phi_n$.
 When calculating the matrix element of the hard-scattering process, the divergent terms are absorbed into the redefinition of fields or parameters via subtractions. This procedure is usually referred to as renormalization, and the subtraction scale is called the renormalization scale, $\mu_R$. 
-The PDF is estimated by the collision data from previous and current experiments and extrapolated to the appropriate energy using the so-called DGLAP evolution equations.\cite{}.
+The PDF is estimated by the collision data from previous and current experiments and extrapolated to the appropriate energy using the so-called DGLAP evolution equations.~\cite{https://doi.org/10.48550/arxiv.0802.0161}.
 %this reference can be found in "VBS2014"
 Since the matrix element is calculated at a fixed order, the final states of parton-level events calculated so far is neglecting higher-order corrections, which have a sizable effect on the particle kinematics. In order to account for the effects of higher order QCD correction and hadronization, parton showering and hadronization algorithm are performed.
 
 \subsection{Parton shower}
 \label{subsec:partonshower}
-The parton shower does the splittings of the outgoing colored partons.  The MC simulations are based on the Markov chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two partons, in the limit of the infrared cutoff scale, t$_{cutoff}$, typically $t_{0} \approx 1 \mathrm{GeV}$. 
-Typical generators: Pythia~\cite{SJOSTRAND2008852} and Herwig~\cite{Gieseke2012} use different choices of t$_{cutoff}$.
-The parton shower doesn't affect to the total cross section, since the final state particles are emitted in every direction.
+The parton shower does the splittings of the outgoing colored partons.  The MC simulations are based on the Markov chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two partons, in the limit of the infrared cutoff scale, t$_{\mathrm{cutoff}}$, typically $t_{0} \approx 1~\mathrm{GeV}$. 
+Typical generators: Pythia~\cite{SJOSTRAND2008852} and Herwig~\cite{Gieseke2012} use different choices of t$_{\mathrm{cutoff}}$.
+Pythia uses a $p_\mathrm{T}$ ordered shower~\cite{PYTHIAorder}, whereas Herwig uses angular ordering~\cite{PhysRevD.76.094003}.
+%The parton shower doesn't affect to the total cross section, since the final state particles are emitted in every direction.
 \subsection{Hadoronization}
 The partons generated after parton shower are combined to form hadrons. 
 Hadronization is performed in a completely non-perturbative way, based on several models. 
-Pythia and Herwig adopt different phenomenological models: String Model, based on the linear confinement of partons, and the Cluster Model, based on the preconfinement of parton showers~\cite{}.
+Pythia and Herwig adopt different phenomenological models: String Model~\cite{ANDERSSON198331}, based on the linear confinement of partons, and the Cluster Model~\cite{MARCHESINI19841}, based on the preconfinement of parton showers.
 %\subsection{MC generators}
 %description of MC generators, up to where and what they do
 

@@ -48,6 +48,18 @@ The output scores (RNN score) as a result of training are not used as a categori
 %It is added and used in the combined RNN-DNN network, which is able to exploit the correlation across the tagging jets and the signal jets topology.
 %The extra large-R information used as inputs are shown in Figure... \textcolor{blue}{put input plots here}
 %The output RNN score in 2-lepton channel in each SRs are shown in Figure... \textcolor{blue}{put output plots here}
+\subsection{Output variable}
+The output distribution as the result of the machine learning is shown in figure~\ref{fig:RNNoutput} as RNN scores in each signal region of the 2-lepton channel.
+The distribution shows nice separation between signal and background.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.47\textwidth]{figures/RNN/ttV_0ptag1pfat0pjet_0ptv_SRVBS_HP_RNNScoreMerged.pdf}
+    \includegraphics[width=0.47\textwidth]{figures/RNN/ttV_0ptag1pfat0pjet_0ptv_SRVBS_LP_RNNScoreMerged.pdf}
+    \includegraphics[width=0.47\textwidth]{figures/RNN/ttV_0ptag2pjet_0ptv_SRVBS_Fid_RNNScoreResolved.pdf}
+    \caption{ The output RNN score distributions of signal and background samples in merged SRs (top) and in resolved SR (bottom), in the 2-lepton channel. Signal distribution is normalized to the background distribution to compare the shape.
+    }
+    \label{fig:RNNoutput}
+\end{figure}
 
 \subsection{Optimization of the binning}
 The optimization of the binning is needed to get the optimal performance of the RNN, in order to get better significance. 
