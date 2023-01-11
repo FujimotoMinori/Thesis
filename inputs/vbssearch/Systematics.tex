@@ -101,16 +101,52 @@ QCD scale uncertainties are determined by varying the renormalization ($\mu_R$) 
 %The renormalization scale $\mu_R$ is the scale at which the strong coupling $\alpha_s$ is evaluated, while the factorization scale $\mu_F$ is the scale to separate the perturbative part of the hard-interaction from the non-perturbative part of PDF as mentioned in section~\ref{subsec:factorization}. 
 They are estimated by taking the envelope of the 6 set of the combination of the $\mu_R$ and $\mu_F$, which are fixed to be 1, 0.5, or 2.0. 
 This uncertainties are implemented to the background samples as well as signal EW VV+jj sample.\\ \\
+%
+The estimated QCD scale uncertainties with Z+jets background and the EW VV+jj signal in the 2-lepton channels are shown in figure~\ref{fig:QCDZ} and \ref{fig:QCDSig}, respectively.
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/Z_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_SysTheoryQCD_Z__1up_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/Z_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_SysTheoryQCD_Z__1up_Norm.pdf}
+ \\
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/Z_0ptag1pfat0pjet_0ptv_SRVBS_HP_RNNScoreMerged_SysTheoryQCD_Z__1up_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/Z_0ptag1pfat0pjet_0ptv_SRVBS_LP_RNNScoreMerged_SysTheoryQCD_Z__1up_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/Z_0ptag2pjet_0ptv_SRVBS_Fid_RNNScoreResolved_SysTheoryQCD_Z__1up_Norm.pdf}
+ \caption[f]{
+Pre-fit variation of the QCD scale uncertainty of Z+jets sample in the 2-lepton channel.  Variation distributions are normalized to the nominal one to see the shapes.
+}
+\label{fig:QCDZ}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/EW6llqq_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_SysTheoryQCD_VBS__1up_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/EW6llqq_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_SysTheoryQCD_VBS__1up_Norm.pdf}
+ \\ 
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/EW6llqq_0ptag1pfat0pjet_0ptv_SRVBS_HP_RNNScoreMerged_SysTheoryQCD_VBS__1up_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/EW6llqq_0ptag1pfat0pjet_0ptv_SRVBS_LP_RNNScoreMerged_SysTheoryQCD_VBS__1up_Norm.pdf}
+ \includegraphics[width=0.32\textwidth,keepaspectratio]{figures/syst/QCDScale/EW6llqq_0ptag2pjet_0ptv_SRVBS_Fid_RNNScoreResolved_SysTheoryQCD_VBS__1up_Norm.pdf}
+ \caption[f]{
+Pre-fit variation of the QCD scale uncertainty of EW VV+jj signal sample in the 2-lepton channel.  Variation distributions are normalized to the nominal one to see the shapes.
+}
+\label{fig:QCDSignal}
+\end{center}
+\end{figure}
 \noindent\textbf{\sf{PDF + $\alpha_s$ uncertainties}}\\
 %
-Parton Distribution Function (PDF) sets are obtained by the fit to experimental datasets. There are uncertainties originated from the experimental uncertainties from the datasets and from the choice of the functional form adapted in the PDF fits.
-The uncertainty from the PDF set choice can be assessed by two approaches. One is to calculate the difference of a single PDF set by varying its internal parameters, which is called internal PDF uncertainties. For this study the 100 MC replicas of the NNPDF~\cite{Ball:2014uwa} sets are used. 
+Parton Distribution Function (PDF) sets are obtained by the fit to experimental datasets. 
+There are uncertainties originated from the experimental uncertainties from the datasets and from the choice of the functional form adapted in the PDF fits.
+The uncertainty from the PDF set choice can be assessed by two approaches. 
+
+One is to calculate the difference of a single PDF set by varying its internal parameters, which is called internal PDF uncertainties. 
+For this study the 100 MC replicas of the NNPDF~\cite{Ball:2014uwa} sets are used. 
 The standard deviation of the mean value of the 100 MC replicas for each bin of the final discriminant is taken as the uncertainty. 
-%
-An uncertainty on the strong coupling constant value, $\alpha_s$ is also considered. It is defined from the experimental uncertainties, and included to the estimation of the internal PDF uncertainties. 
+An uncertainty on the strong coupling constant value, $\alpha_s$ is also considered. 
+It is defined from the experimental uncertainties, and included to the estimation of the internal PDF uncertainties. 
 The internal PDF uncertainty is considered both in V+jets background and the signal EW VV+jj samples.
 %
-The other is from the difference between the different PDF sets, which is called external PDF uncertainties. This uncertainty is estimated by comparing the nominal distributions with the alternative PDF sets. The uncertainties are combined by taking the envelope of all uncertainties, which means the most varied uncertainty is taken as the final uncertainty. 
+The other is from the difference between the different PDF sets, which is called external PDF uncertainties. 
+This uncertainty is estimated by comparing the nominal distributions with the alternative PDF sets. 
+The uncertainties are combined by taking the envelope of all uncertainties, which means the most varied uncertainty is taken as the final uncertainty. 
 External PDF uncertainty is considered only in V+jets background sample due to the missing of the alternative sample in signal.
 
 
