@@ -50,7 +50,7 @@ The output scores (RNN score) as a result of training are not used as a categori
 %The output RNN score in 2-lepton channel in each SRs are shown in Figure... \textcolor{blue}{put output plots here}
 \subsection{Output variable}
 The output distribution as the result of the machine learning is shown in figure~\ref{fig:RNNoutput} as RNN scores in each signal region of the 2-lepton channel.
-The distribution shows nice separation between signal and background.
+The distribution shows a nice separation between the signal and the background. These distributions are used as final discriminants in the SRs.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.47\textwidth]{figures/RNN/ttV_0ptag1pfat0pjet_0ptv_SRVBS_HP_RNNScoreMerged.pdf}
@@ -65,5 +65,5 @@ The distribution shows nice separation between signal and background.
 The optimization of the binning is needed to get the optimal performance of the RNN, in order to get better significance. 
 The transformation of the RNN output \cite{ATL-PHYS-PUB-2019-009} is implemented to optimize the number of bins and get the best sensitivity.
 The binning of the RNN score starts from 100~bins and is summed up from the right side of the distribution until getting the best sensitivity. 
-MC statistical uncertainty in each bin is required to be $<$ 20~\% to minimize the bias on fitted $\mu$~\cite{ATL-PHYS-PUB-2019-009}. 
+MC statistical uncertainty in each bin is required to be $<$ 20~\% to minimize the bias on fitted signal strength, $\mu$~\cite{ATL-PHYS-PUB-2019-009}. 
 For the current analysis, binning is required to have 15 bins.

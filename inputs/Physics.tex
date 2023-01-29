@@ -381,7 +381,7 @@ Coupling constants & Measured Value \\
                              & $g_{u}=10^{-5}, g_{c}=7 \times 10^{-5}, g_{t}=1,$ \\
             Yukawa Couplings & $g_{d}=3 \times 10^{-5}, g_{s}=5 \times 10^{-4}, g_{b}=0.03$, \\
                              & $g_{e}=3 \times 10^{-6}, g_{\mu}=6 \times 10^{-4}, g_{\tau}=0.01$ \\
-     Fine Structure Constant & $\alpha=1 / 127$ \\
+     Fine Structure Constant & $\alpha= e^2 / 4 \pi \epsilon_0 \hbar c = 1 / 137$ \\
     Strong Coupling Constant & $\alpha_{s}=0.12$ \\
               Weinberg Angle & $sin^{2} \theta_{W}=0.23$ \\
 Higgs Self Coupling Constant & $\lambda=0.1$ \\
@@ -423,24 +423,25 @@ In the scattering process $ab \rightarrow n$ at a hadron collider can be written
 \label{eqn:qcdxsec}
 \sigma_{a b \rightarrow n}=\sum_{a, b} \int_{0}^{1} \mathrm{~d} x_{a} \mathrm{~d} x_{b} \int \mathrm{d} \Phi_{n} f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right) f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right) \times \frac{1}{2 \hat{s}}\left|\mathcal{M}_{a b \rightarrow n}\right|^{2}\left(\Phi_{n} ; \mu_{F}, \mu_{R}\right)
 \end{equation}
-where a and b are summed over all partonic constituents of the colliding hadrons, $h_1$ and $h_2$, respectively.
+where a and b are summed over all partonic constituents of the colliding hadrons, $h_1$ and $h_2$, respectively. ($\hat{s} = (p_a + p_b)^2$.)
 $f_{a}^{h_{1}}\left(x_{a}, \mu_{F}\right)$ and $f_{b}^{h_{2}}\left(x_{b}, \mu_{F}\right)$ are the PDF, obtaining the partons from the original colliding hadrons, at a given momentum fraction x. The factorization depends on the arbitrary cutoff scale, referred to as the factorization scale, $\mu_F$.
 Then the partonic cross section of the hard scattering, $\hat{\sigma}_{a b \rightarrow n}\left(\mu_{F}, \mu_{R}\right)$ can be calculated perturbatively with Feynman-diagrams technique by considering the process $ab\rightarrow n $ with free partons in the initial state. This calculation is done with the Matrix element $\left|\mathcal{M}_{a b \rightarrow n}\right|$ for the phase-space $\Phi_n$.
 When calculating the matrix element of the hard-scattering process, the divergent terms are absorbed into the redefinition of fields or parameters via subtractions. This procedure is usually referred to as renormalization, and the subtraction scale is called the renormalization scale, $\mu_R$. 
 The PDF is estimated by the collision data from previous and current experiments and extrapolated to the appropriate energy using the so-called DGLAP evolution equations.~\cite{https://doi.org/10.48550/arxiv.0802.0161}.
 %this reference can be found in "VBS2014"
-Since the matrix element is calculated at a fixed order, the final states of parton-level events calculated so far is neglecting higher-order corrections, which have a sizable effect on the particle kinematics. In order to account for the effects of higher order QCD correction and hadronization, parton showering and hadronization algorithm are performed.
+Since the matrix element is calculated at a fixed order, the final states of parton-level events calculated so far is neglecting higher-order corrections, which have a sizable effect on the particle kinematics. In order to account for the effects of higher order QCD correction and hadronization, parton showering and hadronization algorithm are employed.
 
 \subsection{Parton shower}
 \label{subsec:partonshower}
-The parton shower does the splittings of the outgoing colored partons.  The MC simulations are based on the Markov chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two partons, in the limit of the infrared cutoff scale, t$_{\mathrm{cutoff}}$, typically $t_{0} \approx 1~\mathrm{GeV}$. 
+The parton shower manages the parton emissions from the outgoing colored partons based on the QCD splitting functions. 
+The MC simulations are based on the Markov chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two partons, in the limit of the infrared cutoff scale, t$_{\mathrm{cutoff}}$, typically $t_{0} \approx 1~\mathrm{GeV}$. 
 Typical generators: Pythia~\cite{SJOSTRAND2008852} and Herwig~\cite{Gieseke2012} use different choices of t$_{\mathrm{cutoff}}$.
 Pythia uses a $p_\mathrm{T}$ ordered shower~\cite{PYTHIAorder}, whereas Herwig uses angular ordering~\cite{PhysRevD.76.094003}.
 %The parton shower doesn't affect to the total cross section, since the final state particles are emitted in every direction.
 \subsection{Hadoronization}
-The partons generated after parton shower are combined to form hadrons. 
+The partons generated after the parton shower are combined to form hadrons. 
 Hadronization is performed in a completely non-perturbative way, based on several models. 
-Pythia and Herwig adopt different phenomenological models: String Model~\cite{ANDERSSON198331}, based on the linear confinement of partons, and the Cluster Model~\cite{MARCHESINI19841}, based on the preconfinement of parton showers.
+Pythia and Herwig adopt different phenomenological models: String Model~\cite{ANDERSSON198331}, based on the linear confinement of partons, and the Cluster Model~\cite{MARCHESINI19841}, based on the preconfinement of parton showers, respectively.
 %\subsection{MC generators}
 %description of MC generators, up to where and what they do
 
@@ -512,28 +513,29 @@ The VV to VV interaction Feynman diagram at tree-level. Contributions include Hi
 
 Here, the amplitude of the longitudinal WW scattering is discussed further to see the effect of the existence of the Higgs boson for example. The combination of other weak massive bosons like WZ, as well as ZZ can be considered similarly. 
 
-Since the polarization vector of the longitudinal weak vector boson can be written in the form, \cite{Rindani_2009}: 
+Since the polarization vector of the longitudinal weak vector boson can be written in the form: 
 \begin{equation}
 \epsilon_{L}^{\mu}=\frac{1}{m_{V}}\left(|\vec{p}|, \frac{\vec{p}}{|\vec{p}|} E\right)=\frac{p^{\mu}}{m_{V}}+\mathcal{O}\left(\frac{m_{V}}{E}\right)
 \end{equation}
-as the $p_{T}$ grows, the yields with massive vector particles in the initial and final states will be longitudinal-dominant.
-At high-energy limit, the amplitude for $W_L^+W_L^-$ without the existence of the Higgs boson (Figure\ref{fig:VBSEW}) can be describes in the form of:
+as the $p_{T}$ grows, the yields with massive vector particles in the initial and final states will be longitudinal-dominant~\cite{Rindani_2009}.
+At high-energy limit, the amplitude for $W_L^+W_L^-$ without the existence of the Higgs boson (Figure~\ref{fig:VBSEW}) can be describes in the form of:
 \begin{equation}
 \mathcal{M}^{\text {gauge}}=-\frac{g_{w}^{2}}{4 m_{W}^{2}} u+\mathcal{O}\left(\left[\frac{E}{m_{W}}\right]^{0}\right)
 \end{equation}
 The remaining amplitude from the second term will rise with energy ane eventually violates the unitarity at the unitarity bound. 
-The amplitude including the Higgs contributions (Figure\ref{fig:VBSHiggs}) is:
+The amplitude including the Higgs contributions (Figure~\ref{fig:VBSHiggs}) is:
 \begin{equation}
 \begin{aligned}
-\mathcal{M}^{\text {Higgs}} &=-\frac{g^{2}}{4 m_{W}^{2}}\left[\frac{\left(s-m_{W}^{2}\right)^{2}}{s-m_{H}^{2}}+\frac{\left(t-m_{W}^{2}\right)^{2}}{t-m_{H}^{2}}\right] \\
-& \approx \frac{g^{2}}{4 m_{W}^{2}} u,
+\mathcal{M}^{\text {Higgs}} 
+%&=-\frac{g^{2}}{4 m_{W}^{2}}\left[\frac{\left(s-m_{W}^{2}\right)^{2}}{s-m_{H}^{2}}+\frac{\left(t-m_{W}^{2}\right)^{2}}{t-m_{H}^{2}}\right] \\
+\approx \frac{g^{2}}{4 m_{W}^{2}} u,
 \end{aligned}
 \end{equation}
-in the high-energy limit s >> $m_{H}^{2}$, $m_{W}^{2}$.
+%in the high-energy limit s $ \gg m_{H}^{2}$, $m_{W}^{2}$.
 Therefore the terms affected by the rising energy cancel and leave the constant term, which is not violating the unitarity.
 %The energy scale where the unitarity is violated
 
-This effect is described in the Figure~\ref{fig:violation}.
+This effect is also described in the Figure~\ref{fig:violation}~\cite{DENNER199827}.
 The figure shows that if diagrams with Higgs contribution are missing, the electroweak couplings become strong around $\sqrt{s}$ is around 1~TeV, and the unitarity of the $W_LW_L \rightarrow W_LW_L$ process is violated, which means the SM without the Higgs boson is no longer valid above TeV-scale. 
 
 \begin{figure}[tbp]
@@ -542,7 +544,7 @@ The figure shows that if diagrams with Higgs contribution are missing, the elect
  \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/violation}
 %}
 \caption{
-Cross section at tree-level %\ref{}
+Cross section at tree-level~\cite{DENNER199827} for various cases in (a) Triple Gauge Coupling, (b) Quartic Gauge Coupling, and (c) Higgs exchanges are shown. The solid, dashed. dash-dotted lines represent the SM, SM without QGC nor Higgs changes, and SM without Higgs exchanges, respectively.
 }
 \label{fig:violation}
 \end{center}

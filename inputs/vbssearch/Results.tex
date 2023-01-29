@@ -1,21 +1,21 @@
 \chapter{Results of the SM EW VV+jj measurement}
 \label{chap:results}
-This chapter shows the results of the likelihood fit introduced in section~\ref{sec:likelihood}.
+This chapter shows the results of the likelihood fit described in section~\ref{sec:likelihood}.
 First, whether the machine learning discriminant is modeled well is checked in section~\ref{sec:confirm}.
 The expected event yields are compared with the observed data yields in section~\ref{sec:eventyields}.
-In section~\ref{sec:postfitplots} distributions after the fit is shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
+In section~\ref{sec:postfitplots} distributions after the fit are shown, and the impact of nuisance parameters over signal strength is discussed in section~\ref{sec:ranking}.
 Finally the signal strength $\mu$ is extracted and the observed significance is estimated in section~\ref{sec:mu}.
 
 \section{Validation of the background modeling of the RNN score}
 \label{sec:confirm}
 The validity of the fitting setup is confirmed by checking the information after fitting using the CRs.
 In this section validation was performed by not looking at the observed data in the signal-sensitive regions, for the purpose of not being biased by looking at the signals and just checking the background modeling.
-The following ``left-side" bins of the SR discriminant distribution are referred to as the bins in the SR without the right-side bins that contains 75~\% of the signal sample. It is the background-dominant region in the SR.
+The following ``left-side" bins of the SR discriminant distribution are introduced which refer to as the bins in the SR without the right-side bins that contains 75~\% of the signal sample. It is the background-dominant region in the SR.
 %RNN modeling check
 The post-fit RNN distributions in the CRs are checked to make sure that the machine learning discriminant models the data well.
-The fitting result using $m^{tag}_{jj}$ in CRs and the left-side bins of the RNN score in SRs as summerized in table ~\ref{tab:discriminant} are applied to the RNN score distributions in CRs. 
+The fitting result using $m^{tag}_{jj}$ in CRs and the left-side bins of the RNN score in SRs as summarized in table ~\ref{tab:discriminant} are applied to the RNN score distributions in CRs. 
 Obtained distributions are shown in figure~\ref{fig:postCheck}. 
-Overall the post-fit RNN distributions in the CRs show good background modeling except for the right-most bin of the 1-lepton channel, which indicates that the RNN score discriminant has good modeling with all NPs. For the 2-lepton channel, it is shown that the discrepancy seen in figure~\ref{fig:after_rw} as a slope is well corrected.
+Overall the post-fit RNN distributions in the CRs show good background modeling except for the right-most bin of the 1-lepton channel, which indicates that the RNN score discriminant is modeled well with all NPs. For the 2-lepton channel, it is shown that the discrepancy seen in figure~\ref{fig:after_rw} as a slope is well corrected.
 %what changes the shape of the RNN score
 As seen in the pre/post-fit plots of the 2-lepton merged CR in figure~\ref{fig:postCheck}, the shape of the RNN score is corrected by the fitting.
 A similar correction is also expected with the RNN distributions in the SRs.
@@ -223,7 +223,7 @@ With the RNN score in the same region this tendency is not reflected a lot, and 
     \label{fig:postSR2lepmtagjj}
 \end{figure}
 
-The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}, \ref{fig:postSR2lepmvv}. The statistical fluctuation is large in the high-$m_{VV}$ bins, and overall it shows the agreement between data and MC within the statistical fluctuations. After the confirmation of the fine modeling of these distributions with our fitting setup, they can be used in the EFT/aQGC interpretation described in chapter~\ref{chap:aQGC}.
+The diboson invariant mass ($m_{VV}$) distributions in each SRs after fitting are shown in figure~\ref{fig:postSR0lepmvv}, \ref{fig:postSR1lepmvv}, \ref{fig:postSR2lepmvv}. The statistical fluctuation is large in the high-$m_{VV}$ bins, and overall it shows an agreement between data and MC within the statistical fluctuations. After the confirmation of the fine modeling of these distributions with our fitting setup, they can be used in the EFT/aQGC interpretation described in chapter~\ref{chap:aQGC}.
 %signal region
 \begin{figure}[]
     \centering
@@ -332,7 +332,7 @@ The pull, which can be seen as the deviation of the certain NP from zero, repres
 The size of the error bar of each uncertainty is the constraints, represent its reduction from its initial uncertainty value and show how much that uncertainty is constrained by the observed data after fitting.
 Ideally, the pull and the constraints of specific NP are zero and $1~\sigma$ when the uncertainty is perfectly applied.
 
-The Reweighting systematic uncertainty is highly constrained in figure~\ref{fig:fit_2lep_ranking_all} as designed, as well as modeling Z uncertainty. 
+The reweighting systematic uncertainty is highly constrained in figure~\ref{fig:fit_2lep_ranking_all} as it was set conservatively, as well as modeling Z uncertainty. 
 The modeling Z uncertainty is pulled about 1~$\sigma$, which adjusts the Z+jets background to the observed data in the fitting. The modeling W uncertainty is also pulled and works similarly with modeling Z uncertainty. The diboson modeling uncertainty and the normalization of the Diboson is also pulled, which can be caused from the mis-modeling of the diboson samples.
 All of these highly-ranked NPs are not unexpectedly pulled or constrained, which indicates the likelihood fit performed in this analysis is valid enough.
 %The pull plot for all NPs is discussed in Appendix.
@@ -367,7 +367,7 @@ The 1-lepton channel contributes to the combined signal strength most because of
 \section{Fiducial cross section}
 The fiducial cross section, $\sigma_{EWVVjj,~\mathrm{obs}}$, defined in section~\ref{sec:crosssection}, is derived using the observed $\mu$ value.
 The expected cross-section, $\sigma_{EWVVjj,~\mathrm{SM}}$, obtained by truth event selection using the stable final state particle is shown in table~\ref{tab:expxsec}.
-The expected cross-section is the sum of each cross-section of each lepton channel. 
+The expected cross-section is the sum of the cross-section of each lepton channel. 
 The merged HP SR and LP SR are combined into a single merged signal region.
 %predicted cross section
 \begin{table}[H]
