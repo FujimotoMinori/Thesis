@@ -29,6 +29,20 @@ Further details on the technical setups are summarized in Appendix~\ref{app:RNNs
 
 \subsection{Input variables and setups}
 The $p_\mathrm{T}, \eta, \phi, E$, of the small-R jets as well as the track multiplicity ($n_{Tracks}$) are used as inputs in a recurrent way. 
+Figure~\ref{fig:RNNinput} shows the signal and the background distributions of input variables of the leading jet.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.33\textwidth]{figures/RNN/inputs/j1pT.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/RNN/inputs/j1eta.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/RNN/inputs/j1phi.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/RNN/inputs/j1E.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/RNN/inputs/j1nTracks.pdf}
+    \caption{ The input distributions of the leading jet. 
+    }
+    \label{fig:RNNinput}
+\end{figure}
+
+
 As actual input information, only these low-level information of $p_\mathrm{T}$ ordered small-R jets are used regardless they are signal and forward jets or other jets. 
 The maximum variable length given by the jets multiplicity, is fixed to be 5 in this analysis. 
 The values are filled with a masking value if the jet is not reconstructed in the event, and the tool knows to consider only the actual jets during the training phase according to the Keras RNN implementation. 
