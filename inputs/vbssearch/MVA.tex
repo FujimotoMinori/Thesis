@@ -29,7 +29,8 @@ Further details on the technical setups are summarized in Appendix~\ref{app:RNNs
 
 \subsection{Input variables and setups}
 The $p_\mathrm{T}, \eta, \phi, E$, of the small-R jets as well as the track multiplicity ($n_{Tracks}$) are used as inputs in a recurrent way. 
-Figure~\ref{fig:RNNinput} shows the signal and the background distributions of input variables of the leading jet.
+Figure~\ref{fig:RNNinput} shows the signal and the background distributions of input variables of the leading jet. Only jet information is used without labeling signal jets or forward jets.
+Lepton information is not included as input variables to use the similar architecture among three lepton channels.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.33\textwidth]{figures/RNN/inputs/j1pT.pdf}
@@ -74,6 +75,19 @@ The distribution shows a nice separation between the signal and the background. 
     }
     \label{fig:RNNoutput}
 \end{figure}
+
+The output RNN score learns high-level information for example the $m_{jj}^{tag}$. 
+Figure~\ref{fig:2Dplot} shows the 2-dimension plots in the resolved signal region with signal and background. The correlation between RNN score and $m_{jj}^{tag}$ can be seen.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.47\textwidth]{figures/RNN/outputs/j1nTracks2Dsig.pdf}
+    \includegraphics[width=0.47\textwidth]{figures/RNN/outputs/j1nTracks2Dbg.pdf}
+    \caption{ The 2D plots of output RNN score ($y$-axis) versus $m_{jj}^{tag}$ ($x$-axis) in the resolved signal region with signal (left) and background (right) in the 2-lepton channel. 
+    }
+    \label{fig:2Dplot}
+\end{figure}
+
+
 
 \subsection{Optimization of the binning}
 The optimization of the binning is needed to get the optimal performance of the RNN, in order to get better significance. 

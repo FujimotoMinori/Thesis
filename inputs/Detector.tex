@@ -62,16 +62,16 @@ The whole picture of the ATLAS detector
 \end{figure}
 
 \subsection{The ATLAS coordinate system}
-ATLAS adopts a right-handed coordinate system with its origin at the interaction point. The z-axis is defined along the beam pipe, the y-axis points upwards and the x-axis points toward the center of the LHC. The azimuthal angle $\phi$ is the angle around the beam pipe, measured in x-y plane with respect to the x-axis. The polar angle $\theta$ is the angle to z-axis. A commonly used variable is the pseudorapidity $\eta$, which is defined as:
+ATLAS adopts a right-handed coordinate system with its origin at the interaction point. The $z$-axis is defined along the beam pipe, the $y$-axis points upwards and the $x$-axis points toward the center of the LHC. The azimuthal angle $\phi$ is the angle around the beam pipe, measured in the $x$-$y$ plane with respect to the $x$-axis. The polar angle $\theta$ is the angle to $z$-axis. A commonly used variable is the pseudorapidity $\eta$, which is defined as:
 \begin{eqnarray*}
 \eta &=& -\ln\tan(\theta/2)
 \end{eqnarray*}
-The low $\eta$ corresponds to the central part of the detector, while high $\eta$ region points the beam axis. At the massless limit, the difference in $\eta$ between two particles, $\Delta\eta$ is invariant under the Lorentz transformation along z-axis.
+The low $\eta$ corresponds to the central part of the detector, while the high $\eta$ region points the beam axis. At the massless limit, the difference in $\eta$ between two particles, $\Delta\eta$ is invariant under the Lorentz transformation along the $z$-axis.
 The other variable used often is the distance in the cylindrical coordinate system;
 $
 \Delta R = \sqrt{\Delta \eta^2 + \Delta \phi^2}
 $.
-Both of $\Delta \eta$ and $\Delta \phi$ are lorentz invariant, hence $\Delta R$ is also a lorentz invariant variable along z-axis.
+Both $\Delta \eta$ and $\Delta \phi$ are lorentz invariant, hence $\Delta R$ is also a lorentz invariant variable along $z$-axis.
 
 \subsection{Magnet}
 The ATLAS magnet system consists of four large superconducting magnets with a dimension of 22~m in diameter and 26~m in length with a stored energy of 1.6~GJ. A solenoid aligned on the beam axis generates 2~T axial magnetic field for the inner detector, which is placed inside the calorimeter system. 
@@ -213,7 +213,7 @@ The layout of the ATLAS trigger system in Run~2
 The ATLAS trigger system~\cite{TRIG-2019-04} consists of hardware based Level-1 (L1) trigger, and software based High Level Trigger (HLT). 
 The L1 trigger is implemented with custom electronics and roughly reconstructs high-$p_\mathrm{T}$, $e/\gamma$, $\mu$, $j$, and so on to determine the Regions-of-Interest (RoIs) in the HLT algorithms, from coarse granularity calorimeter and the muon spectrometer information. 
 These data are treated by sub-systems, the L1Calo and L1Muon, respectively. 
-L1 electron is reconstructed by L1Calo. 2$\times$2 core towers and 12 surrounded towers of ECal are used for capturing the electron energy and calculating isolation requirement, respectively. The sketch of these calorimeter towers is shown in figure~\ref{fig:TriggerTower}.
+L1 electron is reconstructed by L1Calo. 2$\times$2 core towers and 12 surrounded towers of ECal are used for capturing the electron energy and calculating isolation requirement, respectively. The sketch of these calorimeter towers is shown in Figure~\ref{fig:TriggerTower}.
 The L1 Muon makes use of RPC and TGC hits and fires if there is a coincidence between different chambers based on the predefined look-up-tables.
 The schematic of the muon barrel trigger is shown in figure~\ref{fig:muontrigger}.
 The reconstructed L1 objects by the L1Calo and the L1Muon are sent to the L1Topo, and the selections based on kinematical information can be performed. 

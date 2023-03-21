@@ -115,7 +115,7 @@ Cuts on $E^{miss}_\mathrm{T}$ ( $>$ 200~GeV) and $E^{\mathrm{miss,track}}_\mathr
 The QCD-induced multijet background with fake $E^{miss}_\mathrm{T}$ due to the mis-reconstruction and momentum resolution of the jets is significant in the 0-lepton channel. 
 To suppress its contribution, several cuts are applied related to the direction of $E^{miss}_\mathrm{T}$ and the jet: $\Delta\phi(\met,\mpt) < \pi/2$, $\min(\Delta\phi(\met,j)) > \pi/6$ and, $\Delta\phi(\met, V_{had}) > \pi/9$. The fake $E^{miss}_\mathrm{T}$ contribution can be ignored after this selction. \\ \\ 
 \noindent\textbf{\sf{1-lepton}}  \\
-One tight-lepton with $p_\mathrm{T} > 28~\mathrm{GeV}$ and $E^{miss}_\mathrm{T} > 80~\mathrm{GeV}$ is required. In 1-lepton channel there are significant contribution from t$\bar{\mathrm{t}}$ background hence b-veto is applied to all small-R jets to reduce its contribution.\\ \\
+One tight-lepton with $p_\mathrm{T} > 30~\mathrm{GeV}$ and $E^{miss}_\mathrm{T} > 80~\mathrm{GeV}$ is required. In 1-lepton channel there are significant contribution from t$\bar{\mathrm{t}}$ background hence b-veto is applied to all small-R jets to reduce its contribution.\\ \\
 \noindent\textbf{\sf{2-lepton}}  \\
 Two same flavor loose-leptons satisfying $p_\mathrm{T}$ > 28~GeV ( $p_\mathrm{T}$ > 20~GeV) for the leading (sub leading) one 
 and an invariant mass of the lepton system ( m$_{ll}$ ) close to the Z boson mass are requested. Figure~\ref{fig:2lepLeptons} shows a peak of the invariant mass reconstructed by two selected leptons around the Z boson mass. Depending on the lepton pair (ee, $\mu\mu$) different mass
@@ -160,6 +160,7 @@ Hadronically decaying boson ($V_{had}$) is reconstructed as a single large-R jet
 \noindent\textbf{\sf{Merged selection}}  \\
 The leading large-R jet not overlapping with any of the tagging jets by $|\Delta R|>1.4$, to avoind the double counting of the energy deposits, is selected as the signal jet candidate (sigJ).
 The sigJ is required to have a $p_{T} \geq ~200~\mathrm{GeV}$, $|\eta| < 2.0$, and not overlapping with leptons by $|\Delta R|>1.0$.
+Figure~\ref{fig:MVHadResSR} shows the mass of these sigJ distribution.
 
 In order to select events including sigJ coming from the W/Z hadronically decay, the boson-tagger is applied. Events are further divided into subcategories depending on the result of the boson-tagger. The events passing the boson-tagger 50~\% efficiency working point is categorized in the so-called high-purity (HP) signal region (SRVBS\_HP), while those failing 50~\% working point but passing 80~\% working point are considered in the low-purity (LP) signal region (SRVBS\_LP) as shown in figure~\ref{fig:MergedRegion}. \\ \\ 
 
@@ -538,3 +539,37 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{2}{c|}{ $>220$~GeV} \\
 \caption{A summary of regions event selection for 2-lepton channel in the resolved selection.}
 \label{tab:2lep_resolved}
 \end{table}
+
+The signal selection efficiencies after applying all the selections in those tables are shown in the table~\ref{tab:selectioneff}.
+
+\begin{figure}[H]
+    \centering
+    \resizebox{0.60\textwidth}{!}{
+    \begin{tabular}{|c||c|c|c|}
+         \hline
+                        & Resolved SR  & Merged HP SR & Merged LP SR \\ \hline
+        0-lepton        &  1.4~\%  &   0.6~\% &    0.5~\%               \\ \hline
+        1-lepton        &  1.3~\%  &   0.4~\% &    0.6~\%               \\ \hline
+        2-lepton        &  2.1~\%  &   0.4~\% &    0.3~\%               \\ \hline
+    \end{tabular}
+        }
+        \caption{Signal selection efficiencies in each signal region.}
+        \label{tab:selectioneff}
+\end{figure}
+
+The signal/background ratios after applying all the selections in those tables are shown in the table~\ref{tab:soverb}.
+
+\begin{figure}[H]
+    \centering
+    \resizebox{0.6\textwidth}{!}{
+    \begin{tabular}{|c||c|c|c|}
+         \hline
+                        & Resolved SR  & Merged HP SR & Merged LP SR \\ \hline
+        0-lepton        &  1.0~\%  &   2.6~\% &    1.0~\%            \\ \hline
+        1-lepton        &  0.9~\%  &   1.9~\% &    1.1~\%            \\ \hline
+        2-lepton        &  0.5~\%  &   2.7~\% &    0.8~\%             \\ \hline
+    \end{tabular}
+        }
+        \caption{Signal over background ratio in each signal region.}
+        \label{tab:soverb}
+\end{figure}

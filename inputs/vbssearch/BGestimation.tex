@@ -32,7 +32,7 @@ the RNN score are shown in figure~\ref{fig:before_rw}, showing discrepancies as 
     %\includegraphics[width=0.48\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_PtTagResJets_Log.eps}
     \includegraphics[width=0.48\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_RNNScoreMerged_Lin.eps}
     \includegraphics[width=0.48\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_RNNScoreResolved_Lin.eps}
-    \caption{ Distributions of number of jets and the $p_\mathrm{T}$ of the two forward jets, and RNN score before applying reweighting for the merged (left) and resolved (right) control regions in the 2-lepton channel.}
+    \caption{ Distributions of number of jets and RNN score before applying reweighting for the merged (left) and resolved (right) control regions in the 2-lepton channel.}
     \label{fig:before_rw}
 \end{figure}
 
@@ -94,7 +94,7 @@ The uncertainty on the reweighting factor is conservatively assigned in the fina
 The comparison of distributions of data and MC for the number of small-R jets and 
 %$p_\mathrm{T}$ of the two forward jets and 
 the RNN score after reweighting are shown in Figure \ref{fig:after_rw}
-respectively. The discrepancy is relaxed by the reweighting procedure, while it is not fully corrected especially for the $p_\mathrm{T}$ of the two forward jets.
+respectively. The discrepancy is relaxed by the reweighting procedure. %while it is not fully corrected especially for the $p_\mathrm{T}$ of the two forward jets.
 The RNN score distribution is also corrected since it learns high-level information like $m^{tag}_{jj}$.
 The RNN score still has a discrepancy in the normalization as well as its shape, which can be seen as a slope, especially in the merged CR.
 That discrepancy will be corrected by the final fitting described in chapter~\ref{chap:statistics}.
@@ -106,7 +106,7 @@ That discrepancy will be corrected by the final fitting described in chapter~\re
     %\includegraphics[width=0.48\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_PtTagResJets_Log.eps}
     \includegraphics[width=0.48\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_RNNScoreMerged_Lin.eps}
     \includegraphics[width=0.48\textwidth]{figures/2lep/reweighting/after_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_RNNScoreResolved_Lin.eps}
-    \caption{ Distributions of the number of jets and the $p_\mathrm{T}$ of the two forward jets after applying reweighting for the merged (left) and resolved (right) control regions in the 2-lepton channel.}
+    \caption{ Distributions of the number of jets and the RNN score after applying reweighting for the merged (left) and resolved (right) control regions in the 2-lepton channel.}
     \label{fig:after_rw}
 \end{figure}
 % njets and pt plots after reweighting
@@ -136,7 +136,7 @@ This difference between the two generators is included in the final fitting as a
     \centering
     \includegraphics[width=0.49\textwidth]{figures/2lep/reweighting/MTagResJets_0ptag2pjet_0ptv_CRVjet_ratio.pdf}
     \includegraphics[width=0.49\textwidth]{figures/2lep/reweighting/MTagMerJets_0ptag1pfat0pjet_0ptv_CRVjet_ratio.pdf}
-    \caption{ $m^{tag}_{jj}$ distributions before applying reweighting for Sherpa~2.2.1 (red) and MadGraph (blue). Sherpa~2.2.11 (green), the newly modified version is also compared, showing that there is little improvement in slope compared to MadGraph.}
+    \caption{ $m^{tag}_{jj}$ distributions in resolved (left) and merged (right) control region, before applying reweighting for Sherpa~2.2.1 (red) and MadGraph (blue). Sherpa~2.2.11 (green), the newly modified version is also compared, showing that there is little improvement in slope compared to MadGraph.}
     \label{fig:SherpaMadGraph}
 \end{figure}
 

@@ -13,7 +13,7 @@ The first three of them are described by the SM.
 The theoretical description is given with the Quantum Field Theory (QFT) framework. 
 The invariance under the local gauge transformation is the key of the framework. 
 The underlying symmetry is described by the Lie groups. 
-It is written by SU(3)$_C \times$ SR(2)$_L \times$ U(1)$_Y$ gauge group and some more details are discussed in the following subsections. 
+It is written by SU(3)$_C \times$ SU(2)$_L \times$ U(1)$_Y$ gauge group and some more details are discussed in the following subsections. 
 
 \subsection{Particle content}
 Figure~\ref{fig:SM} shows 17 fundamental particles, consisting of the SM.
@@ -60,7 +60,7 @@ The free fermion with the spin 1/2 is described by the Lagrangian\\
 \end{equation}
 The $\psi$ here is the spinor of the fermion field, $\gamma^{\mu}$  ($\mu$ = 0,1,2,3) is the Dirac gamma 4$\times$4 matrix. $\partial_{\mu}$ = $\frac{\delta}{\delta x_{\mu}}$ are the partial derivatives, and the $\bar{\psi}=\psi^{\dagger} \gamma^{0}$.
 %The Euler–Lagrange equation, the Dirac equation of motion for $\psi$:
-Solving the lagrangian equation for this yields, the Dirac equation of motion for $\psi$:
+Solving the Lagrangian equation for this yields, the Dirac equation of motion for $\psi$:
 \begin{equation}
 \left(i \gamma^{\mu} \partial_{\mu}-m\right) \psi=0
 \end{equation}
@@ -69,7 +69,7 @@ The Lagrangian is required to be invariant under the "local" gauge transformatio
 \psi(x) \rightarrow \psi^{\prime}(x)=e^{i \alpha(x)} \psi(x)
 \end{equation}
 where the local phase is given by $\alpha(x)$, depending on space and time. 
-This transformation form the Abelian unitary group U(1) with e$^{i\alpha(x)}$ written as the 1$\times$1 matrix with $U^{\dagger} U=1$.
+This transformation forms the Abelian unitary group U(1) with e$^{i\alpha(x)}$ written as the 1$\times$1 matrix with $U^{\dagger} U=1$.
 The first term of the Lagrangian (\ref{eqn:QED}) is not invariant under this transformation:
 \begin{equation}
 \partial_{\mu} \psi \rightarrow \partial_{\mu} \psi^{\prime}=e^{i \alpha(x)} \partial_{\mu} \psi+i e^{i \alpha(x)} \psi \partial_{\mu} \alpha(x)
@@ -133,7 +133,7 @@ Gluons are also required to be massless from the gauge invariance of the fields.
 %asymptotic freedom 
 \\ \\
 \noindent\textbf{\sf{ElectroWeak Model}} \\
-It is shown by experiments that the weak interaction only acts on left-handed fermions. In the electroweak model, the SU(2)$_L \times$ U(1)$_Y$ symmetry is conserved. Here the left-handed fermions are assigned to SU(2)$_L$ doublets with weak isospin I = 1/2, and gauge field W$^a_\mu$. The right-handed fermions are assigned to  U(1)$_Y$ singlets with weak isospin I = 0, and gauge field B$_\mu$.
+It is shown by experiments that the weak interaction only acts on left-handed fermions. In the electroweak model, the SU(2)$_L \times$ U(1)$_Y$ symmetry is conserved. Here the left-handed fermions are assigned to SU(2)$_L$ doublets with weak isospin I = 1/2, and gauge field W$^a_\mu$. The right-handed fermions are assigned to  SU(2)$_Y$ singlets with weak isospin I = 0, and gauge field B$_\mu$.
 %table of the quantum numbers
 The left-handed doublets and right-handed singlets are denoted as $\chi_{L}$ and $\psi_{R}$, respectively. Specifically $\chi_{L}$ is written as 
 $
@@ -158,8 +158,8 @@ and $\psi_{R}$ is $(u_R)$ and $(d_R)$.
 These behave under the local gauge transformations as:
 \begin{equation}
 \begin{aligned}
-\chi_{L}(x) \rightarrow \chi_{L}^{\prime}(x) &=e^{i \alpha_{a}(x) \tau_{a}} e^{i \beta(x) Y} \chi_{L} \\
-\psi_{R}(x) \rightarrow \psi_{R}^{\prime}(x) &=e^{i \beta(x) Y} \psi_{R}
+\chi_{L}(x) \rightarrow \chi_{L}^{\prime}(x) &=e^{i \alpha_{a}(x) \tau_{a}/2} e^{i \beta(x) Y} \chi_{L} \\
+\psi_{R}(x) \rightarrow \psi_{R}^{\prime}(x) &=e^{i \beta(x) Y/2} \psi_{R}
 \end{aligned}
 \end{equation}
 where $\alpha_{a}(x)$ and $\beta(x)$ are the local phases, $\tau_{a}$ are the generators of SU(2)$_L$ with a = 1,2,3, and Y is the weak hypercharge operator of U(1)$_Y$. The covariant derivative is:
@@ -197,7 +197,7 @@ e&=g \sin \theta_{W}=g^{\prime} \cos \theta_{W} \\
 The local gauge invariance forbids the introduction of the mass term of the bosons like $m^2_W W_\mu W^\mu$, since it is not invariant under $SU(2)_L \times U(1)_Y$ local transformations.
 This statement that the local phase invariance in the electroweak model requests the fermions and bosons to be massless particles, is conflicted against the experimental results, where W$^{\pm}$, Z bosons and fermions are found to be massive.
 \\ \\
-\noindent\textbf{\sf{Spontaneously Symmetry breaking}} \\ 
+\noindent\textbf{\sf{Spontaneous Symmetry Breaking}} \\ 
 The disagreement of the electroweak model forbidding the masses of the fermions and bosons with the experimental results can be solved by introducing a spontaneous symmetry breaking.
 It is known as Brout-Englert-Higgs (BEH) mechanism or “Higgs mechanism” for short.
 
@@ -222,8 +222,8 @@ The potential of $\phi$ can be parametrize as:
 \begin{equation}
 V(\phi)=\mu^{2} \phi^{\dagger} \phi+\lambda\left(\phi^{\dagger} \phi\right)^{2}
 \end{equation}
-where $\lambda$ > 0. The value of the $\Phi$ at the vacuum is chosen by minimizing $V(\Phi)$. 
-In case $-\mu^{2}>0$, the $V(\Phi)$ has its minimum value at 
+where $\lambda$ > 0. The value of the $\phi$ at the vacuum is chosen by minimizing $V(\Phi)$. 
+In case $-\mu^{2}>0$, the $V(\phi)$ has its minimum value at 
 \begin{equation}
 \label{eqn:vacuum}
 \phi_{0}&=\frac{1}{\sqrt{2}}\left(\begin{array}{l}
@@ -258,7 +258,7 @@ The field is parameterized as:
 v+h(x)
 \end{array}\right)
 \end{equation}
-where $\theta_{a}(x)$ (a = 1,2,3) and $h(x)$ are the real field, and  $h(x)$ represents the Higgs boson which is associated with the Higgs fields. The exponential term including $\theta_{a}(x)$ is defined to be specifical since local gauge transformation needs to be invariant;
+where $\theta_{a}(x)$ $(a = 1,2,3)$ and $h(x)$ are the real field, and  $h(x)$ represents the Higgs boson which is associated with the Higgs fields. The exponential term including $\theta_{a}(x)$ is defined to be specifical since local gauge transformation needs to be invariant;
 \begin{equation}
 \phi=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
 0 \\
@@ -279,7 +279,7 @@ The Lagrangian of Higgs (\ref{eqn:Higgs}) can be substituted and
 the terms represent the mass terms and their relations are written as:
 \begin{equation}
 \begin{aligned}
-\left|\left(i g \frac{\tau_{a}}{2} W_{\mu}^{a}+i g^{\prime} \frac{Y}{2} B_{\mu}\right) \phi_{0}\right|=&\left(\frac{1}{2} v g\right)^{2} W_{\mu}^{+} W^{\mu-} \\
+\left|\left(i g \frac{\tau_{a}}{2} W_{\mu}^{a}+i g^{\prime} \frac{Y}{2} B_{\mu}\right) \phi_{0}\right|^2 =&\left(\frac{1}{2} v g\right)^{2} W_{\mu}^{+} W^{\mu-} \\
 &+\left(\frac{1}{2} v g\right)^{2} \frac{1}{2 \cos ^{2} \theta_{W}} Z_{\mu} Z^{\mu} \\
 &+0 \cdot A_{\mu} A^{\mu}
 \end{aligned}
@@ -327,7 +327,7 @@ For the down type fermions, the same Higgs field $\phi$ is used, while for the u
 \end{equation}
 For the quarks, the additional Lagrangian can be described as follows:
 \begin{equation}
-\mathcal{L}_{q}=\left[-g_{d}\left(\bar{\psi}_{L}^{d} \phi \psi_{R}^{d}\right)+\text { h.c. }\right]+\left[-g_{u}\left(\bar{\psi}_{L}^{u} \phi^{c} \psi_{R}^{u}\right)+\text { h.c. }\right]
+\mathcal{L}_{q}=\left[-g_{d}\left(\bar{\psi}_{L}^{d} \phi \psi_{R}^{d}\right)+\text { h.c. }\right]+\left[-g_{u}\left(\bar{\psi}_{L}^{u} \phi^{c} \psi_{R}^{u}\right)+\text { h.c. }\right]+\mathrm{ h.c. }
 \end{equation}
 These are local gauge invariant before the symmetry breaking. After the symmetry breaking, $\phi^C$ can be written as:
 \begin{equation}
@@ -340,15 +340,15 @@ v+h \\
 \end{equation}
 Then the additional Lagrangian substituted into:
 \begin{equation}
-\mathcal{L}_{q}=-\frac{1}{\sqrt{2}} g_{d} v \bar{d}_{L} d_{R}\left(1+\frac{h}{v}\right)-\frac{1}{\sqrt{2}} g_{u} v \bar{u}_{L} u_{R}\left(1+\frac{h}{v}\right)
+\mathcal{L}_{q}=-\frac{1}{\sqrt{2}} g_{d} v \bar{d}_{L} d_{R}\left(1+\frac{h}{v}\right)-\frac{1}{\sqrt{2}} g_{u} v \bar{u}_{L} u_{R}\left(1+\frac{h}{v}\right)+\mathrm{ h.c. } 
 \end{equation}
 In the case of leptons, the additional Lagrangian is:
 \begin{equation}
-\mathcal{L}_{e}=\left[-g_{e}\left(\bar{\psi}_{L}^{e} \phi \psi_{R}^{e}\right)+\text { h.c. }\right]
+\mathcal{L}_{e}=\left[-g_{e}\left(\bar{\psi}_{L}^{e} \phi \psi_{R}^{e}\right)+\mathrm{ h.c. }\right]
 \end{equation}
 then after the symmetry breaking:
 \begin{equation}
-\mathcal{L}_{e}=-\frac{1}{\sqrt{2}} g_{e} v \bar{e}_{L} e_{R}\left(1+\frac{h}{v}\right)
+\mathcal{L}_{e}=-\frac{1}{\sqrt{2}} g_{e} v \bar{e}_{L} e_{R}\left(1+\frac{h}{v}\right)+\mathrm{ h.c. } 
 \end{equation}
 
 The mass of the fermions is to be obtained as:
@@ -382,8 +382,8 @@ Coupling constants & Measured Value \\
             Yukawa Couplings & $g_{d}=3 \times 10^{-5}, g_{s}=5 \times 10^{-4}, g_{b}=0.03$, \\
                              & $g_{e}=3 \times 10^{-6}, g_{\mu}=6 \times 10^{-4}, g_{\tau}=0.01$ \\
      Fine Structure Constant & $\alpha= e^2 / 4 \pi \epsilon_0 \hbar c = 1 / 137$ \\
-    Strong Coupling Constant & $\alpha_{s}=0.12$ \\
-              Weinberg Angle & $sin^{2} \theta_{W}=0.23$ \\
+    Strong Coupling Constant & $\alpha_{s}=0.11$ \\
+              Weinberg Angle & $sin^{2} \theta_{W}=0.231$ \\
 Higgs Self Coupling Constant & $\lambda=0.1$ \\
 %PMNS matrix (parametric representation) & $\theta_{12}=34, \theta_{13}=8.5, \theta_{23}=247, \delta_{C P}=200$ \\
 %CKM matrix (parametric representation) & $\theta_{12}=13.0, \theta_{13}=0.2, \theta_{23}=2.4, \delta_{13}=1.2$ \\
@@ -434,7 +434,7 @@ Since the matrix element is calculated at a fixed order, the final states of par
 \subsection{Parton shower}
 \label{subsec:partonshower}
 The parton shower manages the parton emissions from the outgoing colored partons based on the QCD splitting functions. 
-The MC simulations are based on the Markov chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two partons, in the limit of the infrared cutoff scale, t$_{\mathrm{cutoff}}$, typically $t_{0} \approx 1~\mathrm{GeV}$. 
+The Monte Carlo (MC) simulations are based on the Markov chain, in which the components of the hard subprocess are evolved by adding branchings of one parton into two partons, in the limit of the infrared cutoff scale, t$_{\mathrm{cutoff}}$, typically t$_{\mathrm{cutoff}}$ = $t_{0} \approx 1~\mathrm{GeV}$. 
 Typical generators: Pythia~\cite{SJOSTRAND2008852} and Herwig~\cite{Gieseke2012} use different choices of t$_{\mathrm{cutoff}}$.
 Pythia uses a $p_\mathrm{T}$ ordered shower~\cite{PYTHIAorder}, whereas Herwig uses angular ordering~\cite{PhysRevD.76.094003}.
 %The parton shower doesn't affect to the total cross section, since the final state particles are emitted in every direction.
@@ -447,7 +447,7 @@ Pythia and Herwig adopt different phenomenological models: String Model~\cite{AN
 
 \section{Vector Boson Scattering}
 \label{sec:VBS}
-The scattering of two electroweak vector gauge bosons can probe the structure of the electroweak symmetry breaking (EWSM) mechanism directly. 
+The scattering of two electroweak vector gauge bosons can probe the structure of the electroweak symmetry breaking (EWSB) mechanism directly. 
 The Vector Boson Scattering (VBS) is therefore one of the key processes to be investigated in the LHC experiment.
 The Vector Boson indicates W, Z,$\gamma$ here, which are fundamental electroweak bosons. 
 Though the massive vector bosons, W and Z are only sensitive to the mechanism of the EWSM, $\gamma$ is also included since it is impossible to fully separate the $\gamma$ and Z contributions experimentally. 
@@ -520,18 +520,19 @@ Since the polarization vector of the longitudinal weak vector boson can be writt
 as the $p_{T}$ grows, the yields with massive vector particles in the initial and final states will be longitudinal-dominant~\cite{Rindani_2009}.
 At high-energy limit, the amplitude for $W_L^+W_L^-$ without the existence of the Higgs boson (Figure~\ref{fig:VBSEW}) can be describes in the form of:
 \begin{equation}
-\mathcal{M}^{\text {gauge}}=-\frac{g_{w}^{2}}{4 m_{W}^{2}} u+\mathcal{O}\left(\left[\frac{E}{m_{W}}\right]^{0}\right)
+\mathcal{M}^{\text {gauge}}=-\frac{g^{2}}{4 m_{W}^{2}} u+\mathcal{O}\left(\left[\frac{E}{m_{W}}\right]^{0}\right)
 \end{equation}
+
 The remaining amplitude from the second term will rise with energy ane eventually violates the unitarity at the unitarity bound. 
 The amplitude including the Higgs contributions (Figure~\ref{fig:VBSHiggs}) is:
 \begin{equation}
 \begin{aligned}
 \mathcal{M}^{\text {Higgs}} 
-%&=-\frac{g^{2}}{4 m_{W}^{2}}\left[\frac{\left(s-m_{W}^{2}\right)^{2}}{s-m_{H}^{2}}+\frac{\left(t-m_{W}^{2}\right)^{2}}{t-m_{H}^{2}}\right] \\
+&=-\frac{g^{2}}{4 m_{W}^{2}}\left[\frac{\left(s-m_{W}^{2}\right)^{2}}{s-m_{H}^{2}}+\frac{\left(t-m_{W}^{2}\right)^{2}}{t-m_{H}^{2}}\right] \\
 \approx \frac{g^{2}}{4 m_{W}^{2}} u,
 \end{aligned}
 \end{equation}
-%in the high-energy limit s $ \gg m_{H}^{2}$, $m_{W}^{2}$.
+in the high-energy limit s $ \gg m_{H}^{2}$, $m_{W}^{2}$, where s,t,u are the Mandelstam variables.
 Therefore the terms affected by the rising energy cancel and leave the constant term, which is not violating the unitarity.
 %The energy scale where the unitarity is violated
 
@@ -554,12 +555,13 @@ Cross section at tree-level~\cite{DENNER199827} for various cases in (a) Triple 
 The VBS analysis is performed in several decay channels with respect to the boson type and its decay products.
 The latest significance obtained by ATLAS and CMS in each channel is summarized in the table~\ref{tab:VBSchannels}.
 
+
 \begin{center}
 \begin{table}[h]
 \begin{tabular}{|c|c|c|c|}
 \hline \multicolumn{2}{|c|}{}                                   & ATLAS                              & CMS\\
 \hline
-\hline \multirow{3}{*}{ Full-leptonic }      & ssWW -> lvlv     & $6.5~(4.4^{\mathrm{Sherpa}}, 6.5^{\mathrm{Powheg}})~\sigma$ (36.1~$fb^{-1}$)~\cite{STDM-2017-06} & $5.5~(5.7)~\sigma$ (35.9~$fb^{-1}$)~\cite{CMS-SMP-21-001}  \\
+\hline \multirow{3}{*}{ Full-leptonic }      & ssWW -> lvlv     & $6.5~(4.4^{\mathrm{Sherpa}})~\sigma$ (36.1~$fb^{-1}$)~\cite{STDM-2017-06} & $5.5~(5.7)~\sigma$ (35.9~$fb^{-1}$)~\cite{CMS-SMP-21-001}  \\
 \cline { 2 - 4 }                             & osWW             & $-$                                 & $-$   \\
 \cline { 2 - 4 }                             & WZ -> lvll       & $5.3~(3.2)~\sigma$ (36.1~$fb^{-1}$)~\cite{STDM-2017-23} & $2.2~(2.5)~\sigma$ (35.9~$fb^{-1}$)~\cite{CMS-SMP-18-001}   \\
 \cline { 2 - 4 }                             & ZZ -> llll/llvv  & $5.5~(4.3)~\sigma$ (139~$fb^{-1}$)~\cite{STDM-2017-19}  & $2.7~(1.6)~\sigma$ (35.9~$fb^{-1}$) (llll)~\cite{CMS-SMP-17-006} \\
@@ -616,7 +618,7 @@ The operators are constructed from the following fields;
     \item fermion fields $\psi$
 \end{itemize}
 In general, all operators with an odd number of dimensions involve fermion fields and lead to lepton or baryon number violation~\cite{PhysRevLett.43.1566}. Therefore we need to consider even dimension only, starting from d = 6.
-Equation~\ref{eq:EFTLagrangian} is then written like;
+Equation~(\ref{eq:EFTLagrangian}) is then written like;
 \begin{equation}
 \label{eq:EFTLagrangian2}
 \mathcal{L}_{\mathrm{EFT}}=\mathcal{L}_{\mathrm{SM}} + \sum_{i} \frac{f_{i}^{(d)}}{\Lambda^{2}} \mathcal{O}_{i}^{(d)} +  \sum_{j} \frac{f_{j}^{(d)}}{\Lambda^{4}} \mathcal{O}_{j}^{(d)} + \cdots
@@ -629,9 +631,11 @@ To model possible anomalous QGC (aQGC) effect in the VBS process, the Eboli mode
 %This is when we get a operator with 
 These operators are with weak boson field either from the covariant derivative of Higgs doublet $\Phi$ or from the field strength tensor. 
 %In either case the vector field is accompanied by a vacuum expected value or a derivative, therefore the genuine quartic vertices are of dimension 8 or higher.
-All the corresponding operators are shown hereafter. The analysis usually focuses on these operators on a one-by-one basis.
+All the corresponding operators are shown hereafter.
+$\hat{W}_{\mu \nu} \equiv \sum W_{\mu \nu}^j \frac{\sigma^j}{2}$, where $W_{\mu \nu}^i$ is the $S U(2)_L$ field strength and $B_{\mu \nu}$ is the $U(1)_Y$ one. The covariant derivative is given by $D_\mu \Phi=$ $\left(\partial_\mu-i g W_\mu^j \frac{\sigma^j}{2}-i g^{\prime} B_\mu \frac{1}{2}\right) \Phi$.
+The analysis usually focuses on these operators on a one-by-one basis.
 \begin{itemize}
-\item Operators containing just $D_\mu \Phi$ : (Scalor type)
+\item Operators containing just $D_\mu \Phi$ : (Scalar type)
 \begin{equation}
 \label{eq:OpratorFS}
 \begin{aligned}
@@ -754,7 +758,7 @@ The latest limits on the Wilson coefficients of the 8-dimension operators obtain
 \begin{figure}[tbp]
 \begin{center}
  \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/aQGC/aQGC_ft.png}
-\caption{CMS limits on FT operators}
+\caption{CMS and ATLAS limits on FT operators}
 \label{fig:limitFT}
 \end{center}
 \end{figure}
@@ -762,7 +766,7 @@ The latest limits on the Wilson coefficients of the 8-dimension operators obtain
 \begin{figure}[tbp]
 \begin{center}
  \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/aQGC/aQGC_fm.png}
-\caption{CMS limits on FM operators}
+\caption{CMS and ATLAS limits on FM operators}
 \label{fig:limitFM}
 \end{center}
 \end{figure}
@@ -770,7 +774,7 @@ The latest limits on the Wilson coefficients of the 8-dimension operators obtain
 \begin{figure}[tbp]
 \begin{center}
  \includegraphics[width=0.80\textwidth,keepaspectratio]{figures/aQGC/aQGC_fs.png}
-\caption{CMS limits on FS operators}
+\caption{CMS and ATLAS limits on FS operators}
 \label{fig:limitFS}
 \end{center}
 \end{figure}
